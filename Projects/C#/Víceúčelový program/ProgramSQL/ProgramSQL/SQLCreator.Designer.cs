@@ -73,9 +73,9 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(188, 381);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(194, 17);
+            this.checkBox2.Size = new System.Drawing.Size(161, 17);
             this.checkBox2.TabIndex = 4;
-            this.checkBox2.Text = "Generovat podle hodnoty reference";
+            this.checkBox2.Text = "Generate value by reference";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox3
@@ -83,9 +83,9 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(421, 358);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(106, 17);
+            this.checkBox3.Size = new System.Drawing.Size(97, 17);
             this.checkBox3.TabIndex = 5;
-            this.checkBox3.Text = "Obchodní název";
+            this.checkBox3.Text = "Business name";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox4
@@ -93,9 +93,9 @@
             this.checkBox4.AutoSize = true;
             this.checkBox4.Location = new System.Drawing.Point(421, 381);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(102, 17);
+            this.checkBox4.Size = new System.Drawing.Size(122, 17);
             this.checkBox4.TabIndex = 6;
-            this.checkBox4.Text = "Obchodní popis";
+            this.checkBox4.Text = "Business description";
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // progressBar1
@@ -111,7 +111,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 23);
             this.button3.TabIndex = 8;
-            this.button3.Text = "Subjekty";
+            this.button3.Text = "Entities";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -120,7 +120,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 23);
             this.button4.TabIndex = 9;
-            this.button4.Text = "Parametry";
+            this.button4.Text = "Parameters";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // SQLCreator

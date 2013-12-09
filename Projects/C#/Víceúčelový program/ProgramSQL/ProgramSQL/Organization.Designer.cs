@@ -125,9 +125,9 @@
             this.Organizations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Organizations.Location = new System.Drawing.Point(12, 65);
             this.Organizations.Name = "Organizations";
-            this.Organizations.Size = new System.Drawing.Size(109, 13);
+            this.Organizations.Size = new System.Drawing.Size(39, 13);
             this.Organizations.TabIndex = 6;
-            this.Organizations.Text = "Jmeno organizace";
+            this.Organizations.Text = "Name";
             // 
             // adress_org
             // 
@@ -135,9 +135,9 @@
             this.adress_org.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.adress_org.Location = new System.Drawing.Point(12, 91);
             this.adress_org.Name = "adress_org";
-            this.adress_org.Size = new System.Drawing.Size(77, 13);
+            this.adress_org.Size = new System.Drawing.Size(52, 13);
             this.adress_org.TabIndex = 7;
-            this.adress_org.Text = "Adresa ulice";
+            this.adress_org.Text = "Address";
             // 
             // psc_org
             // 
@@ -165,9 +165,9 @@
             this.zeme_org.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.zeme_org.Location = new System.Drawing.Point(12, 168);
             this.zeme_org.Name = "zeme_org";
-            this.zeme_org.Size = new System.Drawing.Size(38, 13);
+            this.zeme_org.Size = new System.Drawing.Size(50, 13);
             this.zeme_org.TabIndex = 10;
-            this.zeme_org.Text = "Země";
+            this.zeme_org.Text = "Country";
             // 
             // org_faktura
             // 
@@ -175,9 +175,9 @@
             this.org_faktura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.org_faktura.Location = new System.Drawing.Point(408, 65);
             this.org_faktura.Name = "org_faktura";
-            this.org_faktura.Size = new System.Drawing.Size(109, 13);
+            this.org_faktura.Size = new System.Drawing.Size(39, 13);
             this.org_faktura.TabIndex = 11;
-            this.org_faktura.Text = "Jméno organizace";
+            this.org_faktura.Text = "Name";
             // 
             // typ_org
             // 
@@ -185,9 +185,9 @@
             this.typ_org.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.typ_org.Location = new System.Drawing.Point(12, 19);
             this.typ_org.Name = "typ_org";
-            this.typ_org.Size = new System.Drawing.Size(192, 20);
+            this.typ_org.Size = new System.Drawing.Size(287, 20);
             this.typ_org.TabIndex = 12;
-            this.typ_org.Text = "Informace o organizaci";
+            this.typ_org.Text = "Information about the organization";
             // 
             // typ_expozitura
             // 
@@ -205,9 +205,9 @@
             this.typ_faktura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.typ_faktura.Location = new System.Drawing.Point(410, 19);
             this.typ_faktura.Name = "typ_faktura";
-            this.typ_faktura.Size = new System.Drawing.Size(156, 20);
+            this.typ_faktura.Size = new System.Drawing.Size(128, 20);
             this.typ_faktura.TabIndex = 14;
-            this.typ_faktura.Text = "Fakturační Adresa";
+            this.typ_faktura.Text = "Billing Address";
             // 
             // adress_faktura
             // 
@@ -215,9 +215,9 @@
             this.adress_faktura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.adress_faktura.Location = new System.Drawing.Point(408, 91);
             this.adress_faktura.Name = "adress_faktura";
-            this.adress_faktura.Size = new System.Drawing.Size(77, 13);
+            this.adress_faktura.Size = new System.Drawing.Size(52, 13);
             this.adress_faktura.TabIndex = 15;
-            this.adress_faktura.Text = "Adresa ulice";
+            this.adress_faktura.Text = "Address";
             // 
             // psc_faktura
             // 
@@ -245,9 +245,9 @@
             this.zeme_faktura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.zeme_faktura.Location = new System.Drawing.Point(408, 168);
             this.zeme_faktura.Name = "zeme_faktura";
-            this.zeme_faktura.Size = new System.Drawing.Size(38, 13);
+            this.zeme_faktura.Size = new System.Drawing.Size(50, 13);
             this.zeme_faktura.TabIndex = 18;
-            this.zeme_faktura.Text = "Země";
+            this.zeme_faktura.Text = "Country";
             // 
             // textBox_adresa_fa
             // 
@@ -351,9 +351,9 @@
             this.org_expozitura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.org_expozitura.Location = new System.Drawing.Point(12, 262);
             this.org_expozitura.Name = "org_expozitura";
-            this.org_expozitura.Size = new System.Drawing.Size(109, 13);
+            this.org_expozitura.Size = new System.Drawing.Size(39, 13);
             this.org_expozitura.TabIndex = 31;
-            this.org_expozitura.Text = "Jmeno organizace";
+            this.org_expozitura.Text = "Name";
             // 
             // zeme_expozitura
             // 
@@ -361,9 +361,9 @@
             this.zeme_expozitura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.zeme_expozitura.Location = new System.Drawing.Point(12, 367);
             this.zeme_expozitura.Name = "zeme_expozitura";
-            this.zeme_expozitura.Size = new System.Drawing.Size(38, 13);
+            this.zeme_expozitura.Size = new System.Drawing.Size(50, 13);
             this.zeme_expozitura.TabIndex = 32;
-            this.zeme_expozitura.Text = "Země";
+            this.zeme_expozitura.Text = "Country";
             // 
             // ico_expozitura
             // 
@@ -391,9 +391,9 @@
             this.adress_expozitura.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.adress_expozitura.Location = new System.Drawing.Point(12, 288);
             this.adress_expozitura.Name = "adress_expozitura";
-            this.adress_expozitura.Size = new System.Drawing.Size(77, 13);
+            this.adress_expozitura.Size = new System.Drawing.Size(52, 13);
             this.adress_expozitura.TabIndex = 35;
-            this.adress_expozitura.Text = "Adresa ulice";
+            this.adress_expozitura.Text = "Address";
             // 
             // textBox_zeme_exp
             // 
@@ -409,9 +409,9 @@
             this.control_inform.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.control_inform.Location = new System.Drawing.Point(520, 204);
             this.control_inform.Name = "control_inform";
-            this.control_inform.Size = new System.Drawing.Size(156, 20);
+            this.control_inform.Size = new System.Drawing.Size(154, 20);
             this.control_inform.TabIndex = 37;
-            this.control_inform.Text = "Kontrola Informací";
+            this.control_inform.Text = "Check information";
             this.control_inform.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // change_inform
@@ -423,7 +423,7 @@
             this.change_inform.Name = "change_inform";
             this.change_inform.Size = new System.Drawing.Size(125, 20);
             this.change_inform.TabIndex = 38;
-            this.change_inform.Text = "Provést změny";
+            this.change_inform.Text = "Make changes";
             this.change_inform.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // org_next
@@ -431,45 +431,45 @@
             this.org_next.AutoSize = true;
             this.org_next.Location = new System.Drawing.Point(408, 247);
             this.org_next.Name = "org_next";
-            this.org_next.Size = new System.Drawing.Size(127, 13);
+            this.org_next.Size = new System.Drawing.Size(143, 13);
             this.org_next.TabIndex = 39;
-            this.org_next.Text = "Přejíš na další organizaci";
+            this.org_next.Text = "Jump to another organization";
             // 
             // org_back
             // 
             this.org_back.AutoSize = true;
             this.org_back.Location = new System.Drawing.Point(411, 277);
             this.org_back.Name = "org_back";
-            this.org_back.Size = new System.Drawing.Size(145, 13);
+            this.org_back.Size = new System.Drawing.Size(165, 13);
             this.org_back.TabIndex = 40;
-            this.org_back.Text = "Zpět na předešlou organizaci";
+            this.org_back.Text = "Back to the previous organization";
             // 
             // org_aktualizace
             // 
             this.org_aktualizace.AutoSize = true;
             this.org_aktualizace.Location = new System.Drawing.Point(408, 342);
             this.org_aktualizace.Name = "org_aktualizace";
-            this.org_aktualizace.Size = new System.Drawing.Size(147, 13);
+            this.org_aktualizace.Size = new System.Drawing.Size(131, 13);
             this.org_aktualizace.TabIndex = 41;
-            this.org_aktualizace.Text = "Aktualizovat organizace v DB";
+            this.org_aktualizace.Text = "Update organization in DB";
             // 
             // org_storno
             // 
             this.org_storno.AutoSize = true;
             this.org_storno.Location = new System.Drawing.Point(408, 371);
             this.org_storno.Name = "org_storno";
-            this.org_storno.Size = new System.Drawing.Size(66, 13);
+            this.org_storno.Size = new System.Drawing.Size(62, 13);
             this.org_storno.TabIndex = 42;
-            this.org_storno.Text = "Zavřít panel";
+            this.org_storno.Text = "Close panel";
             // 
             // update_org
             // 
             this.update_org.AutoSize = true;
             this.update_org.Location = new System.Drawing.Point(299, 23);
             this.update_org.Name = "update_org";
-            this.update_org.Size = new System.Drawing.Size(80, 17);
+            this.update_org.Size = new System.Drawing.Size(85, 17);
             this.update_org.TabIndex = 43;
-            this.update_org.Text = "Organizace";
+            this.update_org.Text = "Organization";
             this.update_org.UseVisualStyleBackColor = true;
             // 
             // update_fa_udaje
@@ -477,9 +477,9 @@
             this.update_fa_udaje.AutoSize = true;
             this.update_fa_udaje.Location = new System.Drawing.Point(683, 23);
             this.update_fa_udaje.Name = "update_fa_udaje";
-            this.update_fa_udaje.Size = new System.Drawing.Size(79, 17);
+            this.update_fa_udaje.Size = new System.Drawing.Size(83, 17);
             this.update_fa_udaje.TabIndex = 44;
-            this.update_fa_udaje.Text = "FR. Adresa";
+            this.update_fa_udaje.Text = "BL. Address";
             this.update_fa_udaje.UseVisualStyleBackColor = true;
             // 
             // update_expozitura
