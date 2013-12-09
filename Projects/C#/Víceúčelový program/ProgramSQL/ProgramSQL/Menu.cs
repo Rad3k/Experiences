@@ -21,7 +21,7 @@ namespace ProgramSQL
 
         private void Button_Close(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Opravdu chcete ukončit program?", "",
+            if (MessageBox.Show("Do you really want to quit?", "",
             MessageBoxButtons.YesNo) == DialogResult.Yes)
 
                 // The user wants to exit the application. 

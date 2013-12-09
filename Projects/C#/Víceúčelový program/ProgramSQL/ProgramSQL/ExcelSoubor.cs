@@ -14,7 +14,7 @@ namespace ProgramSQL
         public ExcelSoubor()
         {
             InitializeComponent();
-            textBox1.Text = "Šablona.xls";
+            textBox1.Text = "Pattern.xls";
             textBox2.Text = "DxDiag.txt";
         }
 

@@ -61,7 +61,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Grafika";
+            this.textBox1.Text = "Graphics";
             // 
             // textBox2
             // 
@@ -101,7 +101,7 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 4;
-            this.textBox5.Text = "Klávesnice";
+            this.textBox5.Text = "Keyboard";
             // 
             // textBox6
             // 
@@ -111,7 +111,7 @@
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 5;
-            this.textBox6.Text = "Myš";
+            this.textBox6.Text = "Mouse";
             // 
             // textBox7
             // 
@@ -120,7 +120,7 @@
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(430, 20);
             this.textBox7.TabIndex = 6;
-            this.textBox7.Text = "Stistkněte continue, zdali vše souhlasí.";
+            this.textBox7.Text = "Press continue if everything is correct.";
             // 
             // textBox8
             // 
@@ -223,7 +223,7 @@
             this.textBox19.ReadOnly = true;
             this.textBox19.Size = new System.Drawing.Size(100, 20);
             this.textBox19.TabIndex = 19;
-            this.textBox19.Text = "Jmeno PC";
+            this.textBox19.Text = "PC Name";
             // 
             // maindesk
             // 
@@ -240,7 +240,7 @@
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(100, 20);
             this.textBox11.TabIndex = 21;
-            this.textBox11.Text = "Main Desk";
+            this.textBox11.Text = "Motherboard";
             // 
             // ConvertExcel
             // 

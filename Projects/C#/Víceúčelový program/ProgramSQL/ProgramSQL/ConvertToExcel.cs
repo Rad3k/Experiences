@@ -30,7 +30,7 @@ namespace ProgramSQL
                 // ------------------------------------------------
                 while (true)
                 {
-                    foreach (string a in Definitions.JmenoPC)
+                    foreach (string a in Definitions.PCName)
                         workSheet.Cells[5, "B"] = a;
                     foreach (string b in Definitions.Monitor)
                         workSheet.Cells[7, "B"] = b;
@@ -40,15 +40,15 @@ namespace ProgramSQL
                         workSheet.Cells[9, "B"] = d;
                     foreach (string e in Definitions.GPU)
                         workSheet.Cells[10, "B"] = e;
-                    foreach (string f in Definitions.MainDesk)
+                    foreach (string f in Definitions.Motherboard)
                         workSheet.Cells[11, "B"] = f;
                     foreach (string g in Definitions.HDD)
                         workSheet.Cells[12, "B"] = g;
                     foreach (string h in Definitions.OS)
                         workSheet.Cells[21, "B"] = h;
-                    foreach (string j in Definitions.Klavesnice)
+                    foreach (string j in Definitions.Keyboard)
                         workSheet.Cells[13, "B"] = j;
-                    foreach (string k in Definitions.Mys)
+                    foreach (string k in Definitions.Mouse)
                         workSheet.Cells[14, "B"] = k;
 
                     break;

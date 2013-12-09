@@ -9,16 +9,16 @@ namespace ProgramSQL
     static class Definitions
     {
         // Předávací protokoly
-        public static List<string> JmenoPC = new List<string>();
+        public static List<string> PCName = new List<string>();
         public static List<string> CPU = new List<string>();
         public static List<string> Ram = new List<string>();
         public static List<string> OS = new List<string>();
         public static List<string> GPU = new List<string>();
         public static List<string> HDD = new List<string>();
         public static List<string> Monitor = new List<string>();
-        public static List<string> Klavesnice = new List<string>();
-        public static List<string> Mys = new List<string>();
-        public static List<string> MainDesk = new List<string>();
+        public static List<string> Keyboard = new List<string>();
+        public static List<string> Mouse = new List<string>();
+        public static List<string> Motherboard = new List<string>();
 
         // CreateSQL
         public static List<string> CisloSubjektu = new List<string>();
