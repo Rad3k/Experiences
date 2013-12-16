@@ -27,10 +27,11 @@ namespace organizace_ulice
             selectDataFromDB("organizace", sender as BackgroundWorker);
             updateDataToDB("organizace", sender as BackgroundWorker);
 
-                Definitions.Ulice.Clear();
-                Definitions.cp.Clear();
-                Definitions.cSubjekt.Clear();
-                Definitions.co.Clear();
+            Definitions definition = new Definitions();
+            definition.Ulice.Clear();
+            definition.cp.Clear();
+            definition.cSubjekt.Clear();
+            definition.co.Clear();
 
             selectDataFromDB("expozitura", sender as BackgroundWorker);
             updateDataToDB("expozitura", sender as BackgroundWorker);
@@ -49,7 +50,7 @@ namespace organizace_ulice
 
         public void selectDataFromDB(string tab, BackgroundWorker bw)
         {
-            
+            Definitions definition = new Definitions();
             string connection = @"";
             int err_cnt = 0;
 
@@ -80,10 +81,10 @@ namespace organizace_ulice
                         }
                         catch (Exception e)
                         {
-                            Definitions.cSubjekt.Add(subjekt);
-                            Definitions.Ulice.Add(s);
-                            Definitions.cp.Add("");
-                            Definitions.co.Add("");
+                            definition.cSubjekt.Add(subjekt);
+                            definition.Ulice.Add(s);
+                            definition.cp.Add("");
+                            definition.co.Add("");
                             //this.updateDataToDB(sql, tab, subjekt, s, "", "", bw);
                             //pgb.Value++;
                             err_cnt++;
@@ -115,10 +116,10 @@ namespace organizace_ulice
                             }
                             try
                             {
-                                Definitions.cSubjekt.Add(subjekt);
-                                Definitions.Ulice.Add(ulice);
-                                Definitions.cp.Add(cp);
-                                Definitions.co.Add(co);
+                                definition.cSubjekt.Add(subjekt);
+                                definition.Ulice.Add(ulice);
+                                definition.cp.Add(cp);
+                                definition.co.Add(co);
                             }
                             catch (Exception e)
                             {
@@ -132,10 +133,10 @@ namespace organizace_ulice
                         {
                             try
                             {
-                                Definitions.cSubjekt.Add(subjekt);
-                                Definitions.Ulice.Add(s);
-                                Definitions.cp.Add("");
-                                Definitions.co.Add("");
+                                definition.cSubjekt.Add(subjekt);
+                                definition.Ulice.Add(s);
+                                definition.cp.Add("");
+                                definition.co.Add("");
                                 //this.updateDataToDB(sql, tab, subjekt, s, "", "", bw);
                             }
                             catch (Exception e)
@@ -152,7 +153,7 @@ namespace organizace_ulice
                 sql.Close();
             }
 
-            MessageBox.Show("" + Definitions.cSubjekt.Count() + " " + Definitions.Ulice.Count() + " " + Definitions.cp.Count() + " " + Definitions.co.Count());
+            MessageBox.Show("" + definition.cSubjekt.Count() + " " + definition.Ulice.Count() + " " + definition.cp.Count() + " " + definition.co.Count());
             MessageBox.Show(err_cnt.ToString());
 
         }
@@ -160,6 +161,7 @@ namespace organizace_ulice
         //public void updateDataToDB(SqlConnection sql, string tab, int cislo_subjektu, string ulice, string cp, string co, BackgroundWorker bw)
         public void updateDataToDB(string tab, BackgroundWorker bw)
         {
+            Definitions definition = new Definitions();
             string connection = @"";
 
             //MessageBox.Show(err_cnt.ToString());
@@ -169,7 +171,7 @@ namespace organizace_ulice
                 sql.Open();
                 SqlCommand update_org = new SqlCommand("UPDATE " + tab + " SET ulice_ds = @ulice, cislo_cp = @cp, cislo_co = @co where " + tab + ".cislo_subjektu = @subjekt", sql);
 
-                for (int i = 0; i < Definitions.cSubjekt.Count(); i++)
+                for (int i = 0; i < definition.cSubjekt.Count(); i++)
                 {
 
                     update_org.Parameters.Clear();
@@ -179,10 +181,10 @@ namespace organizace_ulice
                     SqlParameter cpParam = new SqlParameter("@cp", SqlDbType.VarChar, 5);
                     SqlParameter coParam = new SqlParameter("@co", SqlDbType.VarChar, 5);
 
-                    subjektParam.Value = Definitions.cSubjekt[i];
-                    uliceParam.Value = Definitions.Ulice[i];
-                    cpParam.Value = Definitions.cp[i];
-                    coParam.Value = Definitions.co[i];
+                    subjektParam.Value = definition.cSubjekt[i];
+                    uliceParam.Value = definition.Ulice[i];
+                    cpParam.Value = definition.cp[i];
+                    coParam.Value = definition.co[i];
 
                     /*subjektParam.Value = cislo_subjektu;
                     uliceParam.Value = ulice;

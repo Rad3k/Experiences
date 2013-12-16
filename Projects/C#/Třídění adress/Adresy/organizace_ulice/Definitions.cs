@@ -5,11 +5,11 @@ using System.Text;
 
 namespace organizace_ulice
 {
-    static class Definitions
+    class Definitions
     {
-        public static List<int> cSubjekt = new List<int>();
-        public static List<string> Ulice = new List<string>();
-        public static List<string> cp = new List<string>();
-        public static List<string> co = new List<string>();
+        public List<int> cSubjekt = new List<int>();
+        public List<string> Ulice = new List<string>();
+        public List<string> cp = new List<string>();
+        public List<string> co = new List<string>();
     }
 }
