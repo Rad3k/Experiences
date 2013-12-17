@@ -1,0 +1,134 @@
+﻿################################################
+# Evidence zaměstnanců & konfigurační soubor   #
+################################################
+[config]
+
+###################################################################################################
+# OBSAH
+#
+#    Popis
+#    Nastavení pro připojení do databáze
+#    Zdrojové soubory
+#    Nastavení cest ke zdrojy obrázků a dat
+#    Nastavení projectu
+#    Nastavení ochrany a práv
+#
+###################################################################################################
+
+###################################################################################################
+# EXAMPLE CONFIG
+#
+#    Variable
+#        Description: Brief description what the variable is doing.
+#        Important:   Annotation for important things about this variable.
+#        Example:     "Example, i.e. if the value is a string"
+#        Default:     10 - (Enabled|Comment|Variable name in case of grouped config options)
+#                     0  - (Disabled|Comment|Variable name in case of grouped config options)
+#
+# Note to developers:
+# - Copy this example to keep the formatting.
+# - Line breaks should be at column 100.
+###################################################################################################
+
+###################################################################################################
+# Nastavení pro připojení do databáze
+#
+#    RealmID
+#        Popis:   Zde se rozhoduje, kterou databázy bude systém využit prioritně při prvním spuštění.
+#        Důležité:   Hodnota je vypsaná vždy čislém a nesmí mít větší hodnotu než je definovaný počet databázích.
+#        Původní hodnota:     1
+
+RealmID = 1
+
+#
+#    Cesta pro debug DB
+#        Popis: Zde je nutné vypsat cestu, kam chcete ukládat vypis o transakcích a chyb.
+#        Důležité:   Cesta nusí být úváděná přesně s lomítky, jak uvádí příklad.
+#        Příklad:     "@C:/slozka/slozka"
+#        Původní hodnota:     "."
+
+DataDir = "."
+
+#
+#    Název souboru
+#        Popis: Zde uvádíte název souboru v kterém bude výpis o transakcích a chybových hláškách.
+#        Důležité:   Soubor musí obsahovat název a také příponu .log
+#        Původní hodnota:     "" - (Soubor bude připojen i ke zdrojové cestě, kterou jste definovali v herním nastavení.)
+
+LogsDir = ""
+
+#
+#    LoginDatabaseInfo
+#    WorldDatabaseInfo
+#        Popis: Nastavení pro přopojení do databáze
+#        Příklad:     "hostname;port;username;password;database"
+#                     ".;somenumber;username;password;database" - (Use named pipes on Windows
+#                                                                 "enable-named-pipe" to [mysqld]
+#                                                                 section my.ini)
+#                     ".;/path/to/unix_socket;username;password;database" - (use Unix sockets on
+#                                                                           Unix/Linux)
+#        Default:     "127.0.0.1;3306;root;root;login"       - (LoginDatabaseInfo)
+#                     "127.0.0.1;3306;root;root;evidence"      - (ProgramDatabaseInfo)
+
+LoginDatabaseInfo   = "127.0.0.1;3306;root;root;login"
+ProgramDatabaseInfo = "127.0.0.1;3306;root;root;evidence"
+
+#
+#    Čas maximální odezvy
+#        Popis: Čas (v minutách) mezi databázovou odezvou.
+#        Původní hodnota:     30
+
+MaxPingTime = 30
+
+#
+#    PORT
+#        Popis: TCP port, který na kterém program poběží.
+#        Původní hodnota:     8085
+
+ProgramPort = 8085
+
+#
+#    IP
+#        Popis: IP pod kterou server poběží
+#        Původní hodnota:     "0.0.0.0" - (Bind to all IPs on the system)
+
+BindIP = "0.0.0.0"
+
+#
+###################################################################################################
+
+###################################################################################################
+# Nastavení výkonu
+#
+#    Využítí procesorů
+#        Popis: Toto využití bude fungovat jak pro windows, tak pro linux.
+#        Příklad:     Počítač s 2 CPUs:
+#                     1 - využítí jednoho CPU, 2 - využití dvou CPU, 3 - Využítí maximální výkonu, protože 1 | 2 je 3
+#        Původní hodnota:     0  - (Vybedere dle OS)
+#                     1+ - (Bit mask value of selected processors)
+
+UseProcessors = 0
+
+#
+###################################################################################################
+
+###################################################################################################
+# Nastavení projectu
+#
+#    FilePath
+#        Popis: Cesta do které se bude vypisovat výpis chybových hlášek programu.
+#        Příklad:     "@C:/slozka/slozka"
+#        Původní hodnota:     "" - (Vypnuto)
+
+FilePath = ""
+
+#
+#    NameFile
+#        Popis: Název souboru do kterého se buodu vypisovat chyby programu.
+#        Příklad:     "erros.log" - (Enabled)
+#        Původní hodnota:     ""  - (Disabled)
+
+NameFile = ""
+
+#
+###################################################################################################
