@@ -11,34 +11,43 @@ namespace Evidence_zaměstnanců
     {
         public void ReadFromFile()
         {
-            while (true)
-            {
-                string TextFromConfig = Resource.konfigurace;
+            string TextFromConfig = Resource.konfigurace;
 
-                // Nastavení pro připojení do databáze
-                int value = TextFromConfig.IndexOf("RealmID");
-                value = TextFromConfig.IndexOf('=');
-                RealmID = int.Parse(TextFromConfig.Substring(value));
+            // Nastavení pro připojení do databáze
+            var value = TextFromConfig.IndexOf("RealmID");
+            value = TextFromConfig.IndexOf('=', value);
+            value = TextFromConfig.IndexOf(' ', value);
+            var value2 = TextFromConfig.IndexOf("\r\n", value);
+            RealmID = int.Parse(TextFromConfig.Substring(value, value2 - value));
 
-                value = TextFromConfig.IndexOf("DataDir");
-                value = TextFromConfig.IndexOf('=', value + 1);
-                DataAndLogsDir = TextFromConfig.Substring(value);
-                value = TextFromConfig.IndexOf("LogsDir");
-                value = TextFromConfig.IndexOf('=', value + 1);
-                DataAndLogsDir = DataAndLogsDir + TextFromConfig.Substring(value);
+            value = TextFromConfig.IndexOf("DataDir");
+            value = TextFromConfig.IndexOf('=', value);
+            value = TextFromConfig.IndexOf(' ', value);
+            value2 = TextFromConfig.IndexOf("\r\n", value);
+            DataAndLogsDir = TextFromConfig.Substring(value, value2 - value);
+            value = TextFromConfig.IndexOf("LogsDir");
+            value = TextFromConfig.IndexOf('=', value);
+            value = TextFromConfig.IndexOf(' ', value);
+            value2 = TextFromConfig.IndexOf("\r\n", value);
+            DataAndLogsDir = DataAndLogsDir + TextFromConfig.Substring(value, value2 - value);
 
-                value = TextFromConfig.IndexOf("LoginDatabaseInfo");
-                value = TextFromConfig.IndexOf('=', value + 1);
-                LoginDatabaseInfo = TextFromConfig.Substring(value);
+            value = TextFromConfig.IndexOf("LoginDatabaseInfo");
+            value = TextFromConfig.IndexOf('=', value);
+            value = TextFromConfig.IndexOf(' ', value);
+            value2 = TextFromConfig.IndexOf("\r\n", value);
+            LoginDatabaseInfo = TextFromConfig.Substring(value, value2 - value);
 
-                value = TextFromConfig.IndexOf("ProgramDatabaseInfo");
-                value = TextFromConfig.IndexOf('=', value + 1);
-                ProgramDatabaseInfo = TextFromConfig.Substring(value);
+            value = TextFromConfig.IndexOf("ProgramDatabaseInfo");
+            value = TextFromConfig.IndexOf('=', value);
+            value = TextFromConfig.IndexOf(' ', value);
+            value2 = TextFromConfig.IndexOf("\r\n", value);
+            ProgramDatabaseInfo = TextFromConfig.Substring(value, value2 - value);
 
-                value = TextFromConfig.IndexOf("BindIP");
-                value = TextFromConfig.IndexOf('=', value + 1);
-                BindIP = TextFromConfig.Substring(value);
-            }
+            value = TextFromConfig.IndexOf("BindIP");
+            value = TextFromConfig.IndexOf('=', value);
+            value = TextFromConfig.IndexOf(' ', value);
+            value2 = TextFromConfig.IndexOf("\r\n", value);
+            BindIP = TextFromConfig.Substring(value, value2 - value);
         }
     }
 }
