@@ -16,7 +16,10 @@ namespace Evidence_zaměstnanců
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            if (new Login().ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new Main());
+            }
         }
     }
 }

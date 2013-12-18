@@ -21,7 +21,17 @@ namespace Evidence_zaměstnanců
         {
             ReadFromConfig config = new ReadFromConfig();
             config.ReadFromFile();
-            LoginValidation login = new LoginValidation(loginText.Text, passwordText.Text);
+            LoginInformation login = new LoginInformation(loginText.Text);
+            LoginValidation access = new LoginValidation();
+            access.ValidateLogin(loginText.Text, passwordText.Text, login.Login, login.Password);
+
+            if (access.access == true)
+            {
+                Main main = new Main();
+                main.Show();
+            }
+            else
+                MessageBox.Show("Přihlašovací jméno nebo heslo neni správné");
         }
     }
 }
