@@ -44,7 +44,7 @@ RealmID = 1
 #    Cesta pro debug DB
 #        Popis: Zde je nutné vypsat cestu, kam chcete ukládat vypis o transakcích a chyb.
 #        Důležité:   Cesta nusí být úváděná přesně s lomítky, jak uvádí příklad.
-#        Příklad:     "@C:/slozka/slozka"
+#        Příklad:     "@C:/slozka/"
 #        Původní hodnota:     "."
 
 DataDir = "."
