@@ -18,6 +18,11 @@ namespace Evidence_zaměstnanců
         public string ProgramDatabaseInfo;
         public string BindIP;
 
+        // Přihlašovací údaje uživatele
+        public string Login;
+        public string Password;
+        public string Email;
+
         // Nastavení výkonu
         public int UseProcessors;
     }

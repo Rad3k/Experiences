@@ -9,12 +9,13 @@ CREATE TABLE AboutPrograms
 CREATE TABLE [Login]
 (
 	username varchar(30) CHECK (username is not null AND username <> ''),
-	email varchar(30) CHECK (email is not null AND username <> ''),
-	[password] varchar(50),
-	UNIQUE (username, email)
+	email varchar(30),
+	[password] varchar(255),
+	UNIQUE (username)
 )
 
-INSERT INTO [dbo.Login] values('admin', 'Email@seznam.cz', HASHBYTES('md5',convert(varchar(50),'root')))
+-- Password is root
+INSERT INTO dbo.Login values('admin', 'Email@seznam.cz', '1000:fUfSA21iLeLHnvkT2cnTSxgSSx7Vizzq:ZG0HAsIIMwYxtmoYzc1fjYlSP8IQRrZ3')
 
 CREATE TABLE Employee
 (

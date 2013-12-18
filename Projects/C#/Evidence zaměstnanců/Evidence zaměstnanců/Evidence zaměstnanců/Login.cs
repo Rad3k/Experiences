@@ -21,6 +21,7 @@ namespace Evidence_zaměstnanců
         {
             ReadFromConfig config = new ReadFromConfig();
             config.ReadFromFile();
+            LoginValidation login = new LoginValidation(loginText.Text, passwordText.Text);
         }
     }
 }
