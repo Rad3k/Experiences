@@ -31,30 +31,32 @@
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.zamMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.addZam = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.zamSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.delZam = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.zamSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.controlZam = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.zamSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.smlouvyZam = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.zamSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.problemZam = new System.Windows.Forms.ToolStripMenuItem();
             this.mzdyZam = new System.Windows.Forms.ToolStripMenuItem();
             this.vypocetMzdy = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.mzdySeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.zobrazeniMzdy = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.mzdySeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.nakladyZam = new System.Windows.Forms.ToolStripMenuItem();
-            this.evidenceŽivotopisůToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.přidatŽivotopisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.upravitŽivotopisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.odstranitŽivotopisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statistikyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ziskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.ztrátyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.investiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evidenceCVs = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCVs = new System.Windows.Forms.ToolStripMenuItem();
+            this.editCVs = new System.Windows.Forms.ToolStripMenuItem();
+            this.separatorCVs1 = new System.Windows.Forms.ToolStripSeparator();
+            this.separatorCVs2 = new System.Windows.Forms.ToolStripSeparator();
+            this.delCVs = new System.Windows.Forms.ToolStripMenuItem();
+            this.statisticsMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.statZisk = new System.Windows.Forms.ToolStripMenuItem();
+            this.statSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.statNaklady = new System.Windows.Forms.ToolStripMenuItem();
+            this.statSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.statInvestice = new System.Windows.Forms.ToolStripMenuItem();
             this.programPanel = new System.Windows.Forms.MenuStrip();
             this.navigačníPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.websiteItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,8 +79,8 @@
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.zamMenu,
             this.mzdyZam,
-            this.evidenceŽivotopisůToolStripMenuItem,
-            this.statistikyToolStripMenuItem});
+            this.evidenceCVs,
+            this.statisticsMenu});
             this.MainMenu.Location = new System.Drawing.Point(0, 29);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(126, 413);
@@ -89,13 +91,13 @@
             // 
             this.zamMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addZam,
-            this.toolStripSeparator2,
+            this.zamSeparator1,
             this.delZam,
-            this.toolStripSeparator3,
+            this.zamSeparator2,
             this.controlZam,
-            this.toolStripSeparator1,
+            this.zamSeparator3,
             this.smlouvyZam,
-            this.toolStripSeparator4,
+            this.zamSeparator4,
             this.problemZam});
             this.zamMenu.Name = "zamMenu";
             this.zamMenu.Size = new System.Drawing.Size(119, 19);
@@ -109,10 +111,10 @@
             this.addZam.Size = new System.Drawing.Size(207, 22);
             this.addZam.Text = "Založení zaměstnance";
             // 
-            // toolStripSeparator2
+            // zamSeparator1
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
+            this.zamSeparator1.Name = "zamSeparator1";
+            this.zamSeparator1.Size = new System.Drawing.Size(204, 6);
             // 
             // delZam
             // 
@@ -120,10 +122,10 @@
             this.delZam.Size = new System.Drawing.Size(207, 22);
             this.delZam.Text = "Odstranění zaměstnance";
             // 
-            // toolStripSeparator3
+            // zamSeparator2
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(204, 6);
+            this.zamSeparator2.Name = "zamSeparator2";
+            this.zamSeparator2.Size = new System.Drawing.Size(204, 6);
             // 
             // controlZam
             // 
@@ -131,10 +133,10 @@
             this.controlZam.Size = new System.Drawing.Size(207, 22);
             this.controlZam.Text = "Controla zaměstnanců";
             // 
-            // toolStripSeparator1
+            // zamSeparator3
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(204, 6);
+            this.zamSeparator3.Name = "zamSeparator3";
+            this.zamSeparator3.Size = new System.Drawing.Size(204, 6);
             // 
             // smlouvyZam
             // 
@@ -142,10 +144,10 @@
             this.smlouvyZam.Size = new System.Drawing.Size(207, 22);
             this.smlouvyZam.Text = "Ukončené smlouvy";
             // 
-            // toolStripSeparator4
+            // zamSeparator4
             // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(204, 6);
+            this.zamSeparator4.Name = "zamSeparator4";
+            this.zamSeparator4.Size = new System.Drawing.Size(204, 6);
             // 
             // problemZam
             // 
@@ -157,9 +159,9 @@
             // 
             this.mzdyZam.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vypocetMzdy,
-            this.toolStripSeparator5,
+            this.mzdySeparator1,
             this.zobrazeniMzdy,
-            this.toolStripSeparator6,
+            this.mzdySeparator2,
             this.nakladyZam});
             this.mzdyZam.Name = "mzdyZam";
             this.mzdyZam.Size = new System.Drawing.Size(119, 19);
@@ -171,10 +173,10 @@
             this.vypocetMzdy.Size = new System.Drawing.Size(205, 22);
             this.vypocetMzdy.Text = "Výpočet mzdy";
             // 
-            // toolStripSeparator5
+            // mzdySeparator1
             // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(202, 6);
+            this.mzdySeparator1.Name = "mzdySeparator1";
+            this.mzdySeparator1.Size = new System.Drawing.Size(202, 6);
             // 
             // zobrazeniMzdy
             // 
@@ -182,10 +184,10 @@
             this.zobrazeniMzdy.Size = new System.Drawing.Size(205, 22);
             this.zobrazeniMzdy.Text = "Mzdy";
             // 
-            // toolStripSeparator6
+            // mzdySeparator2
             // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(202, 6);
+            this.mzdySeparator2.Name = "mzdySeparator2";
+            this.mzdySeparator2.Size = new System.Drawing.Size(202, 6);
             // 
             // nakladyZam
             // 
@@ -193,73 +195,85 @@
             this.nakladyZam.Size = new System.Drawing.Size(205, 22);
             this.nakladyZam.Text = "Náklady na zaměstnance";
             // 
-            // evidenceŽivotopisůToolStripMenuItem
+            // evidenceCVs
             // 
-            this.evidenceŽivotopisůToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.přidatŽivotopisToolStripMenuItem,
-            this.upravitŽivotopisToolStripMenuItem,
-            this.odstranitŽivotopisToolStripMenuItem});
-            this.evidenceŽivotopisůToolStripMenuItem.Name = "evidenceŽivotopisůToolStripMenuItem";
-            this.evidenceŽivotopisůToolStripMenuItem.Size = new System.Drawing.Size(119, 19);
-            this.evidenceŽivotopisůToolStripMenuItem.Text = "Evidence životopisů";
+            this.evidenceCVs.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCVs,
+            this.separatorCVs1,
+            this.editCVs,
+            this.separatorCVs2,
+            this.delCVs});
+            this.evidenceCVs.Name = "evidenceCVs";
+            this.evidenceCVs.Size = new System.Drawing.Size(119, 19);
+            this.evidenceCVs.Text = "Evidence životopisů";
             // 
-            // přidatŽivotopisToolStripMenuItem
+            // addCVs
             // 
-            this.přidatŽivotopisToolStripMenuItem.Name = "přidatŽivotopisToolStripMenuItem";
-            this.přidatŽivotopisToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.přidatŽivotopisToolStripMenuItem.Text = "Přidat životopis";
+            this.addCVs.Name = "addCVs";
+            this.addCVs.Size = new System.Drawing.Size(173, 22);
+            this.addCVs.Text = "Přidat životopis";
             // 
-            // upravitŽivotopisToolStripMenuItem
+            // editCVs
             // 
-            this.upravitŽivotopisToolStripMenuItem.Name = "upravitŽivotopisToolStripMenuItem";
-            this.upravitŽivotopisToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.upravitŽivotopisToolStripMenuItem.Text = "Upravit životopis";
+            this.editCVs.Name = "editCVs";
+            this.editCVs.Size = new System.Drawing.Size(173, 22);
+            this.editCVs.Text = "Upravit životopis";
             // 
-            // odstranitŽivotopisToolStripMenuItem
+            // separatorCVs1
             // 
-            this.odstranitŽivotopisToolStripMenuItem.Name = "odstranitŽivotopisToolStripMenuItem";
-            this.odstranitŽivotopisToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.odstranitŽivotopisToolStripMenuItem.Text = "Odstranit životopis";
+            this.separatorCVs1.Name = "separatorCVs1";
+            this.separatorCVs1.Size = new System.Drawing.Size(170, 6);
             // 
-            // statistikyToolStripMenuItem
+            // separatorCVs2
             // 
-            this.statistikyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ziskToolStripMenuItem,
-            this.toolStripSeparator7,
-            this.ztrátyToolStripMenuItem,
-            this.toolStripSeparator8,
-            this.investiceToolStripMenuItem});
-            this.statistikyToolStripMenuItem.Name = "statistikyToolStripMenuItem";
-            this.statistikyToolStripMenuItem.Size = new System.Drawing.Size(119, 19);
-            this.statistikyToolStripMenuItem.Text = "Statistiky";
+            this.separatorCVs2.Name = "separatorCVs2";
+            this.separatorCVs2.Size = new System.Drawing.Size(170, 6);
             // 
-            // ziskToolStripMenuItem
+            // delCVs
             // 
-            this.ziskToolStripMenuItem.Name = "ziskToolStripMenuItem";
-            this.ziskToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.ziskToolStripMenuItem.Text = "Zisky";
+            this.delCVs.Name = "delCVs";
+            this.delCVs.Size = new System.Drawing.Size(173, 22);
+            this.delCVs.Text = "Odstranit životopis";
             // 
-            // toolStripSeparator7
+            // statisticsMenu
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(117, 6);
+            this.statisticsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statZisk,
+            this.statSeparator1,
+            this.statNaklady,
+            this.statSeparator2,
+            this.statInvestice});
+            this.statisticsMenu.Name = "statisticsMenu";
+            this.statisticsMenu.Size = new System.Drawing.Size(119, 19);
+            this.statisticsMenu.Text = "Statistiky";
             // 
-            // ztrátyToolStripMenuItem
+            // statZisk
             // 
-            this.ztrátyToolStripMenuItem.Name = "ztrátyToolStripMenuItem";
-            this.ztrátyToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.ztrátyToolStripMenuItem.Text = "Ztráty";
+            this.statZisk.Name = "statZisk";
+            this.statZisk.Size = new System.Drawing.Size(120, 22);
+            this.statZisk.Text = "Zisky";
             // 
-            // toolStripSeparator8
+            // statSeparator1
             // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(117, 6);
+            this.statSeparator1.Name = "statSeparator1";
+            this.statSeparator1.Size = new System.Drawing.Size(117, 6);
             // 
-            // investiceToolStripMenuItem
+            // statNaklady
             // 
-            this.investiceToolStripMenuItem.Name = "investiceToolStripMenuItem";
-            this.investiceToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.investiceToolStripMenuItem.Text = "Investice";
+            this.statNaklady.Name = "statNaklady";
+            this.statNaklady.Size = new System.Drawing.Size(120, 22);
+            this.statNaklady.Text = "Ztráty";
+            // 
+            // statSeparator2
+            // 
+            this.statSeparator2.Name = "statSeparator2";
+            this.statSeparator2.Size = new System.Drawing.Size(117, 6);
+            // 
+            // statInvestice
+            // 
+            this.statInvestice.Name = "statInvestice";
+            this.statInvestice.Size = new System.Drawing.Size(120, 22);
+            this.statInvestice.Text = "Investice";
             // 
             // programPanel
             // 
@@ -372,13 +386,13 @@
         private System.Windows.Forms.ToolStripMenuItem napovedaProgram;
         private System.Windows.Forms.ToolStripMenuItem zamMenu;
         private System.Windows.Forms.ToolStripMenuItem addZam;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator zamSeparator1;
         private System.Windows.Forms.ToolStripMenuItem delZam;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSeparator zamSeparator2;
         private System.Windows.Forms.ToolStripMenuItem controlZam;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator zamSeparator3;
         private System.Windows.Forms.ToolStripMenuItem smlouvyZam;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator zamSeparator4;
         private System.Windows.Forms.ToolStripMenuItem problemZam;
         private System.Windows.Forms.ToolStripMenuItem mzdyZam;
         private System.Windows.Forms.ToolStripMenuItem vypocetMzdy;
@@ -386,20 +400,22 @@
         private System.Windows.Forms.ToolStripMenuItem nakladyZam;
         private System.Windows.Forms.ToolStripMenuItem websiteItem;
         private System.Windows.Forms.ToolStripComboBox selectDB;
-        private System.Windows.Forms.ToolStripMenuItem evidenceŽivotopisůToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem přidatŽivotopisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem upravitŽivotopisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem odstranitŽivotopisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem statistikyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ziskToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ztrátyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem investiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem evidenceCVs;
+        private System.Windows.Forms.ToolStripMenuItem addCVs;
+        private System.Windows.Forms.ToolStripMenuItem editCVs;
+        private System.Windows.Forms.ToolStripMenuItem delCVs;
+        private System.Windows.Forms.ToolStripMenuItem statisticsMenu;
+        private System.Windows.Forms.ToolStripMenuItem statZisk;
+        private System.Windows.Forms.ToolStripMenuItem statNaklady;
+        private System.Windows.Forms.ToolStripMenuItem statInvestice;
         private System.Windows.Forms.ToolStripMenuItem repozitaryLink;
         private System.Windows.Forms.ToolStripMenuItem technickSupportLink;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripSeparator mzdySeparator1;
+        private System.Windows.Forms.ToolStripSeparator mzdySeparator2;
+        private System.Windows.Forms.ToolStripSeparator statSeparator1;
+        private System.Windows.Forms.ToolStripSeparator statSeparator2;
+        private System.Windows.Forms.ToolStripSeparator separatorCVs1;
+        private System.Windows.Forms.ToolStripSeparator separatorCVs2;
     }
 }
 
