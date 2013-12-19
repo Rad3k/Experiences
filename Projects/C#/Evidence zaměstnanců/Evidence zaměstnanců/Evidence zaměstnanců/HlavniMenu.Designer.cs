@@ -41,7 +41,9 @@
             this.problemZam = new System.Windows.Forms.ToolStripMenuItem();
             this.mzdyZam = new System.Windows.Forms.ToolStripMenuItem();
             this.vypocetMzdy = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.zobrazeniMzdy = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.nakladyZam = new System.Windows.Forms.ToolStripMenuItem();
             this.evidenceŽivotopisůToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.přidatŽivotopisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,21 +51,18 @@
             this.odstranitŽivotopisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statistikyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ziskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.ztrátyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.investiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.programPanel = new System.Windows.Forms.MenuStrip();
             this.navigačníPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.websiteItem = new System.Windows.Forms.ToolStripMenuItem();
             this.napovedaProgram = new System.Windows.Forms.ToolStripMenuItem();
-            this.webovéStránkyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.repozitářToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.technickáPodporaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.repozitaryLink = new System.Windows.Forms.ToolStripMenuItem();
+            this.technickSupportLink = new System.Windows.Forms.ToolStripMenuItem();
             this.infoProgram = new System.Windows.Forms.ToolStripMenuItem();
             this.selectDB = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.MainMenu.SuspendLayout();
             this.programPanel.SuspendLayout();
             this.SuspendLayout();
@@ -172,11 +171,21 @@
             this.vypocetMzdy.Size = new System.Drawing.Size(205, 22);
             this.vypocetMzdy.Text = "Výpočet mzdy";
             // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(202, 6);
+            // 
             // zobrazeniMzdy
             // 
             this.zobrazeniMzdy.Name = "zobrazeniMzdy";
             this.zobrazeniMzdy.Size = new System.Drawing.Size(205, 22);
             this.zobrazeniMzdy.Text = "Mzdy";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(202, 6);
             // 
             // nakladyZam
             // 
@@ -227,19 +236,29 @@
             // ziskToolStripMenuItem
             // 
             this.ziskToolStripMenuItem.Name = "ziskToolStripMenuItem";
-            this.ziskToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ziskToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.ziskToolStripMenuItem.Text = "Zisky";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(117, 6);
             // 
             // ztrátyToolStripMenuItem
             // 
             this.ztrátyToolStripMenuItem.Name = "ztrátyToolStripMenuItem";
-            this.ztrátyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ztrátyToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.ztrátyToolStripMenuItem.Text = "Ztráty";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(117, 6);
             // 
             // investiceToolStripMenuItem
             // 
             this.investiceToolStripMenuItem.Name = "investiceToolStripMenuItem";
-            this.investiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.investiceToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.investiceToolStripMenuItem.Text = "Investice";
             // 
             // programPanel
@@ -271,43 +290,37 @@
             this.websiteItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.websiteItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.websiteItem.Name = "websiteItem";
-            this.websiteItem.Size = new System.Drawing.Size(70, 25);
-            this.websiteItem.Text = "Website";
+            this.websiteItem.Size = new System.Drawing.Size(119, 25);
+            this.websiteItem.Text = "Webové stránky";
             this.websiteItem.Click += new System.EventHandler(this.websiteItem_Click);
             // 
             // napovedaProgram
             // 
             this.napovedaProgram.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.napovedaProgram.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.webovéStránkyToolStripMenuItem,
-            this.repozitářToolStripMenuItem,
-            this.technickáPodporaToolStripMenuItem});
+            this.repozitaryLink,
+            this.technickSupportLink});
             this.napovedaProgram.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.napovedaProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.napovedaProgram.Name = "napovedaProgram";
             this.napovedaProgram.Size = new System.Drawing.Size(82, 25);
             this.napovedaProgram.Text = "Nápověda";
             // 
-            // webovéStránkyToolStripMenuItem
+            // repozitaryLink
             // 
-            this.webovéStránkyToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.webovéStránkyToolStripMenuItem.Name = "webovéStránkyToolStripMenuItem";
-            this.webovéStránkyToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.webovéStránkyToolStripMenuItem.Text = "Webové stránky";
+            this.repozitaryLink.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.repozitaryLink.Name = "repozitaryLink";
+            this.repozitaryLink.Size = new System.Drawing.Size(177, 22);
+            this.repozitaryLink.Text = "Repozitář";
+            this.repozitaryLink.Click += new System.EventHandler(this.repozitaryLink_Click);
             // 
-            // repozitářToolStripMenuItem
+            // technickSupportLink
             // 
-            this.repozitářToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.repozitářToolStripMenuItem.Name = "repozitářToolStripMenuItem";
-            this.repozitářToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.repozitářToolStripMenuItem.Text = "Repozitář";
-            // 
-            // technickáPodporaToolStripMenuItem
-            // 
-            this.technickáPodporaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.technickáPodporaToolStripMenuItem.Name = "technickáPodporaToolStripMenuItem";
-            this.technickáPodporaToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.technickáPodporaToolStripMenuItem.Text = "Technická podpora";
+            this.technickSupportLink.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.technickSupportLink.Name = "technickSupportLink";
+            this.technickSupportLink.Size = new System.Drawing.Size(177, 22);
+            this.technickSupportLink.Text = "Technická podpora";
+            this.technickSupportLink.Click += new System.EventHandler(this.technickSupportLink_Click);
             // 
             // infoProgram
             // 
@@ -331,26 +344,6 @@
             this.selectDB.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.selectDB.Size = new System.Drawing.Size(121, 25);
             this.selectDB.Click += new System.EventHandler(this.selectDB_Click);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(202, 6);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(202, 6);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(149, 6);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(149, 6);
             // 
             // Main
             // 
@@ -401,9 +394,8 @@
         private System.Windows.Forms.ToolStripMenuItem ziskToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ztrátyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem investiceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem webovéStránkyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem repozitářToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem technickáPodporaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem repozitaryLink;
+        private System.Windows.Forms.ToolStripMenuItem technickSupportLink;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;

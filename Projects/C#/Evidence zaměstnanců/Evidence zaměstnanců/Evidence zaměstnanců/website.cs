@@ -13,37 +13,29 @@ namespace Evidence_zaměstnanců
         /// <summary>
         /// Opens the Internet Explorer application.
         /// </summary>
-        public void OpenApplication(string myFavoritesPath)
+        public void BaseWebsite()
         {
             // Start Internet Explorer. Defaults to the home page.
-            Process.Start("IExplore.exe", "http://tdg-gaming.eu/");
+            Process.Start("IExplore.exe", "http://rad3k.eu/");
         }
 
         /// <summary>
         /// Opens urls and .html documents using Internet Explorer.
         /// </summary>
-        public void OpenWithArguments()
+        public void OpenGitHubRepozitary()
         {
             // url's are not considered documents. They can only be opened
             // by passing them as arguments.
-            Process.Start("IExplore.exe", "www.northwindtraders.com");
-
-            // Start a Web page using a browser associated with .html and .asp files.
-            Process.Start("IExplore.exe", "C:\\myPath\\myFile.htm");
-            Process.Start("IExplore.exe", "C:\\myPath\\myFile.asp");
+            Process.Start("IExplore.exe", "https://github.com/Rad3k/Experiences/");
         }
 
         /// <summary>
         /// Uses the ProcessStartInfo class to start new processes, both in a minimized 
         /// mode.
         /// </summary>
-        public void OpenWithStartInfo()
+        public void OpenWebsiteFaQ()
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo("IExplore.exe");
-            startInfo.WindowStyle = ProcessWindowStyle.Minimized;
-            Process.Start(startInfo);
-            startInfo.Arguments = "www.northwindtraders.com";
-            Process.Start(startInfo);
+            Process.Start("IExplore.exe", "http://rad3k.eu/faq");
         }
     }
 }

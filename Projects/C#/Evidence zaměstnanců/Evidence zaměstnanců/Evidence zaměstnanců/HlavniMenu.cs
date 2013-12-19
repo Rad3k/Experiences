@@ -35,9 +35,19 @@ namespace Evidence_zaměstnanců
         private void websiteItem_Click(object sender, EventArgs e)
         {
             website web = new website();
-            // Get the path that stores favorite links.
-            string myFavoritesPath = Environment.GetFolderPath(Environment.SpecialFolder.Favorites);
-            web.OpenApplication(myFavoritesPath);
+            web.BaseWebsite();
+        }
+
+        private void repozitaryLink_Click(object sender, EventArgs e)
+        {
+            website web = new website();
+            web.OpenGitHubRepozitary();
+        }
+
+        private void technickSupportLink_Click(object sender, EventArgs e)
+        {
+            website web = new website();
+            web.OpenWebsiteFaQ();
         }
     }
 }
