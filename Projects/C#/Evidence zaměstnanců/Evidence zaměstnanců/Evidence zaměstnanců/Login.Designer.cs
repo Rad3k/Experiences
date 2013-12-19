@@ -73,6 +73,7 @@
             // 
             // LoginToProgram
             // 
+            this.LoginToProgram.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.LoginToProgram.Location = new System.Drawing.Point(186, 208);
             this.LoginToProgram.Name = "LoginToProgram";
             this.LoginToProgram.Size = new System.Drawing.Size(75, 23);

@@ -20,18 +20,11 @@ namespace Evidence_zaměstnanců
         private void LoginToProgram_Click(object sender, EventArgs e)
         {
             ReadFromConfig config = new ReadFromConfig();
+            DialogResult dr = new DialogResult();
             config.ReadFromFile();
             LoginInformation login = new LoginInformation(loginText.Text);
             LoginValidation access = new LoginValidation();
             access.ValidateLogin(loginText.Text, passwordText.Text, login.Login, login.Password);
-
-            if (access.access == true)
-            {
-                Main main = new Main();
-                main.Show();
-            }
-            else
-                MessageBox.Show("Přihlašovací jméno nebo heslo neni správné");
         }
     }
 }

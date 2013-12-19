@@ -91,6 +91,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Compile Include="UniqueValue.cs" />
     <Compile Include="website.cs" />
     <EmbeddedResource Include="HlavniMenu.resx">
       <DependentUpon>HlavniMenu.cs</DependentUpon>

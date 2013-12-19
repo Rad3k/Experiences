@@ -16,9 +16,21 @@ namespace Evidence_zaměstnanců
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (new Login().ShowDialog() == DialogResult.OK)
+            bool validated = false;
+            while (!validated)
             {
-                Application.Run(new Main());
+                using (Login fLogin = new Login())
+                {
+                    if (fLogin.ShowDialog() == DialogResult.OK)
+                        validated = true;
+                }
+                if (validated && UniqueValue.access)
+                    Application.Run(new Main());
+                else
+                {
+                    MessageBox.Show("Přihlašovací jméno nebo heslo neni správné");
+                    validated = false;
+                }
             }
         }
     }
