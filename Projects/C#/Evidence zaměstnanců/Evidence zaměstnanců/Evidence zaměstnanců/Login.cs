@@ -20,7 +20,6 @@ namespace Evidence_zaměstnanců
         private void LoginToProgram_Click(object sender, EventArgs e)
         {
             ReadFromConfig config = new ReadFromConfig();
-            DialogResult dr = new DialogResult();
             config.ReadFromFile();
             LoginInformation login = new LoginInformation(loginText.Text);
             LoginValidation access = new LoginValidation();
