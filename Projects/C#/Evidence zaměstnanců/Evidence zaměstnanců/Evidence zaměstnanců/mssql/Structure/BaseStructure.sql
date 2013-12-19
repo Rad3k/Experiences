@@ -2,8 +2,8 @@ CREATE TABLE AboutPrograms
 (
 	id INT CONSTRAINT IndexKey PRIMARY KEY,
 	[Version] varchar(10),
-	[Date] datetime,
-	LastChanged datetime,
+	[Date] date,
+	LastChanged date,
 )
 
 CREATE TABLE [Login]

@@ -33,6 +33,7 @@
             this.loginText = new System.Windows.Forms.TextBox();
             this.passwordText = new System.Windows.Forms.TextBox();
             this.LoginToProgram = new System.Windows.Forms.Button();
+            this.loginCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // passwordLabel
@@ -82,11 +83,22 @@
             this.LoginToProgram.UseVisualStyleBackColor = true;
             this.LoginToProgram.Click += new System.EventHandler(this.LoginToProgram_Click);
             // 
+            // loginCancel
+            // 
+            this.loginCancel.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.loginCancel.Location = new System.Drawing.Point(16, 208);
+            this.loginCancel.Name = "loginCancel";
+            this.loginCancel.Size = new System.Drawing.Size(75, 23);
+            this.loginCancel.TabIndex = 5;
+            this.loginCancel.Text = "Cancel";
+            this.loginCancel.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 243);
+            this.Controls.Add(this.loginCancel);
             this.Controls.Add(this.LoginToProgram);
             this.Controls.Add(this.passwordText);
             this.Controls.Add(this.loginText);
@@ -106,5 +118,6 @@
         private System.Windows.Forms.TextBox loginText;
         private System.Windows.Forms.TextBox passwordText;
         private System.Windows.Forms.Button LoginToProgram;
+        private System.Windows.Forms.Button loginCancel;
     }
 }

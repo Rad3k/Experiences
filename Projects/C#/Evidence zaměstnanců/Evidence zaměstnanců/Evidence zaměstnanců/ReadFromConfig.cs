@@ -48,6 +48,12 @@ namespace Evidence_zaměstnanců
             value = TextFromConfig.IndexOf(' ', value);
             value2 = TextFromConfig.IndexOf("\r\n", value);
             BindIP = TextFromConfig.Substring(value, value2 - value);
+
+            value = TextFromConfig.IndexOf("UseProcessors");
+            value = TextFromConfig.IndexOf('=', value);
+            value = TextFromConfig.IndexOf(' ', value);
+            value2 = TextFromConfig.IndexOf("\r\n", value);
+            UseProcessors = int.Parse(TextFromConfig.Substring(value, value2 - value));
         }
     }
 }

@@ -8,9 +8,6 @@ namespace Evidence_zaměstnanců
 {
     class Collections
     {
-        // Plná cesta configu + název
-        public string FullPathConfig;
-
         // Nastavení pro připojení do databáze
         public int RealmID;
         public string DataAndLogsDir;
@@ -25,5 +22,10 @@ namespace Evidence_zaměstnanců
 
         // Nastavení výkonu
         public int UseProcessors;
+
+        // Informace o programu
+        public string version;
+        public string date;
+        public string lastChanged;
     }
 }

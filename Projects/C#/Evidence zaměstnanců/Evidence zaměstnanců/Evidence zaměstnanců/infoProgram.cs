@@ -16,11 +16,16 @@ namespace Evidence_zaměstnanců
         {
             InitializeComponent();
             DateTime time = new DateTime();
-            textBoxUser.Text = ".";
+            textBoxUser.Text = UniqueValue.Login;
             textBoxVersion.Text = ".";
-            textBoxDatabase.Text = ".";
+            textBoxDatabase.Text = "Evidence";
             textBoxGetDate.Text = time.ToLongDateString() + " -- " + time.ToLongTimeString();
             textBoxDateChanged.Text = "17.12.2013 -- 01:32 AM";
+        }
+
+        private void continuePassword_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

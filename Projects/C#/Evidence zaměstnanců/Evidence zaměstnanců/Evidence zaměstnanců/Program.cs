@@ -23,6 +23,11 @@ namespace Evidence_zaměstnanců
                 {
                     if (fLogin.ShowDialog() == DialogResult.OK)
                         validated = true;
+                    else
+                    {
+                        fLogin.Close();
+                        break;
+                    }
                 }
                 if (validated && UniqueValue.access)
                     Application.Run(new Main());

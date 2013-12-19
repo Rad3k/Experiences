@@ -118,6 +118,7 @@
             this.continuePassword.TabIndex = 8;
             this.continuePassword.Text = "Pokračovat";
             this.continuePassword.UseVisualStyleBackColor = true;
+            this.continuePassword.Click += new System.EventHandler(this.continuePassword_Click);
             // 
             // label1
             // 

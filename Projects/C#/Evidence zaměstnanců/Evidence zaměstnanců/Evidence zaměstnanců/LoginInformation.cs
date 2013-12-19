@@ -15,6 +15,8 @@ namespace Evidence_zaměstnanců
 
         public LoginInformation(string login)
         {
+            UniqueValue.FullPathConfig = connection;
+
             try
             {
                 using (SqlConnection sql = new SqlConnection(connection))
@@ -36,6 +38,7 @@ namespace Evidence_zaměstnanců
                                 if (readerLogin.IsDBNull(0) || readerLogin.IsDBNull(1) || readerLogin.IsDBNull(2))
                                     continue;
 
+                                // Dynamic value for login dialog
                                 Login = readerLogin.GetString(0);
                                 Email = readerLogin.GetString(1);
                                 Password = readerLogin.GetString(2);

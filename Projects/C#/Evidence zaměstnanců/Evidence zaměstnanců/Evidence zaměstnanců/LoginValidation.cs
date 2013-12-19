@@ -15,6 +15,8 @@ namespace Evidence_zaměstnanců
             else
                 UniqueValue.access = false;
 
+            UniqueValue.Login = login;
+            UniqueValue.Password = password;
             return UniqueValue.access;
         }
     }

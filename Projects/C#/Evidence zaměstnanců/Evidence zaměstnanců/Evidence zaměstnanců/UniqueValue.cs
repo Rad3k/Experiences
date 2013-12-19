@@ -8,7 +8,14 @@ namespace Evidence_zaměstnanců
 {
     static class UniqueValue
     {
+        // Plná cesta configu + název
+        public static string FullPathConfig;
+
         // This bool return value after validation informations
         public static bool access;
+
+        // Přihlašovací údaje uživatele
+        public static string Login;
+        public static string Password;
     }
 }
