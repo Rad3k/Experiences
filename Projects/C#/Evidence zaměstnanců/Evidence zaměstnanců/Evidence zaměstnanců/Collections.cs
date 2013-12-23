@@ -25,7 +25,7 @@ namespace Evidence_zaměstnanců
 
         // Informace o programu
         public string version;
-        public string date;
-        public string lastChanged;
+        public DateTime date;
+        public DateTime lastChanged;
     }
 }

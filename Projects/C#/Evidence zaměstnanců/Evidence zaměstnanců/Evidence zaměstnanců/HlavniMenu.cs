@@ -49,5 +49,46 @@ namespace Evidence_zaměstnanců
             website web = new website();
             web.OpenWebsiteFaQ();
         }
+
+        private void addZam_Click(object sender, EventArgs e)
+        {
+            pridatUzivatele addZam = new pridatUzivatele();
+            addZam.Show();
+        }
+
+        private void delZam_Click(object sender, EventArgs e)
+        {
+            odstraneniUzivatele delZam = new odstraneniUzivatele();
+            delZam.Show();
+        }
+
+        private void controlZam_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void smlouvyZam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void problemZam_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addCVs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editCVs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void delCVs_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

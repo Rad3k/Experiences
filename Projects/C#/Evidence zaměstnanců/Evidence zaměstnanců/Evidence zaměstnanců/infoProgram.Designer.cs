@@ -86,6 +86,7 @@
             // 
             this.textBoxVersion.Location = new System.Drawing.Point(118, 107);
             this.textBoxVersion.Name = "textBoxVersion";
+            this.textBoxVersion.ReadOnly = true;
             this.textBoxVersion.Size = new System.Drawing.Size(154, 20);
             this.textBoxVersion.TabIndex = 4;
             // 
@@ -93,6 +94,7 @@
             // 
             this.textBoxDatabase.Location = new System.Drawing.Point(118, 135);
             this.textBoxDatabase.Name = "textBoxDatabase";
+            this.textBoxDatabase.ReadOnly = true;
             this.textBoxDatabase.Size = new System.Drawing.Size(154, 20);
             this.textBoxDatabase.TabIndex = 5;
             // 
@@ -100,6 +102,7 @@
             // 
             this.textBoxGetDate.Location = new System.Drawing.Point(118, 161);
             this.textBoxGetDate.Name = "textBoxGetDate";
+            this.textBoxGetDate.ReadOnly = true;
             this.textBoxGetDate.Size = new System.Drawing.Size(154, 20);
             this.textBoxGetDate.TabIndex = 6;
             // 
@@ -107,6 +110,7 @@
             // 
             this.textBoxUser.Location = new System.Drawing.Point(118, 18);
             this.textBoxUser.Name = "textBoxUser";
+            this.textBoxUser.ReadOnly = true;
             this.textBoxUser.Size = new System.Drawing.Size(154, 20);
             this.textBoxUser.TabIndex = 7;
             // 
@@ -144,6 +148,7 @@
             // 
             this.textBoxDateChanged.Location = new System.Drawing.Point(118, 186);
             this.textBoxDateChanged.Name = "textBoxDateChanged";
+            this.textBoxDateChanged.ReadOnly = true;
             this.textBoxDateChanged.Size = new System.Drawing.Size(154, 20);
             this.textBoxDateChanged.TabIndex = 11;
             // 

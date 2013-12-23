@@ -16,7 +16,6 @@ namespace Evidence_zaměstnanců
             try
             {
                 SqlConnection sql = new SqlConnection(connection);
-                sql.Open();
             }
             catch (Exception e)
             {
@@ -26,6 +25,7 @@ namespace Evidence_zaměstnanců
 
         public void GetDataFromAboutProgram(SqlConnection sql)
         {
+            sql.Open();
             using (SqlCommand aboutPrograms = new SqlCommand("SELECT * FROM dbo.AboutPrograms", sql))
             {
                 using (SqlDataReader readerData = aboutPrograms.ExecuteReader())
@@ -37,16 +37,17 @@ namespace Evidence_zaměstnanců
 
                         // Dynamic value for login dialog
                         version = readerData.GetString(1);
-                        date = readerData.GetString(2);
-                        lastChanged = readerData.GetString(3);
+                        date = readerData.GetDateTime(2);
+                        lastChanged = readerData.GetDateTime(3);
                     }
                 }
             }
             sql.Close();
         }
 
-        public void ChangePassword(string oldPassword, string newPassword, SqlConnection sql)
+        public void ChangePassword(string newPassword, SqlConnection sql)
         {
+            sql.Open();
             using (SqlCommand updatePassword = new SqlCommand("UPDATE dbo.Login SET password = @password WHERE username = @login", sql))
             {
                 updatePassword.Parameters.Clear();
@@ -58,6 +59,8 @@ namespace Evidence_zaměstnanců
                 updatePassword.Parameters.Add(passwordParam);
                 updatePassword.Prepare();
                 updatePassword.ExecuteNonQuery();
+
+                MessageBox.Show("Heslo bylo úspěšně změněno");
             }
             sql.Close();
         }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Globalization;
 
 namespace Evidence_zaměstnanců
 {
@@ -15,17 +17,26 @@ namespace Evidence_zaměstnanců
         public infoProgram()
         {
             InitializeComponent();
-            DateTime time = new DateTime();
-            textBoxUser.Text = UniqueValue.Login;
-            textBoxVersion.Text = ".";
-            textBoxDatabase.Text = "Evidence";
-            textBoxGetDate.Text = time.ToLongDateString() + " -- " + time.ToLongTimeString();
-            textBoxDateChanged.Text = "17.12.2013 -- 01:32 AM";
+            try
+            {
+                Transactions tran = new Transactions(UniqueValue.FullPathConfig);
+                tran.GetDataFromAboutProgram(new SqlConnection(UniqueValue.FullPathConfig));
+                textBoxUser.Text = UniqueValue.Login;
+                textBoxVersion.Text = tran.version;
+                textBoxDatabase.Text = "Evidence";
+                textBoxGetDate.Text = tran.date.ToString();
+                textBoxDateChanged.Text = tran.lastChanged.ToString();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Chyba: " + e);
+            }
         }
 
         private void continuePassword_Click(object sender, EventArgs e)
         {
-
+            ChangePassword changePass = new ChangePassword();
+            changePass.Show();
         }
     }
 }
