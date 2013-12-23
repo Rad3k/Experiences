@@ -32,6 +32,7 @@ CREATE TABLE Employee
 	DoplnujiciUdaje varchar(255),
 	Ulice varchar(255),
 	Mesto varchar(100),
+	Stat char(2),
 	CP int,
 	CO int,
 	Mzda money,

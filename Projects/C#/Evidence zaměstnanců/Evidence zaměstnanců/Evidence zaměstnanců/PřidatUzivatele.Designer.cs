@@ -36,14 +36,14 @@
             this.mobilDomu = new System.Windows.Forms.Label();
             this.telefonPrace = new System.Windows.Forms.Label();
             this.telefonDomu = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.mobilText = new System.Windows.Forms.TextBox();
+            this.telPraceText = new System.Windows.Forms.TextBox();
+            this.telDomuText = new System.Windows.Forms.TextBox();
+            this.prijmeniText = new System.Windows.Forms.TextBox();
+            this.faxPraceText = new System.Windows.Forms.TextBox();
+            this.jmenoText = new System.Windows.Forms.TextBox();
+            this.emailText = new System.Windows.Forms.TextBox();
+            this.pracovniPoziceText = new System.Windows.Forms.TextBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -52,19 +52,23 @@
             this.mesto = new System.Windows.Forms.Label();
             this.pobocka = new System.Windows.Forms.Label();
             this.cp = new System.Windows.Forms.Label();
-            this.oc = new System.Windows.Forms.Label();
+            this.co = new System.Windows.Forms.Label();
             this.mzda = new System.Windows.Forms.Label();
             this.utvar = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.mzdaText = new System.Windows.Forms.TextBox();
+            this.cpText = new System.Windows.Forms.TextBox();
+            this.uliceText = new System.Windows.Forms.TextBox();
+            this.mestoText = new System.Windows.Forms.TextBox();
+            this.doplnUdajeText = new System.Windows.Forms.TextBox();
+            this.coText = new System.Windows.Forms.TextBox();
+            this.utvarText = new System.Windows.Forms.TextBox();
+            this.pobockaText = new System.Windows.Forms.TextBox();
             this.cancel = new System.Windows.Forms.Button();
             this.pridat = new System.Windows.Forms.Button();
+            this.stat = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rodneCisloText = new System.Windows.Forms.TextBox();
+            this.statText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // jmeno
@@ -139,61 +143,61 @@
             this.telefonDomu.TabIndex = 7;
             this.telefonDomu.Text = "Telefon domů:";
             // 
-            // textBox1
+            // mobilText
             // 
-            this.textBox1.Location = new System.Drawing.Point(412, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 8;
+            this.mobilText.Location = new System.Drawing.Point(412, 105);
+            this.mobilText.Name = "mobilText";
+            this.mobilText.Size = new System.Drawing.Size(128, 20);
+            this.mobilText.TabIndex = 8;
             // 
-            // textBox2
+            // telPraceText
             // 
-            this.textBox2.Location = new System.Drawing.Point(412, 26);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 20);
-            this.textBox2.TabIndex = 9;
+            this.telPraceText.Location = new System.Drawing.Point(412, 26);
+            this.telPraceText.Name = "telPraceText";
+            this.telPraceText.Size = new System.Drawing.Size(128, 20);
+            this.telPraceText.TabIndex = 9;
             // 
-            // textBox3
+            // telDomuText
             // 
-            this.textBox3.Location = new System.Drawing.Point(412, 79);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(128, 20);
-            this.textBox3.TabIndex = 10;
+            this.telDomuText.Location = new System.Drawing.Point(412, 79);
+            this.telDomuText.Name = "telDomuText";
+            this.telDomuText.Size = new System.Drawing.Size(128, 20);
+            this.telDomuText.TabIndex = 10;
             // 
-            // textBox4
+            // prijmeniText
             // 
-            this.textBox4.Location = new System.Drawing.Point(133, 52);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(128, 20);
-            this.textBox4.TabIndex = 11;
+            this.prijmeniText.Location = new System.Drawing.Point(133, 52);
+            this.prijmeniText.Name = "prijmeniText";
+            this.prijmeniText.Size = new System.Drawing.Size(128, 20);
+            this.prijmeniText.TabIndex = 11;
             // 
-            // textBox5
+            // faxPraceText
             // 
-            this.textBox5.Location = new System.Drawing.Point(412, 52);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(128, 20);
-            this.textBox5.TabIndex = 12;
+            this.faxPraceText.Location = new System.Drawing.Point(412, 52);
+            this.faxPraceText.Name = "faxPraceText";
+            this.faxPraceText.Size = new System.Drawing.Size(128, 20);
+            this.faxPraceText.TabIndex = 12;
             // 
-            // textBox6
+            // jmenoText
             // 
-            this.textBox6.Location = new System.Drawing.Point(133, 26);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(128, 20);
-            this.textBox6.TabIndex = 13;
+            this.jmenoText.Location = new System.Drawing.Point(133, 26);
+            this.jmenoText.Name = "jmenoText";
+            this.jmenoText.Size = new System.Drawing.Size(128, 20);
+            this.jmenoText.TabIndex = 13;
             // 
-            // textBox7
+            // emailText
             // 
-            this.textBox7.Location = new System.Drawing.Point(133, 79);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(128, 20);
-            this.textBox7.TabIndex = 14;
+            this.emailText.Location = new System.Drawing.Point(133, 79);
+            this.emailText.Name = "emailText";
+            this.emailText.Size = new System.Drawing.Size(128, 20);
+            this.emailText.TabIndex = 14;
             // 
-            // textBox8
+            // pracovniPoziceText
             // 
-            this.textBox8.Location = new System.Drawing.Point(133, 105);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(128, 20);
-            this.textBox8.TabIndex = 15;
+            this.pracovniPoziceText.Location = new System.Drawing.Point(133, 105);
+            this.pracovniPoziceText.Name = "pracovniPoziceText";
+            this.pracovniPoziceText.Size = new System.Drawing.Size(128, 20);
+            this.pracovniPoziceText.TabIndex = 15;
             // 
             // shapeContainer1
             // 
@@ -270,19 +274,19 @@
             this.cp.TabIndex = 21;
             this.cp.Text = "CP:";
             // 
-            // oc
+            // co
             // 
-            this.oc.AutoSize = true;
-            this.oc.Location = new System.Drawing.Point(311, 185);
-            this.oc.Name = "oc";
-            this.oc.Size = new System.Drawing.Size(25, 13);
-            this.oc.TabIndex = 22;
-            this.oc.Text = "OC:";
+            this.co.AutoSize = true;
+            this.co.Location = new System.Drawing.Point(311, 185);
+            this.co.Name = "co";
+            this.co.Size = new System.Drawing.Size(25, 13);
+            this.co.TabIndex = 22;
+            this.co.Text = "CO:";
             // 
             // mzda
             // 
             this.mzda.AutoSize = true;
-            this.mzda.Location = new System.Drawing.Point(311, 211);
+            this.mzda.Location = new System.Drawing.Point(309, 287);
             this.mzda.Name = "mzda";
             this.mzda.Size = new System.Drawing.Size(36, 13);
             this.mzda.TabIndex = 23;
@@ -297,61 +301,61 @@
             this.utvar.TabIndex = 24;
             this.utvar.Text = "Útvar:";
             // 
-            // textBox9
+            // mzdaText
             // 
-            this.textBox9.Location = new System.Drawing.Point(412, 208);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(126, 20);
-            this.textBox9.TabIndex = 25;
+            this.mzdaText.Location = new System.Drawing.Point(412, 280);
+            this.mzdaText.Name = "mzdaText";
+            this.mzdaText.Size = new System.Drawing.Size(126, 20);
+            this.mzdaText.TabIndex = 25;
             // 
-            // textBox10
+            // cpText
             // 
-            this.textBox10.Location = new System.Drawing.Point(412, 156);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(126, 20);
-            this.textBox10.TabIndex = 26;
+            this.cpText.Location = new System.Drawing.Point(412, 156);
+            this.cpText.Name = "cpText";
+            this.cpText.Size = new System.Drawing.Size(126, 20);
+            this.cpText.TabIndex = 26;
             // 
-            // textBox11
+            // uliceText
             // 
-            this.textBox11.Location = new System.Drawing.Point(133, 156);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(128, 20);
-            this.textBox11.TabIndex = 27;
+            this.uliceText.Location = new System.Drawing.Point(133, 156);
+            this.uliceText.Name = "uliceText";
+            this.uliceText.Size = new System.Drawing.Size(128, 20);
+            this.uliceText.TabIndex = 27;
             // 
-            // textBox12
+            // mestoText
             // 
-            this.textBox12.Location = new System.Drawing.Point(133, 182);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(128, 20);
-            this.textBox12.TabIndex = 28;
+            this.mestoText.Location = new System.Drawing.Point(133, 182);
+            this.mestoText.Name = "mestoText";
+            this.mestoText.Size = new System.Drawing.Size(128, 20);
+            this.mestoText.TabIndex = 28;
             // 
-            // textBox13
+            // doplnUdajeText
             // 
-            this.textBox13.Location = new System.Drawing.Point(133, 208);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(128, 20);
-            this.textBox13.TabIndex = 29;
+            this.doplnUdajeText.Location = new System.Drawing.Point(133, 208);
+            this.doplnUdajeText.Name = "doplnUdajeText";
+            this.doplnUdajeText.Size = new System.Drawing.Size(128, 20);
+            this.doplnUdajeText.TabIndex = 29;
             // 
-            // textBox14
+            // coText
             // 
-            this.textBox14.Location = new System.Drawing.Point(412, 182);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(126, 20);
-            this.textBox14.TabIndex = 30;
+            this.coText.Location = new System.Drawing.Point(412, 182);
+            this.coText.Name = "coText";
+            this.coText.Size = new System.Drawing.Size(126, 20);
+            this.coText.TabIndex = 30;
             // 
-            // textBox15
+            // utvarText
             // 
-            this.textBox15.Location = new System.Drawing.Point(412, 254);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(126, 20);
-            this.textBox15.TabIndex = 31;
+            this.utvarText.Location = new System.Drawing.Point(412, 254);
+            this.utvarText.Name = "utvarText";
+            this.utvarText.Size = new System.Drawing.Size(126, 20);
+            this.utvarText.TabIndex = 31;
             // 
-            // textBox16
+            // pobockaText
             // 
-            this.textBox16.Location = new System.Drawing.Point(133, 254);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(128, 20);
-            this.textBox16.TabIndex = 32;
+            this.pobockaText.Location = new System.Drawing.Point(133, 254);
+            this.pobockaText.Name = "pobockaText";
+            this.pobockaText.Size = new System.Drawing.Size(128, 20);
+            this.pobockaText.TabIndex = 32;
             // 
             // cancel
             // 
@@ -373,37 +377,73 @@
             this.pridat.UseVisualStyleBackColor = true;
             this.pridat.Click += new System.EventHandler(this.pridat_Click);
             // 
+            // stat
+            // 
+            this.stat.AutoSize = true;
+            this.stat.Location = new System.Drawing.Point(311, 214);
+            this.stat.Name = "stat";
+            this.stat.Size = new System.Drawing.Size(29, 13);
+            this.stat.TabIndex = 35;
+            this.stat.Text = "Stát:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 283);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Rodné číslo:";
+            // 
+            // rodneCisloText
+            // 
+            this.rodneCisloText.Location = new System.Drawing.Point(133, 280);
+            this.rodneCisloText.Name = "rodneCisloText";
+            this.rodneCisloText.Size = new System.Drawing.Size(128, 20);
+            this.rodneCisloText.TabIndex = 37;
+            // 
+            // statText
+            // 
+            this.statText.Location = new System.Drawing.Point(412, 211);
+            this.statText.Name = "statText";
+            this.statText.Size = new System.Drawing.Size(126, 20);
+            this.statText.TabIndex = 38;
+            // 
             // pridatUzivatele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 363);
+            this.Controls.Add(this.statText);
+            this.Controls.Add(this.rodneCisloText);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.stat);
             this.Controls.Add(this.pridat);
             this.Controls.Add(this.cancel);
-            this.Controls.Add(this.textBox16);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.pobockaText);
+            this.Controls.Add(this.utvarText);
+            this.Controls.Add(this.coText);
+            this.Controls.Add(this.doplnUdajeText);
+            this.Controls.Add(this.mestoText);
+            this.Controls.Add(this.uliceText);
+            this.Controls.Add(this.cpText);
+            this.Controls.Add(this.mzdaText);
             this.Controls.Add(this.utvar);
             this.Controls.Add(this.mzda);
-            this.Controls.Add(this.oc);
+            this.Controls.Add(this.co);
             this.Controls.Add(this.cp);
             this.Controls.Add(this.pobocka);
             this.Controls.Add(this.mesto);
             this.Controls.Add(this.ulice);
             this.Controls.Add(this.doplnUdaje);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pracovniPoziceText);
+            this.Controls.Add(this.emailText);
+            this.Controls.Add(this.jmenoText);
+            this.Controls.Add(this.faxPraceText);
+            this.Controls.Add(this.prijmeniText);
+            this.Controls.Add(this.telDomuText);
+            this.Controls.Add(this.telPraceText);
+            this.Controls.Add(this.mobilText);
             this.Controls.Add(this.telefonDomu);
             this.Controls.Add(this.telefonPrace);
             this.Controls.Add(this.mobilDomu);
@@ -430,14 +470,14 @@
         private System.Windows.Forms.Label mobilDomu;
         private System.Windows.Forms.Label telefonPrace;
         private System.Windows.Forms.Label telefonDomu;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox mobilText;
+        private System.Windows.Forms.TextBox telPraceText;
+        private System.Windows.Forms.TextBox telDomuText;
+        private System.Windows.Forms.TextBox prijmeniText;
+        private System.Windows.Forms.TextBox faxPraceText;
+        private System.Windows.Forms.TextBox jmenoText;
+        private System.Windows.Forms.TextBox emailText;
+        private System.Windows.Forms.TextBox pracovniPoziceText;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
@@ -446,18 +486,22 @@
         private System.Windows.Forms.Label mesto;
         private System.Windows.Forms.Label pobocka;
         private System.Windows.Forms.Label cp;
-        private System.Windows.Forms.Label oc;
+        private System.Windows.Forms.Label co;
         private System.Windows.Forms.Label mzda;
         private System.Windows.Forms.Label utvar;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox mzdaText;
+        private System.Windows.Forms.TextBox cpText;
+        private System.Windows.Forms.TextBox uliceText;
+        private System.Windows.Forms.TextBox mestoText;
+        private System.Windows.Forms.TextBox doplnUdajeText;
+        private System.Windows.Forms.TextBox coText;
+        private System.Windows.Forms.TextBox utvarText;
+        private System.Windows.Forms.TextBox pobockaText;
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button pridat;
+        private System.Windows.Forms.Label stat;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox rodneCisloText;
+        private System.Windows.Forms.TextBox statText;
     }
 }

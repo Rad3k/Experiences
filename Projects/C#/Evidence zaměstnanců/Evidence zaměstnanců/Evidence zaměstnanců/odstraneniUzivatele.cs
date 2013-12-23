@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Evidence_zaměstnanců
 {
@@ -15,6 +16,12 @@ namespace Evidence_zaměstnanců
         public odstraneniUzivatele()
         {
             InitializeComponent();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            Transactions tran = new Transactions(UniqueValue.FullPathConfig);
+            tran.delZam(new SqlConnection(UniqueValue.FullPathConfig), jmenoText.Text, prijmeniText.Text);
         }
     }
 }

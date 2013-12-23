@@ -88,6 +88,7 @@
             this.delete.TabIndex = 6;
             this.delete.Text = "Delete";
             this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // odstraneniUzivatele
             // 

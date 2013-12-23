@@ -64,5 +64,109 @@ namespace Evidence_zaměstnanců
             }
             sql.Close();
         }
+
+        public void addZam(SqlConnection sql, string jmeno, string prijmeni, string Email, string rodneCislo, string pracovniPozice, string telefonPrace, string faxPrace, string telefonDomu
+            , string mobilDomu, string doplnujiciUdaje, string ulice, string mesto, string stat, string cp, string co, string mzda, string pobocka, string utvar)
+        {
+            sql.Open();
+            using (SqlCommand addZam = new SqlCommand("INSERT INTO dbo.Employee VALUES (@jmeno, @prijmeni, @email, @rodneCislo, @pracovniPozice, @telefonPrace, @faxPrace, @telefonDomu, " +
+                "@mobilDomu, @doplnUdaje, @ulice, @mesto, @stat, @cp, @co, @mzda, @pobocka, @utvar)", sql))
+            {
+                addZam.Parameters.Clear();
+                // Parameters
+                SqlParameter jmenoParam = new SqlParameter("@jmeno", SqlDbType.VarChar, 20);
+                SqlParameter prijmeniParam = new SqlParameter("@prijmeni", SqlDbType.VarChar, 20);
+                SqlParameter emailParam = new SqlParameter("@email", SqlDbType.VarChar, 30);
+                SqlParameter rodneCisloParam = new SqlParameter("@rodneCislo", SqlDbType.VarChar, 30);
+                SqlParameter pracovniPoziceParam = new SqlParameter("@pracovniPozice", SqlDbType.VarChar, 100);
+                SqlParameter telefonPraceParam = new SqlParameter("@telefonPrace", SqlDbType.VarChar, 15);
+                SqlParameter faxPraceParam = new SqlParameter("@faxPrace", SqlDbType.VarChar, 15);
+                SqlParameter telefonDomuParam = new SqlParameter("@telefonDomu", SqlDbType.VarChar, 15);
+                SqlParameter mobilDomuParam = new SqlParameter("@mobilDomu", SqlDbType.VarChar, 15);
+                SqlParameter doplnUdajeParam = new SqlParameter("@doplnUdaje", SqlDbType.VarChar, 255);
+                SqlParameter uliceParam = new SqlParameter("@ulice", SqlDbType.VarChar, 255);
+                SqlParameter mestoParam = new SqlParameter("@mesto", SqlDbType.VarChar, 100);
+                SqlParameter statParam = new SqlParameter("@stat", SqlDbType.VarChar, 2);
+                SqlParameter cpParam = new SqlParameter("@cp", SqlDbType.Int);
+                SqlParameter coParam = new SqlParameter("@co", SqlDbType.Int);
+                SqlParameter mzdaParam = new SqlParameter("@mzda", SqlDbType.Money);
+                SqlParameter pobockaParam = new SqlParameter("@pobocka", SqlDbType.Char, 2);
+                SqlParameter utvarParam = new SqlParameter("@utvar", SqlDbType.Char, 2);
+
+                // Definitions for parameters
+                jmenoParam.Value = jmeno;
+                prijmeniParam.Value = prijmeni;
+                emailParam.Value = Email;
+                rodneCisloParam.Value = rodneCislo;
+                pracovniPoziceParam.Value = pracovniPozice;
+                telefonPraceParam.Value = telefonPrace;
+                faxPraceParam.Value = faxPrace;
+                telefonDomuParam.Value = telefonDomu;
+                mobilDomuParam.Value = mobilDomu;
+                doplnUdajeParam.Value = doplnujiciUdaje;
+                uliceParam.Value = ulice;
+                mestoParam.Value = mesto;
+                statParam.Value = stat;
+                cpParam.Value = cp;
+                coParam.Value = co;
+                mzdaParam.Value = mzda;
+                pobockaParam.Value = pobocka;
+                utvarParam.Value = utvar;
+
+                // Add parameters
+                addZam.Parameters.Add(jmenoParam);
+                addZam.Parameters.Add(prijmeniParam);
+                addZam.Parameters.Add(emailParam);
+                addZam.Parameters.Add(rodneCisloParam);
+                addZam.Parameters.Add(pracovniPoziceParam);
+                addZam.Parameters.Add(telefonPraceParam);
+                addZam.Parameters.Add(faxPraceParam);
+                addZam.Parameters.Add(telefonDomuParam);
+                addZam.Parameters.Add(mobilDomuParam);
+                addZam.Parameters.Add(doplnUdajeParam);
+                addZam.Parameters.Add(uliceParam);
+                addZam.Parameters.Add(mestoParam);
+                addZam.Parameters.Add(statParam);
+                addZam.Parameters.Add(cpParam);
+                addZam.Parameters.Add(coParam);
+                addZam.Parameters.Add(mzdaParam);
+                addZam.Parameters.Add(pobockaParam);
+                addZam.Parameters.Add(utvarParam);
+
+                // Execute command
+                addZam.Prepare();
+                addZam.ExecuteNonQuery();
+
+                MessageBox.Show("Uživatel úspěšně přidán");
+            }
+            sql.Close();
+        }
+
+        public void delZam(SqlConnection sql, string jmeno, string prijmeni)
+        {
+            sql.Open();
+            using (SqlCommand delZam = new SqlCommand("DELETE FROM dbo.Employee WHERE jmeno = @jmeno or prijmeni = @prijmeni", sql))
+            {
+                delZam.Parameters.Clear();
+                // Parameters
+                SqlParameter jmenoParam = new SqlParameter("@jmeno", SqlDbType.VarChar, 20);
+                SqlParameter prijmeniParam = new SqlParameter("@prijmeni", SqlDbType.VarChar, 20);
+
+                // Definitions for parameters
+                jmenoParam.Value = jmeno;
+                prijmeniParam.Value = prijmeni;
+
+                // Add parameters
+                delZam.Parameters.Add(jmenoParam);
+                delZam.Parameters.Add(prijmeniParam);
+
+                // Execute command
+                delZam.Prepare();
+                delZam.ExecuteNonQuery();
+
+                MessageBox.Show("Uživatel úspěšně přidán");
+            }
+            sql.Close();
+        }
     }
 }
