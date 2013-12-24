@@ -111,6 +111,12 @@
     <Compile Include="odstraneniUzivatele.Designer.cs">
       <DependentUpon>odstraneniUzivatele.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProblemsZam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProblemsZam.Designer.cs">
+      <DependentUpon>ProblemsZam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PřidatUzivatele.cs">
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="odstraneniUzivatele.resx">
       <DependentUpon>odstraneniUzivatele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProblemsZam.resx">
+      <DependentUpon>ProblemsZam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
