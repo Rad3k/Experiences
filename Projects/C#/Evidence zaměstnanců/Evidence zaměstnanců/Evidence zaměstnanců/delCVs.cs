@@ -25,7 +25,7 @@ namespace Evidence_zaměstnanců
 
         private void delete_Click(object sender, EventArgs e)
         {
-            if (jmenoText.Text == null && prijmeniText.Text == null)
+            if (jmenoText.Text == "" && prijmeniText.Text == "")
                 MessageBox.Show("Jméno nebo přijmení neni vyplněno, prosím vyplňte je!");
             else
             {

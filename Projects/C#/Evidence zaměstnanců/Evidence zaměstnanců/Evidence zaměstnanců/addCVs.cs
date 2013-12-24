@@ -36,13 +36,18 @@ namespace Evidence_zaměstnanců
 
         private void finish_Click(object sender, EventArgs e)
         {
-            if (jmenoText.Text == null && prijmeniText.Text == null)
+            if (jmenoText.Text == "" && prijmeniText.Text == "")
                 MessageBox.Show("Jméno nebo přijmení neni vyplněno, prosím vyplňte je!");
             else
             {
-                Transactions tran = new Transactions(UniqueValue.FullPathConfig);
-                tran.selectID(new SqlConnection(UniqueValue.FullPathConfig), jmenoText.Text, prijmeniText.Text);
-                tran.addCVs(new SqlConnection(UniqueValue.FullPathConfig), tran.ID, traceToFileText.Text);
+                if (traceToFileText.Text == "")
+                    MessageBox.Show("Cesta k souboru neni vyplněna, uveďte jí!");
+                else
+                {
+                    Transactions tran = new Transactions(UniqueValue.FullPathConfig);
+                    tran.selectID(new SqlConnection(UniqueValue.FullPathConfig), jmenoText.Text, prijmeniText.Text);
+                    tran.addCVs(new SqlConnection(UniqueValue.FullPathConfig), tran.ID, traceToFileText.Text);
+                }
             }
         }
     }
