@@ -164,6 +164,8 @@
     <EmbeddedResource Include="PřidatUzivatele.resx">
       <DependentUpon>PřidatUzivatele.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportProblems.rdlc" />
+    <EmbeddedResource Include="ReportSmlouvy.rdlc" />
     <EmbeddedResource Include="ReportMzdy.rdlc" />
     <EmbeddedResource Include="ReportZam.rdlc" />
     <EmbeddedResource Include="Resource.resx">

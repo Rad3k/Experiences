@@ -1,6 +1,6 @@
 ﻿namespace Evidence_zaměstnanců
 {
-    partial class statistikaMzdy
+    partial class controlZam
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.EmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.EvidenceDB = new Evidence_zaměstnanců.EvidenceDB();
             this.reportZam = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -51,9 +51,9 @@
             // reportZam
             // 
             this.reportZam.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.EmployeeBindingSource;
-            this.reportZam.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.EmployeeBindingSource;
+            this.reportZam.LocalReport.DataSources.Add(reportDataSource2);
             this.reportZam.LocalReport.ReportEmbeddedResource = "Evidence_zaměstnanců.ReportZam.rdlc";
             this.reportZam.Location = new System.Drawing.Point(0, 0);
             this.reportZam.Name = "reportZam";
@@ -64,13 +64,13 @@
             // 
             this.EmployeeTableAdapter.ClearBeforeFill = true;
             // 
-            // statistikaMzdy
+            // controlZam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 536);
             this.Controls.Add(this.reportZam);
-            this.Name = "statistikaMzdy";
+            this.Name = "controlZam";
             this.Text = "Kontrola zaměstnanců";
             this.Load += new System.EventHandler(this.controlZam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).EndInit();

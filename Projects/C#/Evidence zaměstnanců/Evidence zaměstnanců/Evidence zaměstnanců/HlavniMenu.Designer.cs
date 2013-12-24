@@ -39,18 +39,13 @@
             this.smlouvyZam = new System.Windows.Forms.ToolStripMenuItem();
             this.zamSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.problemZam = new System.Windows.Forms.ToolStripMenuItem();
-            this.mzdyZam = new System.Windows.Forms.ToolStripMenuItem();
-            this.vypocetMzdy = new System.Windows.Forms.ToolStripMenuItem();
-            this.mzdySeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.zobrazeniMzdy = new System.Windows.Forms.ToolStripMenuItem();
-            this.mzdySeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.nakladyZam = new System.Windows.Forms.ToolStripMenuItem();
             this.evidenceCVs = new System.Windows.Forms.ToolStripMenuItem();
             this.addCVs = new System.Windows.Forms.ToolStripMenuItem();
             this.separatorCVs1 = new System.Windows.Forms.ToolStripSeparator();
             this.editCVs = new System.Windows.Forms.ToolStripMenuItem();
             this.separatorCVs2 = new System.Windows.Forms.ToolStripSeparator();
             this.delCVs = new System.Windows.Forms.ToolStripMenuItem();
+            this.statisticsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.programPanel = new System.Windows.Forms.MenuStrip();
             this.navigačníPanelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.websiteItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +54,6 @@
             this.technickSupportLink = new System.Windows.Forms.ToolStripMenuItem();
             this.infoProgram = new System.Windows.Forms.ToolStripMenuItem();
             this.selectDB = new System.Windows.Forms.ToolStripComboBox();
-            this.statisticsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.programPanel.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +67,6 @@
             this.MainMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.zamMenu,
-            this.mzdyZam,
             this.evidenceCVs,
             this.statisticsMenu});
             this.MainMenu.Location = new System.Drawing.Point(0, 29);
@@ -155,46 +148,6 @@
             this.problemZam.Text = "Problémový zaměstnanci";
             this.problemZam.Click += new System.EventHandler(this.problemZam_Click);
             // 
-            // mzdyZam
-            // 
-            this.mzdyZam.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vypocetMzdy,
-            this.mzdySeparator1,
-            this.zobrazeniMzdy,
-            this.mzdySeparator2,
-            this.nakladyZam});
-            this.mzdyZam.Name = "mzdyZam";
-            this.mzdyZam.Size = new System.Drawing.Size(119, 19);
-            this.mzdyZam.Text = "Mzdy zaměstnanců";
-            // 
-            // vypocetMzdy
-            // 
-            this.vypocetMzdy.Name = "vypocetMzdy";
-            this.vypocetMzdy.Size = new System.Drawing.Size(205, 22);
-            this.vypocetMzdy.Text = "Výpočet mzdy";
-            // 
-            // mzdySeparator1
-            // 
-            this.mzdySeparator1.Name = "mzdySeparator1";
-            this.mzdySeparator1.Size = new System.Drawing.Size(202, 6);
-            // 
-            // zobrazeniMzdy
-            // 
-            this.zobrazeniMzdy.Name = "zobrazeniMzdy";
-            this.zobrazeniMzdy.Size = new System.Drawing.Size(205, 22);
-            this.zobrazeniMzdy.Text = "Mzdy";
-            // 
-            // mzdySeparator2
-            // 
-            this.mzdySeparator2.Name = "mzdySeparator2";
-            this.mzdySeparator2.Size = new System.Drawing.Size(202, 6);
-            // 
-            // nakladyZam
-            // 
-            this.nakladyZam.Name = "nakladyZam";
-            this.nakladyZam.Size = new System.Drawing.Size(205, 22);
-            this.nakladyZam.Text = "Náklady na zaměstnance";
-            // 
             // evidenceCVs
             // 
             this.evidenceCVs.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -237,6 +190,13 @@
             this.delCVs.Size = new System.Drawing.Size(173, 22);
             this.delCVs.Text = "Odstranit životopis";
             this.delCVs.Click += new System.EventHandler(this.delCVs_Click);
+            // 
+            // statisticsMenu
+            // 
+            this.statisticsMenu.Name = "statisticsMenu";
+            this.statisticsMenu.Size = new System.Drawing.Size(119, 19);
+            this.statisticsMenu.Text = "Statistika";
+            this.statisticsMenu.Click += new System.EventHandler(this.statisticsMenu_Click);
             // 
             // programPanel
             // 
@@ -322,13 +282,6 @@
             this.selectDB.Size = new System.Drawing.Size(121, 25);
             this.selectDB.Click += new System.EventHandler(this.selectDB_Click);
             // 
-            // statisticsMenu
-            // 
-            this.statisticsMenu.Name = "statisticsMenu";
-            this.statisticsMenu.Size = new System.Drawing.Size(119, 19);
-            this.statisticsMenu.Text = "Statistika";
-            this.statisticsMenu.Click += new System.EventHandler(this.statisticsMenu_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -364,10 +317,6 @@
         private System.Windows.Forms.ToolStripMenuItem smlouvyZam;
         private System.Windows.Forms.ToolStripSeparator zamSeparator4;
         private System.Windows.Forms.ToolStripMenuItem problemZam;
-        private System.Windows.Forms.ToolStripMenuItem mzdyZam;
-        private System.Windows.Forms.ToolStripMenuItem vypocetMzdy;
-        private System.Windows.Forms.ToolStripMenuItem zobrazeniMzdy;
-        private System.Windows.Forms.ToolStripMenuItem nakladyZam;
         private System.Windows.Forms.ToolStripMenuItem websiteItem;
         private System.Windows.Forms.ToolStripComboBox selectDB;
         private System.Windows.Forms.ToolStripMenuItem evidenceCVs;
@@ -376,8 +325,6 @@
         private System.Windows.Forms.ToolStripMenuItem delCVs;
         private System.Windows.Forms.ToolStripMenuItem repozitaryLink;
         private System.Windows.Forms.ToolStripMenuItem technickSupportLink;
-        private System.Windows.Forms.ToolStripSeparator mzdySeparator1;
-        private System.Windows.Forms.ToolStripSeparator mzdySeparator2;
         private System.Windows.Forms.ToolStripSeparator separatorCVs1;
         private System.Windows.Forms.ToolStripSeparator separatorCVs2;
         private System.Windows.Forms.ToolStripMenuItem statisticsMenu;

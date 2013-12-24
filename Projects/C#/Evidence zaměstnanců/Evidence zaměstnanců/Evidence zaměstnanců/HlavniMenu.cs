@@ -64,7 +64,7 @@ namespace Evidence_zaměstnanců
 
         private void controlZam_Click(object sender, EventArgs e)
         {
-            statistikaMzdy control = new statistikaMzdy();
+            controlZam control = new controlZam();
             control.Show();
         }
 

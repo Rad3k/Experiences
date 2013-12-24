@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Evidence_zaměstnanců
 {
-    public partial class statistikaMzdy : Form
+    public partial class controlZam : Form
     {
-        public statistikaMzdy()
+        public controlZam()
         {
             InitializeComponent();
         }
