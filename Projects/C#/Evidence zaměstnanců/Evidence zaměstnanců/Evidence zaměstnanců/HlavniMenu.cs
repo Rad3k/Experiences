@@ -64,6 +64,8 @@ namespace Evidence_zaměstnanců
 
         private void controlZam_Click(object sender, EventArgs e)
         {
+            controlZam control = new controlZam();
+            control.Show();
         }
 
         private void smlouvyZam_Click(object sender, EventArgs e)

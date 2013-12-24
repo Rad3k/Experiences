@@ -1,0 +1,88 @@
+﻿namespace Evidence_zaměstnanců
+{
+    partial class controlZam
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.reportZam = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.EvidenceDB = new Evidence_zaměstnanců.EvidenceDB();
+            this.EmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.EmployeeTableAdapter = new Evidence_zaměstnanců.EvidenceDBTableAdapters.EmployeeTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.EvidenceDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // reportZam
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.EmployeeBindingSource;
+            this.reportZam.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportZam.LocalReport.ReportEmbeddedResource = "Evidence_zaměstnanců.Report1.rdlc";
+            this.reportZam.Location = new System.Drawing.Point(-1, 0);
+            this.reportZam.Name = "reportZam";
+            this.reportZam.Size = new System.Drawing.Size(853, 537);
+            this.reportZam.TabIndex = 0;
+            // 
+            // EvidenceDB
+            // 
+            this.EvidenceDB.DataSetName = "EvidenceDB";
+            this.EvidenceDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // EmployeeBindingSource
+            // 
+            this.EmployeeBindingSource.DataMember = "Employee";
+            this.EmployeeBindingSource.DataSource = this.EvidenceDB;
+            // 
+            // EmployeeTableAdapter
+            // 
+            this.EmployeeTableAdapter.ClearBeforeFill = true;
+            // 
+            // controlZam
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(851, 536);
+            this.Controls.Add(this.reportZam);
+            this.Name = "controlZam";
+            this.Text = "Kontrola zaměstnanců";
+            this.Load += new System.EventHandler(this.controlZam_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.EvidenceDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportZam;
+        private System.Windows.Forms.BindingSource EmployeeBindingSource;
+        private EvidenceDB EvidenceDB;
+        private EvidenceDBTableAdapters.EmployeeTableAdapter EmployeeTableAdapter;
+    }
+}

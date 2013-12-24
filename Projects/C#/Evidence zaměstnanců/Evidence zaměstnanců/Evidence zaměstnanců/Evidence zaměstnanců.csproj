@@ -47,11 +47,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +73,17 @@
     </Compile>
     <Compile Include="Collections.cs" />
     <Compile Include="ComboBox_selectDB.cs" />
+    <Compile Include="controlZam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controlZam.Designer.cs">
+      <DependentUpon>controlZam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvidenceDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EvidenceDB.xsd</DependentUpon>
+    </Compile>
     <Compile Include="HashPassword.cs" />
     <Compile Include="HlavniMenu.cs">
       <SubType>Form</SubType>
@@ -117,6 +131,9 @@
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="controlZam.resx">
+      <DependentUpon>controlZam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HlavniMenu.resx">
       <DependentUpon>HlavniMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,11 +158,22 @@
     <EmbeddedResource Include="PřidatUzivatele.resx">
       <DependentUpon>PřidatUzivatele.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="reportZamestnancu.rdlc" />
+    <EmbeddedResource Include="ReportZam.rdlc" />
     <EmbeddedResource Include="Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="EvidenceDB.xsc">
+      <DependentUpon>EvidenceDB.xsd</DependentUpon>
+    </None>
+    <None Include="EvidenceDB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EvidenceDB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="EvidenceDB.xss">
+      <DependentUpon>EvidenceDB.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
