@@ -23,7 +23,7 @@ AS
 SET NOCOUNT ON;
 BEGIN TRY
    BEGIN TRANSACTION 
-	UPDATE dbo.Employee SET [Status] = '1' WHERE datumUkonceni < GETDATE()
+	UPDATE dbo.Employee SET [Status] = '0' WHERE datumUkonceni < GETDATE()
 	COMMIT
 
 END TRY
@@ -55,7 +55,7 @@ AS
 SET NOCOUNT ON;
 BEGIN TRY
    BEGIN TRANSACTION 
-	UPDATE dbo.Employee SET [Status] = '1' WHERE datumUkonceni < GETDATE() and id = @id
+	UPDATE dbo.Employee SET [Status] = '0' WHERE datumUkonceni < GETDATE() and id = @id
 	COMMIT
 
 END TRY

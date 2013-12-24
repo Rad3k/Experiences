@@ -66,7 +66,7 @@ namespace Evidence_zaměstnanců
         }
 
         public void addZam(SqlConnection sql, string jmeno, string prijmeni, string Email, string rodneCislo, string pracovniPozice, string telefonPrace, string faxPrace, string telefonDomu
-            , string mobilDomu, string doplnujiciUdaje, string ulice, string mesto, string stat, string cp, string co, string mzda, string pobocka, string utvar, DateTimePicker denNastupu, DateTimePicker denUkonceni)
+            , string mobilDomu, string doplnujiciUdaje, string ulice, string mesto, string stat, string cp, string co, string mzda, string pobocka, string utvar, DateTimePicker denNastupu, DateTimePicker denUkonceni, int problem)
         {
             sql.Open();
             using (SqlCommand addZam = new SqlCommand("INSERT INTO dbo.Employee VALUES (1, @jmeno, @prijmeni, @email, @rodneCislo, @pracovniPozice, @telefonPrace, @faxPrace, @telefonDomu, " +
@@ -94,6 +94,7 @@ namespace Evidence_zaměstnanců
                 SqlParameter utvarParam = new SqlParameter("@utvar", SqlDbType.Char, 2);
                 SqlParameter denNastupuParam = new SqlParameter("@denNastupu", SqlDbType.Date);
                 SqlParameter denUkonceniParam = new SqlParameter("@denUkonceni", SqlDbType.Date);
+                SqlParameter problemParam = new SqlParameter("@problem", SqlDbType.Int);
 
                 // Definitions for parameters
                 jmenoParam.Value = jmeno;
@@ -116,6 +117,7 @@ namespace Evidence_zaměstnanců
                 utvarParam.Value = utvar;
                 denNastupuParam.Value = denNastupu.Value;
                 denUkonceniParam.Value = denUkonceni.Value;
+                problemParam.Value = problem;
 
                 // Add parameters
                 addZam.Parameters.Add(jmenoParam);
@@ -138,6 +140,7 @@ namespace Evidence_zaměstnanců
                 addZam.Parameters.Add(utvarParam);
                 addZam.Parameters.Add(denNastupuParam);
                 addZam.Parameters.Add(denUkonceniParam);
+                addZam.Parameters.Add(problemParam);
 
                 // Execute command
                 addZam.Prepare();
@@ -171,6 +174,56 @@ namespace Evidence_zaměstnanců
                 delZam.ExecuteNonQuery();
 
                 MessageBox.Show("Uživatel úspěšně přidán");
+            }
+            sql.Close();
+        }
+
+        public void selectZam(SqlConnection sql, string jmeno, string prijmeni)
+        {
+            sql.Open();
+            using (SqlCommand selectZam = new SqlCommand("SELECT * FROM dbo.Employee WHERE Jmeno = @jmeno or Prijmeni = @prijmeni", sql))
+            {
+                selectZam.Parameters.Clear();
+                SqlParameter jmenoParam = new SqlParameter("@jmeno", SqlDbType.VarChar, 20);
+                SqlParameter prijmeniParam = new SqlParameter("@prijmeni", SqlDbType.VarChar, 20);
+                jmenoParam.Value = jmeno;
+                prijmeniParam.Value = prijmeni;
+                selectZam.Parameters.Add(jmenoParam);
+                selectZam.Parameters.Add(prijmeniParam);
+                selectZam.Prepare();
+
+                using (SqlDataReader readerData = selectZam.ExecuteReader())
+                {
+                    while (readerData.Read())
+                    {
+                        for (int i = 0; i < readerData.FieldCount; i++)
+                            if (readerData.IsDBNull(i))
+                                continue;
+
+                        // Dynamic value for login dialog
+                        ID = readerData.GetInt32(0);
+                        Jmeno = readerData.GetString(1);
+                        Prijmeni = readerData.GetString(2);
+                        email = readerData.GetString(3);
+                        RodneCislo = readerData.GetString(4);
+                        PracovniPozice = readerData.GetString(5);
+                        TelefonPrace = readerData.GetString(6);
+                        FaxPrace = readerData.GetString(7);
+                        TelefonDomu = readerData.GetString(8);
+                        MobilDomu = readerData.GetString(9);
+                        DoplnujiciUdaje = readerData.GetString(10);
+                        Ulice = readerData.GetString(11);
+                        Mesto = readerData.GetString(12);
+                        Stat = readerData.GetString(13);
+                        CP = readerData.GetInt32(14);
+                        CO = readerData.GetInt32(15);
+                        Mzda = readerData.GetDouble(16);
+                        Pobocka = readerData.GetString(17);
+                        Utvar = readerData.GetString(18);
+                        datumNastupu = readerData.GetDateTime(19);
+                        datumUkonceni = readerData.GetDateTime(20);
+                    }
+                }
             }
             sql.Close();
         }

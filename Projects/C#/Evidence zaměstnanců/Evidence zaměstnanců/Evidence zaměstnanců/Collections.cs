@@ -27,5 +27,28 @@ namespace Evidence_zaměstnanců
         public string version;
         public DateTime date;
         public DateTime lastChanged;
+
+        // Informace o zaměstnanci
+        public int ID;
+        public string Jmeno;
+        public string Prijmeni;
+        public string email;
+        public string RodneCislo;
+        public string PracovniPozice;
+        public string TelefonPrace;
+        public string FaxPrace;
+        public string TelefonDomu;
+        public string MobilDomu;
+        public string DoplnujiciUdaje;
+        public string Ulice;
+        public string Mesto;
+        public string Stat;
+        public int CP;
+        public int CO;
+        public double Mzda;
+        public string Pobocka;
+        public string Utvar;
+        public DateTime datumNastupu;
+        public DateTime datumUkonceni;
     }
 }

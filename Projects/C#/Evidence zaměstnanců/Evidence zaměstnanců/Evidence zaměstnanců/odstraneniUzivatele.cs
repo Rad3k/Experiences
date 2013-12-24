@@ -20,8 +20,13 @@ namespace Evidence_zaměstnanců
 
         private void delete_Click(object sender, EventArgs e)
         {
-            Transactions tran = new Transactions(UniqueValue.FullPathConfig);
-            tran.delZam(new SqlConnection(UniqueValue.FullPathConfig), jmenoText.Text, prijmeniText.Text);
+            if (jmenoText.Text == null && prijmeniText.Text == null)
+                MessageBox.Show("Jméno nebo přijmení neni vyplněno, prosím vyplňte je!");
+            else
+            {
+                Transactions tran = new Transactions(UniqueValue.FullPathConfig);
+                tran.delZam(new SqlConnection(UniqueValue.FullPathConfig), jmenoText.Text, prijmeniText.Text);
+            }
         }
     }
 }

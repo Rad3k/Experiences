@@ -73,6 +73,9 @@
             this.denNastupu = new System.Windows.Forms.Label();
             this.datumNastupuTime = new System.Windows.Forms.DateTimePicker();
             this.datumUkonceniTime = new System.Windows.Forms.DateTimePicker();
+            this.troubledZamCheck = new System.Windows.Forms.CheckBox();
+            this.update = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // jmeno
@@ -445,11 +448,44 @@
             this.datumUkonceniTime.Size = new System.Drawing.Size(126, 20);
             this.datumUkonceniTime.TabIndex = 44;
             // 
+            // troubledZamCheck
+            // 
+            this.troubledZamCheck.AutoSize = true;
+            this.troubledZamCheck.Location = new System.Drawing.Point(412, 332);
+            this.troubledZamCheck.Name = "troubledZamCheck";
+            this.troubledZamCheck.Size = new System.Drawing.Size(81, 17);
+            this.troubledZamCheck.TabIndex = 45;
+            this.troubledZamCheck.Text = "Problémový";
+            this.troubledZamCheck.UseVisualStyleBackColor = true;
+            // 
+            // update
+            // 
+            this.update.Location = new System.Drawing.Point(248, 396);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(75, 23);
+            this.update.TabIndex = 46;
+            this.update.Text = "Update";
+            this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
+            // 
+            // search
+            // 
+            this.search.Location = new System.Drawing.Point(248, 367);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(75, 23);
+            this.search.TabIndex = 47;
+            this.search.Text = "Vyhledat";
+            this.search.UseVisualStyleBackColor = true;
+            this.search.Click += new System.EventHandler(this.search_Click);
+            // 
             // pridatUzivatele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 431);
+            this.Controls.Add(this.search);
+            this.Controls.Add(this.update);
+            this.Controls.Add(this.troubledZamCheck);
             this.Controls.Add(this.datumUkonceniTime);
             this.Controls.Add(this.datumNastupuTime);
             this.Controls.Add(this.denNastupu);
@@ -547,5 +583,8 @@
         private System.Windows.Forms.Label denNastupu;
         private System.Windows.Forms.DateTimePicker datumNastupuTime;
         private System.Windows.Forms.DateTimePicker datumUkonceniTime;
+        private System.Windows.Forms.CheckBox troubledZamCheck;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Button search;
     }
 }
