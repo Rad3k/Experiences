@@ -79,6 +79,10 @@
     <Compile Include="controlZam.Designer.cs">
       <DependentUpon>controlZam.cs</DependentUpon>
     </Compile>
+    <Compile Include="EvidenceDB.cs">
+      <DependentUpon>EvidenceDB.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="EvidenceDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,6 +142,12 @@
       <DependentUpon>Statistics.cs</DependentUpon>
     </Compile>
     <Compile Include="Transactions.cs" />
+    <Compile Include="UkonceneSmlouvy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UkonceneSmlouvy.Designer.cs">
+      <DependentUpon>UkonceneSmlouvy.cs</DependentUpon>
+    </Compile>
     <Compile Include="UniqueValue.cs" />
     <Compile Include="website.cs" />
     <EmbeddedResource Include="ChangePassword.resx">
@@ -183,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Statistics.resx">
       <DependentUpon>Statistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UkonceneSmlouvy.resx">
+      <DependentUpon>UkonceneSmlouvy.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="EvidenceDB.xsc">
       <DependentUpon>EvidenceDB.xsd</DependentUpon>
