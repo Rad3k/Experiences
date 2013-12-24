@@ -30,34 +30,34 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportZam = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.EvidenceDB = new Evidence_zaměstnanců.EvidenceDB();
             this.EmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.EvidenceDB = new Evidence_zaměstnanců.EvidenceDB();
+            this.reportZam = new Microsoft.Reporting.WinForms.ReportViewer();
             this.EmployeeTableAdapter = new Evidence_zaměstnanců.EvidenceDBTableAdapters.EmployeeTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.EvidenceDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EvidenceDB)).BeginInit();
             this.SuspendLayout();
             // 
-            // reportZam
+            // EmployeeBindingSource
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.EmployeeBindingSource;
-            this.reportZam.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportZam.LocalReport.ReportEmbeddedResource = "Evidence_zaměstnanců.Report1.rdlc";
-            this.reportZam.Location = new System.Drawing.Point(-1, 0);
-            this.reportZam.Name = "reportZam";
-            this.reportZam.Size = new System.Drawing.Size(853, 537);
-            this.reportZam.TabIndex = 0;
+            this.EmployeeBindingSource.DataMember = "Employee";
+            this.EmployeeBindingSource.DataSource = this.EvidenceDB;
             // 
             // EvidenceDB
             // 
             this.EvidenceDB.DataSetName = "EvidenceDB";
             this.EvidenceDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // EmployeeBindingSource
+            // reportZam
             // 
-            this.EmployeeBindingSource.DataMember = "Employee";
-            this.EmployeeBindingSource.DataSource = this.EvidenceDB;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.EmployeeBindingSource;
+            this.reportZam.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportZam.LocalReport.ReportEmbeddedResource = "Evidence_zaměstnanců.ReportZam.rdlc";
+            this.reportZam.Location = new System.Drawing.Point(-1, 0);
+            this.reportZam.Name = "reportZam";
+            this.reportZam.Size = new System.Drawing.Size(853, 537);
+            this.reportZam.TabIndex = 0;
             // 
             // EmployeeTableAdapter
             // 
@@ -72,8 +72,8 @@
             this.Name = "controlZam";
             this.Text = "Kontrola zaměstnanců";
             this.Load += new System.EventHandler(this.controlZam_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.EvidenceDB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EvidenceDB)).EndInit();
             this.ResumeLayout(false);
 
         }
