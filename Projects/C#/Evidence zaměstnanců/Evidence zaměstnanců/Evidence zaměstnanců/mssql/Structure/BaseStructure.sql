@@ -41,6 +41,7 @@ CREATE TABLE Employee
 	datumNastupu date,
 	datumUkonceni date,
 	[Status] char(1),
+	Troubled char(1),
 )
 
 CREATE TABLE TroubledEmployees

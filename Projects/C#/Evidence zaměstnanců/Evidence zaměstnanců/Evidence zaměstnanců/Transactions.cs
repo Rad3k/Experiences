@@ -70,7 +70,7 @@ namespace Evidence_zaměstnanců
         {
             sql.Open();
             using (SqlCommand addZam = new SqlCommand("INSERT INTO dbo.Employee VALUES (1, @jmeno, @prijmeni, @email, @rodneCislo, @pracovniPozice, @telefonPrace, @faxPrace, @telefonDomu, " +
-                "@mobilDomu, @doplnUdaje, @ulice, @mesto, @stat, @cp, @co, @mzda, @pobocka, @utvar, @denNastupu, @denUkonceni, 1)", sql))
+                "@mobilDomu, @doplnUdaje, @ulice, @mesto, @stat, @cp, @co, @mzda, @pobocka, @utvar, @denNastupu, @denUkonceni, 1, 0)", sql))
             {
                 addZam.Parameters.Clear();
                 // Parameters
