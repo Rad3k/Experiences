@@ -22,8 +22,7 @@ namespace Evidence_zaměstnanců
         private void selectDB_Click(object sender, EventArgs e)
         {
             selectDB.Items.Clear();
-            selectDB.Items.Add(new ComboBox_selectDB("1", "HlavníDB"));
-            selectDB.Items.Add(new ComboBox_selectDB("2", "Test"));
+            selectDB.Items.Add(new ComboBox_selectDB("1", "Evidence"));
         }
 
         private void infoProgram_Click(object sender, EventArgs e)
