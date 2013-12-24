@@ -21,7 +21,7 @@ CREATE TABLE Employee
 (
 	ID INT CONSTRAINT PrimaryIndex PRIMARY KEY,
 	Jmeno varchar(20) CHECK (Jmeno is not null AND Jmeno <> ''),
-	Prijemni varchar(20) CHECK (Prijemni is not null AND Prijemni <> ''),
+	Prijmeni varchar(20) CHECK (Prijmeni is not null AND Prijmeni <> ''),
 	Email varchar(30),
 	RodneCislo varchar(30),
 	PracovniPozice varchar(100),
@@ -38,4 +38,7 @@ CREATE TABLE Employee
 	Mzda money,
 	Pobocka char(2),
 	Utvar char(2),
+	datumNastupu date,
+	datumUkonceni date,
+	[Status] char(1),
 )

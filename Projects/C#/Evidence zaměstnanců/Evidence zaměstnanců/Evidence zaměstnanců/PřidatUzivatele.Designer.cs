@@ -69,6 +69,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.rodneCisloText = new System.Windows.Forms.TextBox();
             this.statText = new System.Windows.Forms.TextBox();
+            this.datumUkonceni = new System.Windows.Forms.Label();
+            this.denNastupu = new System.Windows.Forms.Label();
+            this.datumNastupuTime = new System.Windows.Forms.DateTimePicker();
+            this.datumUkonceniTime = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // jmeno
@@ -207,7 +211,7 @@
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape2,
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(578, 363);
+            this.shapeContainer1.Size = new System.Drawing.Size(578, 431);
             this.shapeContainer1.TabIndex = 16;
             this.shapeContainer1.TabStop = false;
             // 
@@ -359,7 +363,7 @@
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(36, 311);
+            this.cancel.Location = new System.Drawing.Point(36, 383);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(126, 36);
             this.cancel.TabIndex = 33;
@@ -369,7 +373,7 @@
             // 
             // pridat
             // 
-            this.pridat.Location = new System.Drawing.Point(412, 311);
+            this.pridat.Location = new System.Drawing.Point(412, 383);
             this.pridat.Name = "pridat";
             this.pridat.Size = new System.Drawing.Size(126, 36);
             this.pridat.TabIndex = 34;
@@ -409,11 +413,47 @@
             this.statText.Size = new System.Drawing.Size(126, 20);
             this.statText.TabIndex = 38;
             // 
+            // datumUkonceni
+            // 
+            this.datumUkonceni.AutoSize = true;
+            this.datumUkonceni.Location = new System.Drawing.Point(309, 309);
+            this.datumUkonceni.Name = "datumUkonceni";
+            this.datumUkonceni.Size = new System.Drawing.Size(90, 13);
+            this.datumUkonceni.TabIndex = 41;
+            this.datumUkonceni.Text = "Datum ukončení:";
+            // 
+            // denNastupu
+            // 
+            this.denNastupu.AutoSize = true;
+            this.denNastupu.Location = new System.Drawing.Point(34, 309);
+            this.denNastupu.Name = "denNastupu";
+            this.denNastupu.Size = new System.Drawing.Size(82, 13);
+            this.denNastupu.TabIndex = 42;
+            this.denNastupu.Text = "Datum nástupu:";
+            // 
+            // datumNastupuTime
+            // 
+            this.datumNastupuTime.Location = new System.Drawing.Point(133, 303);
+            this.datumNastupuTime.Name = "datumNastupuTime";
+            this.datumNastupuTime.Size = new System.Drawing.Size(128, 20);
+            this.datumNastupuTime.TabIndex = 43;
+            // 
+            // datumUkonceniTime
+            // 
+            this.datumUkonceniTime.Location = new System.Drawing.Point(412, 306);
+            this.datumUkonceniTime.Name = "datumUkonceniTime";
+            this.datumUkonceniTime.Size = new System.Drawing.Size(126, 20);
+            this.datumUkonceniTime.TabIndex = 44;
+            // 
             // pridatUzivatele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 363);
+            this.ClientSize = new System.Drawing.Size(578, 431);
+            this.Controls.Add(this.datumUkonceniTime);
+            this.Controls.Add(this.datumNastupuTime);
+            this.Controls.Add(this.denNastupu);
+            this.Controls.Add(this.datumUkonceni);
             this.Controls.Add(this.statText);
             this.Controls.Add(this.rodneCisloText);
             this.Controls.Add(this.label2);
@@ -503,5 +543,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox rodneCisloText;
         private System.Windows.Forms.TextBox statText;
+        private System.Windows.Forms.Label datumUkonceni;
+        private System.Windows.Forms.Label denNastupu;
+        private System.Windows.Forms.DateTimePicker datumNastupuTime;
+        private System.Windows.Forms.DateTimePicker datumUkonceniTime;
     }
 }

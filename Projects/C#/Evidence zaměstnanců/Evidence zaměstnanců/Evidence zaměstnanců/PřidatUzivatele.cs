@@ -28,7 +28,9 @@ namespace Evidence_zaměstnanců
             Transactions tran = new Transactions(UniqueValue.FullPathConfig);
             tran.addZam(new SqlConnection(UniqueValue.FullPathConfig), jmenoText.Text, prijmeniText.Text, emailText.Text, rodneCisloText.Text, pracovniPoziceText.Text
                 , telPraceText.Text, faxPraceText.Text, telDomuText.Text, mobilText.Text, doplnUdajeText.Text, uliceText.Text, mestoText.Text, statText.Text, cpText.Text, coText.Text
-                , mzdaText.Text, pobockaText.Text, utvarText.Text);
+                , mzdaText.Text, pobockaText.Text, utvarText.Text, datumNastupuTime, datumUkonceniTime);
+
+            Close();
         }
     }
 }

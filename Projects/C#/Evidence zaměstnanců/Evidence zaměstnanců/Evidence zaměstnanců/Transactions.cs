@@ -66,11 +66,11 @@ namespace Evidence_zaměstnanců
         }
 
         public void addZam(SqlConnection sql, string jmeno, string prijmeni, string Email, string rodneCislo, string pracovniPozice, string telefonPrace, string faxPrace, string telefonDomu
-            , string mobilDomu, string doplnujiciUdaje, string ulice, string mesto, string stat, string cp, string co, string mzda, string pobocka, string utvar)
+            , string mobilDomu, string doplnujiciUdaje, string ulice, string mesto, string stat, string cp, string co, string mzda, string pobocka, string utvar, DateTimePicker denNastupu, DateTimePicker denUkonceni)
         {
             sql.Open();
-            using (SqlCommand addZam = new SqlCommand("INSERT INTO dbo.Employee VALUES (@jmeno, @prijmeni, @email, @rodneCislo, @pracovniPozice, @telefonPrace, @faxPrace, @telefonDomu, " +
-                "@mobilDomu, @doplnUdaje, @ulice, @mesto, @stat, @cp, @co, @mzda, @pobocka, @utvar)", sql))
+            using (SqlCommand addZam = new SqlCommand("INSERT INTO dbo.Employee VALUES (1, @jmeno, @prijmeni, @email, @rodneCislo, @pracovniPozice, @telefonPrace, @faxPrace, @telefonDomu, " +
+                "@mobilDomu, @doplnUdaje, @ulice, @mesto, @stat, @cp, @co, @mzda, @pobocka, @utvar, @denNastupu, @denUkonceni, 1)", sql))
             {
                 addZam.Parameters.Clear();
                 // Parameters
@@ -92,6 +92,8 @@ namespace Evidence_zaměstnanců
                 SqlParameter mzdaParam = new SqlParameter("@mzda", SqlDbType.Money);
                 SqlParameter pobockaParam = new SqlParameter("@pobocka", SqlDbType.Char, 2);
                 SqlParameter utvarParam = new SqlParameter("@utvar", SqlDbType.Char, 2);
+                SqlParameter denNastupuParam = new SqlParameter("@denNastupu", SqlDbType.Date);
+                SqlParameter denUkonceniParam = new SqlParameter("@denUkonceni", SqlDbType.Date);
 
                 // Definitions for parameters
                 jmenoParam.Value = jmeno;
@@ -112,6 +114,8 @@ namespace Evidence_zaměstnanců
                 mzdaParam.Value = mzda;
                 pobockaParam.Value = pobocka;
                 utvarParam.Value = utvar;
+                denNastupuParam.Value = denNastupu.Value;
+                denUkonceniParam.Value = denUkonceni.Value;
 
                 // Add parameters
                 addZam.Parameters.Add(jmenoParam);
@@ -132,6 +136,8 @@ namespace Evidence_zaměstnanců
                 addZam.Parameters.Add(mzdaParam);
                 addZam.Parameters.Add(pobockaParam);
                 addZam.Parameters.Add(utvarParam);
+                addZam.Parameters.Add(denNastupuParam);
+                addZam.Parameters.Add(denUkonceniParam);
 
                 // Execute command
                 addZam.Prepare();
@@ -145,7 +151,7 @@ namespace Evidence_zaměstnanců
         public void delZam(SqlConnection sql, string jmeno, string prijmeni)
         {
             sql.Open();
-            using (SqlCommand delZam = new SqlCommand("DELETE FROM dbo.Employee WHERE jmeno = @jmeno or prijmeni = @prijmeni", sql))
+            using (SqlCommand delZam = new SqlCommand("DELETE FROM dbo.Employee WHERE Jmeno = @jmeno or Prijmeni = @prijmeni", sql))
             {
                 delZam.Parameters.Clear();
                 // Parameters

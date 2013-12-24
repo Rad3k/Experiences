@@ -59,6 +59,7 @@
             this.technickSupportLink = new System.Windows.Forms.ToolStripMenuItem();
             this.infoProgram = new System.Windows.Forms.ToolStripMenuItem();
             this.selectDB = new System.Windows.Forms.ToolStripComboBox();
+            this.statisticsMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.programPanel.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +74,8 @@
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.zamMenu,
             this.mzdyZam,
-            this.evidenceCVs});
+            this.evidenceCVs,
+            this.statisticsMenu});
             this.MainMenu.Location = new System.Drawing.Point(0, 29);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(126, 413);
@@ -320,6 +322,13 @@
             this.selectDB.Size = new System.Drawing.Size(121, 25);
             this.selectDB.Click += new System.EventHandler(this.selectDB_Click);
             // 
+            // statisticsMenu
+            // 
+            this.statisticsMenu.Name = "statisticsMenu";
+            this.statisticsMenu.Size = new System.Drawing.Size(119, 19);
+            this.statisticsMenu.Text = "Statistika";
+            this.statisticsMenu.Click += new System.EventHandler(this.statisticsMenu_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,6 +380,7 @@
         private System.Windows.Forms.ToolStripSeparator mzdySeparator2;
         private System.Windows.Forms.ToolStripSeparator separatorCVs1;
         private System.Windows.Forms.ToolStripSeparator separatorCVs2;
+        private System.Windows.Forms.ToolStripMenuItem statisticsMenu;
     }
 }
 

@@ -64,7 +64,7 @@ namespace Evidence_zaměstnanců
 
         private void controlZam_Click(object sender, EventArgs e)
         {
-            controlZam control = new controlZam();
+            statistikaMzdy control = new statistikaMzdy();
             control.Show();
         }
 
@@ -91,6 +91,12 @@ namespace Evidence_zaměstnanců
         private void delCVs_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void statisticsMenu_Click(object sender, EventArgs e)
+        {
+            Statistics stat = new Statistics();
+            stat.Show();
         }
     }
 }
