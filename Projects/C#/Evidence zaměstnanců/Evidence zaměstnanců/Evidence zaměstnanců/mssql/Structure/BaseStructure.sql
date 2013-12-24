@@ -42,3 +42,11 @@ CREATE TABLE Employee
 	datumUkonceni date,
 	[Status] char(1),
 )
+
+CREATE TABLE TroubledEmployees
+(
+	ID INT CONSTRAINT PrimaryIndex PRIMARY KEY,
+	Jmeno varchar(20) CHECK (Jmeno is not null AND Jmeno <> ''),
+	Prijmeni varchar(20) CHECK (Prijmeni is not null AND Prijmeni <> ''),
+	Reason varchar(255),
+)

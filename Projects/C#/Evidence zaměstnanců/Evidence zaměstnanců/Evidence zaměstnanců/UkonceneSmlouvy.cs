@@ -19,6 +19,8 @@ namespace Evidence_zaměstnanců
 
         private void ukonceneSmlouvy_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'EvidenceDB.Employee' table. You can move, or remove it, as needed.
+            this.EmployeeTableAdapter.Fill(this.EvidenceDB.Employee);
 
             this.reportSmlouvy.RefreshReport();
         }

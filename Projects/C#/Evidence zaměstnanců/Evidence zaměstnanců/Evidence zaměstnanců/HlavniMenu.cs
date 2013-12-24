@@ -70,12 +70,14 @@ namespace Evidence_zaměstnanců
 
         private void smlouvyZam_Click(object sender, EventArgs e)
         {
-
+            ukonceneSmlouvy smlouvy = new ukonceneSmlouvy();
+            smlouvy.Show();
         }
 
         private void problemZam_Click(object sender, EventArgs e)
         {
-
+            problemsZam zam = new problemsZam();
+            zam.Show();
         }
 
         private void addCVs_Click(object sender, EventArgs e)

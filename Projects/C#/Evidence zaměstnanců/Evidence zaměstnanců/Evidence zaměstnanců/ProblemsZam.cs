@@ -19,6 +19,8 @@ namespace Evidence_zaměstnanců
 
         private void problemsZam_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'EvidenceDB.TroubledEmployees' table. You can move, or remove it, as needed.
+            this.TroubledEmployeesTableAdapter.Fill(this.EvidenceDB.TroubledEmployees);
 
             this.reportProblemZam.RefreshReport();
         }
