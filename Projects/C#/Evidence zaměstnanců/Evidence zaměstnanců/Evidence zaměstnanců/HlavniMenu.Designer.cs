@@ -41,8 +41,6 @@
             this.problemZam = new System.Windows.Forms.ToolStripMenuItem();
             this.evidenceCVs = new System.Windows.Forms.ToolStripMenuItem();
             this.addCVs = new System.Windows.Forms.ToolStripMenuItem();
-            this.separatorCVs1 = new System.Windows.Forms.ToolStripSeparator();
-            this.editCVs = new System.Windows.Forms.ToolStripMenuItem();
             this.separatorCVs2 = new System.Windows.Forms.ToolStripSeparator();
             this.delCVs = new System.Windows.Forms.ToolStripMenuItem();
             this.statisticsMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -152,8 +150,6 @@
             // 
             this.evidenceCVs.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addCVs,
-            this.separatorCVs1,
-            this.editCVs,
             this.separatorCVs2,
             this.delCVs});
             this.evidenceCVs.Name = "evidenceCVs";
@@ -166,18 +162,6 @@
             this.addCVs.Size = new System.Drawing.Size(173, 22);
             this.addCVs.Text = "Přidat životopis";
             this.addCVs.Click += new System.EventHandler(this.addCVs_Click);
-            // 
-            // separatorCVs1
-            // 
-            this.separatorCVs1.Name = "separatorCVs1";
-            this.separatorCVs1.Size = new System.Drawing.Size(170, 6);
-            // 
-            // editCVs
-            // 
-            this.editCVs.Name = "editCVs";
-            this.editCVs.Size = new System.Drawing.Size(173, 22);
-            this.editCVs.Text = "Upravit životopis";
-            this.editCVs.Click += new System.EventHandler(this.editCVs_Click);
             // 
             // separatorCVs2
             // 
@@ -321,11 +305,9 @@
         private System.Windows.Forms.ToolStripComboBox selectDB;
         private System.Windows.Forms.ToolStripMenuItem evidenceCVs;
         private System.Windows.Forms.ToolStripMenuItem addCVs;
-        private System.Windows.Forms.ToolStripMenuItem editCVs;
         private System.Windows.Forms.ToolStripMenuItem delCVs;
         private System.Windows.Forms.ToolStripMenuItem repozitaryLink;
         private System.Windows.Forms.ToolStripMenuItem technickSupportLink;
-        private System.Windows.Forms.ToolStripSeparator separatorCVs1;
         private System.Windows.Forms.ToolStripSeparator separatorCVs2;
         private System.Windows.Forms.ToolStripMenuItem statisticsMenu;
     }

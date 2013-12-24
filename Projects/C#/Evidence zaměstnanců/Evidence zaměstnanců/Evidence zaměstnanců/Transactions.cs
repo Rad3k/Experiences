@@ -146,7 +146,7 @@ namespace Evidence_zaměstnanců
                 addZam.Prepare();
                 addZam.ExecuteNonQuery();
 
-                MessageBox.Show("Uživatel úspěšně přidán");
+                MessageBox.Show("Uživatel úspěšně přidán/aktualizován");
             }
             sql.Close();
         }
@@ -173,7 +173,7 @@ namespace Evidence_zaměstnanců
                 delZam.Prepare();
                 delZam.ExecuteNonQuery();
 
-                MessageBox.Show("Uživatel úspěšně přidán");
+                MessageBox.Show("Uživatel úspěšně odstraněn");
             }
             sql.Close();
         }
@@ -224,6 +224,95 @@ namespace Evidence_zaměstnanců
                         datumUkonceni = readerData.GetDateTime(20);
                     }
                 }
+            }
+            sql.Close();
+        }
+
+        public void selectID(SqlConnection sql, string jmeno, string prijmeni)
+        {
+            sql.Open();
+            using (SqlCommand selectEmployee = new SqlCommand("SELECT ID FROM dbo.Employee WHERE Jmeno = @jmeno or Prijmeni = @prijmeni", sql))
+            {
+                selectEmployee.Parameters.Clear();
+
+                // Parameters
+                SqlParameter jmenoParam = new SqlParameter("@jmeno", SqlDbType.VarChar, 20);
+                SqlParameter prijmeniParam = new SqlParameter("@prijmeni", SqlDbType.VarChar, 20);
+
+                // Definitions for parameters
+                jmenoParam.Value = jmeno;
+                prijmeniParam.Value = prijmeni;
+
+                // Add parameters
+                selectEmployee.Parameters.Add(jmenoParam);
+                selectEmployee.Parameters.Add(prijmeniParam);
+
+                // Execute command
+                selectEmployee.Prepare();
+
+                using (SqlDataReader readerData = selectEmployee.ExecuteReader())
+                {
+                    while (readerData.Read())
+                    {
+                        if (readerData.IsDBNull(0))
+                            continue;
+
+                        // Dynamic value for login dialog
+                        ID = readerData.GetInt32(0);
+                    }
+                }
+            }
+            sql.Close();
+        }
+        public void addCVs(SqlConnection sql, int id, string path)
+        {
+            sql.Open();
+            using (SqlCommand addCVs = new SqlCommand("INSERT INTO dbo.ExternFile VALUES (1, @idEmployee, @path)", sql))
+            {
+                addCVs.Parameters.Clear();
+
+                // Parameters
+                SqlParameter idEmployeeParam = new SqlParameter("@ID", SqlDbType.Int);
+                SqlParameter pathParam = new SqlParameter("@path", SqlDbType.VarChar, 255);
+
+                // Definitions for parameters
+                idEmployeeParam.Value = id;
+                pathParam.Value = path;
+
+                // Add parameters
+                addCVs.Parameters.Add(idEmployeeParam);
+                addCVs.Parameters.Add(pathParam);
+
+                // Execute command
+                addCVs.Prepare();
+                addCVs.ExecuteNonQuery();
+
+                MessageBox.Show("Životopis úspěšně přidán do DB");
+            }
+            sql.Close();
+        }
+
+        public void delCVs(SqlConnection sql, int id)
+        {
+            sql.Open();
+            using (SqlCommand deleteCVs = new SqlCommand("DELETE FROM dbo.ExternFile WHERE IdEmployee = @ID", sql))
+            {
+                deleteCVs.Parameters.Clear();
+
+                // Parameters
+                SqlParameter idEmployeeParam = new SqlParameter("@ID", SqlDbType.Int);
+
+                // Definitions for parameters
+                idEmployeeParam.Value = id;
+
+                // Add parameters
+                deleteCVs.Parameters.Add(idEmployeeParam);
+
+                // Execute command
+                deleteCVs.Prepare();
+                deleteCVs.ExecuteNonQuery();
+
+                MessageBox.Show("Životopis úspěšně odstraněn z DB");
             }
             sql.Close();
         }

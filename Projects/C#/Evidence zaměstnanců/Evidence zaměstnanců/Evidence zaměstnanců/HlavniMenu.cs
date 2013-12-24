@@ -81,17 +81,14 @@ namespace Evidence_zaměstnanců
 
         private void addCVs_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void editCVs_Click(object sender, EventArgs e)
-        {
-
+            addCVs cvs = new addCVs();
+            cvs.Show();
         }
 
         private void delCVs_Click(object sender, EventArgs e)
         {
-
+            delCVs delCVs = new delCVs();
+            delCVs.Show();
         }
 
         private void statisticsMenu_Click(object sender, EventArgs e)

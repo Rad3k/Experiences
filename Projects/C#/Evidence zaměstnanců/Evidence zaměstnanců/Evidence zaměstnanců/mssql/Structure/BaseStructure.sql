@@ -51,3 +51,10 @@ CREATE TABLE TroubledEmployees
 	Prijmeni varchar(20) CHECK (Prijmeni is not null AND Prijmeni <> ''),
 	Reason varchar(255),
 )
+
+CREATE TABLE ExternFile
+(
+    IdFile INT PRIMARY KEY,
+	IdEmployee INT,
+	[Path] varchar(255),
+)

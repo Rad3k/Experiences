@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addCVs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCVs.Designer.cs">
+      <DependentUpon>addCVs.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,12 @@
     </Compile>
     <Compile Include="controlZam.Designer.cs">
       <DependentUpon>controlZam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="delCVs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="delCVs.Designer.cs">
+      <DependentUpon>delCVs.cs</DependentUpon>
     </Compile>
     <Compile Include="EvidenceDB.cs">
       <DependentUpon>EvidenceDB.xsd</DependentUpon>
@@ -150,11 +162,17 @@
     </Compile>
     <Compile Include="UniqueValue.cs" />
     <Compile Include="website.cs" />
+    <EmbeddedResource Include="addCVs.resx">
+      <DependentUpon>addCVs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controlZam.resx">
       <DependentUpon>controlZam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="delCVs.resx">
+      <DependentUpon>delCVs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HlavniMenu.resx">
       <DependentUpon>HlavniMenu.cs</DependentUpon>
