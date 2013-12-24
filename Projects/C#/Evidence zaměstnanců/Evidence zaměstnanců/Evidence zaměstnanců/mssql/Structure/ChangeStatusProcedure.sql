@@ -16,7 +16,7 @@ GO
 -- =============================================
 -- Author:		<Rad3k>
 -- Create date: <24.12.2013>
--- Description:	<Transfer to troubled employees>
+-- Description:	<Change contract for employee>
 -- =============================================
 CREATE PROCEDURE konec_smlouvy_zmena_statusu ( @id int )
 AS
@@ -48,7 +48,7 @@ GO
 -- =============================================
 -- Author:		<Rad3k>
 -- Create date: <24.12.2013>
--- Description:	<Transfer to troubled employees>
+-- Description:	<Change contract for employee>
 -- =============================================
 ALTER PROCEDURE [dbo].[konec_smlouvy_zmena_statusu] ( @id int )
 AS
