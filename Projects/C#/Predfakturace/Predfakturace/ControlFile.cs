@@ -30,7 +30,10 @@ namespace Predfakturace
 
         private void nextStep_Click(object sender, EventArgs e)
         {
-            config.ReadFromList();
+            config.AddToUniqueList();
+            DataGridView grid = new DataGridView();
+            grid.Show();
+            Close();
         }
 
         private void OpenFileDialogButton_Click(object sender, EventArgs e)

@@ -93,6 +93,7 @@
             this.Controls.Add(this.nextDialog);
             this.Controls.Add(this.OpenFileDialogButton);
             this.Controls.Add(this.filePathText);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Name = "ControlFile";
             this.Text = "Vkládání předfakturací";
             this.ResumeLayout(false);

@@ -108,6 +108,7 @@
             this.Controls.Add(this.spoNext);
             this.Controls.Add(this.pojNext);
             this.Name = "menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hlavní menu";
             this.ResumeLayout(false);
             this.PerformLayout();

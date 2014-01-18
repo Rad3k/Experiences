@@ -17,11 +17,11 @@ namespace Predfakturace
             traceToFile.Add(path);
         }
 
-        public void ReadFromList()
+        public void AddToUniqueList()
         {
             foreach (string items in traceToFile)
             {
-                MessageBox.Show(items);
+                UniqueValue.traceToFile.Add(items);
             }
         }
     }
