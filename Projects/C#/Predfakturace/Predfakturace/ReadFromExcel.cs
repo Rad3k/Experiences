@@ -16,8 +16,8 @@ namespace Predfakturace
         {
             DataSet da = new DataSet();
             OleDbDataAdapter adapter = new OleDbDataAdapter();
-            string bunka = "C7";
-            string nazev = "List1";
+            string cell = "C7";
+            string name = "List1";
 
             string FileName = fullpath;
             string _ConnectionString = string.Empty;
@@ -34,7 +34,7 @@ namespace Predfakturace
             }
 
             OleDbConnection con = new OleDbConnection(_ConnectionString);
-            string strCmd = "SELECT * FROM [" + nazev + "$" + bunka + "]";
+            string strCmd = "SELECT * FROM [" + name + "$" + cell + "]";
             OleDbCommand cmd = new OleDbCommand(strCmd, con);
 
             try
@@ -43,10 +43,6 @@ namespace Predfakturace
                 da.Clear();
                 adapter.SelectCommand = cmd;
                 adapter.Fill(da);
-                /*dataGridView1.DataSource = da.Tables[0];
-                Definitions.CisloSubjektu.RemoveRange(0, Definitions.CisloSubjektu.Count);
-                for (int i = 0; i < dataGridView1.RowCount; ++i)
-                    Definitions.CisloSubjektu.Add(dataGridView1.Rows[i].Cells[0].Value.ToString());*/
             }
 
             catch (Exception ex)

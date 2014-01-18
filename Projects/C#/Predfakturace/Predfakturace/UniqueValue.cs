@@ -10,5 +10,6 @@ namespace Predfakturace
     {
         public static List<string> traceToFile = new List<string>();
         public static List<int> money = new List<int>();
+        public static string finalyPath;
     }
 }

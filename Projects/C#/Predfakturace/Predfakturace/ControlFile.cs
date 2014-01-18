@@ -30,10 +30,15 @@ namespace Predfakturace
 
         private void nextStep_Click(object sender, EventArgs e)
         {
-            config.AddToUniqueList();
-            DataGridView grid = new DataGridView();
-            grid.Show();
-            Close();
+            if (filePathText.Text == "")
+                MessageBox.Show("Nebyl zvolen žádný soubor!");
+            else
+            {
+                config.AddToUniqueList();
+                DataGridView grid = new DataGridView();
+                grid.Show();
+                Close();
+            }
         }
 
         private void OpenFileDialogButton_Click(object sender, EventArgs e)
