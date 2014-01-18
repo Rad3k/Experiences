@@ -14,10 +14,9 @@ namespace Predfakturace
     {
         public void ReadData(string fullpath)
         {
-            DataTable da = new DataTable();
+            DataSet da = new DataSet();
             OleDbDataAdapter adapter = new OleDbDataAdapter();
             string name = "List1";
-            string result = "";
             string FileName = fullpath;
             string _ConnectionString = string.Empty;
             string _Extension = Path.GetExtension(FileName);
