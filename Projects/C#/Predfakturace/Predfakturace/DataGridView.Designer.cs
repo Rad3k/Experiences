@@ -33,6 +33,7 @@
             this.traceToFile = new System.Windows.Forms.Button();
             this.filePathText = new System.Windows.Forms.TextBox();
             this.cancel = new System.Windows.Forms.Button();
+            this.vysledekLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.seznamPenez)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             // 
             // traceToFile
             // 
-            this.traceToFile.Location = new System.Drawing.Point(369, 12);
+            this.traceToFile.Location = new System.Drawing.Point(369, 37);
             this.traceToFile.Name = "traceToFile";
             this.traceToFile.Size = new System.Drawing.Size(31, 21);
             this.traceToFile.TabIndex = 2;
@@ -66,7 +67,7 @@
             // 
             // filePathText
             // 
-            this.filePathText.Location = new System.Drawing.Point(159, 12);
+            this.filePathText.Location = new System.Drawing.Point(159, 38);
             this.filePathText.Name = "filePathText";
             this.filePathText.ReadOnly = true;
             this.filePathText.Size = new System.Drawing.Size(204, 20);
@@ -82,11 +83,22 @@
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
+            // vysledekLabel
+            // 
+            this.vysledekLabel.AutoSize = true;
+            this.vysledekLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.vysledekLabel.Location = new System.Drawing.Point(156, 22);
+            this.vysledekLabel.Name = "vysledekLabel";
+            this.vysledekLabel.Size = new System.Drawing.Size(153, 16);
+            this.vysledekLabel.TabIndex = 5;
+            this.vysledekLabel.Text = "Kam vložit výsledek?";
+            // 
             // DataGridView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 389);
+            this.Controls.Add(this.vysledekLabel);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.filePathText);
             this.Controls.Add(this.traceToFile);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Button traceToFile;
         private System.Windows.Forms.TextBox filePathText;
         private System.Windows.Forms.Button cancel;
+        private System.Windows.Forms.Label vysledekLabel;
     }
 }

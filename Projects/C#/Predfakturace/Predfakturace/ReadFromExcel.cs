@@ -14,11 +14,10 @@ namespace Predfakturace
     {
         public void ReadData(string fullpath)
         {
-            DataSet da = new DataSet();
+            DataTable da = new DataTable();
             OleDbDataAdapter adapter = new OleDbDataAdapter();
-            string cell = "C7";
             string name = "List1";
-
+            string result = "";
             string FileName = fullpath;
             string _ConnectionString = string.Empty;
             string _Extension = Path.GetExtension(FileName);
@@ -34,7 +33,7 @@ namespace Predfakturace
             }
 
             OleDbConnection con = new OleDbConnection(_ConnectionString);
-            string strCmd = "SELECT * FROM [" + name + "$" + cell + "]";
+            string strCmd = "SELECT C7 FROM [" + name + "]";
             OleDbCommand cmd = new OleDbCommand(strCmd, con);
 
             try
@@ -43,6 +42,7 @@ namespace Predfakturace
                 da.Clear();
                 adapter.SelectCommand = cmd;
                 adapter.Fill(da);
+                UniqueValue.money.Add(double.Parse(da.ToString()));
             }
 
             catch (Exception ex)

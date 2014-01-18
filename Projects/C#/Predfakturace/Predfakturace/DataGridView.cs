@@ -28,6 +28,12 @@ namespace Predfakturace
                     ReadFromExcel read = new ReadFromExcel();
                     read.ReadData(UniqueValue.traceToFile[i]);
                 }
+
+                DataTable table = new DataTable();
+
+                foreach (int money in UniqueValue.money)
+                    table.Rows.Add(money);
+                seznamPenez.DataSource = table;
             }
         }
 

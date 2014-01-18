@@ -9,7 +9,7 @@ namespace Predfakturace
     static class UniqueValue
     {
         public static List<string> traceToFile = new List<string>();
-        public static List<int> money = new List<int>();
+        public static List<double> money = new List<double>();
         public static string finalyPath;
     }
 }
