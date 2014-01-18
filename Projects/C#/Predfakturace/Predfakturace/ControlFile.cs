@@ -12,6 +12,8 @@ namespace Predfakturace
 {
     public partial class ControlFile : Form
     {
+        Config config = new Config();
+
         public int calculate = 0;
         public int y = 28;
         public string name;
@@ -28,6 +30,7 @@ namespace Predfakturace
 
         private void nextStep_Click(object sender, EventArgs e)
         {
+            config.ReadFromList();
         }
 
         private void OpenFileDialogButton_Click(object sender, EventArgs e)
@@ -40,12 +43,14 @@ namespace Predfakturace
                 {
                     string souborFilename = openFileDialog1.FileName;
                     filePathText.Text = souborFilename;
+                    config.AddToList(filePathText.Text);
                 }
                 else
                 {
                     Button btn = sender as Button;
                     string souborFilename = openFileDialog1.FileName;
                     this.Controls.Find((string)btn.Tag, true)[0].Text = souborFilename;
+                    config.AddToList(this.Controls.Find((string)btn.Tag, true)[0].Text);
                 }
             }
         }
