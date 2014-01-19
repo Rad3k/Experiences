@@ -112,58 +112,173 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="background_800_600" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background_800_600.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sorcerer_hidden1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sorcerer_hidden1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cancel_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cancel_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Nightblade_revealed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nightblade_revealed.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sorcerer_revealed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sorcerer_revealed1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close_on.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Nightblade_hidden1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nightblade_hidden1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Login_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close_transparent_on2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_transparent_on2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="max" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\max.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close_transparent_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_transparent_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="max_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\max_on.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cursor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cursor.cur;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="min" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="min_transparent1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\min_transparent1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="min_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\min_on.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Templar_hidden" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Templar_hidden.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Radek" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Radek.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="upload_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upload_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Register" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Register.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="class_window" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\class_window.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Register_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Register_on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="about_transparent2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about_transparent2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TESOcz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TESOcz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sorcerer_revealed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sorcerer_revealed.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="version_1_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\version_1_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="close_transparent2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_transparent2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about_transparent_on2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about_transparent_on2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="status_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\status_green.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="create" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\create.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nightblade_hidden" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nightblade_hidden.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dragonknight_revealed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dragonknight_revealed1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="load_window" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\load_window.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="file" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\file.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="min_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\min_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rad3k_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rad3k_logo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="min_transparent_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\min_transparent_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="create_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\create_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="upload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\upload.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about_transparent_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about_transparent_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about_transparent1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about_transparent1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="class_window1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\class_window1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="min_transparent2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\min_transparent2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about_transparent_on1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about_transparent_on1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dragonknight_revealed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dragonknight_revealed.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="status_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\status_red.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="min_transparent_on1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\min_transparent_on1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="teso_cz_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\teso_cz_logo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="about_transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\about_transparent.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sorcerer_hidden" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sorcerer_hidden.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dragonknight_hidden" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dragonknight_hidden.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rad3k_logo_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rad3k_logo_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cancel_on1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_on1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Templar_hidden1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Templar_hidden1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Templar_revealed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Templar_revealed.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_transparent_on1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_transparent_on1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Templar_revealed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Templar_revealed1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dragonknight_hidden1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dragonknight_hidden1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="min_transparent_on2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\min_transparent_on2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="teso_cz_logo_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\teso_cz_logo_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nightblade_revealed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Nightblade_revealed1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close_transparent1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_transparent1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Cursor1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cursor1.cur;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

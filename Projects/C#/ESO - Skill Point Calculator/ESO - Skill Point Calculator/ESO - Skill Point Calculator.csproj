@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,7 +60,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -53,28 +67,49 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Links.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="choose_class.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="choose_class.Designer.cs">
+      <DependentUpon>choose_class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Collection.cs" />
+    <Compile Include="Cursor.cs" />
+    <Compile Include="Links.cs" />
+    <Compile Include="BasePreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasePreview.Designer.cs">
+      <DependentUpon>BasePreview.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SkillTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkillTree.Designer.cs">
+      <DependentUpon>SkillTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UniqueValue.cs" />
+    <EmbeddedResource Include="choose_class.resx">
+      <DependentUpon>choose_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasePreview.resx">
+      <DependentUpon>BasePreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="SkillTree.resx">
+      <DependentUpon>SkillTree.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,56 +124,75 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\background_800_600.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cancel_on.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close_on.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login_on.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\max.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\max_on.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\min.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\min_on.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Radek.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Register.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Register_on.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\TESOcz.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\version_1_0.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\Cursor1.cur" />
+    <None Include="Resources\Cursor.cur" />
+    <None Include="Resources\cancel_on1.png" />
+    <None Include="Resources\cancel1.png" />
+    <None Include="Resources\Templar_revealed1.png" />
+    <None Include="Resources\Templar_hidden1.png" />
+    <None Include="Resources\Sorcerer_revealed1.png" />
+    <None Include="Resources\Sorcerer_hidden1.png" />
+    <None Include="Resources\Nightblade_revealed1.png" />
+    <None Include="Resources\Nightblade_hidden1.png" />
+    <None Include="Resources\min_transparent_on2.png" />
+    <None Include="Resources\min_transparent2.png" />
+    <None Include="Resources\Dragonknight_revealed1.png" />
+    <None Include="Resources\Dragonknight_hidden1.png" />
+    <None Include="Resources\close_transparent_on2.png" />
+    <None Include="Resources\close_transparent2.png" />
+    <None Include="Resources\class_window1.png" />
+    <None Include="Resources\about_transparent_on2.png" />
+    <None Include="Resources\about_transparent2.png" />
+    <None Include="Resources\upload_on.png" />
+    <None Include="Resources\upload.png" />
+    <None Include="Resources\teso_cz_logo_on.png" />
+    <None Include="Resources\teso_cz_logo.png" />
+    <None Include="Resources\status_red.png" />
+    <None Include="Resources\status_green.png" />
+    <None Include="Resources\rad3k_logo_on.png" />
+    <None Include="Resources\rad3k_logo.png" />
+    <None Include="Resources\min_transparent_on1.png" />
+    <None Include="Resources\min_transparent1.png" />
+    <None Include="Resources\load_window.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\create_on.png" />
+    <None Include="Resources\create.png" />
+    <None Include="Resources\close_transparent_on1.png" />
+    <None Include="Resources\close_transparent1.png" />
+    <None Include="Resources\cancel_on.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\about_transparent_on1.png" />
+    <None Include="Resources\about_transparent1.png" />
+    <None Include="Resources\Templar_revealed.png" />
+    <None Include="Resources\Templar_hidden.png" />
+    <None Include="Resources\Sorcerer_revealed.png" />
+    <None Include="Resources\Sorcerer_hidden.png" />
+    <None Include="Resources\Nightblade_revealed.png" />
+    <None Include="Resources\Nightblade_hidden.png" />
+    <None Include="Resources\min_transparent_on.png" />
+    <None Include="Resources\min_transparent.png" />
+    <None Include="Resources\Dragonknight_revealed.png" />
+    <None Include="Resources\Dragonknight_hidden.png" />
+    <None Include="Resources\close_transparent_on.png" />
+    <None Include="Resources\close_transparent.png" />
+    <None Include="Resources\class_window.png" />
+    <None Include="Resources\about_transparent_on.png" />
+    <None Include="Resources\about_transparent.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

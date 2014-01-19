@@ -21,26 +21,5 @@ namespace ESO___Skill_Point_Calculator
             // by passing them as arguments.
             Process.Start("IExplore.exe", "http://elderscrolls-online.tiscali.cz/");
         }
-
-        public void forgetUsername()
-        {
-            // url's are not considered documents. They can only be opened
-            // by passing them as arguments.
-            Process.Start("IExplore.exe", "http://elderscrolls-online.tiscali.cz/");
-        }
-
-        public void forgetPassword()
-        {
-            // url's are not considered documents. They can only be opened
-            // by passing them as arguments.
-            Process.Start("IExplore.exe", "http://elderscrolls-online.tiscali.cz/forum/ucp.php?mode=sendpassword");
-        }
-
-        public void Register()
-        {
-            // url's are not considered documents. They can only be opened
-            // by passing them as arguments.
-            Process.Start("IExplore.exe", "http://elderscrolls-online.tiscali.cz/forum/ucp.php?mode=register");
-        }
     }
 }

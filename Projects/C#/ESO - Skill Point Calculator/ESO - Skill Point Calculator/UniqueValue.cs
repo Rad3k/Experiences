@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ESO___Skill_Point_Calculator
 {
-    class Collection
+    static class UniqueValue
     {
     }
 }

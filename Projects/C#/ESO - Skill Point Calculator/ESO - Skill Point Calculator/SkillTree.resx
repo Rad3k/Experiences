@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
-        AAAIBwP/CAcD/wgHA/8IBwP/CAcD/wgHA/8IBwP/CQoG/wgHA/8IBwP/CAcD/wgHA/8IBwP/CAcD/wgH
-        A/8IBwP/CAcD/wgHA/8LCwn/CwsJ/wkIBf8IBwP/BQAA/wcFAP8EAAD/BQAA/wgHAv8IBwP/CAcD/wgH
-        A/8IBwP/CAcD/wgHA/8IBwP/CAcD/wgHA/8HBQD/AgAA/yAuM/8YJSz/Hicp/xgjKP8EAAD/BQMA/wgH
-        A/8IBwP/CAcD/wgHA/8IBwP/CAcD/wgHA/8GBAD/Cw0M/yMpLP8fJyn/anp+/0xeZP9RXGD/Jy4w/xUX
-        F/8BAAD/CAcD/wgHA/8IBwP/CQkG/wgHA/8HBgD/BgYE/0tUV/9BSUr/VGNn/0NPUv83PT//QkpL/0FO
-        Uv9aZ2z/HB8e/wMAAP8IBwP/CAcD/wkIBf8JCQb/AAAA/y41N/8qLy//AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAAD/FBob/1dgY/8AAAD/BwYB/wgHA/8IBwP/CQkG/wwQD/9RWVz/AAAA/wkKB/8IBgL/CgsI/wkK
-        Bv8JCAX/CAcD/wAAAP9GTU//Ky4u/wAAAP8IBwP/CAcD/wQAAP8iKy//RlFT/wAAAP8IBwP/CAcD/wgH
-        BP8ICAT/CQoG/wgHA/8FAwD/DxAR/zU7Pf8AAAD/CAcD/wgHA/8BAAD/KTQ4/zhCR/8AAAD/CAYC/wgH
-        A/8IBwP/CQoG/wgHA/8IBgH/CQsI/zA7QP8nMDT/AwAA/wgHA/8IBgH/CQkF/zJES/82P0P/KTM2/wAA
-        AP8IBwP/CQkG/wgJBv8IBwP/BgUA/wUAAP88SE3/Iy0w/wYEAP8IBwP/CAgE/wYFAP82Q0f/PFRd/1Bj
-        af8JCQX/BwUA/wgHA/8KCgf/BgUA/wUBAP82QUb/OEpQ/zNARP8AAAD/CAcD/woLCf8AAAD/LDg8/2uG
-        jv8wOz//MTg6/wAAAP8AAAD/AQAA/wkKCP8tNTf/SFJV/z1LUP9baGz/AAAA/wgHA/8JCgb/CAYB/wAA
-        AP8yPUH/YXN3/1dgZP9BR0n/Ki8u/x0hI/9ASkz/XnV8/09eY/9IUVT/AAAA/wcGAP8IBwP/CAYC/wkJ
-        Bf8JCgb/AAAA/wAAAP8fIB//TFRX/15pa/9mb3D/cXp8/ykwMP8KDAr/AAAA/wcGAP8IBwP/CAcD/wkJ
-        Bv8JCQf/CgsI/wsMCv8JCgb/BgcC/wAAAP8AAAD/AAAA/wAAAP8CAAD/BwUA/wgHA/8IBwP/CAcD/wgH
-        A/8JCQb/CgoH/wgGAv8JCQX/CAgE/wgGAv8KCwj/CgoH/wgGAv8KCgj/CgsI/wgHA/8IBwP/CAcD/wgH
-        A/8IBwP/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAA==
-</value>
-  </data>
 </root>

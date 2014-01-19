@@ -15,7 +15,25 @@ namespace ESO___Skill_Point_Calculator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            bool validated = false;
+            while (!validated)
+            {
+                using (BasePreview fLogin = new BasePreview())
+                {
+                    switch (fLogin.ShowDialog())
+                    {
+                        case DialogResult.OK:
+                            Application.Run(new choose_class());
+                            validated = true;
+                            break;
+
+                        case DialogResult.No:
+                            fLogin.Close();
+                            validated = true;
+                            break;
+                    }
+                }
+            }
         }
     }
 }
