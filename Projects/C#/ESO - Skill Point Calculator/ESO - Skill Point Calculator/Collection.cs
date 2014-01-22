@@ -16,6 +16,10 @@ namespace ESO___Skill_Point_Calculator
         public string sound;
         public string source;
         public int value;
+        
+        // Build editor
+        // Base value
+        public int maxSkill = 60;
 
         public Collection()
         {

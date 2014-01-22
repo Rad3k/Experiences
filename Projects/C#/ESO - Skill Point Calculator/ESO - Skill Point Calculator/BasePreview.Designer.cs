@@ -51,6 +51,7 @@
             // 
             this.version.AutoSize = true;
             this.version.BackColor = System.Drawing.Color.Transparent;
+            this.version.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.version.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(196)))), ((int)(((byte)(181)))));
             this.version.Location = new System.Drawing.Point(843, 687);
             this.version.Name = "version";

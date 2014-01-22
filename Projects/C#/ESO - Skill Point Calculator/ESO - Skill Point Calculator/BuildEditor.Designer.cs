@@ -32,6 +32,20 @@
             this.minimalizedButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.dragonKnightText = new System.Windows.Forms.Button();
+            this.weaponSlot1 = new System.Windows.Forms.Button();
+            this.weaponSlot2 = new System.Windows.Forms.Button();
+            this.armorType = new System.Windows.Forms.Button();
+            this.racialDaggerfall = new System.Windows.Forms.Button();
+            this.racialAldmeri = new System.Windows.Forms.Button();
+            this.racialEbonheart = new System.Windows.Forms.Button();
+            this.pvpType = new System.Windows.Forms.Button();
+            this.guildsType = new System.Windows.Forms.Button();
+            this.craftingType = new System.Windows.Forms.Button();
+            this.soulMagicType = new System.Windows.Forms.Button();
+            this.vampirismType = new System.Windows.Forms.Button();
+            this.lycanthropyType = new System.Windows.Forms.Button();
+            this.maxSkillPoint = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // minimalizedButton
@@ -88,6 +102,215 @@
             this.exitButton.MouseEnter += new System.EventHandler(this.exitButton_MouseEnter);
             this.exitButton.MouseLeave += new System.EventHandler(this.exitButton_MouseLeave);
             // 
+            // dragonKnightText
+            // 
+            this.dragonKnightText.BackColor = System.Drawing.Color.Transparent;
+            this.dragonKnightText.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.dragonknight;
+            this.dragonKnightText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dragonKnightText.FlatAppearance.BorderSize = 0;
+            this.dragonKnightText.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.dragonKnightText.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.dragonKnightText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dragonKnightText.Location = new System.Drawing.Point(89, 223);
+            this.dragonKnightText.Name = "dragonKnightText";
+            this.dragonKnightText.Size = new System.Drawing.Size(133, 26);
+            this.dragonKnightText.TabIndex = 3;
+            this.dragonKnightText.UseVisualStyleBackColor = false;
+            this.dragonKnightText.Click += new System.EventHandler(this.dragonKnightText_Click);
+            // 
+            // weaponSlot1
+            // 
+            this.weaponSlot1.BackColor = System.Drawing.Color.Transparent;
+            this.weaponSlot1.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.one_two_handed_dual;
+            this.weaponSlot1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.weaponSlot1.FlatAppearance.BorderSize = 0;
+            this.weaponSlot1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.weaponSlot1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.weaponSlot1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.weaponSlot1.Location = new System.Drawing.Point(89, 276);
+            this.weaponSlot1.Name = "weaponSlot1";
+            this.weaponSlot1.Size = new System.Drawing.Size(222, 26);
+            this.weaponSlot1.TabIndex = 4;
+            this.weaponSlot1.UseVisualStyleBackColor = false;
+            this.weaponSlot1.Click += new System.EventHandler(this.weaponSlot1_Click);
+            // 
+            // weaponSlot2
+            // 
+            this.weaponSlot2.BackColor = System.Drawing.Color.Transparent;
+            this.weaponSlot2.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.bow_staff;
+            this.weaponSlot2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.weaponSlot2.FlatAppearance.BorderSize = 0;
+            this.weaponSlot2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.weaponSlot2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.weaponSlot2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.weaponSlot2.Location = new System.Drawing.Point(89, 298);
+            this.weaponSlot2.Name = "weaponSlot2";
+            this.weaponSlot2.Size = new System.Drawing.Size(117, 26);
+            this.weaponSlot2.TabIndex = 5;
+            this.weaponSlot2.UseVisualStyleBackColor = false;
+            this.weaponSlot2.Click += new System.EventHandler(this.weaponSlot2_Click);
+            // 
+            // armorType
+            // 
+            this.armorType.BackColor = System.Drawing.Color.Transparent;
+            this.armorType.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.light_medium_heavy;
+            this.armorType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.armorType.FlatAppearance.BorderSize = 0;
+            this.armorType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.armorType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.armorType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.armorType.Location = new System.Drawing.Point(89, 352);
+            this.armorType.Name = "armorType";
+            this.armorType.Size = new System.Drawing.Size(196, 26);
+            this.armorType.TabIndex = 6;
+            this.armorType.UseVisualStyleBackColor = false;
+            this.armorType.Click += new System.EventHandler(this.armorType_Click);
+            // 
+            // racialDaggerfall
+            // 
+            this.racialDaggerfall.BackColor = System.Drawing.Color.Transparent;
+            this.racialDaggerfall.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.breton_redguard_orc;
+            this.racialDaggerfall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.racialDaggerfall.FlatAppearance.BorderSize = 0;
+            this.racialDaggerfall.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.racialDaggerfall.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.racialDaggerfall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.racialDaggerfall.Location = new System.Drawing.Point(89, 404);
+            this.racialDaggerfall.Name = "racialDaggerfall";
+            this.racialDaggerfall.Size = new System.Drawing.Size(211, 26);
+            this.racialDaggerfall.TabIndex = 7;
+            this.racialDaggerfall.UseVisualStyleBackColor = false;
+            // 
+            // racialAldmeri
+            // 
+            this.racialAldmeri.BackColor = System.Drawing.Color.Transparent;
+            this.racialAldmeri.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.altmer_bosmer_khajiit;
+            this.racialAldmeri.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.racialAldmeri.FlatAppearance.BorderSize = 0;
+            this.racialAldmeri.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.racialAldmeri.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.racialAldmeri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.racialAldmeri.Location = new System.Drawing.Point(89, 425);
+            this.racialAldmeri.Name = "racialAldmeri";
+            this.racialAldmeri.Size = new System.Drawing.Size(211, 27);
+            this.racialAldmeri.TabIndex = 8;
+            this.racialAldmeri.UseVisualStyleBackColor = false;
+            // 
+            // racialEbonheart
+            // 
+            this.racialEbonheart.BackColor = System.Drawing.Color.Transparent;
+            this.racialEbonheart.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.nord_dunmer_argonian;
+            this.racialEbonheart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.racialEbonheart.FlatAppearance.BorderSize = 0;
+            this.racialEbonheart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.racialEbonheart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.racialEbonheart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.racialEbonheart.Location = new System.Drawing.Point(89, 447);
+            this.racialEbonheart.Name = "racialEbonheart";
+            this.racialEbonheart.Size = new System.Drawing.Size(227, 26);
+            this.racialEbonheart.TabIndex = 9;
+            this.racialEbonheart.UseVisualStyleBackColor = false;
+            // 
+            // pvpType
+            // 
+            this.pvpType.BackColor = System.Drawing.Color.Transparent;
+            this.pvpType.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.assault_support_emperor;
+            this.pvpType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pvpType.FlatAppearance.BorderSize = 0;
+            this.pvpType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.pvpType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.pvpType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pvpType.Location = new System.Drawing.Point(89, 502);
+            this.pvpType.Name = "pvpType";
+            this.pvpType.Size = new System.Drawing.Size(230, 26);
+            this.pvpType.TabIndex = 10;
+            this.pvpType.UseVisualStyleBackColor = false;
+            // 
+            // guildsType
+            // 
+            this.guildsType.BackColor = System.Drawing.Color.Transparent;
+            this.guildsType.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.guilds;
+            this.guildsType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guildsType.FlatAppearance.BorderSize = 0;
+            this.guildsType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.guildsType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.guildsType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.guildsType.Location = new System.Drawing.Point(89, 555);
+            this.guildsType.Name = "guildsType";
+            this.guildsType.Size = new System.Drawing.Size(80, 26);
+            this.guildsType.TabIndex = 11;
+            this.guildsType.UseVisualStyleBackColor = false;
+            // 
+            // craftingType
+            // 
+            this.craftingType.BackColor = System.Drawing.Color.Transparent;
+            this.craftingType.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.crafting;
+            this.craftingType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.craftingType.FlatAppearance.BorderSize = 0;
+            this.craftingType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.craftingType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.craftingType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.craftingType.Location = new System.Drawing.Point(89, 575);
+            this.craftingType.Name = "craftingType";
+            this.craftingType.Size = new System.Drawing.Size(97, 26);
+            this.craftingType.TabIndex = 12;
+            this.craftingType.UseVisualStyleBackColor = false;
+            // 
+            // soulMagicType
+            // 
+            this.soulMagicType.BackColor = System.Drawing.Color.Transparent;
+            this.soulMagicType.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.soul_magic;
+            this.soulMagicType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.soulMagicType.FlatAppearance.BorderSize = 0;
+            this.soulMagicType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.soulMagicType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.soulMagicType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.soulMagicType.Location = new System.Drawing.Point(89, 596);
+            this.soulMagicType.Name = "soulMagicType";
+            this.soulMagicType.Size = new System.Drawing.Size(114, 26);
+            this.soulMagicType.TabIndex = 13;
+            this.soulMagicType.UseVisualStyleBackColor = false;
+            // 
+            // vampirismType
+            // 
+            this.vampirismType.BackColor = System.Drawing.Color.Transparent;
+            this.vampirismType.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.vampirism;
+            this.vampirismType.FlatAppearance.BorderSize = 0;
+            this.vampirismType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.vampirismType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.vampirismType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vampirismType.Location = new System.Drawing.Point(89, 638);
+            this.vampirismType.Name = "vampirismType";
+            this.vampirismType.Size = new System.Drawing.Size(103, 26);
+            this.vampirismType.TabIndex = 14;
+            this.vampirismType.UseVisualStyleBackColor = false;
+            // 
+            // lycanthropyType
+            // 
+            this.lycanthropyType.BackColor = System.Drawing.Color.Transparent;
+            this.lycanthropyType.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.lycanthropy;
+            this.lycanthropyType.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.lycanthropyType.FlatAppearance.BorderSize = 0;
+            this.lycanthropyType.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.lycanthropyType.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.lycanthropyType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lycanthropyType.Location = new System.Drawing.Point(89, 617);
+            this.lycanthropyType.Name = "lycanthropyType";
+            this.lycanthropyType.Size = new System.Drawing.Size(125, 26);
+            this.lycanthropyType.TabIndex = 15;
+            this.lycanthropyType.UseVisualStyleBackColor = false;
+            // 
+            // maxSkillPoint
+            // 
+            this.maxSkillPoint.AutoSize = true;
+            this.maxSkillPoint.BackColor = System.Drawing.Color.Transparent;
+            this.maxSkillPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.maxSkillPoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(196)))), ((int)(((byte)(181)))));
+            this.maxSkillPoint.Location = new System.Drawing.Point(525, 689);
+            this.maxSkillPoint.Name = "maxSkillPoint";
+            this.maxSkillPoint.Size = new System.Drawing.Size(0, 20);
+            this.maxSkillPoint.TabIndex = 16;
+            // 
             // buildEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,6 +319,20 @@
             this.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.build_editor_window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 860);
+            this.Controls.Add(this.maxSkillPoint);
+            this.Controls.Add(this.lycanthropyType);
+            this.Controls.Add(this.vampirismType);
+            this.Controls.Add(this.soulMagicType);
+            this.Controls.Add(this.craftingType);
+            this.Controls.Add(this.guildsType);
+            this.Controls.Add(this.pvpType);
+            this.Controls.Add(this.racialEbonheart);
+            this.Controls.Add(this.racialAldmeri);
+            this.Controls.Add(this.racialDaggerfall);
+            this.Controls.Add(this.armorType);
+            this.Controls.Add(this.weaponSlot2);
+            this.Controls.Add(this.weaponSlot1);
+            this.Controls.Add(this.dragonKnightText);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.minimalizedButton);
@@ -107,6 +344,7 @@
             this.Text = "ESO - Build editor";
             this.TransparencyKey = System.Drawing.SystemColors.WindowFrame;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -115,5 +353,19 @@
         private System.Windows.Forms.Button minimalizedButton;
         private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button dragonKnightText;
+        private System.Windows.Forms.Button weaponSlot1;
+        private System.Windows.Forms.Button weaponSlot2;
+        private System.Windows.Forms.Button armorType;
+        private System.Windows.Forms.Button racialDaggerfall;
+        private System.Windows.Forms.Button racialAldmeri;
+        private System.Windows.Forms.Button racialEbonheart;
+        private System.Windows.Forms.Button pvpType;
+        private System.Windows.Forms.Button guildsType;
+        private System.Windows.Forms.Button craftingType;
+        private System.Windows.Forms.Button soulMagicType;
+        private System.Windows.Forms.Button vampirismType;
+        private System.Windows.Forms.Button lycanthropyType;
+        private System.Windows.Forms.Label maxSkillPoint;
     }
 }

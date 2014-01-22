@@ -18,6 +18,7 @@ namespace ESO___Skill_Point_Calculator
         {
             InitializeComponent();
             this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+            maxSkillPoint.Text = collection.maxSkill.ToString();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -69,6 +70,26 @@ namespace ESO___Skill_Point_Calculator
         {
             minimalizedButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
             this.minimalizedButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent));
+        }
+
+        private void dragonKnightText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void weaponSlot1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void armorType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void weaponSlot2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
