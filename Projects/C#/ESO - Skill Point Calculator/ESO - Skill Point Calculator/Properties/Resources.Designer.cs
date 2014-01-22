@@ -503,6 +503,16 @@ namespace ESO___Skill_Point_Calculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sorcerer_hidden2 {
+            get {
+                object obj = ResourceManager.GetObject("Sorcerer_hidden2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sorcerer_revealed {
             get {
                 object obj = ResourceManager.GetObject("Sorcerer_revealed", resourceCulture);
@@ -516,6 +526,16 @@ namespace ESO___Skill_Point_Calculator.Properties {
         internal static System.Drawing.Bitmap Sorcerer_revealed1 {
             get {
                 object obj = ResourceManager.GetObject("Sorcerer_revealed1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sorcerer_revealed2 {
+            get {
+                object obj = ResourceManager.GetObject("Sorcerer_revealed2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -563,6 +583,16 @@ namespace ESO___Skill_Point_Calculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Templar_hidden2 {
+            get {
+                object obj = ResourceManager.GetObject("Templar_hidden2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Templar_revealed {
             get {
                 object obj = ResourceManager.GetObject("Templar_revealed", resourceCulture);
@@ -576,6 +606,16 @@ namespace ESO___Skill_Point_Calculator.Properties {
         internal static System.Drawing.Bitmap Templar_revealed1 {
             get {
                 object obj = ResourceManager.GetObject("Templar_revealed1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Templar_revealed2 {
+            get {
+                object obj = ResourceManager.GetObject("Templar_revealed2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

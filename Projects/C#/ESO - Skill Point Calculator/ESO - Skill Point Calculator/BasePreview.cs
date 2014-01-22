@@ -114,6 +114,11 @@ namespace ESO___Skill_Point_Calculator
             this.myWebsiteButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.rad3k_logo));
         }
 
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void exitButton_MouseEnter(object sender, EventArgs e)
         {
             exitButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));

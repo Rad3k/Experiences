@@ -23,7 +23,7 @@ namespace ESO___Skill_Point_Calculator
                     switch (fLogin.ShowDialog())
                     {
                         case DialogResult.OK:
-                            Application.Run(new choose_class());
+                            Application.Run(new ChooseClass());
                             validated = true;
                             break;
 

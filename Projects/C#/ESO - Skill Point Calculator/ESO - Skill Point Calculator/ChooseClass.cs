@@ -10,11 +10,11 @@ using System.IO;
 
 namespace ESO___Skill_Point_Calculator
 {
-    public partial class choose_class : Form
+    public partial class ChooseClass : Form
     {
         Collection collection = new Collection();
 
-        public choose_class()
+        public ChooseClass()
         {
             InitializeComponent();
             this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
@@ -65,12 +65,12 @@ namespace ESO___Skill_Point_Calculator
         private void sorcererButton_MouseEnter(object sender, EventArgs e)
         {
             sorcererButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.sorcererButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Sorcerer_revealed));
+            this.sorcererButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Sorcerer_revealed2));
         }
 
         private void sorcererButton_MouseLeave(object sender, EventArgs e)
         {
-            this.sorcererButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Sorcerer_hidden));
+            this.sorcererButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Sorcerer_hidden2));
             sorcererButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
         }
 
@@ -83,12 +83,12 @@ namespace ESO___Skill_Point_Calculator
         private void templarButton_MouseEnter(object sender, EventArgs e)
         {
             templarButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.templarButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Templar_revealed));
+            this.templarButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Templar_revealed2));
         }
 
         private void templarButton_MouseLeave(object sender, EventArgs e)
         {
-            this.templarButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Templar_hidden));
+            this.templarButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Templar_hidden2));
             templarButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
         }
 

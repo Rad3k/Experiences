@@ -1,6 +1,6 @@
 ﻿namespace ESO___Skill_Point_Calculator
 {
-    partial class choose_class
+    partial class ChooseClass
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(choose_class));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseClass));
             this.dragonknightButton = new System.Windows.Forms.Button();
             this.nightBlade = new System.Windows.Forms.Button();
             this.sorcererButton = new System.Windows.Forms.Button();
@@ -77,7 +77,7 @@
             // sorcererButton
             // 
             this.sorcererButton.BackColor = System.Drawing.Color.Transparent;
-            this.sorcererButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sorcererButton.BackgroundImage")));
+            this.sorcererButton.BackgroundImage = global::ESO___Skill_Point_Calculator.Properties.Resources.Sorcerer_hidden2;
             this.sorcererButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.sorcererButton.FlatAppearance.BorderSize = 0;
             this.sorcererButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -95,7 +95,7 @@
             // templarButton
             // 
             this.templarButton.BackColor = System.Drawing.Color.Transparent;
-            this.templarButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("templarButton.BackgroundImage")));
+            this.templarButton.BackgroundImage = global::ESO___Skill_Point_Calculator.Properties.Resources.Templar_hidden2;
             this.templarButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.templarButton.FlatAppearance.BorderSize = 0;
             this.templarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -163,7 +163,7 @@
             this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
             this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
             // 
-            // choose_class
+            // ChooseClass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,7 +181,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "choose_class";
+            this.Name = "ChooseClass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ESO - Choose Your Class";
             this.TransparencyKey = System.Drawing.SystemColors.WindowFrame;

@@ -72,11 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BuildResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="choose_class.cs">
+    <Compile Include="ChooseClass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="choose_class.Designer.cs">
-      <DependentUpon>choose_class.cs</DependentUpon>
+    <Compile Include="ChooseClass.Designer.cs">
+      <DependentUpon>ChooseClass.cs</DependentUpon>
     </Compile>
     <Compile Include="Collection.cs" />
     <Compile Include="Controller.cs" />
@@ -95,19 +95,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SkillTree.cs">
+    <Compile Include="BuildEditor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SkillTree.Designer.cs">
-      <DependentUpon>SkillTree.cs</DependentUpon>
+    <Compile Include="BuildEditor.Designer.cs">
+      <DependentUpon>BuildEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="UniqueValue.cs" />
     <EmbeddedResource Include="BuildResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>BuildResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="choose_class.resx">
-      <DependentUpon>choose_class.cs</DependentUpon>
+    <EmbeddedResource Include="ChooseClass.resx">
+      <DependentUpon>ChooseClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BasePreview.resx">
       <DependentUpon>BasePreview.cs</DependentUpon>
@@ -117,8 +117,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SkillTree.resx">
-      <DependentUpon>SkillTree.cs</DependentUpon>
+    <EmbeddedResource Include="BuildEditor.resx">
+      <DependentUpon>BuildEditor.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -135,6 +135,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\Templar_revealed2.png" />
+    <None Include="Resources\Templar_hidden2.png" />
+    <None Include="Resources\Sorcerer_revealed2.png" />
+    <None Include="Resources\Sorcerer_hidden2.png" />
     <None Include="Resources\vampirism_on.png" />
     <None Include="Resources\vampirism.png" />
     <None Include="Resources\templar_skill_tree.png" />

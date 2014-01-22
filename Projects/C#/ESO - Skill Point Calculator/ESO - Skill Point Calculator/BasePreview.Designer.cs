@@ -197,6 +197,7 @@
             this.exitButton.Size = new System.Drawing.Size(22, 22);
             this.exitButton.TabIndex = 11;
             this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             this.exitButton.MouseEnter += new System.EventHandler(this.exitButton_MouseEnter);
             this.exitButton.MouseLeave += new System.EventHandler(this.exitButton_MouseLeave);
             // 

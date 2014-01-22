@@ -49,6 +49,8 @@
             this.minimalizedButton.TabIndex = 0;
             this.minimalizedButton.UseVisualStyleBackColor = false;
             this.minimalizedButton.Click += new System.EventHandler(this.minimalizedButton_Click);
+            this.minimalizedButton.MouseEnter += new System.EventHandler(this.minimalizedButton_MouseEnter);
+            this.minimalizedButton.MouseLeave += new System.EventHandler(this.minimalizedButton_MouseLeave);
             // 
             // helpButton
             // 
@@ -65,6 +67,8 @@
             this.helpButton.TabIndex = 1;
             this.helpButton.UseVisualStyleBackColor = false;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
+            this.helpButton.MouseEnter += new System.EventHandler(this.helpButton_MouseEnter);
+            this.helpButton.MouseLeave += new System.EventHandler(this.helpButton_MouseLeave);
             // 
             // exitButton
             // 
@@ -81,6 +85,8 @@
             this.exitButton.TabIndex = 2;
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.MouseEnter += new System.EventHandler(this.exitButton_MouseEnter);
+            this.exitButton.MouseLeave += new System.EventHandler(this.exitButton_MouseLeave);
             // 
             // buildEditor
             // 
