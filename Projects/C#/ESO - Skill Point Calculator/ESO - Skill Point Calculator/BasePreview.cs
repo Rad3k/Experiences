@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace ESO___Skill_Point_Calculator
 {
@@ -19,7 +20,7 @@ namespace ESO___Skill_Point_Calculator
         {
             InitializeComponent();
             this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            collection.BackroundPlayer();
+            collection.BackroundPlayerStart();
         }
 
         private void uploadButton_Click(object sender, EventArgs e)
@@ -32,17 +33,12 @@ namespace ESO___Skill_Point_Calculator
                 uploadFileText.Text = souborFilename;
 
                 if (control.ControllFile(uploadFileText.Text))
-                {
                     imageCorrectly.Visible = true;
-                    imageFile.Visible = true;
-                    uploadFileText.Visible = true;
-                }
                 else
-                {
-                    uploadFileText.Visible = true;
-                    imageFile.Visible = true;
                     fileBad.Visible = true;
-                }
+
+                imageFile.Visible = true;
+                uploadFileText.Visible = true;
             }
         }
 
@@ -162,6 +158,21 @@ namespace ESO___Skill_Point_Calculator
         {
             minimalizedButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
             this.minimalizedButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent));
+        }
+
+        private void muteButton_Click(object sender, EventArgs e)
+        {
+            switch (collection.value)
+            {
+                case 0:
+                    collection.BackroundPlayerClose();
+                    collection.value++;
+                    break;
+                case 1:
+                    collection.BackroundPlayerStart();
+                    collection.value = 0;
+                    break;
+            }
         }
     }
 }

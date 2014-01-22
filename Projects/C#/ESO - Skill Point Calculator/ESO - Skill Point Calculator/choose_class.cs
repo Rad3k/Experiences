@@ -22,7 +22,7 @@ namespace ESO___Skill_Point_Calculator
 
         private void dragonknightButton_Click(object sender, EventArgs e)
         {
-            SkillTree skill = new SkillTree();
+            buildEditor skill = new buildEditor();
             skill.Show();
         }
 
@@ -40,7 +40,7 @@ namespace ESO___Skill_Point_Calculator
 
         private void nightBlade_Click(object sender, EventArgs e)
         {
-            SkillTree skill = new SkillTree();
+            buildEditor skill = new buildEditor();
             skill.Show();
         }
 
@@ -58,7 +58,7 @@ namespace ESO___Skill_Point_Calculator
 
         private void sorcererButton_Click(object sender, EventArgs e)
         {
-            SkillTree skill = new SkillTree();
+            buildEditor skill = new buildEditor();
             skill.Show();
         }
 
@@ -76,7 +76,7 @@ namespace ESO___Skill_Point_Calculator
 
         private void templarButton_Click(object sender, EventArgs e)
         {
-            SkillTree skill = new SkillTree();
+            buildEditor skill = new buildEditor();
             skill.Show();
         }
 

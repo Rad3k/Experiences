@@ -63,6 +63,16 @@ namespace ESO___Skill_Point_Calculator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5538567_symbol_of_silent_mode_mute_vector_web_icon {
+            get {
+                object obj = ResourceManager.GetObject("5538567-symbol-of-silent-mode-mute-vector-web-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap about_transparent {
             get {
                 object obj = ResourceManager.GetObject("about_transparent", resourceCulture);
@@ -261,12 +271,12 @@ namespace ESO___Skill_Point_Calculator.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Bitmap Cursor {
+        internal static System.Drawing.Icon Cursor {
             get {
                 object obj = ResourceManager.GetObject("Cursor", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -316,6 +326,16 @@ namespace ESO___Skill_Point_Calculator.Properties {
         internal static System.Drawing.Bitmap file {
             get {
                 object obj = ResourceManager.GetObject("file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -386,6 +406,16 @@ namespace ESO___Skill_Point_Calculator.Properties {
         internal static System.Drawing.Bitmap min_transparent2 {
             get {
                 object obj = ResourceManager.GetObject("min_transparent2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mute_symbol_1060219_11 {
+            get {
+                object obj = ResourceManager.GetObject("Mute_symbol_1060219_11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

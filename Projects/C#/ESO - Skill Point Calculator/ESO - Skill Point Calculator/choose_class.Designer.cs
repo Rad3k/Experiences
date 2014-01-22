@@ -183,7 +183,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "choose_class";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "choose_class";
+            this.Text = "ESO - Choose Your Class";
             this.TransparencyKey = System.Drawing.SystemColors.WindowFrame;
             this.ResumeLayout(false);
 

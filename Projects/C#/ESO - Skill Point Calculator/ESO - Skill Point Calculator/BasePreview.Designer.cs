@@ -43,6 +43,8 @@
             this.imageCorrectly = new System.Windows.Forms.Button();
             this.fileBad = new System.Windows.Forms.Button();
             this.uploadFileText = new System.Windows.Forms.Label();
+            this.muteButton = new System.Windows.Forms.Button();
+            this.soundPanel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // version
@@ -275,6 +277,33 @@
             this.uploadFileText.Size = new System.Drawing.Size(0, 13);
             this.uploadFileText.TabIndex = 17;
             // 
+            // muteButton
+            // 
+            this.muteButton.BackColor = System.Drawing.Color.Transparent;
+            this.muteButton.BackgroundImage = global::ESO___Skill_Point_Calculator.Properties.Resources._5538567_symbol_of_silent_mode_mute_vector_web_icon;
+            this.muteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.muteButton.FlatAppearance.BorderSize = 0;
+            this.muteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.muteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.muteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.muteButton.Location = new System.Drawing.Point(137, 703);
+            this.muteButton.Name = "muteButton";
+            this.muteButton.Size = new System.Drawing.Size(35, 35);
+            this.muteButton.TabIndex = 18;
+            this.muteButton.UseVisualStyleBackColor = false;
+            this.muteButton.Click += new System.EventHandler(this.muteButton_Click);
+            // 
+            // soundPanel
+            // 
+            this.soundPanel.AutoSize = true;
+            this.soundPanel.BackColor = System.Drawing.Color.Transparent;
+            this.soundPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(196)))), ((int)(((byte)(181)))));
+            this.soundPanel.Location = new System.Drawing.Point(125, 687);
+            this.soundPanel.Name = "soundPanel";
+            this.soundPanel.Size = new System.Drawing.Size(67, 13);
+            this.soundPanel.TabIndex = 19;
+            this.soundPanel.Text = "Sound panel";
+            // 
             // BasePreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,6 +312,8 @@
             this.BackgroundImage = global::ESO___Skill_Point_Calculator.Properties.Resources.load_window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 860);
+            this.Controls.Add(this.soundPanel);
+            this.Controls.Add(this.muteButton);
             this.Controls.Add(this.uploadFileText);
             this.Controls.Add(this.fileBad);
             this.Controls.Add(this.imageCorrectly);
@@ -303,7 +334,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BasePreview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "ESO - Skill Point Calculator";
             this.TransparencyKey = System.Drawing.SystemColors.WindowFrame;
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -326,6 +357,8 @@
         private System.Windows.Forms.Button imageCorrectly;
         private System.Windows.Forms.Button fileBad;
         private System.Windows.Forms.Label uploadFileText;
+        private System.Windows.Forms.Button muteButton;
+        private System.Windows.Forms.Label soundPanel;
     }
 }
 

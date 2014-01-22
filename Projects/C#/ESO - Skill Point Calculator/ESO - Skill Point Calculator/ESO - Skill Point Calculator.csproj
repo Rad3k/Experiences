@@ -67,6 +67,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="choose_class.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +102,10 @@
       <DependentUpon>SkillTree.cs</DependentUpon>
     </Compile>
     <Compile Include="UniqueValue.cs" />
+    <EmbeddedResource Include="BuildResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BuildResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="choose_class.resx">
       <DependentUpon>choose_class.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +135,52 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\vampirism_on.png" />
+    <None Include="Resources\vampirism.png" />
+    <None Include="Resources\templar_skill_tree.png" />
+    <None Include="Resources\templar_on.png" />
+    <None Include="Resources\templar.png" />
+    <None Include="Resources\soul_magic_on.png" />
+    <None Include="Resources\soul_magic.png" />
+    <None Include="Resources\sorcerer_skill_tree.png" />
+    <None Include="Resources\sorcerer_on.png" />
+    <None Include="Resources\sorcerer.png" />
+    <None Include="Resources\skill_temp.png" />
+    <None Include="Resources\reset_on.png" />
+    <None Include="Resources\reset.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\one_two_handed_dual_on.png" />
+    <None Include="Resources\one_two_handed_dual.png" />
+    <None Include="Resources\nord_dunmer_argonian_on.png" />
+    <None Include="Resources\nord_dunmer_argonian.png" />
+    <None Include="Resources\nightblade_skill_tree.png" />
+    <None Include="Resources\nightblade_on.png" />
+    <None Include="Resources\nightblade.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\lycanthropy_on.png" />
+    <None Include="Resources\lycanthropy.png" />
+    <None Include="Resources\light_medium_heavy_on.png" />
+    <None Include="Resources\light_medium_heavy.png" />
+    <None Include="Resources\guilds_on.png" />
+    <None Include="Resources\guilds.png" />
+    <None Include="Resources\dragonknight_skill_tree.png" />
+    <None Include="Resources\dragonknight_on.png" />
+    <None Include="Resources\dragonknight.png" />
+    <None Include="Resources\crafting_on.png" />
+    <None Include="Resources\crafting.png" />
+    <None Include="Resources\build_editor_window.png" />
+    <None Include="Resources\breton_redguard_orc_on.png" />
+    <None Include="Resources\breton_redguard_orc.png" />
+    <None Include="Resources\bow_staff_on.png" />
+    <None Include="Resources\bow_staff.png" />
+    <None Include="Resources\assault_support_emperor_on.png" />
+    <None Include="Resources\assault_support_emperor.png" />
+    <None Include="Resources\altmer_bosmer_khajiit_on.png" />
+    <None Include="Resources\altmer_bosmer_khajiit.png" />
+    <None Include="Resources\Build editor.bmp" />
+    <None Include="Resources\5538567-symbol-of-silent-mode-mute-vector-web-icon.png" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\Mute_symbol_1060219_11.jpg" />
     <None Include="Resources\Cursor.cur" />
     <None Include="Resources\cancel_on1.png" />
     <None Include="Resources\cancel1.png" />
