@@ -9,8 +9,10 @@ using System.Runtime.InteropServices;
 
 namespace ESO___Skill_Point_Calculator
 {
-    class Collection
+    class Collection : GraphicPosition
     {
+        public Button menu = new Button();
+
         public string cursor;
         public string cursor_hand;
         public string sound;
@@ -53,6 +55,47 @@ namespace ESO___Skill_Point_Calculator
             {
                 MessageBox.Show(ex.Message + ": " + ex.StackTrace.ToString(), "Error");
             }
+        }
+
+        public void CreateClassButtons()
+        {
+            switch (UniqueValue.character)
+            {
+                case "sorcerer":
+                    menu.Name = "sorcererText";
+                    menu.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.sorcerer;
+                    break;
+                case "dragonknight":
+                    menu.Name = "dragonKnightText";
+                    menu.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.dragonknight;
+                    break;
+                case "templar":
+                    menu.Name = "templarText";
+                    menu.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.templar;
+                    break;
+                case "nightblade":
+                    menu.Name = "nightbladeText";
+                    menu.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.nightblade;
+                    break;
+            }
+
+            // Menu
+            menu.BackColor = System.Drawing.Color.Transparent;
+            menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            menu.FlatAppearance.BorderSize = 0;
+            menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            menu.Location = new System.Drawing.Point(Location[0][0,0]);
+            menu.Size = new System.Drawing.Size(Size[0][0,0], 0);
+            menu.TabIndex = 3;
+            menu.UseVisualStyleBackColor = false;
+        }
+
+        public void RemoveAllButtons()
+        {
+            menu.Controls.Remove(menu);
+            menu.Dispose();
         }
     }
 }

@@ -32,7 +32,6 @@
             this.minimalizedButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.dragonKnightText = new System.Windows.Forms.Button();
             this.weaponSlot1 = new System.Windows.Forms.Button();
             this.weaponSlot2 = new System.Windows.Forms.Button();
             this.armorType = new System.Windows.Forms.Button();
@@ -46,6 +45,10 @@
             this.vampirismType = new System.Windows.Forms.Button();
             this.lycanthropyType = new System.Windows.Forms.Button();
             this.maxSkillPoint = new System.Windows.Forms.Label();
+            this.classBackround = new System.Windows.Forms.Button();
+            this.resetTree1 = new System.Windows.Forms.Button();
+            this.resetTree3 = new System.Windows.Forms.Button();
+            this.resetTree2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // minimalizedButton
@@ -101,24 +104,6 @@
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             this.exitButton.MouseEnter += new System.EventHandler(this.exitButton_MouseEnter);
             this.exitButton.MouseLeave += new System.EventHandler(this.exitButton_MouseLeave);
-            // 
-            // dragonKnightText
-            // 
-            this.dragonKnightText.BackColor = System.Drawing.Color.Transparent;
-            this.dragonKnightText.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.dragonknight;
-            this.dragonKnightText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dragonKnightText.FlatAppearance.BorderSize = 0;
-            this.dragonKnightText.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.dragonKnightText.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.dragonKnightText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dragonKnightText.Location = new System.Drawing.Point(89, 223);
-            this.dragonKnightText.Name = "dragonKnightText";
-            this.dragonKnightText.Size = new System.Drawing.Size(133, 26);
-            this.dragonKnightText.TabIndex = 3;
-            this.dragonKnightText.UseVisualStyleBackColor = false;
-            this.dragonKnightText.Click += new System.EventHandler(this.dragonKnightText_Click);
-            this.dragonKnightText.MouseEnter += new System.EventHandler(this.dragonKnightText_MouseEnter);
-            this.dragonKnightText.MouseLeave += new System.EventHandler(this.dragonKnightText_MouseLeave);
             // 
             // weaponSlot1
             // 
@@ -337,6 +322,66 @@
             this.maxSkillPoint.Size = new System.Drawing.Size(0, 20);
             this.maxSkillPoint.TabIndex = 16;
             // 
+            // classBackround
+            // 
+            this.classBackround.BackColor = System.Drawing.Color.Transparent;
+            this.classBackround.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.templar_skill_tree;
+            this.classBackround.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.classBackround.FlatAppearance.BorderSize = 0;
+            this.classBackround.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.classBackround.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.classBackround.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.classBackround.Location = new System.Drawing.Point(325, 200);
+            this.classBackround.Name = "classBackround";
+            this.classBackround.Size = new System.Drawing.Size(619, 484);
+            this.classBackround.TabIndex = 17;
+            this.classBackround.UseVisualStyleBackColor = false;
+            // 
+            // resetTree1
+            // 
+            this.resetTree1.BackColor = System.Drawing.Color.Transparent;
+            this.resetTree1.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.reset;
+            this.resetTree1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.resetTree1.FlatAppearance.BorderSize = 0;
+            this.resetTree1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.resetTree1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.resetTree1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetTree1.Location = new System.Drawing.Point(410, 169);
+            this.resetTree1.Name = "resetTree1";
+            this.resetTree1.Size = new System.Drawing.Size(28, 25);
+            this.resetTree1.TabIndex = 18;
+            this.resetTree1.UseVisualStyleBackColor = false;
+            // 
+            // resetTree3
+            // 
+            this.resetTree3.BackColor = System.Drawing.Color.Transparent;
+            this.resetTree3.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.reset;
+            this.resetTree3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.resetTree3.FlatAppearance.BorderSize = 0;
+            this.resetTree3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.resetTree3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.resetTree3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetTree3.Location = new System.Drawing.Point(823, 169);
+            this.resetTree3.Name = "resetTree3";
+            this.resetTree3.Size = new System.Drawing.Size(28, 25);
+            this.resetTree3.TabIndex = 29;
+            this.resetTree3.UseVisualStyleBackColor = false;
+            // 
+            // resetTree2
+            // 
+            this.resetTree2.BackColor = System.Drawing.Color.Transparent;
+            this.resetTree2.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.reset;
+            this.resetTree2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.resetTree2.FlatAppearance.BorderSize = 0;
+            this.resetTree2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.resetTree2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.resetTree2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetTree2.Location = new System.Drawing.Point(615, 169);
+            this.resetTree2.Name = "resetTree2";
+            this.resetTree2.Size = new System.Drawing.Size(28, 25);
+            this.resetTree2.TabIndex = 30;
+            this.resetTree2.UseVisualStyleBackColor = false;
+            // 
             // buildEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +390,10 @@
             this.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.build_editor_window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 860);
+            this.Controls.Add(this.resetTree2);
+            this.Controls.Add(this.resetTree3);
+            this.Controls.Add(this.resetTree1);
+            this.Controls.Add(this.classBackround);
             this.Controls.Add(this.maxSkillPoint);
             this.Controls.Add(this.lycanthropyType);
             this.Controls.Add(this.vampirismType);
@@ -358,7 +407,6 @@
             this.Controls.Add(this.armorType);
             this.Controls.Add(this.weaponSlot2);
             this.Controls.Add(this.weaponSlot1);
-            this.Controls.Add(this.dragonKnightText);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.minimalizedButton);
@@ -379,7 +427,6 @@
         private System.Windows.Forms.Button minimalizedButton;
         private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Button dragonKnightText;
         private System.Windows.Forms.Button weaponSlot1;
         private System.Windows.Forms.Button weaponSlot2;
         private System.Windows.Forms.Button armorType;
@@ -393,5 +440,9 @@
         private System.Windows.Forms.Button vampirismType;
         private System.Windows.Forms.Button lycanthropyType;
         private System.Windows.Forms.Label maxSkillPoint;
+        private System.Windows.Forms.Button classBackround;
+        private System.Windows.Forms.Button resetTree1;
+        private System.Windows.Forms.Button resetTree3;
+        private System.Windows.Forms.Button resetTree2;
     }
 }
