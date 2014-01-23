@@ -63,19 +63,19 @@ namespace ESO___Skill_Point_Calculator
             {
                 case "sorcerer":
                     menu.Name = "sorcererText";
-                    menu.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.sorcerer;
+                    menu.BackgroundImage = BuildResource.sorcerer;
                     break;
                 case "dragonknight":
                     menu.Name = "dragonKnightText";
-                    menu.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.dragonknight;
+                    menu.BackgroundImage = BuildResource.dragonknight;
                     break;
                 case "templar":
                     menu.Name = "templarText";
-                    menu.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.templar;
+                    menu.BackgroundImage = BuildResource.templar;
                     break;
                 case "nightblade":
                     menu.Name = "nightbladeText";
-                    menu.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.nightblade;
+                    menu.BackgroundImage = BuildResource.nightblade;
                     break;
             }
 
