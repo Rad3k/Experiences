@@ -117,6 +117,8 @@
             this.dragonKnightText.TabIndex = 3;
             this.dragonKnightText.UseVisualStyleBackColor = false;
             this.dragonKnightText.Click += new System.EventHandler(this.dragonKnightText_Click);
+            this.dragonKnightText.MouseEnter += new System.EventHandler(this.dragonKnightText_MouseEnter);
+            this.dragonKnightText.MouseLeave += new System.EventHandler(this.dragonKnightText_MouseLeave);
             // 
             // weaponSlot1
             // 
@@ -133,6 +135,8 @@
             this.weaponSlot1.TabIndex = 4;
             this.weaponSlot1.UseVisualStyleBackColor = false;
             this.weaponSlot1.Click += new System.EventHandler(this.weaponSlot1_Click);
+            this.weaponSlot1.MouseEnter += new System.EventHandler(this.weaponSlot1_MouseEnter);
+            this.weaponSlot1.MouseLeave += new System.EventHandler(this.weaponSlot1_MouseLeave);
             // 
             // weaponSlot2
             // 
@@ -149,6 +153,8 @@
             this.weaponSlot2.TabIndex = 5;
             this.weaponSlot2.UseVisualStyleBackColor = false;
             this.weaponSlot2.Click += new System.EventHandler(this.weaponSlot2_Click);
+            this.weaponSlot2.MouseEnter += new System.EventHandler(this.weaponSlot2_MouseEnter);
+            this.weaponSlot2.MouseLeave += new System.EventHandler(this.weaponSlot2_MouseLeave);
             // 
             // armorType
             // 
@@ -165,6 +171,8 @@
             this.armorType.TabIndex = 6;
             this.armorType.UseVisualStyleBackColor = false;
             this.armorType.Click += new System.EventHandler(this.armorType_Click);
+            this.armorType.MouseEnter += new System.EventHandler(this.armorType_MouseEnter);
+            this.armorType.MouseLeave += new System.EventHandler(this.armorType_MouseLeave);
             // 
             // racialDaggerfall
             // 
@@ -180,6 +188,8 @@
             this.racialDaggerfall.Size = new System.Drawing.Size(211, 26);
             this.racialDaggerfall.TabIndex = 7;
             this.racialDaggerfall.UseVisualStyleBackColor = false;
+            this.racialDaggerfall.MouseEnter += new System.EventHandler(this.racialDaggerfall_MouseEnter);
+            this.racialDaggerfall.MouseLeave += new System.EventHandler(this.racialDaggerfall_MouseLeave);
             // 
             // racialAldmeri
             // 
@@ -195,6 +205,8 @@
             this.racialAldmeri.Size = new System.Drawing.Size(211, 27);
             this.racialAldmeri.TabIndex = 8;
             this.racialAldmeri.UseVisualStyleBackColor = false;
+            this.racialAldmeri.MouseEnter += new System.EventHandler(this.racialAldmeri_MouseEnter);
+            this.racialAldmeri.MouseLeave += new System.EventHandler(this.racialAldmeri_MouseLeave);
             // 
             // racialEbonheart
             // 
@@ -210,6 +222,8 @@
             this.racialEbonheart.Size = new System.Drawing.Size(227, 26);
             this.racialEbonheart.TabIndex = 9;
             this.racialEbonheart.UseVisualStyleBackColor = false;
+            this.racialEbonheart.MouseEnter += new System.EventHandler(this.racialEbonheart_MouseEnter);
+            this.racialEbonheart.MouseLeave += new System.EventHandler(this.racialEbonheart_MouseLeave);
             // 
             // pvpType
             // 
@@ -225,6 +239,8 @@
             this.pvpType.Size = new System.Drawing.Size(230, 26);
             this.pvpType.TabIndex = 10;
             this.pvpType.UseVisualStyleBackColor = false;
+            this.pvpType.MouseEnter += new System.EventHandler(this.pvpType_MouseEnter);
+            this.pvpType.MouseLeave += new System.EventHandler(this.pvpType_MouseLeave);
             // 
             // guildsType
             // 
@@ -240,6 +256,8 @@
             this.guildsType.Size = new System.Drawing.Size(80, 26);
             this.guildsType.TabIndex = 11;
             this.guildsType.UseVisualStyleBackColor = false;
+            this.guildsType.MouseEnter += new System.EventHandler(this.guildsType_MouseEnter);
+            this.guildsType.MouseLeave += new System.EventHandler(this.guildsType_MouseLeave);
             // 
             // craftingType
             // 
@@ -255,6 +273,8 @@
             this.craftingType.Size = new System.Drawing.Size(97, 26);
             this.craftingType.TabIndex = 12;
             this.craftingType.UseVisualStyleBackColor = false;
+            this.craftingType.MouseEnter += new System.EventHandler(this.craftingType_MouseEnter);
+            this.craftingType.MouseLeave += new System.EventHandler(this.craftingType_MouseLeave);
             // 
             // soulMagicType
             // 
@@ -270,6 +290,8 @@
             this.soulMagicType.Size = new System.Drawing.Size(114, 26);
             this.soulMagicType.TabIndex = 13;
             this.soulMagicType.UseVisualStyleBackColor = false;
+            this.soulMagicType.MouseEnter += new System.EventHandler(this.soulMagicType_MouseEnter);
+            this.soulMagicType.MouseLeave += new System.EventHandler(this.soulMagicType_MouseLeave);
             // 
             // vampirismType
             // 
@@ -284,6 +306,8 @@
             this.vampirismType.Size = new System.Drawing.Size(103, 26);
             this.vampirismType.TabIndex = 14;
             this.vampirismType.UseVisualStyleBackColor = false;
+            this.vampirismType.MouseEnter += new System.EventHandler(this.vampirismType_MouseEnter);
+            this.vampirismType.MouseLeave += new System.EventHandler(this.vampirismType_MouseLeave);
             // 
             // lycanthropyType
             // 
@@ -299,6 +323,8 @@
             this.lycanthropyType.Size = new System.Drawing.Size(125, 26);
             this.lycanthropyType.TabIndex = 15;
             this.lycanthropyType.UseVisualStyleBackColor = false;
+            this.lycanthropyType.MouseEnter += new System.EventHandler(this.lycanthropyType_MouseEnter);
+            this.lycanthropyType.MouseLeave += new System.EventHandler(this.lycanthropyType_MouseLeave);
             // 
             // maxSkillPoint
             // 
@@ -306,7 +332,7 @@
             this.maxSkillPoint.BackColor = System.Drawing.Color.Transparent;
             this.maxSkillPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.maxSkillPoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(196)))), ((int)(((byte)(181)))));
-            this.maxSkillPoint.Location = new System.Drawing.Point(525, 689);
+            this.maxSkillPoint.Location = new System.Drawing.Point(528, 687);
             this.maxSkillPoint.Name = "maxSkillPoint";
             this.maxSkillPoint.Size = new System.Drawing.Size(0, 20);
             this.maxSkillPoint.TabIndex = 16;
