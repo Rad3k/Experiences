@@ -13,63 +13,64 @@ namespace ESO___Skill_Point_Calculator
     public partial class buildEditor : Form
     {
         Collection collection = new Collection();
+        GraphicClassStructure classStructure = new GraphicClassStructure();
 
         public buildEditor()
         {
             InitializeComponent();
             this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
             maxSkillPoint.Text = collection.maxSkill.ToString();
-            collection.CreateClassButtons();
-            this.Controls.Add(collection.classBackround);
+            classStructure.CreateClassButtons();
+            this.Controls.Add(classStructure.classBackround);
 
             for (int i = 0; i < 3; i++)
             {
                 switch (i)
                 {
                     case 0:
-                        collection.resetTree.Location = new System.Drawing.Point(collection.Location[0][0][2], collection.Location[0][1][2]);
+                        classStructure.resetTree.Location = new System.Drawing.Point(collection.Location[0][0][2], collection.Location[0][1][2]);
                         break;
                     case 1:
-                        collection.resetTree.Location = new System.Drawing.Point(collection.Location[0][0][3], collection.Location[0][1][3]);
+                        classStructure.resetTree.Location = new System.Drawing.Point(collection.Location[0][0][3], collection.Location[0][1][3]);
                         break;
                     case 2:
-                        collection.resetTree.Location = new System.Drawing.Point(collection.Location[0][0][4], collection.Location[0][1][4]);
+                        classStructure.resetTree.Location = new System.Drawing.Point(collection.Location[0][0][4], collection.Location[0][1][4]);
                         break;
                 }
-                collection.resetTree.Click += new EventHandler(resetTreekOneEvent_Click);
-                collection.resetTree.Tag = i;
-                this.Controls.Add(collection.resetTree);
+                classStructure.resetTree.Click += new EventHandler(resetTreekOneEvent_Click);
+                classStructure.resetTree.Tag = i;
+                this.Controls.Add(classStructure.resetTree);
             }
 
             switch (UniqueValue.character)
             {
                 case "sorcerer":
                     MessageBox.Show("sorcerer");
-                    collection.menu.Click += new System.EventHandler(sorcerer_Click);
-                    collection.menu.MouseEnter += new System.EventHandler(sorcerer_MouseEnter);
-                    collection.menu.MouseLeave += new System.EventHandler(sorcerer_MouseLeave);
-                    this.Controls.Add(this.collection.menu);
+                    classStructure.menu.Click += new System.EventHandler(sorcerer_Click);
+                    classStructure.menu.MouseEnter += new System.EventHandler(sorcerer_MouseEnter);
+                    classStructure.menu.MouseLeave += new System.EventHandler(sorcerer_MouseLeave);
+                    this.Controls.Add(this.classStructure.menu);
                     break;
                 case "dragonknight":
                     MessageBox.Show("dragonknight");
-                    collection.menu.Click += new System.EventHandler(dragonKnightText_Click);
-                    collection.menu.MouseEnter += new System.EventHandler(dragonKnightText_MouseEnter);
-                    collection.menu.MouseLeave += new System.EventHandler(dragonKnightText_MouseLeave);
-                    this.Controls.Add(this.collection.menu);
+                    classStructure.menu.Click += new System.EventHandler(dragonKnightText_Click);
+                    classStructure.menu.MouseEnter += new System.EventHandler(dragonKnightText_MouseEnter);
+                    classStructure.menu.MouseLeave += new System.EventHandler(dragonKnightText_MouseLeave);
+                    this.Controls.Add(this.classStructure.menu);
                     break;
                 case "templar":
                     MessageBox.Show("templar");
-                    collection.menu.Click += new System.EventHandler(templar_Click);
-                    collection.menu.MouseEnter += new System.EventHandler(templar_MouseEnter);
-                    collection.menu.MouseLeave += new System.EventHandler(templar_MouseLeave);
-                    this.Controls.Add(this.collection.menu);
+                    classStructure.menu.Click += new System.EventHandler(templar_Click);
+                    classStructure.menu.MouseEnter += new System.EventHandler(templar_MouseEnter);
+                    classStructure.menu.MouseLeave += new System.EventHandler(templar_MouseLeave);
+                    this.Controls.Add(this.classStructure.menu);
                     break;
                 case "nightblade":
                     MessageBox.Show("nightblade");
-                    collection.menu.Click += new System.EventHandler(nightblade_Click);
-                    collection.menu.MouseEnter += new System.EventHandler(nightblade_MouseEnter);
-                    collection.menu.MouseLeave += new System.EventHandler(nightblade_MouseLeave);
-                    this.Controls.Add(this.collection.menu);
+                    classStructure.menu.Click += new System.EventHandler(nightblade_Click);
+                    classStructure.menu.MouseEnter += new System.EventHandler(nightblade_MouseEnter);
+                    classStructure.menu.MouseLeave += new System.EventHandler(nightblade_MouseLeave);
+                    this.Controls.Add(this.classStructure.menu);
                     break;
             }
         }
@@ -77,7 +78,7 @@ namespace ESO___Skill_Point_Calculator
         private void exitButton_Click(object sender, EventArgs e)
         {
             Close();
-            collection.RemoveAllButtons();
+            classStructure.RemoveAllButtons();
         }
 
         private void exitButton_MouseEnter(object sender, EventArgs e)
@@ -133,14 +134,14 @@ namespace ESO___Skill_Point_Calculator
 
         private void dragonKnightText_MouseEnter(object sender, EventArgs e)
         {
-            collection.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.collection.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight_on));
+            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
+            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight_on));
         }
 
         private void dragonKnightText_MouseLeave(object sender, EventArgs e)
         {
-            collection.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.collection.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight));
+            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight));
         }
 
         private void sorcerer_Click(object sender, EventArgs e)
@@ -150,14 +151,14 @@ namespace ESO___Skill_Point_Calculator
 
         private void sorcerer_MouseEnter(object sender, EventArgs e)
         {
-            collection.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.collection.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer_on));
+            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
+            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer_on));
         }
 
         private void sorcerer_MouseLeave(object sender, EventArgs e)
         {
-            collection.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.collection.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer));
+            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer));
         }
 
         private void templar_Click(object sender, EventArgs e)
@@ -167,14 +168,14 @@ namespace ESO___Skill_Point_Calculator
 
         private void templar_MouseEnter(object sender, EventArgs e)
         {
-            collection.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.collection.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer_on));
+            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
+            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer_on));
         }
 
         private void templar_MouseLeave(object sender, EventArgs e)
         {
-            collection.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.collection.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer));
+            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer));
         }
 
         private void nightblade_Click(object sender, EventArgs e)
@@ -184,14 +185,14 @@ namespace ESO___Skill_Point_Calculator
 
         private void nightblade_MouseEnter(object sender, EventArgs e)
         {
-            collection.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.collection.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer_on));
+            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
+            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer_on));
         }
 
         private void nightblade_MouseLeave(object sender, EventArgs e)
         {
-            collection.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.collection.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer));
+            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer));
         }
 
         private void weaponSlot1_Click(object sender, EventArgs e)

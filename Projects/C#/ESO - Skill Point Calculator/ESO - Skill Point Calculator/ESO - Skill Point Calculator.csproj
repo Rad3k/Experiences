@@ -81,6 +81,7 @@
     <Compile Include="Collection.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Cursors.cs" />
+    <Compile Include="GraphicClassStructure.cs" />
     <Compile Include="GraphicPosition.cs" />
     <Compile Include="Links.cs" />
     <Compile Include="BasePreview.cs">
