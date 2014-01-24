@@ -22,6 +22,25 @@ namespace ESO___Skill_Point_Calculator
             collection.CreateClassButtons();
             this.Controls.Add(collection.classBackround);
 
+            for (int i = 0; i < 3; i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        collection.resetTree.Location = new System.Drawing.Point(collection.Location[0][0][2], collection.Location[0][1][2]);
+                        break;
+                    case 1:
+                        collection.resetTree.Location = new System.Drawing.Point(collection.Location[0][0][3], collection.Location[0][1][3]);
+                        break;
+                    case 2:
+                        collection.resetTree.Location = new System.Drawing.Point(collection.Location[0][0][4], collection.Location[0][1][4]);
+                        break;
+                }
+                collection.resetTree.Click += new EventHandler(resetTreekOneEvent_Click);
+                collection.resetTree.Tag = i;
+                this.Controls.Add(collection.resetTree);
+            }
+
             switch (UniqueValue.character)
             {
                 case "sorcerer":
@@ -332,6 +351,27 @@ namespace ESO___Skill_Point_Calculator
         {
             lycanthropyType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
             this.lycanthropyType.BackgroundImage = ((System.Drawing.Image)(BuildResource.lycanthropy));
+        }
+
+        private void resetTreekOneEvent_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            if (button != null)
+            {
+                // now you know the button that was clicked
+                switch ((int)button.Tag)
+                {
+                    case 0:
+                        // First Button Clicked
+                        break;
+                    case 1:
+                        // Second Button Clicked
+                        break;
+                    case 2:
+                        // Third Button Clicked
+                        break;
+                }
+            }
         }
     }
 }

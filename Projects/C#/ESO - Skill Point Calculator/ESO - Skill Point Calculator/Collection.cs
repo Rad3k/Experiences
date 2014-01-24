@@ -13,6 +13,7 @@ namespace ESO___Skill_Point_Calculator
     {
         public Button menu = new Button();
         public Button classBackround = new Button();
+        public Button resetTree = new Button();
 
         public string cursor;
         public string cursor_hand;
@@ -108,12 +109,30 @@ namespace ESO___Skill_Point_Calculator
             this.classBackround.Size = new System.Drawing.Size(Size[0][0][1], Size[0][1][1]);
             this.classBackround.TabIndex = 17;
             this.classBackround.UseVisualStyleBackColor = false;
+
+            // Reset tree
+            this.resetTree.BackColor = System.Drawing.Color.Transparent;
+            this.resetTree.BackgroundImage = BuildResource.reset;
+            this.resetTree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.resetTree.FlatAppearance.BorderSize = 0;
+            this.resetTree.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.resetTree.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.resetTree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetTree.Name = "resetTree";
+            this.resetTree.Size = new System.Drawing.Size(Size[0][0][2], Size[0][1][2]);
+            //this.resetTree.TabIndex = 18;
+            this.resetTree.UseVisualStyleBackColor = false;
         }
 
         public void RemoveAllButtons()
         {
             this.menu.Controls.Remove(menu);
+            this.classBackround.Controls.Remove(classBackround);
+            this.resetTree.Controls.Remove(resetTree);
+
             this.menu.Dispose();
+            this.classBackround.Dispose();
+            this.resetTree.Dispose();
         }
     }
 }
