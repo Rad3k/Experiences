@@ -20,6 +20,7 @@ namespace ESO___Skill_Point_Calculator
             this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
             maxSkillPoint.Text = collection.maxSkill.ToString();
             collection.CreateClassButtons();
+            this.Controls.Add(collection.classBackround);
 
             switch (UniqueValue.character)
             {
@@ -28,28 +29,28 @@ namespace ESO___Skill_Point_Calculator
                     collection.menu.Click += new System.EventHandler(sorcerer_Click);
                     collection.menu.MouseEnter += new System.EventHandler(sorcerer_MouseEnter);
                     collection.menu.MouseLeave += new System.EventHandler(sorcerer_MouseLeave);
-                    collection.menu.Controls.Add(collection.menu);
+                    this.Controls.Add(this.collection.menu);
                     break;
                 case "dragonknight":
                     MessageBox.Show("dragonknight");
                     collection.menu.Click += new System.EventHandler(dragonKnightText_Click);
                     collection.menu.MouseEnter += new System.EventHandler(dragonKnightText_MouseEnter);
                     collection.menu.MouseLeave += new System.EventHandler(dragonKnightText_MouseLeave);
-                    collection.menu.Controls.Add(collection.menu);
+                    this.Controls.Add(this.collection.menu);
                     break;
                 case "templar":
                     MessageBox.Show("templar");
                     collection.menu.Click += new System.EventHandler(templar_Click);
                     collection.menu.MouseEnter += new System.EventHandler(templar_MouseEnter);
                     collection.menu.MouseLeave += new System.EventHandler(templar_MouseLeave);
-                    collection.menu.Controls.Add(collection.menu);
+                    this.Controls.Add(this.collection.menu);
                     break;
                 case "nightblade":
                     MessageBox.Show("nightblade");
                     collection.menu.Click += new System.EventHandler(nightblade_Click);
                     collection.menu.MouseEnter += new System.EventHandler(nightblade_MouseEnter);
                     collection.menu.MouseLeave += new System.EventHandler(nightblade_MouseLeave);
-                    collection.menu.Controls.Add(collection.menu);
+                    this.Controls.Add(this.collection.menu);
                     break;
             }
         }

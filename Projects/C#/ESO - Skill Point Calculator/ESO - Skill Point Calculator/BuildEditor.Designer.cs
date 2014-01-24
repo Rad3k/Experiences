@@ -45,7 +45,6 @@
             this.vampirismType = new System.Windows.Forms.Button();
             this.lycanthropyType = new System.Windows.Forms.Button();
             this.maxSkillPoint = new System.Windows.Forms.Label();
-            this.classBackround = new System.Windows.Forms.Button();
             this.resetTree1 = new System.Windows.Forms.Button();
             this.resetTree3 = new System.Windows.Forms.Button();
             this.resetTree2 = new System.Windows.Forms.Button();
@@ -322,21 +321,6 @@
             this.maxSkillPoint.Size = new System.Drawing.Size(0, 20);
             this.maxSkillPoint.TabIndex = 16;
             // 
-            // classBackround
-            // 
-            this.classBackround.BackColor = System.Drawing.Color.Transparent;
-            this.classBackround.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.templar_skill_tree;
-            this.classBackround.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.classBackround.FlatAppearance.BorderSize = 0;
-            this.classBackround.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.classBackround.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.classBackround.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.classBackround.Location = new System.Drawing.Point(325, 200);
-            this.classBackround.Name = "classBackround";
-            this.classBackround.Size = new System.Drawing.Size(619, 484);
-            this.classBackround.TabIndex = 17;
-            this.classBackround.UseVisualStyleBackColor = false;
-            // 
             // resetTree1
             // 
             this.resetTree1.BackColor = System.Drawing.Color.Transparent;
@@ -393,7 +377,6 @@
             this.Controls.Add(this.resetTree2);
             this.Controls.Add(this.resetTree3);
             this.Controls.Add(this.resetTree1);
-            this.Controls.Add(this.classBackround);
             this.Controls.Add(this.maxSkillPoint);
             this.Controls.Add(this.lycanthropyType);
             this.Controls.Add(this.vampirismType);
@@ -440,7 +423,6 @@
         private System.Windows.Forms.Button vampirismType;
         private System.Windows.Forms.Button lycanthropyType;
         private System.Windows.Forms.Label maxSkillPoint;
-        private System.Windows.Forms.Button classBackround;
         private System.Windows.Forms.Button resetTree1;
         private System.Windows.Forms.Button resetTree3;
         private System.Windows.Forms.Button resetTree2;
