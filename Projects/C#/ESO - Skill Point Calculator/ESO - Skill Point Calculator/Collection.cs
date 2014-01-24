@@ -86,8 +86,8 @@ namespace ESO___Skill_Point_Calculator
             menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            menu.Location = new System.Drawing.Point(Location[0][0,0]);
-            menu.Size = new System.Drawing.Size(Size[0][0,0], 0);
+            menu.Location = new System.Drawing.Point(Location[0][0][0], Location[0][1][0]);
+            menu.Size = new System.Drawing.Size(Size[0][0][0], Size[0][1][0]);
             menu.TabIndex = 3;
             menu.UseVisualStyleBackColor = false;
         }
