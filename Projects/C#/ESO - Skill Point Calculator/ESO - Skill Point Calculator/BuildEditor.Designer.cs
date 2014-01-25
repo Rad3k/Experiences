@@ -351,6 +351,7 @@
             this.TransparencyKey = System.Drawing.SystemColors.WindowFrame;
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

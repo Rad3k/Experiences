@@ -22,10 +22,10 @@ namespace ESO___Skill_Point_Calculator
 
         private void dragonknightButton_Click(object sender, EventArgs e)
         {
+            UniqueValue.character = "dragonknight";
             buildEditor skill = new buildEditor();
             skill.Show();
             this.WindowState = FormWindowState.Minimized;
-            UniqueValue.character = "dragonknight";
         }
 
         private void dragonknightButton_MouseEnter(object sender, EventArgs e)
@@ -42,10 +42,10 @@ namespace ESO___Skill_Point_Calculator
 
         private void nightBlade_Click(object sender, EventArgs e)
         {
+            UniqueValue.character = "nightblade";
             buildEditor skill = new buildEditor();
             skill.Show();
             this.WindowState = FormWindowState.Minimized;
-            UniqueValue.character = "nightblade";
         }
 
         private void nightBlade_MouseEnter(object sender, EventArgs e)
@@ -62,10 +62,10 @@ namespace ESO___Skill_Point_Calculator
 
         private void sorcererButton_Click(object sender, EventArgs e)
         {
+            UniqueValue.character = "sorcerer";
             buildEditor skill = new buildEditor();
             skill.Show();
             this.WindowState = FormWindowState.Minimized;
-            UniqueValue.character = "sorcerer";
         }
 
         private void sorcererButton_MouseEnter(object sender, EventArgs e)
@@ -82,10 +82,10 @@ namespace ESO___Skill_Point_Calculator
 
         private void templarButton_Click(object sender, EventArgs e)
         {
+            UniqueValue.character = "templar";
             buildEditor skill = new buildEditor();
             skill.Show();
             this.WindowState = FormWindowState.Minimized;
-            UniqueValue.character = "templar";
         }
 
         private void templarButton_MouseEnter(object sender, EventArgs e)

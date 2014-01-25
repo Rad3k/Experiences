@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 namespace ESO___Skill_Point_Calculator
 {
-    class Collection : GraphicPosition
+    class Collection
     {
         public string cursor;
         public string cursor_hand;

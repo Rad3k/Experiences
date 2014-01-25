@@ -2,63 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 
 namespace ESO___Skill_Point_Calculator
 {
     class GraphicPosition
     {
         // Location
-        public int[][][] Location;
+        public Point[][] Location;
 
         // Size
-        public int[][][] Size;
+        public Size[][] Size;
 
         public GraphicPosition()
         {
-            Location = new int[][][]
+            Location = new Point[][]
             {
-                new int[][]
+                new Point[]
                 {
                     // Menu
-                    new int[89],
+                    new Point(89, 224),
                     // Class
-                    new int[325],
+                    new Point(325, 200),
                     // Reset Tree
-                    new int[410],
-                    new int[615],
-                    new int[823]
-                },
-                new int[][]
-                {
-                    // Menu
-                    new int[223],
-                    // Class
-                    new int[200],
-                    // Reset Tree
-                    new int[169],
-                    new int[169],
-                    new int[169]
+                    new Point(410, 169),
+                    new Point(615, 169),
+                    new Point(823, 169)
                 }
             };
-            Size = new int[][][]
+            Size = new Size[][]
             {
-                new int[][]
+                new Size[]
                 {
                     // Menu
-                    new int[133],
+                    new Size(133, 26), // dragonknight
+                    new Size(98, 26),  // sorcerer
+                    new Size(115, 26), // nightblade
+                    new Size(90, 26),  // templar
                     // Class
-                    new int[619],
+                    new Size(619, 484),
                     // Reset Tree
-                    new int[28]
-                },
-                new int[][]
-                {
-                    // Menu
-                    new int[26],
-                    // Class
-                    new int[484],
-                    // Reset Tree
-                    new int[25]
+                    new Size(28, 25)
                 }
             };
         }
