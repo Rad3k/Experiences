@@ -28,36 +28,12 @@ namespace ESO___Skill_Point_Calculator
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void dragonknightButton_MouseEnter(object sender, EventArgs e)
-        {
-            dragonknightButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.dragonknightButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Dragonknight_revealed));
-        }
-
-        private void dragonknightButton_MouseLeave(object sender, EventArgs e)
-        {
-            this.dragonknightButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Dragonknight_hidden));
-            dragonknightButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-        }
-
         private void nightBlade_Click(object sender, EventArgs e)
         {
             UniqueValue.character = "nightblade";
             buildEditor skill = new buildEditor();
             skill.Show();
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void nightBlade_MouseEnter(object sender, EventArgs e)
-        {
-            nightBlade.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.nightBlade.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Nightblade_revealed));
-        }
-
-        private void nightBlade_MouseLeave(object sender, EventArgs e)
-        {
-            this.nightBlade.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Nightblade_hidden));
-            nightBlade.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
         }
 
         private void sorcererButton_Click(object sender, EventArgs e)
@@ -68,18 +44,6 @@ namespace ESO___Skill_Point_Calculator
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void sorcererButton_MouseEnter(object sender, EventArgs e)
-        {
-            sorcererButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.sorcererButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Sorcerer_revealed2));
-        }
-
-        private void sorcererButton_MouseLeave(object sender, EventArgs e)
-        {
-            this.sorcererButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Sorcerer_hidden2));
-            sorcererButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-        }
-
         private void templarButton_Click(object sender, EventArgs e)
         {
             UniqueValue.character = "templar";
@@ -88,33 +52,9 @@ namespace ESO___Skill_Point_Calculator
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void templarButton_MouseEnter(object sender, EventArgs e)
-        {
-            templarButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.templarButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Templar_revealed2));
-        }
-
-        private void templarButton_MouseLeave(object sender, EventArgs e)
-        {
-            this.templarButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Templar_hidden2));
-            templarButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-        }
-
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void closeButton_MouseEnter(object sender, EventArgs e)
-        {
-            closeButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.closeButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent_on));
-        }
-
-        private void closeButton_MouseLeave(object sender, EventArgs e)
-        {
-            this.closeButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent));
-            closeButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
         }
 
         private void helpButtons_Click(object sender, EventArgs e)
@@ -122,33 +62,73 @@ namespace ESO___Skill_Point_Calculator
             //this.WindowState = FormWindowState.Maximized;
         }
 
-        private void helpButtons_MouseEnter(object sender, EventArgs e)
-        {
-            helpButtons.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.helpButtons.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent_on));
-        }
-
-        private void helpButtons_MouseLeave(object sender, EventArgs e)
-        {
-            this.helpButtons.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent));
-            helpButtons.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-        }
-
         private void minButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void minButton_MouseEnter(object sender, EventArgs e)
+        private void CheckAllButtons_MouseEnter(object sender, EventArgs e)
         {
-            minButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.minButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent_on));
+            var currentButton = sender as Button;
+            var name = currentButton.Name;
+            currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
+
+            switch (name)
+            {
+                case "dragonknightButton":
+                    this.dragonknightButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Dragonknight_revealed1));
+                    break;
+                case "nightBladeButton":
+                    this.nightBlade.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Nightblade_revealed1));
+                    break;
+                case "sorcererButton":
+                    this.sorcererButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Sorcerer_revealed2));
+                    break;
+                case "templarButton":
+                    this.templarButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Templar_revealed2));
+                    break;
+                case "minButton":
+                    this.minButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent_on));
+                    break;
+                case "helpButtons":
+                    this.helpButtons.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent_on));
+                    break;
+                case "closeButton":
+                    this.closeButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent_on));
+                    break;
+            }
         }
 
-        private void minButton_MouseLeave(object sender, EventArgs e)
+        private void CheckAllButtons_MouseLeave(object sender, EventArgs e)
         {
-            this.minButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent));
-            minButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+            var currentButton = sender as Button;
+            var name = currentButton.Name;
+            currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+
+            switch (name)
+            {
+                case "dragonknightButton":
+                    this.dragonknightButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Dragonknight_hidden1));
+                    break;
+                case "nightBladeButton":
+                    this.nightBlade.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Nightblade_hidden1));
+                    break;
+                case "sorcererButton":
+                    this.sorcererButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Sorcerer_hidden2));
+                    break;
+                case "templarButton":
+                    this.templarButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Templar_hidden2));
+                    break;
+                case "minButton":
+                    this.minButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent));
+                    break;
+                case "helpButtons":
+                    this.helpButtons.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent));
+                    break;
+                case "closeButton":
+                    this.closeButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent));
+                    break;
+            }
         }
     }
 }

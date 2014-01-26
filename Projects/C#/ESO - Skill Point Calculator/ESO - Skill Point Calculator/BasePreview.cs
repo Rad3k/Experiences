@@ -42,40 +42,74 @@ namespace ESO___Skill_Point_Calculator
             }
         }
 
-        private void uploadButton_MouseEnter(object sender, EventArgs e)
+        private void CheckAllButtons_MouseEnter(object sender, EventArgs e)
         {
-            uploadButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.uploadButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.upload_on));
+            var currentButton = sender as Button;
+            var name = currentButton.Name;
+            currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
+
+            switch (name)
+            {
+                case "createButton":
+                    this.createButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.create_on));
+                    break;
+                case "uploadButton":
+                    this.uploadButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.upload_on));
+                    break;
+                case "myWebsiteButton":
+                    this.myWebsiteButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.rad3k_logo_on));
+                    break;
+                case "cancelButton":
+                    this.cancelButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.cancel_on1));
+                    break;
+                case "InterestButton":
+                    this.InterestButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.teso_cz_logo_on));
+                    break;
+                case "minimalizedButton":
+                    this.minimalizedButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent_on));
+                    break;
+                case "helpButton":
+                    this.helpButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent_on));
+                    break;
+                case "exitButton":
+                    this.exitButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent_on));
+                    break;
+            }
         }
 
-        private void uploadButton_MouseLeave(object sender, EventArgs e)
+        private void CheckAllButtons_MouseLeave(object sender, EventArgs e)
         {
-            uploadButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.uploadButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.upload));
-        }
+            var currentButton = sender as Button;
+            var name = currentButton.Name;
+            currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
 
-        private void createButton_MouseEnter(object sender, EventArgs e)
-        {
-            createButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.createButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.create_on));
-        }
-
-        private void createButton_MouseLeave(object sender, EventArgs e)
-        {
-            createButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.createButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.create));
-        }
-
-        private void cancelButton_MouseEnter(object sender, EventArgs e)
-        {
-            cancelButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.cancelButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.cancel_on1));
-        }
-
-        private void cancelButton_MouseLeave(object sender, EventArgs e)
-        {
-            cancelButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.cancelButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.cancel1));
+            switch (name)
+            {
+                case "createButton":
+                    this.createButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.create));
+                    break;
+                case "uploadButton":
+                    this.uploadButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.upload));
+                    break;
+                case "myWebsiteButton":
+                    this.myWebsiteButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.rad3k_logo));
+                    break;
+                case "cancelButton":
+                    this.cancelButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.cancel1));
+                    break;
+                case "InterestButton":
+                    this.InterestButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.teso_cz_logo));
+                    break;
+                case "minimalizedButton":
+                    this.minimalizedButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent));
+                    break;
+                case "helpButton":
+                    this.helpButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent));
+                    break;
+                case "exitButton":
+                    this.exitButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent));
+                    break;
+            }
         }
 
         private void InterestButton_Click(object sender, EventArgs e)
@@ -84,34 +118,10 @@ namespace ESO___Skill_Point_Calculator
             link.interestWebSite();
         }
 
-        private void InterestButton_MouseEnter(object sender, EventArgs e)
-        {
-            InterestButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.InterestButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.teso_cz_logo_on));
-        }
-
-        private void InterestButton_MouseLeave(object sender, EventArgs e)
-        {
-            InterestButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.InterestButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.teso_cz_logo));
-        }
-
         private void myWebsiteButton_Click(object sender, EventArgs e)
         {
             Links link = new Links();
             link.myWebSite();
-        }
-
-        private void myWebsiteButton_MouseEnter(object sender, EventArgs e)
-        {
-            myWebsiteButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.myWebsiteButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.rad3k_logo_on));
-        }
-
-        private void myWebsiteButton_MouseLeave(object sender, EventArgs e)
-        {
-            myWebsiteButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.myWebsiteButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.rad3k_logo));
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -119,50 +129,14 @@ namespace ESO___Skill_Point_Calculator
             Close();
         }
 
-        private void exitButton_MouseEnter(object sender, EventArgs e)
-        {
-            exitButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.exitButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent_on));
-        }
-
-        private void exitButton_MouseLeave(object sender, EventArgs e)
-        {
-            exitButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.exitButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent));
-        }
-
         private void maximizedButton_Click(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Maximized;
         }
 
-        private void maximizedButton_MouseEnter(object sender, EventArgs e)
-        {
-            helpButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.helpButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent_on));
-        }
-
-        private void maximizedButton_MouseLeave(object sender, EventArgs e)
-        {
-            helpButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.helpButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent));
-        }
-
         private void minimalizedButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void minimalizedButton_MouseEnter(object sender, EventArgs e)
-        {
-            minimalizedButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.minimalizedButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent_on));
-        }
-
-        private void minimalizedButton_MouseLeave(object sender, EventArgs e)
-        {
-            minimalizedButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.minimalizedButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent));
         }
 
         private void muteButton_Click(object sender, EventArgs e)

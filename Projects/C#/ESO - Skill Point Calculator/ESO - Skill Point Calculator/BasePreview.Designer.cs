@@ -76,8 +76,8 @@
             this.uploadButton.TabIndex = 4;
             this.uploadButton.UseVisualStyleBackColor = false;
             this.uploadButton.Click += new System.EventHandler(this.uploadButton_Click);
-            this.uploadButton.MouseEnter += new System.EventHandler(this.uploadButton_MouseEnter);
-            this.uploadButton.MouseLeave += new System.EventHandler(this.uploadButton_MouseLeave);
+            this.uploadButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.uploadButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // myWebsiteButton
             // 
@@ -95,8 +95,8 @@
             this.myWebsiteButton.TabIndex = 7;
             this.myWebsiteButton.UseVisualStyleBackColor = false;
             this.myWebsiteButton.Click += new System.EventHandler(this.myWebsiteButton_Click);
-            this.myWebsiteButton.MouseEnter += new System.EventHandler(this.myWebsiteButton_MouseEnter);
-            this.myWebsiteButton.MouseLeave += new System.EventHandler(this.myWebsiteButton_MouseLeave);
+            this.myWebsiteButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.myWebsiteButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // cancelButton
             // 
@@ -113,8 +113,8 @@
             this.cancelButton.Size = new System.Drawing.Size(279, 61);
             this.cancelButton.TabIndex = 6;
             this.cancelButton.UseVisualStyleBackColor = false;
-            this.cancelButton.MouseEnter += new System.EventHandler(this.cancelButton_MouseEnter);
-            this.cancelButton.MouseLeave += new System.EventHandler(this.cancelButton_MouseLeave);
+            this.cancelButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.cancelButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // InterestButton
             // 
@@ -132,8 +132,8 @@
             this.InterestButton.TabIndex = 8;
             this.InterestButton.UseVisualStyleBackColor = false;
             this.InterestButton.Click += new System.EventHandler(this.InterestButton_Click);
-            this.InterestButton.MouseEnter += new System.EventHandler(this.InterestButton_MouseEnter);
-            this.InterestButton.MouseLeave += new System.EventHandler(this.InterestButton_MouseLeave);
+            this.InterestButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.InterestButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // beta
             // 
@@ -162,8 +162,8 @@
             this.minimalizedButton.TabIndex = 9;
             this.minimalizedButton.UseVisualStyleBackColor = false;
             this.minimalizedButton.Click += new System.EventHandler(this.minimalizedButton_Click);
-            this.minimalizedButton.MouseEnter += new System.EventHandler(this.minimalizedButton_MouseEnter);
-            this.minimalizedButton.MouseLeave += new System.EventHandler(this.minimalizedButton_MouseLeave);
+            this.minimalizedButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.minimalizedButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // helpButton
             // 
@@ -180,8 +180,8 @@
             this.helpButton.TabIndex = 10;
             this.helpButton.UseVisualStyleBackColor = false;
             this.helpButton.Click += new System.EventHandler(this.maximizedButton_Click);
-            this.helpButton.MouseEnter += new System.EventHandler(this.maximizedButton_MouseEnter);
-            this.helpButton.MouseLeave += new System.EventHandler(this.maximizedButton_MouseLeave);
+            this.helpButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.helpButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // exitButton
             // 
@@ -199,8 +199,8 @@
             this.exitButton.TabIndex = 11;
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            this.exitButton.MouseEnter += new System.EventHandler(this.exitButton_MouseEnter);
-            this.exitButton.MouseLeave += new System.EventHandler(this.exitButton_MouseLeave);
+            this.exitButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.exitButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // createButton
             // 
@@ -218,8 +218,8 @@
             this.createButton.Size = new System.Drawing.Size(138, 139);
             this.createButton.TabIndex = 5;
             this.createButton.UseVisualStyleBackColor = false;
-            this.createButton.MouseEnter += new System.EventHandler(this.createButton_MouseEnter);
-            this.createButton.MouseLeave += new System.EventHandler(this.createButton_MouseLeave);
+            this.createButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.createButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // imageFile
             // 

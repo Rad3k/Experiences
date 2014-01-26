@@ -21,46 +21,196 @@ namespace ESO___Skill_Point_Calculator
             this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
             maxSkillPoint.Text = collection.maxSkill.ToString();
             classStructure.CreateClassButtons();
+            classStructure.menu.Click += new System.EventHandler(classMenu_Click);
+            classStructure.menu.MouseEnter += new System.EventHandler(CheckAllButtons_MouseEnter);
+            classStructure.menu.MouseLeave += new System.EventHandler(CheckAllButtons_MouseLeave);
+            this.Controls.Add(classStructure.menu);
+        }
 
-            switch (UniqueValue.character)
+        private void CheckAllButtons_MouseEnter(object sender, EventArgs e)
+        {
+            var currentButton = sender as Button;
+            var name = currentButton.Name;
+            currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
+
+            if (currentButton != null)
             {
-                case "sorcerer":
-                    classStructure.menu.MouseEnter += new System.EventHandler(sorcerer_MouseEnter);
-                    classStructure.menu.MouseLeave += new System.EventHandler(sorcerer_MouseLeave);
-                    break;
+                if (currentButton.Tag != null)
+                {
+                    switch ((int)currentButton.Tag)
+                    {
+                        case 0:
+                            // First Button Clicked
+                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
+                            break;
+                        case 1:
+                            // Second Button Clicked
+                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
+                            break;
+                        case 2:
+                            // Third Button Clicked
+                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
+                            break;
+                    }
+                }
+            }
+
+            switch (name)
+            {
                 case "dragonknight":
-                    classStructure.menu.MouseEnter += new System.EventHandler(dragonKnightText_MouseEnter);
-                    classStructure.menu.MouseLeave += new System.EventHandler(dragonKnightText_MouseLeave);
+                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight_on));
                     break;
-                case "templar":
-                    classStructure.menu.MouseEnter += new System.EventHandler(templar_MouseEnter);
-                    classStructure.menu.MouseLeave += new System.EventHandler(templar_MouseLeave);
+                case "sorcerer":
+                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer_on));
                     break;
                 case "nightblade":
-                    classStructure.menu.MouseEnter += new System.EventHandler(nightblade_MouseEnter);
-                    classStructure.menu.MouseLeave += new System.EventHandler(nightblade_MouseLeave);
+                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.nightblade_on));
+                    break;
+                case "templar":
+                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.templar_on));
+                    break;
+                case "minimalizedButton":
+                    this.minimalizedButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent_on));
+                    break;
+                case "helpButton":
+                    this.helpButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent_on));
+                    break;
+                case "exitButton":
+                    this.exitButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent_on));
+                    break;
+                case "weaponSlot1":
+                    this.weaponSlot1.BackgroundImage = ((System.Drawing.Image)(BuildResource.one_two_handed_dual_on));
+                    break;
+                case "weaponSlot2":
+                    this.weaponSlot2.BackgroundImage = ((System.Drawing.Image)(BuildResource.bow_staff_on));
+                    break;
+                case "armorType":
+                    this.armorType.BackgroundImage = ((System.Drawing.Image)(BuildResource.light_medium_heavy_on));
+                    break;
+                case "racialDaggerfall":
+                    this.racialDaggerfall.BackgroundImage = ((System.Drawing.Image)(BuildResource.breton_redguard_orc_on));
+                    break;
+                case "racialAldmeri":
+                    this.racialAldmeri.BackgroundImage = ((System.Drawing.Image)(BuildResource.altmer_bosmer_khajiit_on));
+                    break;
+                case "racialEbonheart":
+                    this.racialEbonheart.BackgroundImage = ((System.Drawing.Image)(BuildResource.nord_dunmer_argonian_on));
+                    break;
+                case "pvpType":
+                    this.pvpType.BackgroundImage = ((System.Drawing.Image)(BuildResource.assault_support_emperor_on));
+                    break;
+                case "guildsType":
+                    this.guildsType.BackgroundImage = ((System.Drawing.Image)(BuildResource.guilds_on));
+                    break;
+                case "craftingType":
+                    this.craftingType.BackgroundImage = ((System.Drawing.Image)(BuildResource.crafting_on));
+                    break;
+                case "soulMagicType":
+                    this.soulMagicType.BackgroundImage = ((System.Drawing.Image)(BuildResource.soul_magic_on));
+                    break;
+                case "vampirismType":
+                    this.vampirismType.BackgroundImage = ((System.Drawing.Image)(BuildResource.vampirism_on));
+                    break;
+                case "lycanthropyType":
+                    this.lycanthropyType.BackgroundImage = ((System.Drawing.Image)(BuildResource.lycanthropy_on));
                     break;
             }
-            classStructure.menu.Click += new System.EventHandler(classMenu_Click);
-            this.Controls.Add(classStructure.menu);
+        }
+
+        private void CheckAllButtons_MouseLeave(object sender, EventArgs e)
+        {
+            var currentButton = sender as Button;
+            var name = currentButton.Name;
+            currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+
+            if (currentButton != null)
+            {
+                if (currentButton.Tag != null)
+                {
+                    switch ((int)currentButton.Tag)
+                    {
+                        case 0:
+                            // First Button Clicked
+                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
+                            break;
+                        case 1:
+                            // Second Button Clicked
+                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
+                            break;
+                        case 2:
+                            // Third Button Clicked
+                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
+                            break;
+                    }
+                }
+            }
+
+            switch (name)
+            {
+                case "dragonknight":
+                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight));
+                    break;
+                case "sorcerer":
+                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer));
+                    break;
+                case "nightblade":
+                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.nightblade));
+                    break;
+                case "templar":
+                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.templar));
+                    break;
+                case "minimalizedButton":
+                    this.minimalizedButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent));
+                    break;
+                case "helpButton":
+                    this.helpButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent));
+                    break;
+                case "exitButton":
+                    this.exitButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent));
+                    break;
+                case "weaponSlot1":
+                    this.weaponSlot1.BackgroundImage = ((System.Drawing.Image)(BuildResource.one_two_handed_dual));
+                    break;
+                case "weaponSlot2":
+                    this.weaponSlot2.BackgroundImage = ((System.Drawing.Image)(BuildResource.bow_staff));
+                    break;
+                case "armorType":
+                    this.armorType.BackgroundImage = ((System.Drawing.Image)(BuildResource.light_medium_heavy));
+                    break;
+                case "racialDaggerfall":
+                    this.racialDaggerfall.BackgroundImage = ((System.Drawing.Image)(BuildResource.breton_redguard_orc));
+                    break;
+                case "racialAldmeri":
+                    this.racialAldmeri.BackgroundImage = ((System.Drawing.Image)(BuildResource.altmer_bosmer_khajiit));
+                    break;
+                case "racialEbonheart":
+                    this.racialEbonheart.BackgroundImage = ((System.Drawing.Image)(BuildResource.nord_dunmer_argonian));
+                    break;
+                case "pvpType":
+                    this.pvpType.BackgroundImage = ((System.Drawing.Image)(BuildResource.assault_support_emperor));
+                    break;
+                case "guildsType":
+                    this.guildsType.BackgroundImage = ((System.Drawing.Image)(BuildResource.guilds));
+                    break;
+                case "craftingType":
+                    this.craftingType.BackgroundImage = ((System.Drawing.Image)(BuildResource.crafting));
+                    break;
+                case "soulMagicType":
+                    this.soulMagicType.BackgroundImage = ((System.Drawing.Image)(BuildResource.soul_magic));
+                    break;
+                case "vampirismType":
+                    this.vampirismType.BackgroundImage = ((System.Drawing.Image)(BuildResource.vampirism));
+                    break;
+                case "lycanthropyType":
+                    this.lycanthropyType.BackgroundImage = ((System.Drawing.Image)(BuildResource.lycanthropy));
+                    break;
+            }
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            classStructure.RemoveAllButtons();
+            classStructure.RemoveAllButtons((Button)sender, e);
             Close();
-        }
-
-        private void exitButton_MouseEnter(object sender, EventArgs e)
-        {
-            exitButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.exitButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent_on));
-        }
-
-        private void exitButton_MouseLeave(object sender, EventArgs e)
-        {
-            exitButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.exitButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent));
         }
 
         private void helpButton_Click(object sender, EventArgs e)
@@ -68,45 +218,9 @@ namespace ESO___Skill_Point_Calculator
 
         }
 
-        private void helpButton_MouseEnter(object sender, EventArgs e)
-        {
-            helpButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.helpButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent_on));
-        }
-
-        private void helpButton_MouseLeave(object sender, EventArgs e)
-        {
-            helpButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.helpButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.about_transparent));
-        }
-
         private void minimalizedButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void minimalizedButton_MouseEnter(object sender, EventArgs e)
-        {
-            minimalizedButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.minimalizedButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent_on));
-        }
-
-        private void minimalizedButton_MouseLeave(object sender, EventArgs e)
-        {
-            minimalizedButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.minimalizedButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.min_transparent));
-        }
-
-        private void dragonKnightText_MouseEnter(object sender, EventArgs e)
-        {
-            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight_on));
-        }
-
-        private void dragonKnightText_MouseLeave(object sender, EventArgs e)
-        {
-            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight));
         }
 
         private void classMenu_Click(object sender, EventArgs e)
@@ -116,6 +230,7 @@ namespace ESO___Skill_Point_Calculator
 
             for (int i = 0; i < 3; i++)
             {
+                classStructure.resetTree = new Button();
                 switch (i)
                 {
                     case 0:
@@ -128,219 +243,48 @@ namespace ESO___Skill_Point_Calculator
                         classStructure.resetTree.Location = classStructure.Location[0][4];
                         break;
                 }
+                classStructure.CreateUniqueClass((Button)sender, e);
                 classStructure.resetTree.Click += new EventHandler(resetTreeOneEvent_Click);
-                classStructure.resetTree.MouseEnter += new EventHandler(resetTree_MouseEnter);
-                classStructure.resetTree.MouseLeave += new EventHandler(resetTree_MouseLeave);
+                classStructure.resetTree.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
+                classStructure.resetTree.MouseEnter += new EventHandler(CheckAllButtons_MouseEnter);
+                classStructure.resetTree.MouseLeave += new EventHandler(CheckAllButtons_MouseLeave);
                 classStructure.resetTree.Tag = i;
                 this.Controls.Add(classStructure.resetTree);
+                classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.resetTree });
+                classStructure.ClassAllButtonsVisible((Button)sender, e);
             }
         }
 
-        private void resetTree_MouseEnter(object sender, EventArgs e)
+        private void classUniqueButtons_VisibleChanged(object sender, EventArgs e)
         {
-            classStructure.resetTree.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.classStructure.resetTree.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-        }
-
-        private void resetTree_MouseLeave(object sender, EventArgs e)
-        {
-            classStructure.resetTree.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.classStructure.resetTree.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-        }
-
-        private void sorcerer_MouseEnter(object sender, EventArgs e)
-        {
-            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer_on));
-        }
-
-        private void sorcerer_MouseLeave(object sender, EventArgs e)
-        {
-            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer));
-        }
-
-        private void templar_MouseEnter(object sender, EventArgs e)
-        {
-            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.templar_on));
-        }
-
-        private void templar_MouseLeave(object sender, EventArgs e)
-        {
-            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.templar));
-        }
-
-        private void nightblade_MouseEnter(object sender, EventArgs e)
-        {
-            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.nightblade_on));
-        }
-
-        private void nightblade_MouseLeave(object sender, EventArgs e)
-        {
-            classStructure.menu.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.nightblade));
+            Button button = sender as Button;
+            foreach (ButtonControl btnCntrl in classStructure.buttonControl) 
+            {
+                if (btnCntrl.btn != button) 
+                {
+                    if (btnCntrl.obj.GetType() == typeof(Button))
+                    {
+                        Button objBtn = (Button)btnCntrl.obj;
+                        objBtn.Visible = UniqueValue.visibleType;
+                    }
+                }
+            }
         }
 
         private void weaponSlot1_Click(object sender, EventArgs e)
         {
-            classStructure.RemoveAllButtons();
-        }
-
-        private void weaponSlot1_MouseEnter(object sender, EventArgs e)
-        {
-            weaponSlot1.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.weaponSlot1.BackgroundImage = ((System.Drawing.Image)(BuildResource.one_two_handed_dual_on));
-        }
-
-        private void weaponSlot1_MouseLeave(object sender, EventArgs e)
-        {
-            weaponSlot1.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.weaponSlot1.BackgroundImage = ((System.Drawing.Image)(BuildResource.one_two_handed_dual));
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void armorType_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void armorType_MouseEnter(object sender, EventArgs e)
-        {
-            armorType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.armorType.BackgroundImage = ((System.Drawing.Image)(BuildResource.light_medium_heavy_on));
-        }
-
-        private void armorType_MouseLeave(object sender, EventArgs e)
-        {
-            armorType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.armorType.BackgroundImage = ((System.Drawing.Image)(BuildResource.light_medium_heavy));
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
         }
 
         private void weaponSlot2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void weaponSlot2_MouseEnter(object sender, EventArgs e)
-        {
-            weaponSlot2.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.weaponSlot2.BackgroundImage = ((System.Drawing.Image)(BuildResource.bow_staff_on));
-        }
-
-        private void weaponSlot2_MouseLeave(object sender, EventArgs e)
-        {
-            weaponSlot2.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.weaponSlot2.BackgroundImage = ((System.Drawing.Image)(BuildResource.bow_staff));
-        }
-
-        private void racialDaggerfall_MouseEnter(object sender, EventArgs e)
-        {
-            racialDaggerfall.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.racialDaggerfall.BackgroundImage = ((System.Drawing.Image)(BuildResource.breton_redguard_orc_on));
-        }
-
-        private void racialDaggerfall_MouseLeave(object sender, EventArgs e)
-        {
-            racialDaggerfall.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.racialDaggerfall.BackgroundImage = ((System.Drawing.Image)(BuildResource.breton_redguard_orc));
-        }
-
-        private void racialAldmeri_MouseEnter(object sender, EventArgs e)
-        {
-            racialAldmeri.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.racialAldmeri.BackgroundImage = ((System.Drawing.Image)(BuildResource.altmer_bosmer_khajiit_on));
-        }
-
-        private void racialAldmeri_MouseLeave(object sender, EventArgs e)
-        {
-            racialAldmeri.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.racialAldmeri.BackgroundImage = ((System.Drawing.Image)(BuildResource.altmer_bosmer_khajiit));
-        }
-
-        private void racialEbonheart_MouseEnter(object sender, EventArgs e)
-        {
-            racialEbonheart.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.racialEbonheart.BackgroundImage = ((System.Drawing.Image)(BuildResource.nord_dunmer_argonian_on));
-        }
-
-        private void racialEbonheart_MouseLeave(object sender, EventArgs e)
-        {
-            racialEbonheart.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.racialEbonheart.BackgroundImage = ((System.Drawing.Image)(BuildResource.nord_dunmer_argonian));
-        }
-
-        private void pvpType_MouseEnter(object sender, EventArgs e)
-        {
-            pvpType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.pvpType.BackgroundImage = ((System.Drawing.Image)(BuildResource.assault_support_emperor_on));
-        }
-
-        private void pvpType_MouseLeave(object sender, EventArgs e)
-        {
-            pvpType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.pvpType.BackgroundImage = ((System.Drawing.Image)(BuildResource.assault_support_emperor));
-        }
-
-        private void guildsType_MouseEnter(object sender, EventArgs e)
-        {
-            guildsType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.guildsType.BackgroundImage = ((System.Drawing.Image)(BuildResource.guilds_on));
-        }
-
-        private void guildsType_MouseLeave(object sender, EventArgs e)
-        {
-            guildsType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.guildsType.BackgroundImage = ((System.Drawing.Image)(BuildResource.guilds));
-        }
-
-        private void craftingType_MouseEnter(object sender, EventArgs e)
-        {
-            craftingType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.craftingType.BackgroundImage = ((System.Drawing.Image)(BuildResource.crafting_on));
-        }
-
-        private void craftingType_MouseLeave(object sender, EventArgs e)
-        {
-            craftingType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.craftingType.BackgroundImage = ((System.Drawing.Image)(BuildResource.crafting));
-        }
-
-        private void soulMagicType_MouseEnter(object sender, EventArgs e)
-        {
-            soulMagicType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.soulMagicType.BackgroundImage = ((System.Drawing.Image)(BuildResource.soul_magic_on));
-        }
-
-        private void soulMagicType_MouseLeave(object sender, EventArgs e)
-        {
-            soulMagicType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.soulMagicType.BackgroundImage = ((System.Drawing.Image)(BuildResource.soul_magic));
-        }
-
-        private void vampirismType_MouseEnter(object sender, EventArgs e)
-        {
-            vampirismType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.vampirismType.BackgroundImage = ((System.Drawing.Image)(BuildResource.vampirism_on));
-        }
-
-        private void vampirismType_MouseLeave(object sender, EventArgs e)
-        {
-            vampirismType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.vampirismType.BackgroundImage = ((System.Drawing.Image)(BuildResource.vampirism));
-        }
-
-        private void lycanthropyType_MouseEnter(object sender, EventArgs e)
-        {
-            lycanthropyType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
-            this.lycanthropyType.BackgroundImage = ((System.Drawing.Image)(BuildResource.lycanthropy_on));
-        }
-
-        private void lycanthropyType_MouseLeave(object sender, EventArgs e)
-        {
-            lycanthropyType.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            this.lycanthropyType.BackgroundImage = ((System.Drawing.Image)(BuildResource.lycanthropy));
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
         }
 
         private void resetTreeOneEvent_Click(object sender, EventArgs e)
@@ -348,20 +292,67 @@ namespace ESO___Skill_Point_Calculator
             Button button = sender as Button;
             if (button != null)
             {
-                // now you know the button that was clicked
                 switch ((int)button.Tag)
                 {
                     case 0:
                         // First Button Clicked
+                        MessageBox.Show("1");
                         break;
                     case 1:
                         // Second Button Clicked
+                        MessageBox.Show("2");
                         break;
                     case 2:
                         // Third Button Clicked
+                        MessageBox.Show("3");
                         break;
                 }
             }
+        }
+
+        private void racialDaggerfall_Click(object sender, EventArgs e)
+        {
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+        }
+
+        private void racialAldmeri_Click(object sender, EventArgs e)
+        {
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+        }
+
+        private void racialEbonheart_Click(object sender, EventArgs e)
+        {
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+        }
+
+        private void pvpType_Click(object sender, EventArgs e)
+        {
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+        }
+
+        private void guildsType_Click(object sender, EventArgs e)
+        {
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+        }
+
+        private void craftingType_Click(object sender, EventArgs e)
+        {
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+        }
+
+        private void soulMagicType_Click(object sender, EventArgs e)
+        {
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+        }
+
+        private void lycanthropyType_Click(object sender, EventArgs e)
+        {
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+        }
+
+        private void vampirismType_Click(object sender, EventArgs e)
+        {
+            classStructure.ClassAllButtonsInVisible((Button)sender, e);
         }
     }
 }

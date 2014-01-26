@@ -53,8 +53,8 @@
             this.dragonknightButton.TabIndex = 0;
             this.dragonknightButton.UseVisualStyleBackColor = false;
             this.dragonknightButton.Click += new System.EventHandler(this.dragonknightButton_Click);
-            this.dragonknightButton.MouseEnter += new System.EventHandler(this.dragonknightButton_MouseEnter);
-            this.dragonknightButton.MouseLeave += new System.EventHandler(this.dragonknightButton_MouseLeave);
+            this.dragonknightButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.dragonknightButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // nightBlade
             // 
@@ -66,13 +66,13 @@
             this.nightBlade.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.nightBlade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nightBlade.Location = new System.Drawing.Point(304, 165);
-            this.nightBlade.Name = "nightBlade";
+            this.nightBlade.Name = "nightBladeButton";
             this.nightBlade.Size = new System.Drawing.Size(205, 533);
             this.nightBlade.TabIndex = 1;
             this.nightBlade.UseVisualStyleBackColor = false;
             this.nightBlade.Click += new System.EventHandler(this.nightBlade_Click);
-            this.nightBlade.MouseEnter += new System.EventHandler(this.nightBlade_MouseEnter);
-            this.nightBlade.MouseLeave += new System.EventHandler(this.nightBlade_MouseLeave);
+            this.nightBlade.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.nightBlade.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // sorcererButton
             // 
@@ -89,8 +89,8 @@
             this.sorcererButton.TabIndex = 2;
             this.sorcererButton.UseVisualStyleBackColor = false;
             this.sorcererButton.Click += new System.EventHandler(this.sorcererButton_Click);
-            this.sorcererButton.MouseEnter += new System.EventHandler(this.sorcererButton_MouseEnter);
-            this.sorcererButton.MouseLeave += new System.EventHandler(this.sorcererButton_MouseLeave);
+            this.sorcererButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.sorcererButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // templarButton
             // 
@@ -107,8 +107,8 @@
             this.templarButton.TabIndex = 3;
             this.templarButton.UseVisualStyleBackColor = false;
             this.templarButton.Click += new System.EventHandler(this.templarButton_Click);
-            this.templarButton.MouseEnter += new System.EventHandler(this.templarButton_MouseEnter);
-            this.templarButton.MouseLeave += new System.EventHandler(this.templarButton_MouseLeave);
+            this.templarButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.templarButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // minButton
             // 
@@ -125,8 +125,8 @@
             this.minButton.TabIndex = 4;
             this.minButton.UseVisualStyleBackColor = false;
             this.minButton.Click += new System.EventHandler(this.minButton_Click);
-            this.minButton.MouseEnter += new System.EventHandler(this.minButton_MouseEnter);
-            this.minButton.MouseLeave += new System.EventHandler(this.minButton_MouseLeave);
+            this.minButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseLeave);
+            this.minButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // helpButtons
             // 
@@ -142,8 +142,8 @@
             this.helpButtons.TabIndex = 5;
             this.helpButtons.UseVisualStyleBackColor = false;
             this.helpButtons.Click += new System.EventHandler(this.helpButtons_Click);
-            this.helpButtons.MouseEnter += new System.EventHandler(this.helpButtons_MouseEnter);
-            this.helpButtons.MouseLeave += new System.EventHandler(this.helpButtons_MouseLeave);
+            this.helpButtons.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.helpButtons.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // closeButton
             // 
@@ -160,8 +160,8 @@
             this.closeButton.TabIndex = 6;
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
-            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
+            this.closeButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.closeButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // ChooseClass
             // 

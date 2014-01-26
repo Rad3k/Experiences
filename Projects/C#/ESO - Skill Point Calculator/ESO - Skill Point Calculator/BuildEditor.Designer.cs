@@ -62,8 +62,8 @@
             this.minimalizedButton.TabIndex = 0;
             this.minimalizedButton.UseVisualStyleBackColor = false;
             this.minimalizedButton.Click += new System.EventHandler(this.minimalizedButton_Click);
-            this.minimalizedButton.MouseEnter += new System.EventHandler(this.minimalizedButton_MouseEnter);
-            this.minimalizedButton.MouseLeave += new System.EventHandler(this.minimalizedButton_MouseLeave);
+            this.minimalizedButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.minimalizedButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // helpButton
             // 
@@ -80,8 +80,8 @@
             this.helpButton.TabIndex = 1;
             this.helpButton.UseVisualStyleBackColor = false;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
-            this.helpButton.MouseEnter += new System.EventHandler(this.helpButton_MouseEnter);
-            this.helpButton.MouseLeave += new System.EventHandler(this.helpButton_MouseLeave);
+            this.helpButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.helpButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // exitButton
             // 
@@ -98,8 +98,8 @@
             this.exitButton.TabIndex = 2;
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
-            this.exitButton.MouseEnter += new System.EventHandler(this.exitButton_MouseEnter);
-            this.exitButton.MouseLeave += new System.EventHandler(this.exitButton_MouseLeave);
+            this.exitButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.exitButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // weaponSlot1
             // 
@@ -116,8 +116,8 @@
             this.weaponSlot1.TabIndex = 4;
             this.weaponSlot1.UseVisualStyleBackColor = false;
             this.weaponSlot1.Click += new System.EventHandler(this.weaponSlot1_Click);
-            this.weaponSlot1.MouseEnter += new System.EventHandler(this.weaponSlot1_MouseEnter);
-            this.weaponSlot1.MouseLeave += new System.EventHandler(this.weaponSlot1_MouseLeave);
+            this.weaponSlot1.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.weaponSlot1.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // weaponSlot2
             // 
@@ -134,8 +134,8 @@
             this.weaponSlot2.TabIndex = 5;
             this.weaponSlot2.UseVisualStyleBackColor = false;
             this.weaponSlot2.Click += new System.EventHandler(this.weaponSlot2_Click);
-            this.weaponSlot2.MouseEnter += new System.EventHandler(this.weaponSlot2_MouseEnter);
-            this.weaponSlot2.MouseLeave += new System.EventHandler(this.weaponSlot2_MouseLeave);
+            this.weaponSlot2.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.weaponSlot2.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // armorType
             // 
@@ -152,8 +152,8 @@
             this.armorType.TabIndex = 6;
             this.armorType.UseVisualStyleBackColor = false;
             this.armorType.Click += new System.EventHandler(this.armorType_Click);
-            this.armorType.MouseEnter += new System.EventHandler(this.armorType_MouseEnter);
-            this.armorType.MouseLeave += new System.EventHandler(this.armorType_MouseLeave);
+            this.armorType.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.armorType.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // racialDaggerfall
             // 
@@ -169,8 +169,9 @@
             this.racialDaggerfall.Size = new System.Drawing.Size(211, 26);
             this.racialDaggerfall.TabIndex = 7;
             this.racialDaggerfall.UseVisualStyleBackColor = false;
-            this.racialDaggerfall.MouseEnter += new System.EventHandler(this.racialDaggerfall_MouseEnter);
-            this.racialDaggerfall.MouseLeave += new System.EventHandler(this.racialDaggerfall_MouseLeave);
+            this.racialDaggerfall.Click += new System.EventHandler(this.racialDaggerfall_Click);
+            this.racialDaggerfall.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.racialDaggerfall.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // racialAldmeri
             // 
@@ -186,8 +187,9 @@
             this.racialAldmeri.Size = new System.Drawing.Size(211, 27);
             this.racialAldmeri.TabIndex = 8;
             this.racialAldmeri.UseVisualStyleBackColor = false;
-            this.racialAldmeri.MouseEnter += new System.EventHandler(this.racialAldmeri_MouseEnter);
-            this.racialAldmeri.MouseLeave += new System.EventHandler(this.racialAldmeri_MouseLeave);
+            this.racialAldmeri.Click += new System.EventHandler(this.racialAldmeri_Click);
+            this.racialAldmeri.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.racialAldmeri.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // racialEbonheart
             // 
@@ -203,8 +205,9 @@
             this.racialEbonheart.Size = new System.Drawing.Size(227, 26);
             this.racialEbonheart.TabIndex = 9;
             this.racialEbonheart.UseVisualStyleBackColor = false;
-            this.racialEbonheart.MouseEnter += new System.EventHandler(this.racialEbonheart_MouseEnter);
-            this.racialEbonheart.MouseLeave += new System.EventHandler(this.racialEbonheart_MouseLeave);
+            this.racialEbonheart.Click += new System.EventHandler(this.racialEbonheart_Click);
+            this.racialEbonheart.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.racialEbonheart.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // pvpType
             // 
@@ -220,8 +223,9 @@
             this.pvpType.Size = new System.Drawing.Size(230, 26);
             this.pvpType.TabIndex = 10;
             this.pvpType.UseVisualStyleBackColor = false;
-            this.pvpType.MouseEnter += new System.EventHandler(this.pvpType_MouseEnter);
-            this.pvpType.MouseLeave += new System.EventHandler(this.pvpType_MouseLeave);
+            this.pvpType.Click += new System.EventHandler(this.pvpType_Click);
+            this.pvpType.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.pvpType.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // guildsType
             // 
@@ -237,8 +241,9 @@
             this.guildsType.Size = new System.Drawing.Size(80, 26);
             this.guildsType.TabIndex = 11;
             this.guildsType.UseVisualStyleBackColor = false;
-            this.guildsType.MouseEnter += new System.EventHandler(this.guildsType_MouseEnter);
-            this.guildsType.MouseLeave += new System.EventHandler(this.guildsType_MouseLeave);
+            this.guildsType.Click += new System.EventHandler(this.guildsType_Click);
+            this.guildsType.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.guildsType.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // craftingType
             // 
@@ -254,8 +259,9 @@
             this.craftingType.Size = new System.Drawing.Size(97, 26);
             this.craftingType.TabIndex = 12;
             this.craftingType.UseVisualStyleBackColor = false;
-            this.craftingType.MouseEnter += new System.EventHandler(this.craftingType_MouseEnter);
-            this.craftingType.MouseLeave += new System.EventHandler(this.craftingType_MouseLeave);
+            this.craftingType.Click += new System.EventHandler(this.craftingType_Click);
+            this.craftingType.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.craftingType.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // soulMagicType
             // 
@@ -271,8 +277,9 @@
             this.soulMagicType.Size = new System.Drawing.Size(114, 26);
             this.soulMagicType.TabIndex = 13;
             this.soulMagicType.UseVisualStyleBackColor = false;
-            this.soulMagicType.MouseEnter += new System.EventHandler(this.soulMagicType_MouseEnter);
-            this.soulMagicType.MouseLeave += new System.EventHandler(this.soulMagicType_MouseLeave);
+            this.soulMagicType.Click += new System.EventHandler(this.soulMagicType_Click);
+            this.soulMagicType.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.soulMagicType.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // vampirismType
             // 
@@ -287,8 +294,9 @@
             this.vampirismType.Size = new System.Drawing.Size(103, 26);
             this.vampirismType.TabIndex = 14;
             this.vampirismType.UseVisualStyleBackColor = false;
-            this.vampirismType.MouseEnter += new System.EventHandler(this.vampirismType_MouseEnter);
-            this.vampirismType.MouseLeave += new System.EventHandler(this.vampirismType_MouseLeave);
+            this.vampirismType.Click += new System.EventHandler(this.vampirismType_Click);
+            this.vampirismType.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.vampirismType.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // lycanthropyType
             // 
@@ -304,8 +312,9 @@
             this.lycanthropyType.Size = new System.Drawing.Size(125, 26);
             this.lycanthropyType.TabIndex = 15;
             this.lycanthropyType.UseVisualStyleBackColor = false;
-            this.lycanthropyType.MouseEnter += new System.EventHandler(this.lycanthropyType_MouseEnter);
-            this.lycanthropyType.MouseLeave += new System.EventHandler(this.lycanthropyType_MouseLeave);
+            this.lycanthropyType.Click += new System.EventHandler(this.lycanthropyType_Click);
+            this.lycanthropyType.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.lycanthropyType.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // maxSkillPoint
             // 

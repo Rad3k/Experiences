@@ -4,14 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
+using System.IO;
 
 namespace ESO___Skill_Point_Calculator
 {
     class GraphicClassStructure : GraphicPosition
     {
+        public List<ButtonControl> buttonControl = new List<ButtonControl>();
+
+        public Button resetTree;
         public Button menu = new Button();
         public Button classBackround = new Button();
-        public Button resetTree = new Button();
+        Collection collection = new Collection();
 
         public void CreateClassButtons()
         {
@@ -51,6 +55,7 @@ namespace ESO___Skill_Point_Calculator
             menu.FlatStyle = FlatStyle.Flat;
             menu.Location = Location[0][0];
             menu.TabIndex = 3;
+            menu.Name = UniqueValue.character;
             menu.UseVisualStyleBackColor = false;
 
             // Class Backround
@@ -65,7 +70,10 @@ namespace ESO___Skill_Point_Calculator
             classBackround.Size = Size[0][4];
             classBackround.TabIndex = 17;
             classBackround.UseVisualStyleBackColor = false;
+        }
 
+        public void CreateUniqueClass(object sender, EventArgs e)
+        {
             // Reset tree
             resetTree.BackColor = Color.Transparent;
             resetTree.BackgroundImage = BuildResource.reset;
@@ -78,14 +86,29 @@ namespace ESO___Skill_Point_Calculator
             resetTree.Size = Size[0][5];
             resetTree.UseVisualStyleBackColor = false;
         }
+        
+        public void ClassAllButtonsVisible(object sender, EventArgs e)
+        {
+            classBackround.Visible = true;
+            UniqueValue.visibleType = true;
+        }
 
-        public void RemoveAllButtons()
+        public void ClassAllButtonsInVisible(object sender, EventArgs e)
+        {
+            classBackround.Visible = false;
+            UniqueValue.visibleType = false;
+        }
+
+        public void RemoveAllButtons(object sender, EventArgs e)
         {
             classBackround.Controls.Remove(classBackround);
-            resetTree.Controls.Remove(resetTree);
-
             classBackround.Dispose();
-            resetTree.Dispose();
         }
+    }
+    
+    class ButtonControl 
+    {
+        public Button btn;
+        public object obj;
     }
 }
