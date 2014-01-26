@@ -6,6 +6,7 @@ using System.IO;
 using System.Media;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using WMPLib;
 
 namespace ESO___Skill_Point_Calculator
 {
@@ -25,16 +26,16 @@ namespace ESO___Skill_Point_Calculator
         {
             cursor = "img/Cursor.cur";
             cursor_hand = "img/Cursor_hand.cur";
-            sound = "sound/The_Call_-_The_Elder_Scrolls_Online.wav";
+            sound = "sound/The_Call_-_The_Elder_Scrolls_Online.mp3";
             source = Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory);
         }
 
-        public void BackroundPlayerStart()
+        public void BackroundPlayerStart(WindowsMediaPlayer wplayer)
         {
             try
             {
-                SoundPlayer sndplayr = new SoundPlayer(Path.Combine(source, sound));
-                sndplayr.Play();
+                wplayer.URL = Path.Combine(source, sound);
+                wplayer.controls.play();
             }
             catch (Exception ex)
             {
@@ -42,12 +43,12 @@ namespace ESO___Skill_Point_Calculator
             }
         }
 
-        public void BackroundPlayerClose()
+        public void BackroundPlayerClose(WindowsMediaPlayer wplayer)
         {
             try
             {
-                SoundPlayer sndplayr = new SoundPlayer(Path.Combine(source, sound));
-                sndplayr.Stop();
+                wplayer.URL = Path.Combine(source, sound);
+                wplayer.controls.stop();
             }
             catch (Exception ex)
             {

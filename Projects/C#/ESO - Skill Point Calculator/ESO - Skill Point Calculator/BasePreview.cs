@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Runtime.InteropServices;
+using WMPLib;
 
 namespace ESO___Skill_Point_Calculator
 {
@@ -20,7 +21,7 @@ namespace ESO___Skill_Point_Calculator
         {
             InitializeComponent();
             this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            collection.BackroundPlayerStart();
+            collection.BackroundPlayerStart(new WindowsMediaPlayer());
         }
 
         private void uploadButton_Click(object sender, EventArgs e)
@@ -144,11 +145,11 @@ namespace ESO___Skill_Point_Calculator
             switch (collection.value)
             {
                 case 0:
-                    collection.BackroundPlayerClose();
+                    collection.BackroundPlayerClose(new WindowsMediaPlayer());
                     collection.value++;
                     break;
                 case 1:
-                    collection.BackroundPlayerStart();
+                    collection.BackroundPlayerStart(new WindowsMediaPlayer());
                     collection.value = 0;
                     break;
             }

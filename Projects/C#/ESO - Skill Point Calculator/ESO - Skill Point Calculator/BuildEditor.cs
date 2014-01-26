@@ -206,33 +206,46 @@ namespace ESO___Skill_Point_Calculator
             classStructure.CreateClassButtons();
             classStructure.ClassAllButtonsVisible();
             this.Controls.Add(classStructure.classBackround);
-            this.Controls.Add(classStructure.ultimateInfo);
-            this.Controls.Add(classStructure.activeInfo);
-            this.Controls.Add(classStructure.passiveInfo);
 
             for (int i = 0; i < 3; i++)
             {
                 classStructure.resetTree = new Button();
-                switch (i)
-                {
-                    case 0:
-                        classStructure.resetTree.Location = classStructure.Location[0][2];
-                        break;
-                    case 1:
-                        classStructure.resetTree.Location = classStructure.Location[0][3];
-                        break;
-                    case 2:
-                        classStructure.resetTree.Location = classStructure.Location[0][4];
-                        break;
-                }
+                classStructure.resetTree.Location = classStructure.Location[4][i];
                 classStructure.CreateUniqueClass((Button)sender, e);
                 classStructure.resetTree.Click += new EventHandler(resetTreeOneEvent_Click);
                 classStructure.resetTree.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
                 classStructure.resetTree.MouseEnter += new EventHandler(CheckAllButtons_MouseEnter);
                 classStructure.resetTree.MouseLeave += new EventHandler(CheckAllButtons_MouseLeave);
-                classStructure.resetTree.Name = "resetTree" + i.ToString();
+                classStructure.resetTree.Name = classStructure.resetTree.Name + i.ToString();
                 this.Controls.Add(classStructure.resetTree);
                 classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.resetTree });
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                classStructure.spells = new Button();
+                classStructure.plus = new Button();
+                classStructure.minus = new Button();
+                classStructure.CreateSpellsButton((Button)sender, e);
+                classStructure.CreateCoordinatesButton((Button)sender, e);
+
+                classStructure.spells.Location = classStructure.Location[1][i];
+                classStructure.spells.Name = classStructure.spells.Name + i.ToString();
+                classStructure.spells.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
+                classStructure.plus.Location = classStructure.Location[2][i];
+                classStructure.plus.Name = classStructure.plus.Name + i.ToString();
+                classStructure.plus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
+                classStructure.minus.Location = classStructure.Location[3][i];
+                classStructure.minus.Name = classStructure.minus.Name + i.ToString();
+                classStructure.minus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
+
+                this.classStructure.classBackround.Controls.Add(classStructure.spells);
+                this.classStructure.classBackround.Controls.Add(classStructure.plus);
+                this.classStructure.classBackround.Controls.Add(classStructure.minus);
+
+                classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.spells });
+                classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.plus });
+                classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.minus });
             }
         }
 

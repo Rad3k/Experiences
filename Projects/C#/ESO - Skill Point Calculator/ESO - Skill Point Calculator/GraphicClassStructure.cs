@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
+using WMPLib;
 
 namespace ESO___Skill_Point_Calculator
 {
@@ -17,24 +18,15 @@ namespace ESO___Skill_Point_Calculator
         public Button minus;
         public Button resetTree;
         public Button menu = new Button();
-        public Button classBackround = new Button();
+        public PictureBox classBackround = new PictureBox();
         // Spells
-        public Button ultimateSpell = new Button();
-        public Button activeSpell1 = new Button();
-        public Button activeSpell2 = new Button();
-        public Button activeSpell3 = new Button();
-        public Button activeSpell4 = new Button();
-        public Button activeSpell5 = new Button();
-        public Button passiveSpell1 = new Button();
-        public Button passiveSpell2 = new Button();
-        public Button passiveSpell3 = new Button();
-        public Button passiveSpell4 = new Button();
+        public Button spells;
         // ButtonInformation:
         public Button ultimateInfo = new Button();
         public Button activeInfo = new Button();
         public Button passiveInfo = new Button();
         // Label
-        public Label points;
+        //public Label points;
 
         Collection collection = new Collection();
 
@@ -81,14 +73,12 @@ namespace ESO___Skill_Point_Calculator
             // Class Backround
             classBackround.BackColor = Color.Transparent;
             classBackround.BackgroundImageLayout = ImageLayout.Stretch;
-            classBackround.FlatAppearance.BorderSize = 0;
-            classBackround.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            classBackround.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            classBackround.FlatStyle = FlatStyle.Flat;
             classBackround.Location = Location[0][1];
             classBackround.Name = "classBackround";
             classBackround.Size = Size[0][4];
-            classBackround.UseVisualStyleBackColor = false;
+            classBackround.Controls.Add(ultimateInfo);
+            classBackround.Controls.Add(activeInfo);
+            classBackround.Controls.Add(passiveInfo);
 
             // Button information
             ultimateInfo.BackColor = Color.Transparent;
@@ -98,9 +88,9 @@ namespace ESO___Skill_Point_Calculator
             ultimateInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
             ultimateInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             ultimateInfo.FlatStyle = FlatStyle.Flat;
-            ultimateInfo.Location = Location[0][5];
+            ultimateInfo.Location = Location[0][2];
             ultimateInfo.Name = "ultimateInfo";
-            ultimateInfo.Size = Size[0][5];
+            ultimateInfo.Size = Size[0][6];
             ultimateInfo.UseVisualStyleBackColor = false;
 
             activeInfo.BackColor = Color.Transparent;
@@ -110,9 +100,9 @@ namespace ESO___Skill_Point_Calculator
             activeInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
             activeInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             activeInfo.FlatStyle = FlatStyle.Flat;
-            activeInfo.Location = Location[0][6];
+            activeInfo.Location = Location[0][3];
             activeInfo.Name = "activeInfo";
-            activeInfo.Size = Size[0][6];
+            activeInfo.Size = Size[0][7];
             activeInfo.UseVisualStyleBackColor = false;
 
             passiveInfo.BackColor = Color.Transparent;
@@ -122,7 +112,7 @@ namespace ESO___Skill_Point_Calculator
             passiveInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
             passiveInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             passiveInfo.FlatStyle = FlatStyle.Flat;
-            passiveInfo.Location = Location[0][7];
+            passiveInfo.Location = Location[0][4];
             passiveInfo.Name = "passiveInfo";
             passiveInfo.Size = Size[0][7];
             passiveInfo.UseVisualStyleBackColor = false;
@@ -141,6 +131,48 @@ namespace ESO___Skill_Point_Calculator
             resetTree.Name = "resetTree";
             resetTree.Size = Size[0][5];
             resetTree.UseVisualStyleBackColor = false;
+        }
+
+        public void CreateSpellsButton(object sender, EventArgs e)
+        {
+            // Spells
+            spells.BackColor = Color.Transparent;
+            spells.BackgroundImage = BuildResource.skill_temp;
+            spells.BackgroundImageLayout = ImageLayout.Stretch;
+            spells.FlatAppearance.BorderSize = 0;
+            spells.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            spells.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            spells.FlatStyle = FlatStyle.Flat;
+            spells.Name = "Spells";
+            spells.Size = Size[0][8];
+            spells.UseVisualStyleBackColor = false;
+        }
+
+        public void CreateCoordinatesButton(object sender, EventArgs e)
+        {
+            // Plus
+            plus.BackColor = Color.Transparent;
+            plus.BackgroundImage = BuildResource.plus;
+            plus.BackgroundImageLayout = ImageLayout.Stretch;
+            plus.FlatAppearance.BorderSize = 0;
+            plus.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            plus.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            plus.FlatStyle = FlatStyle.Flat;
+            plus.Name = "plus";
+            plus.Size = Size[0][9];
+            plus.UseVisualStyleBackColor = false;
+
+            // Minus
+            minus.BackColor = Color.Transparent;
+            minus.BackgroundImage = BuildResource.minus;
+            minus.BackgroundImageLayout = ImageLayout.Stretch;
+            minus.FlatAppearance.BorderSize = 0;
+            minus.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            minus.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            minus.FlatStyle = FlatStyle.Flat;
+            minus.Name = "minus";
+            minus.Size = Size[0][10];
+            minus.UseVisualStyleBackColor = false;
         }
         
         public void ClassAllButtonsVisible()
