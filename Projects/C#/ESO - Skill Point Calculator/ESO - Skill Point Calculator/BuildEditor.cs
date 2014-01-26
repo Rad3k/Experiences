@@ -33,30 +33,19 @@ namespace ESO___Skill_Point_Calculator
             var name = currentButton.Name;
             currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
 
-            if (currentButton != null)
-            {
-                if (currentButton.Tag != null)
-                {
-                    switch ((int)currentButton.Tag)
-                    {
-                        case 0:
-                            // First Button Clicked
-                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-                            break;
-                        case 1:
-                            // Second Button Clicked
-                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-                            break;
-                        case 2:
-                            // Third Button Clicked
-                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-                            break;
-                    }
-                }
-            }
-
             switch (name)
             {
+                // Unique buttons
+                case "resetTree0":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
+                    break;
+                case "resetTree1":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
+                    break;
+                case "resetTree2":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
+                    break;
+                // Class buttons
                 case "dragonknight":
                     this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight_on));
                     break;
@@ -123,30 +112,19 @@ namespace ESO___Skill_Point_Calculator
             var name = currentButton.Name;
             currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
 
-            if (currentButton != null)
-            {
-                if (currentButton.Tag != null)
-                {
-                    switch ((int)currentButton.Tag)
-                    {
-                        case 0:
-                            // First Button Clicked
-                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-                            break;
-                        case 1:
-                            // Second Button Clicked
-                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-                            break;
-                        case 2:
-                            // Third Button Clicked
-                            currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-                            break;
-                    }
-                }
-            }
-
             switch (name)
             {
+                // Unique buttons
+                case "resetTree0":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
+                    break;
+                case "resetTree1":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
+                    break;
+                case "resetTree2":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
+                    break;
+                // Class buttons
                 case "dragonknight":
                     this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight));
                     break;
@@ -209,7 +187,7 @@ namespace ESO___Skill_Point_Calculator
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            classStructure.RemoveAllButtons((Button)sender, e);
+            classStructure.RemoveAllButtons();
             Close();
         }
 
@@ -226,7 +204,11 @@ namespace ESO___Skill_Point_Calculator
         private void classMenu_Click(object sender, EventArgs e)
         {
             classStructure.CreateClassButtons();
+            classStructure.ClassAllButtonsVisible();
             this.Controls.Add(classStructure.classBackround);
+            this.Controls.Add(classStructure.ultimateInfo);
+            this.Controls.Add(classStructure.activeInfo);
+            this.Controls.Add(classStructure.passiveInfo);
 
             for (int i = 0; i < 3; i++)
             {
@@ -248,10 +230,9 @@ namespace ESO___Skill_Point_Calculator
                 classStructure.resetTree.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
                 classStructure.resetTree.MouseEnter += new EventHandler(CheckAllButtons_MouseEnter);
                 classStructure.resetTree.MouseLeave += new EventHandler(CheckAllButtons_MouseLeave);
-                classStructure.resetTree.Tag = i;
+                classStructure.resetTree.Name = "resetTree" + i.ToString();
                 this.Controls.Add(classStructure.resetTree);
                 classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.resetTree });
-                classStructure.ClassAllButtonsVisible((Button)sender, e);
             }
         }
 
@@ -273,37 +254,37 @@ namespace ESO___Skill_Point_Calculator
 
         private void weaponSlot1_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
             this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void armorType_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void weaponSlot2_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void resetTreeOneEvent_Click(object sender, EventArgs e)
         {
             Button button = sender as Button;
+            var name = button.Name;
             if (button != null)
             {
-                switch ((int)button.Tag)
+                switch (name)
                 {
-                    case 0:
-                        // First Button Clicked
+                    case "resetTree0":
                         MessageBox.Show("1");
                         break;
-                    case 1:
-                        // Second Button Clicked
+                    case "resetTree1":
                         MessageBox.Show("2");
                         break;
-                    case 2:
-                        // Third Button Clicked
+                    case "resetTree2":
                         MessageBox.Show("3");
                         break;
                 }
@@ -312,47 +293,56 @@ namespace ESO___Skill_Point_Calculator
 
         private void racialDaggerfall_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void racialAldmeri_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void racialEbonheart_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void pvpType_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void guildsType_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void craftingType_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void soulMagicType_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void lycanthropyType_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void vampirismType_Click(object sender, EventArgs e)
         {
-            classStructure.ClassAllButtonsInVisible((Button)sender, e);
+            classStructure.ClassAllButtonsInVisible();
+            this.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
     }
 }

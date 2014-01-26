@@ -27,7 +27,11 @@ namespace ESO___Skill_Point_Calculator
                     // Reset Tree
                     new Point(410, 169),
                     new Point(615, 169),
-                    new Point(823, 169)
+                    new Point(823, 169),
+                    // Button information
+                    new Point(334, 238), // ultimate
+                    new Point(325, 323), // active
+                    new Point(335, 529)  // passive
                 }
             };
             Size = new Size[][]
@@ -35,14 +39,17 @@ namespace ESO___Skill_Point_Calculator
                 new Size[]
                 {
                     // Menu
-                    new Size(133, 26), // dragonknight
-                    new Size(98, 26),  // sorcerer
-                    new Size(115, 26), // nightblade
-                    new Size(90, 26),  // templar
+                    new Size(133, 26),   // dragonknight
+                    new Size(98, 26),    // sorcerer
+                    new Size(115, 26),   // nightblade
+                    new Size(90, 26),    // templar
                     // Class
                     new Size(619, 484),
                     // Reset Tree
-                    new Size(28, 25)
+                    new Size(28, 25),
+                    // Button information
+                    new Size(52, 8),     // ultimate
+                    new Size(39, 8)      // active / passive
                 }
             };
         }

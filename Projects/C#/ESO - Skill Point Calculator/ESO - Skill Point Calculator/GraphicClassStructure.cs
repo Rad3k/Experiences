@@ -12,9 +12,30 @@ namespace ESO___Skill_Point_Calculator
     {
         public List<ButtonControl> buttonControl = new List<ButtonControl>();
 
+        // Button
+        public Button plus;
+        public Button minus;
         public Button resetTree;
         public Button menu = new Button();
         public Button classBackround = new Button();
+        // Spells
+        public Button ultimateSpell = new Button();
+        public Button activeSpell1 = new Button();
+        public Button activeSpell2 = new Button();
+        public Button activeSpell3 = new Button();
+        public Button activeSpell4 = new Button();
+        public Button activeSpell5 = new Button();
+        public Button passiveSpell1 = new Button();
+        public Button passiveSpell2 = new Button();
+        public Button passiveSpell3 = new Button();
+        public Button passiveSpell4 = new Button();
+        // ButtonInformation:
+        public Button ultimateInfo = new Button();
+        public Button activeInfo = new Button();
+        public Button passiveInfo = new Button();
+        // Label
+        public Label points;
+
         Collection collection = new Collection();
 
         public void CreateClassButtons()
@@ -54,7 +75,6 @@ namespace ESO___Skill_Point_Calculator
             menu.FlatAppearance.MouseOverBackColor = Color.Transparent;
             menu.FlatStyle = FlatStyle.Flat;
             menu.Location = Location[0][0];
-            menu.TabIndex = 3;
             menu.Name = UniqueValue.character;
             menu.UseVisualStyleBackColor = false;
 
@@ -68,8 +88,44 @@ namespace ESO___Skill_Point_Calculator
             classBackround.Location = Location[0][1];
             classBackround.Name = "classBackround";
             classBackround.Size = Size[0][4];
-            classBackround.TabIndex = 17;
             classBackround.UseVisualStyleBackColor = false;
+
+            // Button information
+            ultimateInfo.BackColor = Color.Transparent;
+            ultimateInfo.BackgroundImage = BuildResource.ultimate;
+            ultimateInfo.BackgroundImageLayout = ImageLayout.Stretch;
+            ultimateInfo.FlatAppearance.BorderSize = 0;
+            ultimateInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            ultimateInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            ultimateInfo.FlatStyle = FlatStyle.Flat;
+            ultimateInfo.Location = Location[0][5];
+            ultimateInfo.Name = "ultimateInfo";
+            ultimateInfo.Size = Size[0][5];
+            ultimateInfo.UseVisualStyleBackColor = false;
+
+            activeInfo.BackColor = Color.Transparent;
+            activeInfo.BackgroundImage = BuildResource.active;
+            activeInfo.BackgroundImageLayout = ImageLayout.Stretch;
+            activeInfo.FlatAppearance.BorderSize = 0;
+            activeInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            activeInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            activeInfo.FlatStyle = FlatStyle.Flat;
+            activeInfo.Location = Location[0][6];
+            activeInfo.Name = "activeInfo";
+            activeInfo.Size = Size[0][6];
+            activeInfo.UseVisualStyleBackColor = false;
+
+            passiveInfo.BackColor = Color.Transparent;
+            passiveInfo.BackgroundImage = BuildResource.passive;
+            passiveInfo.BackgroundImageLayout = ImageLayout.Stretch;
+            passiveInfo.FlatAppearance.BorderSize = 0;
+            passiveInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            passiveInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            passiveInfo.FlatStyle = FlatStyle.Flat;
+            passiveInfo.Location = Location[0][7];
+            passiveInfo.Name = "passiveInfo";
+            passiveInfo.Size = Size[0][7];
+            passiveInfo.UseVisualStyleBackColor = false;
         }
 
         public void CreateUniqueClass(object sender, EventArgs e)
@@ -87,22 +143,35 @@ namespace ESO___Skill_Point_Calculator
             resetTree.UseVisualStyleBackColor = false;
         }
         
-        public void ClassAllButtonsVisible(object sender, EventArgs e)
+        public void ClassAllButtonsVisible()
         {
             classBackround.Visible = true;
             UniqueValue.visibleType = true;
+            ultimateInfo.Visible = true;
+            activeInfo.Visible = true;
+            passiveInfo.Visible = true;
         }
 
-        public void ClassAllButtonsInVisible(object sender, EventArgs e)
+        public void ClassAllButtonsInVisible()
         {
             classBackround.Visible = false;
             UniqueValue.visibleType = false;
+            ultimateInfo.Visible = false;
+            activeInfo.Visible = false;
+            passiveInfo.Visible = false;
         }
 
-        public void RemoveAllButtons(object sender, EventArgs e)
+        public void RemoveAllButtons()
         {
             classBackround.Controls.Remove(classBackround);
+            ultimateInfo.Controls.Remove(ultimateInfo);
+            activeInfo.Controls.Remove(activeInfo);
+            passiveInfo.Controls.Remove(passiveInfo);
+
             classBackround.Dispose();
+            ultimateInfo.Dispose();
+            activeInfo.Dispose();
+            passiveInfo.Dispose();
         }
     }
     

@@ -63,6 +63,16 @@ namespace ESO___Skill_Point_Calculator {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap active {
+            get {
+                object obj = ResourceManager.GetObject("active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap altmer_bosmer_khajiit {
             get {
                 object obj = ResourceManager.GetObject("altmer_bosmer_khajiit", resourceCulture);
@@ -343,6 +353,16 @@ namespace ESO___Skill_Point_Calculator {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap passive {
+            get {
+                object obj = ResourceManager.GetObject("passive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plus {
             get {
                 object obj = ResourceManager.GetObject("plus", resourceCulture);
@@ -456,6 +476,16 @@ namespace ESO___Skill_Point_Calculator {
         internal static System.Drawing.Bitmap templar_skill_tree {
             get {
                 object obj = ResourceManager.GetObject("templar_skill_tree", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ultimate {
+            get {
+                object obj = ResourceManager.GetObject("ultimate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
