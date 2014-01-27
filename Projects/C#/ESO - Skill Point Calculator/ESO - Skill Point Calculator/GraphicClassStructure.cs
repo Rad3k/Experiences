@@ -31,11 +31,6 @@ namespace ESO___Skill_Point_Calculator
 
         Collection collection = new Collection();
 
-        public GraphicClassStructure()
-        {
-            collection.ListClassValueLabel();
-        }
-
         public void CreateClassButtons()
         {
             switch (UniqueValue.character)
