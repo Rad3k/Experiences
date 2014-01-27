@@ -33,6 +33,13 @@ namespace ESO___Skill_Point_Calculator
 
         public void ListClassValueLabel()
         {
+            for (int i = 0; i < ultimateSpells.Count(); i++)
+                ultimateSpells.RemoveAt(i);
+            for (int i = 0; i < activeSpells.Count(); i++)
+                activeSpells.RemoveAt(i);
+            for (int i = 0; i < passiveSpells.Count(); i++)
+                passiveSpells.RemoveAt(i);
+
             for (int i = 0; i < 3; i++)
                 ultimateSpells.Add(0);
             for (int i = 0; i < 15; i++)

@@ -31,6 +31,11 @@ namespace ESO___Skill_Point_Calculator
 
         Collection collection = new Collection();
 
+        public GraphicClassStructure()
+        {
+            collection.ListClassValueLabel();
+        }
+
         public void CreateClassButtons()
         {
             switch (UniqueValue.character)
@@ -119,7 +124,7 @@ namespace ESO___Skill_Point_Calculator
             passiveInfo.UseVisualStyleBackColor = false;
         }
 
-        public void CreateUniqueClass(object sender, EventArgs e)
+        public void resetTreeButton(object sender, EventArgs e)
         {
             // Reset tree
             resetTree.BackColor = Color.Transparent;
@@ -132,6 +137,12 @@ namespace ESO___Skill_Point_Calculator
             resetTree.Name = "resetTree";
             resetTree.Size = Size[0][5];
             resetTree.UseVisualStyleBackColor = false;
+            resetTree.Click += new EventHandler(resetTreeOneEvent_Click);
+            resetTree.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
+            resetTree.MouseEnter += new EventHandler(classButton_MouseEnter);
+            resetTree.MouseLeave += new EventHandler(classButton_MouseLeave);
+
+            buttonControl.Add(new ButtonControl() { btn = menu, obj = (object)resetTree });
         }
 
         public void CreateSpellsButton()
@@ -191,7 +202,6 @@ namespace ESO___Skill_Point_Calculator
                     spells.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
 
                     // Labels for point
-
                     points.BackColor = Color.Transparent;
                     points.ForeColor = Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(196)))), ((int)(((byte)(181)))));
                     points.BackgroundImageLayout = ImageLayout.Stretch;
@@ -218,8 +228,8 @@ namespace ESO___Skill_Point_Calculator
                     plus.Name = plus.Name + i.ToString() + "_" + j.ToString();
                     plus.Click += new EventHandler(plusButton_click);
                     plus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
-                    plus.MouseEnter += new EventHandler(this.classButton_MouseEnter);
-                    plus.MouseLeave += new EventHandler(this.classButton_MouseLeave);
+                    plus.MouseEnter += new EventHandler(classButton_MouseEnter);
+                    plus.MouseLeave += new EventHandler(classButton_MouseLeave);
                     plus.Tag = points;
 
                     // Minus
@@ -236,8 +246,8 @@ namespace ESO___Skill_Point_Calculator
                     minus.Name = minus.Name + i.ToString() + "_" + j.ToString();
                     minus.Click += new EventHandler(minusButton_click);
                     minus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
-                    minus.MouseEnter += new EventHandler(this.classButton_MouseEnter);
-                    minus.MouseLeave += new EventHandler(this.classButton_MouseLeave);
+                    minus.MouseEnter += new EventHandler(classButton_MouseEnter);
+                    minus.MouseLeave += new EventHandler(classButton_MouseLeave);
                     minus.Tag = points;
 
                     classBackround.Controls.Add(spells);
@@ -274,6 +284,20 @@ namespace ESO___Skill_Point_Calculator
             var currentButton = sender as Button;
             var name = currentButton.Name;
             currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
+
+            switch (name)
+            {
+                // Unique buttons
+                case "resetTree0":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
+                    break;
+                case "resetTree1":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
+                    break;
+                case "resetTree2":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
+                    break;
+            }
         }
 
         private void classButton_MouseLeave(object sender, EventArgs e)
@@ -281,6 +305,20 @@ namespace ESO___Skill_Point_Calculator
             var currentButton = sender as Button;
             var name = currentButton.Name;
             currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+
+            switch (name)
+            {
+                // Unique buttons
+                case "resetTree0":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
+                    break;
+                case "resetTree1":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
+                    break;
+                case "resetTree2":
+                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
+                    break;
+            }
         }
 
         private void plusButton_click(object sender, EventArgs e)
@@ -749,6 +787,27 @@ namespace ESO___Skill_Point_Calculator
                     break;
             }
             UniqueValue.spentSkillPoints = collection.ultimateSpells.Sum() + collection.activeSpells.Sum() + collection.passiveSpells.Sum();
+        }
+
+        private void resetTreeOneEvent_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            var name = button.Name;
+            if (button != null)
+            {
+                switch (name)
+                {
+                    case "resetTree0":
+                        MessageBox.Show("1");
+                        break;
+                    case "resetTree1":
+                        MessageBox.Show("2");
+                        break;
+                    case "resetTree2":
+                        MessageBox.Show("3");
+                        break;
+                }
+            }
         }
         
         public void ClassAllButtonsVisible()

@@ -15,6 +15,8 @@ namespace ESO___Skill_Point_Calculator
         Collection collection = new Collection();
         GraphicClassStructure classStructure = new GraphicClassStructure();
 
+        int clickClass = 0;
+
         public buildEditor()
         {
             InitializeComponent();
@@ -35,16 +37,6 @@ namespace ESO___Skill_Point_Calculator
 
             switch (name)
             {
-                // Unique buttons
-                case "resetTree0":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-                    break;
-                case "resetTree1":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-                    break;
-                case "resetTree2":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-                    break;
                 // Class buttons
                 case "dragonknight":
                     this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight_on));
@@ -114,16 +106,6 @@ namespace ESO___Skill_Point_Calculator
 
             switch (name)
             {
-                // Unique buttons
-                case "resetTree0":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-                    break;
-                case "resetTree1":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-                    break;
-                case "resetTree2":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-                    break;
                 // Class buttons
                 case "dragonknight":
                     this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight));
@@ -204,23 +186,22 @@ namespace ESO___Skill_Point_Calculator
         private void classMenu_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsVisible();
-            classStructure.CreateClassButtons();
-            classStructure.CreateSpellsButton();
-            this.Controls.Add(classStructure.classBackround);
-
+            if (clickClass < 1)
+            {
+                MessageBox.Show("test");
+                classStructure.CreateClassButtons();
+                classStructure.CreateSpellsButton();
+                this.Controls.Add(classStructure.classBackround);
+            }
             for (int i = 0; i < 3; i++)
             {
                 classStructure.resetTree = new Button();
+                classStructure.resetTreeButton((Button)sender, e);
                 classStructure.resetTree.Location = classStructure.Location[4][i];
-                classStructure.CreateUniqueClass((Button)sender, e);
-                classStructure.resetTree.Click += new EventHandler(resetTreeOneEvent_Click);
-                classStructure.resetTree.VisibleChanged += new EventHandler(classStructure.classUniqueButtons_VisibleChanged);
-                classStructure.resetTree.MouseEnter += new EventHandler(CheckAllButtons_MouseEnter);
-                classStructure.resetTree.MouseLeave += new EventHandler(CheckAllButtons_MouseLeave);
                 classStructure.resetTree.Name = classStructure.resetTree.Name + i.ToString();
                 this.Controls.Add(classStructure.resetTree);
-                classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.resetTree });
             }
+            clickClass++;
         }
 
         private void weaponSlot1_Click(object sender, EventArgs e)
@@ -239,27 +220,6 @@ namespace ESO___Skill_Point_Calculator
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
-        }
-
-        private void resetTreeOneEvent_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            var name = button.Name;
-            if (button != null)
-            {
-                switch (name)
-                {
-                    case "resetTree0":
-                        MessageBox.Show("1");
-                        break;
-                    case "resetTree1":
-                        MessageBox.Show("2");
-                        break;
-                    case "resetTree2":
-                        MessageBox.Show("3");
-                        break;
-                }
-            }
         }
 
         private void racialDaggerfall_Click(object sender, EventArgs e)
