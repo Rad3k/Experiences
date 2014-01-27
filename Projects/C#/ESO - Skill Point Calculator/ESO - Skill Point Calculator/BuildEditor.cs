@@ -203,8 +203,9 @@ namespace ESO___Skill_Point_Calculator
 
         private void classMenu_Click(object sender, EventArgs e)
         {
-            classStructure.CreateClassButtons();
             classStructure.ClassAllButtonsVisible();
+            classStructure.CreateClassButtons();
+            classStructure.CreateSpellsButton();
             this.Controls.Add(classStructure.classBackround);
 
             for (int i = 0; i < 3; i++)
@@ -213,74 +214,31 @@ namespace ESO___Skill_Point_Calculator
                 classStructure.resetTree.Location = classStructure.Location[4][i];
                 classStructure.CreateUniqueClass((Button)sender, e);
                 classStructure.resetTree.Click += new EventHandler(resetTreeOneEvent_Click);
-                classStructure.resetTree.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
+                classStructure.resetTree.VisibleChanged += new EventHandler(classStructure.classUniqueButtons_VisibleChanged);
                 classStructure.resetTree.MouseEnter += new EventHandler(CheckAllButtons_MouseEnter);
                 classStructure.resetTree.MouseLeave += new EventHandler(CheckAllButtons_MouseLeave);
                 classStructure.resetTree.Name = classStructure.resetTree.Name + i.ToString();
                 this.Controls.Add(classStructure.resetTree);
                 classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.resetTree });
             }
-
-            for (int i = 0; i < 10; i++)
-            {
-                classStructure.spells = new Button();
-                classStructure.plus = new Button();
-                classStructure.minus = new Button();
-                classStructure.CreateSpellsButton((Button)sender, e);
-                classStructure.CreateCoordinatesButton((Button)sender, e);
-
-                classStructure.spells.Location = classStructure.Location[1][i];
-                classStructure.spells.Name = classStructure.spells.Name + i.ToString();
-                classStructure.spells.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
-                classStructure.plus.Location = classStructure.Location[2][i];
-                classStructure.plus.Name = classStructure.plus.Name + i.ToString();
-                classStructure.plus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
-                classStructure.minus.Location = classStructure.Location[3][i];
-                classStructure.minus.Name = classStructure.minus.Name + i.ToString();
-                classStructure.minus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
-
-                this.classStructure.classBackround.Controls.Add(classStructure.spells);
-                this.classStructure.classBackround.Controls.Add(classStructure.plus);
-                this.classStructure.classBackround.Controls.Add(classStructure.minus);
-
-                classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.spells });
-                classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.plus });
-                classStructure.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)classStructure.minus });
-            }
-        }
-
-        private void classUniqueButtons_VisibleChanged(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            foreach (ButtonControl btnCntrl in classStructure.buttonControl) 
-            {
-                if (btnCntrl.btn != button) 
-                {
-                    if (btnCntrl.obj.GetType() == typeof(Button))
-                    {
-                        Button objBtn = (Button)btnCntrl.obj;
-                        objBtn.Visible = UniqueValue.visibleType;
-                    }
-                }
-            }
         }
 
         private void weaponSlot1_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void armorType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void weaponSlot2_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void resetTreeOneEvent_Click(object sender, EventArgs e)
@@ -307,55 +265,55 @@ namespace ESO___Skill_Point_Calculator
         private void racialDaggerfall_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void racialAldmeri_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void racialEbonheart_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void pvpType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void guildsType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void craftingType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void soulMagicType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void lycanthropyType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
 
         private void vampirismType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
-            this.classUniqueButtons_VisibleChanged((Button)sender, e);
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
         }
     }
 }

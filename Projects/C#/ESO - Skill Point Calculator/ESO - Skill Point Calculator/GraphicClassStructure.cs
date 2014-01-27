@@ -133,46 +133,83 @@ namespace ESO___Skill_Point_Calculator
             resetTree.UseVisualStyleBackColor = false;
         }
 
-        public void CreateSpellsButton(object sender, EventArgs e)
+        public void CreateSpellsButton()
         {
-            // Spells
-            spells.BackColor = Color.Transparent;
-            spells.BackgroundImage = BuildResource.skill_temp;
-            spells.BackgroundImageLayout = ImageLayout.Stretch;
-            spells.FlatAppearance.BorderSize = 0;
-            spells.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            spells.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            spells.FlatStyle = FlatStyle.Flat;
-            spells.Name = "Spells";
-            spells.Size = Size[0][8];
-            spells.UseVisualStyleBackColor = false;
+            for (int i = 0; i < 10; i++)
+            {
+                spells = new Button();
+                plus = new Button();
+                minus = new Button();
+
+                // Spells
+                spells.BackColor = Color.Transparent;
+                spells.BackgroundImage = BuildResource.skill_temp;
+                spells.BackgroundImageLayout = ImageLayout.Stretch;
+                spells.FlatAppearance.BorderSize = 0;
+                spells.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                spells.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                spells.FlatStyle = FlatStyle.Flat;
+                spells.Name = "Spells";
+                spells.Size = Size[0][8];
+                spells.UseVisualStyleBackColor = false;
+                spells.Location = Location[1][i];
+                spells.Name = spells.Name + i.ToString();
+                spells.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
+
+                // Plus
+                plus.BackColor = Color.Transparent;
+                plus.BackgroundImage = BuildResource.plus;
+                plus.BackgroundImageLayout = ImageLayout.Stretch;
+                plus.FlatAppearance.BorderSize = 0;
+                plus.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                plus.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                plus.FlatStyle = FlatStyle.Flat;
+                plus.Name = "plus";
+                plus.Size = Size[0][9];
+                plus.UseVisualStyleBackColor = false;
+                plus.Location = Location[2][i];
+                plus.Name = plus.Name + i.ToString();
+                plus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
+
+                // Minus
+                minus.BackColor = Color.Transparent;
+                minus.BackgroundImage = BuildResource.minus;
+                minus.BackgroundImageLayout = ImageLayout.Stretch;
+                minus.FlatAppearance.BorderSize = 0;
+                minus.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                minus.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                minus.FlatStyle = FlatStyle.Flat;
+                minus.Name = "minus";
+                minus.Size = Size[0][10];
+                minus.UseVisualStyleBackColor = false;
+                minus.Location = Location[3][i];
+                minus.Name = minus.Name + i.ToString();
+                minus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
+
+                classBackround.Controls.Add(spells);
+                classBackround.Controls.Add(plus);
+                classBackround.Controls.Add(minus);
+
+                buttonControl.Add(new ButtonControl() { btn = menu, obj = (object)spells });
+                buttonControl.Add(new ButtonControl() { btn = menu, obj = (object)plus });
+                buttonControl.Add(new ButtonControl() { btn = menu, obj = (object)minus });
+            }
         }
 
-        public void CreateCoordinatesButton(object sender, EventArgs e)
+        public void classUniqueButtons_VisibleChanged(object sender, EventArgs e)
         {
-            // Plus
-            plus.BackColor = Color.Transparent;
-            plus.BackgroundImage = BuildResource.plus;
-            plus.BackgroundImageLayout = ImageLayout.Stretch;
-            plus.FlatAppearance.BorderSize = 0;
-            plus.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            plus.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            plus.FlatStyle = FlatStyle.Flat;
-            plus.Name = "plus";
-            plus.Size = Size[0][9];
-            plus.UseVisualStyleBackColor = false;
-
-            // Minus
-            minus.BackColor = Color.Transparent;
-            minus.BackgroundImage = BuildResource.minus;
-            minus.BackgroundImageLayout = ImageLayout.Stretch;
-            minus.FlatAppearance.BorderSize = 0;
-            minus.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            minus.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            minus.FlatStyle = FlatStyle.Flat;
-            minus.Name = "minus";
-            minus.Size = Size[0][10];
-            minus.UseVisualStyleBackColor = false;
+            Button button = sender as Button;
+            foreach (ButtonControl btnCntrl in buttonControl)
+            {
+                if (btnCntrl.btn != button)
+                {
+                    if (btnCntrl.obj.GetType() == typeof(Button))
+                    {
+                        Button objBtn = (Button)btnCntrl.obj;
+                        objBtn.Visible = UniqueValue.visibleType;
+                    }
+                }
+            }
         }
         
         public void ClassAllButtonsVisible()

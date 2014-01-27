@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using WMPLib;
-using System.IO;
 
 namespace ESO___Skill_Point_Calculator
 {
