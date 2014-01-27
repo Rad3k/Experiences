@@ -16,12 +16,13 @@ namespace ESO___Skill_Point_Calculator
     {
         Collection collection = new Collection();
         Controller control = new Controller();
+        WMPlayer wmplayer = new WMPlayer();
 
         public BasePreview()
         {
             InitializeComponent();
             this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            collection.BackroundPlayerStart(new WindowsMediaPlayer());
+            wmplayer.BackroundPlayerStart();
         }
 
         private void uploadButton_Click(object sender, EventArgs e)
@@ -145,11 +146,11 @@ namespace ESO___Skill_Point_Calculator
             switch (collection.value)
             {
                 case 0:
-                    collection.BackroundPlayerClose(new WindowsMediaPlayer());
+                    wmplayer.BackroundPlayerClose();
                     collection.value++;
                     break;
                 case 1:
-                    collection.BackroundPlayerStart(new WindowsMediaPlayer());
+                    wmplayer.BackroundPlayerStart();
                     collection.value = 0;
                     break;
             }

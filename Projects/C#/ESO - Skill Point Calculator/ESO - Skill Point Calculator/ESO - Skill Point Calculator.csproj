@@ -105,6 +105,7 @@
       <DependentUpon>BuildEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="UniqueValue.cs" />
+    <Compile Include="WMPlayer.cs" />
     <EmbeddedResource Include="BuildResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>BuildResource.Designer.cs</LastGenOutput>

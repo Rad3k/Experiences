@@ -10,5 +10,6 @@ namespace ESO___Skill_Point_Calculator
     {
         public static string character;
         public static bool visibleType;
+        public static int spentSkillPoints;
     }
 }

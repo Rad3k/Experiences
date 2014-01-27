@@ -6,21 +6,22 @@ using System.IO;
 using System.Media;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using WMPLib;
 
 namespace ESO___Skill_Point_Calculator
 {
     class Collection
     {
+        // Global
         public string cursor;
         public string cursor_hand;
         public string sound;
         public string source;
         public int value;
-        
-        // Build editor
-        // Base value
-        public int maxSkill = 60;
+
+        // Class tree
+        public List<int> ultimateSpells = new List<int>();
+        public List<int> activeSpells = new List<int>();
+        public List<int> passiveSpells = new List<int>();
 
         public Collection()
         {
@@ -30,30 +31,14 @@ namespace ESO___Skill_Point_Calculator
             source = Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory);
         }
 
-        public void BackroundPlayerStart(WindowsMediaPlayer wplayer)
+        public void ListClassValueLabel()
         {
-            try
-            {
-                wplayer.URL = Path.Combine(source, sound);
-                wplayer.controls.play();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ": " + ex.StackTrace.ToString(), "Error");
-            }
-        }
-
-        public void BackroundPlayerClose(WindowsMediaPlayer wplayer)
-        {
-            try
-            {
-                wplayer.URL = Path.Combine(source, sound);
-                wplayer.controls.stop();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ": " + ex.StackTrace.ToString(), "Error");
-            }
+            for (int i = 0; i < 3; i++)
+                ultimateSpells.Add(0);
+            for (int i = 0; i < 15; i++)
+                activeSpells.Add(0);
+            for (int i = 0; i < 12; i++)
+                passiveSpells.Add(0);
         }
     }
 }

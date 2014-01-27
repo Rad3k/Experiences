@@ -19,7 +19,7 @@ namespace ESO___Skill_Point_Calculator
         {
             InitializeComponent();
             this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
-            maxSkillPoint.Text = collection.maxSkill.ToString();
+            maxSkillPoint.Text = UniqueValue.spentSkillPoints.ToString();
             classStructure.CreateClassButtons();
             classStructure.menu.Click += new System.EventHandler(classMenu_Click);
             classStructure.menu.MouseEnter += new System.EventHandler(CheckAllButtons_MouseEnter);
