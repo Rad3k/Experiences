@@ -16,7 +16,6 @@ namespace ESO___Skill_Point_Calculator
         public string cursor_hand;
         public string sound;
         public string source;
-        public int value;
 
         // Class tree
         public List<int> ultimateSpells = new List<int>();

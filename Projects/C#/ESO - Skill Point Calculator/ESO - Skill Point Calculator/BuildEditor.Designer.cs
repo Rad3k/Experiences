@@ -346,6 +346,7 @@
             this.Text = "ESO - Build editor";
             this.TransparencyKey = System.Drawing.SystemColors.WindowFrame;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
