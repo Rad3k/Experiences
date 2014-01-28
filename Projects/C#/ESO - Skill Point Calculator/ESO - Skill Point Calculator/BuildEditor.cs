@@ -20,8 +20,18 @@ namespace ESO___Skill_Point_Calculator
         public buildEditor()
         {
             InitializeComponent();
-            this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+            Label maxSkillPoint = new Label();
+            maxSkillPoint.AutoSize = true;
+            maxSkillPoint.BackColor = System.Drawing.Color.Transparent;
+            maxSkillPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            maxSkillPoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(196)))), ((int)(((byte)(181)))));
+            maxSkillPoint.Location = new System.Drawing.Point(528, 687);
+            maxSkillPoint.Name = "maxSkillPoint";
             maxSkillPoint.Text = UniqueValue.spentSkillPoints.ToString();
+            maxSkillPoint.Size = new System.Drawing.Size(0, 20);
+            this.Controls.Add(maxSkillPoint);
+
+            this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
             classStructure.CreateClassButtons();
             classStructure.menu.Click += new System.EventHandler(classMenu_Click);
             classStructure.menu.MouseEnter += new System.EventHandler(CheckAllButtons_MouseEnter);
@@ -274,6 +284,16 @@ namespace ESO___Skill_Point_Calculator
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+        }
+
+        public void maxSkillPoint_TextChanged(Form formInstance, string labelName)
+        {
+            // Get reference to the label
+            var label = formInstance.Controls.Find(labelName, true).FirstOrDefault();
+            if (null != label && label is Label)
+            {
+                (label as Label).Text = "test";
+            }
         }
     }
 }

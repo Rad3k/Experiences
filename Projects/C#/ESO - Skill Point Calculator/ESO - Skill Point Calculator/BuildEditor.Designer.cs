@@ -44,7 +44,6 @@
             this.soulMagicType = new System.Windows.Forms.Button();
             this.vampirismType = new System.Windows.Forms.Button();
             this.lycanthropyType = new System.Windows.Forms.Button();
-            this.maxSkillPoint = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // minimalizedButton
@@ -316,17 +315,6 @@
             this.lycanthropyType.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
             this.lycanthropyType.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
-            // maxSkillPoint
-            // 
-            this.maxSkillPoint.AutoSize = true;
-            this.maxSkillPoint.BackColor = System.Drawing.Color.Transparent;
-            this.maxSkillPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.maxSkillPoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(196)))), ((int)(((byte)(181)))));
-            this.maxSkillPoint.Location = new System.Drawing.Point(528, 687);
-            this.maxSkillPoint.Name = "maxSkillPoint";
-            this.maxSkillPoint.Size = new System.Drawing.Size(0, 20);
-            this.maxSkillPoint.TabIndex = 16;
-            // 
             // buildEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,7 +323,6 @@
             this.BackgroundImage = global::ESO___Skill_Point_Calculator.BuildResource.build_editor_window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 860);
-            this.Controls.Add(this.maxSkillPoint);
             this.Controls.Add(this.lycanthropyType);
             this.Controls.Add(this.vampirismType);
             this.Controls.Add(this.soulMagicType);
@@ -380,6 +367,5 @@
         private System.Windows.Forms.Button soulMagicType;
         private System.Windows.Forms.Button vampirismType;
         private System.Windows.Forms.Button lycanthropyType;
-        private System.Windows.Forms.Label maxSkillPoint;
     }
 }

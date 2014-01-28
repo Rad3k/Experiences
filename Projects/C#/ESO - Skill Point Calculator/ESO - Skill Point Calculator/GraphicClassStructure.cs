@@ -548,6 +548,9 @@ namespace ESO___Skill_Point_Calculator
                     break;
             }
             UniqueValue.spentSkillPoints = collection.ultimateSpells.Sum() + collection.activeSpells.Sum() + collection.passiveSpells.Sum();
+            // Get reference to the label
+            var buildEditor = new buildEditor();
+            buildEditor.maxSkillPoint_TextChanged(buildEditor, "maxSkillPoint");
         }
 
         private void minusButton_click(object sender, EventArgs e)
