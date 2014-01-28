@@ -185,10 +185,10 @@ namespace ESO___Skill_Point_Calculator
 
         private void classMenu_Click(object sender, EventArgs e)
         {
+            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
             classStructure.ClassAllButtonsVisible();
             if (clickClass < 1)
             {
-                MessageBox.Show("test");
                 classStructure.CreateClassButtons();
                 classStructure.CreateSpellsButton();
                 this.Controls.Add(classStructure.classBackround);

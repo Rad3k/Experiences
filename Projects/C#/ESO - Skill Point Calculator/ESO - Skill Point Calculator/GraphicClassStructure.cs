@@ -254,11 +254,6 @@ namespace ESO___Skill_Point_Calculator
                     classBackround.Controls.Add(plus);
                     classBackround.Controls.Add(minus);
                     classBackround.Controls.Add(points);
-
-                    buttonControl.Add(new ButtonControl() { btn = menu, obj = (object)spells });
-                    buttonControl.Add(new ButtonControl() { btn = menu, obj = (object)plus });
-                    buttonControl.Add(new ButtonControl() { btn = menu, obj = (object)minus });
-                    buttonControl.Add(new ButtonControl() { btn = menu, obj = (object)points });
                 }
             }
         }
