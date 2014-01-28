@@ -43,8 +43,10 @@
             this.imageCorrectly = new System.Windows.Forms.Button();
             this.fileBad = new System.Windows.Forms.Button();
             this.uploadFileText = new System.Windows.Forms.Label();
-            this.muteButton = new System.Windows.Forms.Button();
+            this.pauseButton = new System.Windows.Forms.Button();
             this.soundPanel = new System.Windows.Forms.Label();
+            this.playButton = new System.Windows.Forms.Button();
+            this.stopButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // version
@@ -279,32 +281,70 @@
             this.uploadFileText.Size = new System.Drawing.Size(0, 13);
             this.uploadFileText.TabIndex = 17;
             // 
-            // muteButton
+            // pauseButton
             // 
-            this.muteButton.BackColor = System.Drawing.Color.Transparent;
-            this.muteButton.BackgroundImage = global::ESO___Skill_Point_Calculator.Properties.Resources._5538567_symbol_of_silent_mode_mute_vector_web_icon;
-            this.muteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.muteButton.FlatAppearance.BorderSize = 0;
-            this.muteButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.muteButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.muteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.muteButton.Location = new System.Drawing.Point(137, 703);
-            this.muteButton.Name = "muteButton";
-            this.muteButton.Size = new System.Drawing.Size(35, 35);
-            this.muteButton.TabIndex = 18;
-            this.muteButton.UseVisualStyleBackColor = false;
-            this.muteButton.Click += new System.EventHandler(this.muteButton_Click);
+            this.pauseButton.BackColor = System.Drawing.Color.Transparent;
+            this.pauseButton.BackgroundImage = global::ESO___Skill_Point_Calculator.soundResource.pause;
+            this.pauseButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pauseButton.FlatAppearance.BorderSize = 0;
+            this.pauseButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.pauseButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.pauseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pauseButton.Location = new System.Drawing.Point(204, 703);
+            this.pauseButton.Name = "pauseButton";
+            this.pauseButton.Size = new System.Drawing.Size(38, 38);
+            this.pauseButton.TabIndex = 18;
+            this.pauseButton.UseVisualStyleBackColor = false;
+            this.pauseButton.Click += new System.EventHandler(this.pauseButton_Click);
+            this.pauseButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.pauseButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // soundPanel
             // 
             this.soundPanel.AutoSize = true;
             this.soundPanel.BackColor = System.Drawing.Color.Transparent;
             this.soundPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(196)))), ((int)(((byte)(181)))));
-            this.soundPanel.Location = new System.Drawing.Point(125, 687);
+            this.soundPanel.Location = new System.Drawing.Point(147, 687);
             this.soundPanel.Name = "soundPanel";
             this.soundPanel.Size = new System.Drawing.Size(67, 13);
             this.soundPanel.TabIndex = 19;
             this.soundPanel.Text = "Sound panel";
+            // 
+            // playButton
+            // 
+            this.playButton.BackColor = System.Drawing.Color.Transparent;
+            this.playButton.BackgroundImage = global::ESO___Skill_Point_Calculator.soundResource.play;
+            this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.playButton.FlatAppearance.BorderSize = 0;
+            this.playButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.playButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playButton.Location = new System.Drawing.Point(116, 703);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(38, 38);
+            this.playButton.TabIndex = 20;
+            this.playButton.UseVisualStyleBackColor = false;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
+            this.playButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.playButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
+            // 
+            // stopButton
+            // 
+            this.stopButton.BackColor = System.Drawing.Color.Transparent;
+            this.stopButton.BackgroundImage = global::ESO___Skill_Point_Calculator.soundResource.stop;
+            this.stopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.stopButton.FlatAppearance.BorderSize = 0;
+            this.stopButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.stopButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.stopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stopButton.Location = new System.Drawing.Point(160, 703);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(38, 38);
+            this.stopButton.TabIndex = 21;
+            this.stopButton.UseVisualStyleBackColor = false;
+            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
+            this.stopButton.MouseEnter += new System.EventHandler(this.CheckAllButtons_MouseEnter);
+            this.stopButton.MouseLeave += new System.EventHandler(this.CheckAllButtons_MouseLeave);
             // 
             // BasePreview
             // 
@@ -314,8 +354,10 @@
             this.BackgroundImage = global::ESO___Skill_Point_Calculator.Properties.Resources.load_window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 860);
+            this.Controls.Add(this.stopButton);
+            this.Controls.Add(this.playButton);
             this.Controls.Add(this.soundPanel);
-            this.Controls.Add(this.muteButton);
+            this.Controls.Add(this.pauseButton);
             this.Controls.Add(this.uploadFileText);
             this.Controls.Add(this.fileBad);
             this.Controls.Add(this.imageCorrectly);
@@ -359,8 +401,10 @@
         private System.Windows.Forms.Button imageCorrectly;
         private System.Windows.Forms.Button fileBad;
         private System.Windows.Forms.Label uploadFileText;
-        private System.Windows.Forms.Button muteButton;
+        private System.Windows.Forms.Button pauseButton;
         private System.Windows.Forms.Label soundPanel;
+        private System.Windows.Forms.Button playButton;
+        private System.Windows.Forms.Button stopButton;
     }
 }
 

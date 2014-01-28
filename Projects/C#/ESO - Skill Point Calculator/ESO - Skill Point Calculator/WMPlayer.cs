@@ -38,5 +38,18 @@ namespace ESO___Skill_Point_Calculator
                 MessageBox.Show(ex.Message + ": " + ex.StackTrace.ToString(), "Error");
             }
         }
+
+        public void BackroundPlayerPause()
+        {
+            try
+            {
+                wmplayer.URL = Path.Combine(collection.source, collection.sound);
+                wmplayer.controls.pause();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ": " + ex.StackTrace.ToString(), "Error");
+            }
+        }
     }
 }

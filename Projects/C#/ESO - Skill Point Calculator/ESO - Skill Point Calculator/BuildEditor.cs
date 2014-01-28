@@ -13,13 +13,15 @@ namespace ESO___Skill_Point_Calculator
     public partial class buildEditor : Form
     {
         Collection collection = new Collection();
-        GraphicClassStructure classStructure = new GraphicClassStructure();
+        GraphicClassStructure classStructure;
 
         int clickClass = 0;
 
         public buildEditor()
         {
             InitializeComponent();
+            this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+
             Label maxSkillPoint = new Label();
             maxSkillPoint.AutoSize = true;
             maxSkillPoint.BackColor = System.Drawing.Color.Transparent;
@@ -31,7 +33,7 @@ namespace ESO___Skill_Point_Calculator
             maxSkillPoint.Size = new System.Drawing.Size(0, 20);
             this.Controls.Add(maxSkillPoint);
 
-            this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
+            classStructure = new GraphicClassStructure(this);
             classStructure.CreateClassButtons();
             classStructure.menu.Click += new System.EventHandler(classMenu_Click);
             classStructure.menu.MouseEnter += new System.EventHandler(CheckAllButtons_MouseEnter);
@@ -49,7 +51,7 @@ namespace ESO___Skill_Point_Calculator
             {
                 // Class buttons
                 case "dragonknight":
-                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight_on));
+                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight_on1));
                     break;
                 case "sorcerer":
                     this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer_on));
@@ -118,7 +120,7 @@ namespace ESO___Skill_Point_Calculator
             {
                 // Class buttons
                 case "dragonknight":
-                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight));
+                    this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.dragonknight1));
                     break;
                 case "sorcerer":
                     this.classStructure.menu.BackgroundImage = ((System.Drawing.Image)(BuildResource.sorcerer));
@@ -292,7 +294,7 @@ namespace ESO___Skill_Point_Calculator
             var label = formInstance.Controls.Find(labelName, true).FirstOrDefault();
             if (null != label && label is Label)
             {
-                (label as Label).Text = "test";
+                (label as Label).Text = UniqueValue.spentSkillPoints.ToString();
             }
         }
     }

@@ -76,6 +76,15 @@ namespace ESO___Skill_Point_Calculator
                 case "exitButton":
                     this.exitButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent_on));
                     break;
+                case "playButton":
+                    this.playButton.BackgroundImage = ((System.Drawing.Image)(soundResource.play_on));
+                    break;
+                case "stopButton":
+                    this.stopButton.BackgroundImage = ((System.Drawing.Image)(soundResource.stop_on));
+                    break;
+                case "pauseButton":
+                    this.pauseButton.BackgroundImage = ((System.Drawing.Image)(soundResource.pause_on));
+                    break;
             }
         }
 
@@ -111,6 +120,15 @@ namespace ESO___Skill_Point_Calculator
                 case "exitButton":
                     this.exitButton.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.close_transparent));
                     break;
+                case "playButton":
+                    this.playButton.BackgroundImage = ((System.Drawing.Image)(soundResource.play));
+                    break;
+                case "stopButton":
+                    this.stopButton.BackgroundImage = ((System.Drawing.Image)(soundResource.stop));
+                    break;
+                case "pauseButton":
+                    this.pauseButton.BackgroundImage = ((System.Drawing.Image)(soundResource.pause));
+                    break;
             }
         }
 
@@ -141,19 +159,19 @@ namespace ESO___Skill_Point_Calculator
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void muteButton_Click(object sender, EventArgs e)
+        private void playButton_Click(object sender, EventArgs e)
         {
-            switch (collection.value)
-            {
-                case 0:
-                    wmplayer.BackroundPlayerClose();
-                    collection.value++;
-                    break;
-                case 1:
-                    wmplayer.BackroundPlayerStart();
-                    collection.value = 0;
-                    break;
-            }
+            wmplayer.BackroundPlayerStart();
+        }
+
+        private void stopButton_Click(object sender, EventArgs e)
+        {
+            wmplayer.BackroundPlayerClose();
+        }
+
+        private void pauseButton_Click(object sender, EventArgs e)
+        {
+            wmplayer.BackroundPlayerPause();
         }
     }
 }

@@ -104,6 +104,11 @@
     <Compile Include="BuildEditor.Designer.cs">
       <DependentUpon>BuildEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="soundResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>soundResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="UniqueValue.cs" />
     <Compile Include="WMPlayer.cs" />
     <EmbeddedResource Include="BuildResource.resx">
@@ -124,6 +129,10 @@
     <EmbeddedResource Include="BuildEditor.resx">
       <DependentUpon>BuildEditor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="soundResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>soundResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,6 +148,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\stop_on.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\play_on.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\pause_on.png" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\plus_on.png" />
+    <None Include="Resources\plus1.png" />
+    <None Include="Resources\minus_on.png" />
+    <None Include="Resources\minus1.png" />
+    <None Include="Resources\dragonknight_on1.png" />
+    <None Include="Resources\dragonknight1.png" />
     <None Include="Resources\ultimate.png" />
     <None Include="Resources\passive.png" />
     <None Include="Resources\active.png" />

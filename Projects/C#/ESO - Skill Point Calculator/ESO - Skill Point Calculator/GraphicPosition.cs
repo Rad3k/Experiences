@@ -45,29 +45,29 @@ namespace ESO___Skill_Point_Calculator
                 },
                 new Point[]              // plus
                 {
-                    new Point(135, 75),
-                    new Point(85, 160),
-                    new Point(185, 160),
-                    new Point(85, 225),
-                    new Point(185, 225),
-                    new Point(135, 285),
-                    new Point(85, 370),
-                    new Point(185, 370),
-                    new Point(85, 440),
-                    new Point(185, 440),
+                    new Point(130, 72),
+                    new Point(80, 157),
+                    new Point(180, 157),
+                    new Point(80, 222),
+                    new Point(180, 222),
+                    new Point(130, 282),
+                    new Point(80, 367),
+                    new Point(180, 367),
+                    new Point(80, 437),
+                    new Point(180, 437),
                 },
                 new Point[]              // minus
                 {
-                    new Point(60, 82),
-                    new Point(10, 167),
-                    new Point(110, 167),
-                    new Point(10, 232),
-                    new Point(110, 232),
-                    new Point(60, 292),
-                    new Point(10, 377),
-                    new Point(110, 377),
-                    new Point(10, 447),
-                    new Point(110, 447),
+                    new Point(55, 72),
+                    new Point(5, 157),
+                    new Point(105, 157),
+                    new Point(5, 224),
+                    new Point(105, 224),
+                    new Point(55, 284),
+                    new Point(5, 367),
+                    new Point(105, 367),
+                    new Point(5, 437),
+                    new Point(105, 437),
                 },
                 new Point[]              // Reset Tree
                 {
@@ -81,7 +81,7 @@ namespace ESO___Skill_Point_Calculator
                 new Size[]
                 {
                     // Menu
-                    new Size(133, 26),   // dragonknight
+                    new Size(141, 26),   // dragonknight
                     new Size(98, 26),    // sorcerer
                     new Size(115, 26),   // nightblade
                     new Size(90, 26),    // templar
@@ -95,8 +95,7 @@ namespace ESO___Skill_Point_Calculator
                     // Spells
                     new Size(45, 44),
                     // Manipulate Button
-                    new Size(15, 15),    // plus 
-                    new Size(12, 3)      // minus
+                    new Size(23, 23),    // plus / minus
                 }
             };
         }

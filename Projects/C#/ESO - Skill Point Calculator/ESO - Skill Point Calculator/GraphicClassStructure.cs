@@ -11,6 +11,7 @@ namespace ESO___Skill_Point_Calculator
 {
     class GraphicClassStructure : GraphicPosition
     {
+        buildEditor spentSkill;
         public List<ButtonControl> buttonControl = new List<ButtonControl>();
 
         // Global
@@ -31,8 +32,9 @@ namespace ESO___Skill_Point_Calculator
 
         Collection collection = new Collection();
 
-        public GraphicClassStructure()
+        public GraphicClassStructure(buildEditor spentSkill)
         {
+            this.spentSkill = spentSkill;
             collection.ListClassValueLabel();
         }
 
@@ -48,7 +50,7 @@ namespace ESO___Skill_Point_Calculator
                     break;
                 case "dragonknight":
                     menu.Name = "dragonKnightText";
-                    menu.BackgroundImage = BuildResource.dragonknight;
+                    menu.BackgroundImage = BuildResource.dragonknight1;
                     menu.Size = Size[0][0];
                     classBackround.BackgroundImage = BuildResource.dragonknight_skill_tree;
                     break;
@@ -216,7 +218,7 @@ namespace ESO___Skill_Point_Calculator
 
                     // Plus
                     plus.BackColor = Color.Transparent;
-                    plus.BackgroundImage = BuildResource.plus;
+                    plus.BackgroundImage = BuildResource.plus1;
                     plus.BackgroundImageLayout = ImageLayout.Stretch;
                     plus.FlatAppearance.BorderSize = 0;
                     plus.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -234,14 +236,14 @@ namespace ESO___Skill_Point_Calculator
 
                     // Minus
                     minus.BackColor = Color.Transparent;
-                    minus.BackgroundImage = BuildResource.minus;
+                    minus.BackgroundImage = BuildResource.minus1;
                     minus.BackgroundImageLayout = ImageLayout.Stretch;
                     minus.FlatAppearance.BorderSize = 0;
                     minus.FlatAppearance.MouseDownBackColor = Color.Transparent;
                     minus.FlatAppearance.MouseOverBackColor = Color.Transparent;
                     minus.FlatStyle = FlatStyle.Flat;
                     minus.Name = "minus";
-                    minus.Size = Size[0][10];
+                    minus.Size = Size[0][9];
                     minus.UseVisualStyleBackColor = false;
                     minus.Name = minus.Name + i.ToString() + "_" + j.ToString();
                     minus.Click += new EventHandler(minusButton_click);
@@ -280,19 +282,12 @@ namespace ESO___Skill_Point_Calculator
             var name = currentButton.Name;
             currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
 
-            switch (name)
-            {
-                // Unique buttons
-                case "resetTree0":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-                    break;
-                case "resetTree1":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-                    break;
-                case "resetTree2":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-                    break;
-            }
+            if (name.Contains("resetTree"))
+                currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
+            else if (name.Contains("plus"))
+                currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.plus_on));
+            else if (name.Contains("minus"))
+                currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.minus_on));
         }
 
         private void classButton_MouseLeave(object sender, EventArgs e)
@@ -301,19 +296,12 @@ namespace ESO___Skill_Point_Calculator
             var name = currentButton.Name;
             currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
 
-            switch (name)
-            {
-                // Unique buttons
-                case "resetTree0":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-                    break;
-                case "resetTree1":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-                    break;
-                case "resetTree2":
-                    currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-                    break;
-            }
+            if (name.Contains("resetTree"))
+                currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
+            else if (name.Contains("plus"))
+                currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.plus1));
+            else if (name.Contains("minus"))
+                currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.minus1));
         }
 
         private void plusButton_click(object sender, EventArgs e)
@@ -548,9 +536,7 @@ namespace ESO___Skill_Point_Calculator
                     break;
             }
             UniqueValue.spentSkillPoints = collection.ultimateSpells.Sum() + collection.activeSpells.Sum() + collection.passiveSpells.Sum();
-            // Get reference to the label
-            var buildEditor = new buildEditor();
-            buildEditor.maxSkillPoint_TextChanged(buildEditor, "maxSkillPoint");
+            spentSkill.maxSkillPoint_TextChanged(spentSkill, "maxSkillPoint");
         }
 
         private void minusButton_click(object sender, EventArgs e)
@@ -785,6 +771,7 @@ namespace ESO___Skill_Point_Calculator
                     break;
             }
             UniqueValue.spentSkillPoints = collection.ultimateSpells.Sum() + collection.activeSpells.Sum() + collection.passiveSpells.Sum();
+            spentSkill.maxSkillPoint_TextChanged(spentSkill, "maxSkillPoint");
         }
 
         private void resetTreeOneEvent_Click(object sender, EventArgs e)
