@@ -82,6 +82,7 @@
     <Compile Include="Collection.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Cursors.cs" />
+    <Compile Include="GraphicArmorStructure.cs" />
     <Compile Include="GraphicClassStructure.cs" />
     <Compile Include="GraphicPosition.cs" />
     <Compile Include="Links.cs" />
@@ -148,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\armor_skill_tree.png" />
     <None Include="Resources\stop_on.png" />
     <None Include="Resources\stop.png" />
     <None Include="Resources\play_on.png" />

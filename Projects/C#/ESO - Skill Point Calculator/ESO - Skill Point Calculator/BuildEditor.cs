@@ -14,8 +14,10 @@ namespace ESO___Skill_Point_Calculator
     {
         Collection collection = new Collection();
         GraphicClassStructure classStructure;
+        GraphicArmorStructure armorStructure;
 
         int clickClass = 0;
+        int clickArmor = 0;
 
         public buildEditor()
         {
@@ -34,6 +36,8 @@ namespace ESO___Skill_Point_Calculator
             this.Controls.Add(maxSkillPoint);
 
             classStructure = new GraphicClassStructure(this);
+            armorStructure = new GraphicArmorStructure(this);
+
             classStructure.CreateClassButtons();
             classStructure.menu.Click += new System.EventHandler(classMenu_Click);
             classStructure.menu.MouseEnter += new System.EventHandler(CheckAllButtons_MouseEnter);
@@ -199,19 +203,22 @@ namespace ESO___Skill_Point_Calculator
         {
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
             classStructure.ClassAllButtonsVisible();
+            armorStructure.ArmorAllButtonsInVisible();
+
             if (clickClass < 1)
             {
                 classStructure.CreateClassButtons();
                 classStructure.CreateSpellsButton();
                 this.Controls.Add(classStructure.classBackround);
-            }
-            for (int i = 0; i < 3; i++)
-            {
-                classStructure.resetTree = new Button();
-                classStructure.resetTreeButton((Button)sender, e);
-                classStructure.resetTree.Location = classStructure.Location[4][i];
-                classStructure.resetTree.Name = classStructure.resetTree.Name + i.ToString();
-                this.Controls.Add(classStructure.resetTree);
+
+                for (int i = 0; i < 3; i++)
+                {
+                    classStructure.resetTree = new Button();
+                    classStructure.resetTreeButton((Button)sender, e);
+                    classStructure.resetTree.Location = classStructure.Location[0][4][i];
+                    classStructure.resetTree.Name = classStructure.resetTree.Name + i.ToString();
+                    this.Controls.Add(classStructure.resetTree);
+                }
             }
             clickClass++;
         }
@@ -220,72 +227,91 @@ namespace ESO___Skill_Point_Calculator
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void armorType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsVisible();
+
+            if (clickArmor < 1)
+            {
+                armorStructure.CreateArmorButtons();
+                //armorStructure.CreateSpellsButton();
+                this.Controls.Add(armorStructure.armorBackround);
+            }
         }
 
         private void weaponSlot2_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void racialDaggerfall_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void racialAldmeri_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void racialEbonheart_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void pvpType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void guildsType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void craftingType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void soulMagicType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void lycanthropyType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void vampirismType_Click(object sender, EventArgs e)
         {
             classStructure.ClassAllButtonsInVisible();
             classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            armorStructure.ArmorAllButtonsInVisible();
         }
 
         public void maxSkillPoint_TextChanged(Form formInstance, string labelName)

@@ -93,6 +93,16 @@ namespace ESO___Skill_Point_Calculator {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap armor_skill_tree {
+            get {
+                object obj = ResourceManager.GetObject("armor_skill_tree", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap assault_support_emperor {
             get {
                 object obj = ResourceManager.GetObject("assault_support_emperor", resourceCulture);

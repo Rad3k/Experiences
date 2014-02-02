@@ -2,104 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
 using System.Drawing;
+using System.Windows.Forms;
 using System.IO;
-using WMPLib;
 
 namespace ESO___Skill_Point_Calculator
 {
-    class GraphicClassStructure : GraphicPosition
+    class GraphicArmorStructure : GraphicPosition
     {
         buildEditor spentSkill;
-        List<ButtonControl> buttonControl = new List<ButtonControl>();
+        public List<ButtonControl> buttonControl = new List<ButtonControl>();
+        Collection collection = new Collection();
 
-        // Global
-        public Button resetTree;
-        public Button menu = new Button();
-        public PictureBox classBackround = new PictureBox();
+        public PictureBox armorBackround = new PictureBox();
+        // ButtonInformation:
+        Button activeInfo = new Button();
+        Button passiveInfo = new Button();
         // Button
         Button plus;
         Button minus;
         // Spells
         Button spells;
-        // ButtonInformation:
-        Button ultimateInfo = new Button();
-        Button activeInfo = new Button();
-        Button passiveInfo = new Button();
         // Label
         Label points;
 
-        Collection collection = new Collection();
-
-        public GraphicClassStructure(buildEditor spentSkill)
+        public GraphicArmorStructure(buildEditor spentSkill)
         {
             this.spentSkill = spentSkill;
             collection.ListClassValueLabel();
         }
 
-        public void CreateClassButtons()
+        public void CreateArmorButtons()
         {
-            switch (UniqueValue.character)
-            {
-                case "sorcerer":
-                    menu.Name = "sorcererText";
-                    menu.BackgroundImage = BuildResource.sorcerer;
-                    menu.Size = Size[0][1];
-                    classBackround.BackgroundImage = BuildResource.sorcerer_skill_tree;
-                    break;
-                case "dragonknight":
-                    menu.Name = "dragonKnightText";
-                    menu.BackgroundImage = BuildResource.dragonknight1;
-                    menu.Size = Size[0][0];
-                    classBackround.BackgroundImage = BuildResource.dragonknight_skill_tree;
-                    break;
-                case "templar":
-                    menu.Name = "templarText";
-                    menu.BackgroundImage = BuildResource.templar;
-                    menu.Size = Size[0][3];
-                    classBackround.BackgroundImage = BuildResource.templar_skill_tree;
-                    break;
-                case "nightblade":
-                    menu.Name = "nightbladeText";
-                    menu.BackgroundImage = BuildResource.nightblade;
-                    menu.Size = Size[0][2];
-                    classBackround.BackgroundImage = BuildResource.nightblade_skill_tree;
-                    break;
-            }
-            // Menu
-            menu.BackColor = Color.Transparent;
-            menu.BackgroundImageLayout = ImageLayout.Stretch;
-            menu.FlatAppearance.BorderSize = 0;
-            menu.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            menu.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            menu.FlatStyle = FlatStyle.Flat;
-            menu.Location = Location[0][0][0];
-            menu.Name = UniqueValue.character;
-            menu.UseVisualStyleBackColor = false;
-
             // Class Backround
-            classBackround.BackColor = Color.Transparent;
-            classBackround.BackgroundImageLayout = ImageLayout.Stretch;
-            classBackround.Location = Location[0][0][1];
-            classBackround.Name = "classBackround";
-            classBackround.Size = Size[0][4];
-            classBackround.Controls.Add(ultimateInfo);
-            classBackround.Controls.Add(activeInfo);
-            classBackround.Controls.Add(passiveInfo);
-
-            // Button information
-            ultimateInfo.BackColor = Color.Transparent;
-            ultimateInfo.BackgroundImage = BuildResource.ultimate;
-            ultimateInfo.BackgroundImageLayout = ImageLayout.Stretch;
-            ultimateInfo.FlatAppearance.BorderSize = 0;
-            ultimateInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            ultimateInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            ultimateInfo.FlatStyle = FlatStyle.Flat;
-            ultimateInfo.Location = Location[0][0][2];
-            ultimateInfo.Name = "ultimateInfo";
-            ultimateInfo.Size = Size[0][6];
-            ultimateInfo.UseVisualStyleBackColor = false;
+            armorBackround.BackColor = Color.Transparent;
+            armorBackround.BackgroundImage = BuildResource.armor_skill_tree;
+            armorBackround.BackgroundImageLayout = ImageLayout.Stretch;
+            armorBackround.Location = Location[0][0][1];
+            armorBackround.Name = "armorBackround";
+            armorBackround.Size = Size[0][4];
+            armorBackround.Controls.Add(activeInfo);
+            armorBackround.Controls.Add(passiveInfo);
 
             activeInfo.BackColor = Color.Transparent;
             activeInfo.BackgroundImage = BuildResource.active;
@@ -108,7 +51,7 @@ namespace ESO___Skill_Point_Calculator
             activeInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
             activeInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             activeInfo.FlatStyle = FlatStyle.Flat;
-            activeInfo.Location = Location[0][0][3];
+            activeInfo.Location = Location[0][0][2];
             activeInfo.Name = "activeInfo";
             activeInfo.Size = Size[0][7];
             activeInfo.UseVisualStyleBackColor = false;
@@ -120,36 +63,14 @@ namespace ESO___Skill_Point_Calculator
             passiveInfo.FlatAppearance.MouseDownBackColor = Color.Transparent;
             passiveInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             passiveInfo.FlatStyle = FlatStyle.Flat;
-            passiveInfo.Location = Location[0][0][4];
+            passiveInfo.Location = Location[0][0][3];
             passiveInfo.Name = "passiveInfo";
             passiveInfo.Size = Size[0][7];
             passiveInfo.UseVisualStyleBackColor = false;
-        }
 
-        public void resetTreeButton(object sender, EventArgs e)
-        {
-            // Reset tree
-            resetTree.BackColor = Color.Transparent;
-            resetTree.BackgroundImage = BuildResource.reset;
-            resetTree.BackgroundImageLayout = ImageLayout.Stretch;
-            resetTree.FlatAppearance.BorderSize = 0;
-            resetTree.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            resetTree.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            resetTree.FlatStyle = FlatStyle.Flat;
-            resetTree.Name = "resetTree";
-            resetTree.Size = Size[0][5];
-            resetTree.UseVisualStyleBackColor = false;
-            resetTree.Click += new EventHandler(resetTreeOneEvent_Click);
-            resetTree.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
-            resetTree.MouseEnter += new EventHandler(classButton_MouseEnter);
-            resetTree.MouseLeave += new EventHandler(classButton_MouseLeave);
-        }
-
-        public void CreateSpellsButton()
-        {
             for (int j = 0; j < 3; j++)
             {
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 6; i++)
                 {
                     spells = new Button();
                     plus = new Button();
@@ -159,30 +80,30 @@ namespace ESO___Skill_Point_Calculator
                     switch (j)
                     {
                         case 0:
-                            spells.Location = Location[0][1][i];
-                            points.Location = Location[0][1][i];
+                            spells.Location = Location[1][0][i];
+                            points.Location = Location[1][0][i];
                             points.Location = new Point(points.Location.X + 8, points.Location.Y + 45);
-                            plus.Location = Location[0][2][i];
-                            minus.Location = Location[0][3][i];
+                            plus.Location = Location[1][1][i];
+                            minus.Location = Location[1][2][i];
                             break;
                         case 1:
-                            spells.Location = Location[0][1][i];
+                            spells.Location = Location[1][0][i];
                             spells.Location = new Point(spells.Location.X + 205, spells.Location.Y);
-                            plus.Location = Location[0][2][i];
+                            plus.Location = Location[1][1][i];
                             plus.Location = new Point(plus.Location.X + 205, plus.Location.Y);
-                            minus.Location = Location[0][3][i];
+                            minus.Location = Location[1][2][i];
                             minus.Location = new Point(minus.Location.X + 205, minus.Location.Y);
-                            points.Location = Location[0][1][i];
+                            points.Location = Location[1][0][i];
                             points.Location = new Point(points.Location.X + 213, points.Location.Y + 45);
                             break;
                         case 2:
-                            spells.Location = Location[0][1][i];
+                            spells.Location = Location[1][0][i];
                             spells.Location = new Point(spells.Location.X + 410, spells.Location.Y);
-                            plus.Location = Location[0][2][i];
+                            plus.Location = Location[1][1][i];
                             plus.Location = new Point(plus.Location.X + 410, plus.Location.Y);
-                            minus.Location = Location[0][3][i];
+                            minus.Location = Location[1][2][i];
                             minus.Location = new Point(minus.Location.X + 410, minus.Location.Y);
-                            points.Location = Location[0][1][i];
+                            points.Location = Location[1][0][i];
                             points.Location = new Point(points.Location.X + 418, points.Location.Y + 45);
                             break;
                     }
@@ -208,7 +129,7 @@ namespace ESO___Skill_Point_Calculator
                     points.FlatStyle = FlatStyle.Flat;
                     points.Name = "points";
                     points.Name = spells.Name + i.ToString() + "_" + j.ToString();
-                    if (i >= 6)
+                    if (i >= 1)
                         points.Text = "0 / 2";
                     else
                         points.Text = "0 / 1";
@@ -250,10 +171,10 @@ namespace ESO___Skill_Point_Calculator
                     minus.MouseLeave += new EventHandler(classButton_MouseLeave);
                     minus.Tag = points;
 
-                    classBackround.Controls.Add(spells);
-                    classBackround.Controls.Add(plus);
-                    classBackround.Controls.Add(minus);
-                    classBackround.Controls.Add(points);
+                    armorBackround.Controls.Add(spells);
+                    armorBackround.Controls.Add(plus);
+                    armorBackround.Controls.Add(minus);
+                    armorBackround.Controls.Add(points);
                 }
             }
         }
@@ -280,9 +201,7 @@ namespace ESO___Skill_Point_Calculator
             var name = currentButton.Name;
             currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
 
-            if (name.Contains("resetTree"))
-                currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-            else if (name.Contains("plus"))
+            if (name.Contains("plus"))
                 currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.plus_on));
             else if (name.Contains("minus"))
                 currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.minus_on));
@@ -294,9 +213,7 @@ namespace ESO___Skill_Point_Calculator
             var name = currentButton.Name;
             currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
 
-            if (name.Contains("resetTree"))
-                currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-            else if (name.Contains("plus"))
+            if (name.Contains("plus"))
                 currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.plus1));
             else if (name.Contains("minus"))
                 currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.minus1));
@@ -312,224 +229,197 @@ namespace ESO___Skill_Point_Calculator
                 // Ultimate
                 case "plus0_0":
                     (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classUltimateSpells[0] = 1;
+                    collection.armorActiveSpells[0] = 1;
                     break;
                 case "plus0_1":
                     (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classUltimateSpells[1] = 1;
+                    collection.armorActiveSpells[1] = 1;
                     break;
                 case "plus0_2":
                     (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classUltimateSpells[2] = 1;
-                    break;
-                // Active Tree (1)
-                case "plus1_0":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[0] = 1;
-                    break;
-                case "plus2_0":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[1] = 1;
-                    break;
-                case "plus3_0":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[2] = 1;
-                    break;
-                case "plus4_0":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[3] = 1;
-                    break;
-                case "plus5_0":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[4] = 1;
-                    break;
-                // Active Tree (2)
-                case "plus1_1":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[5] = 1;
-                    break;
-                case "plus2_1":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[6] = 1;
-                    break;
-                case "plus3_1":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[7] = 1;
-                    break;
-                case "plus4_1":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[8] = 1;
-                    break;
-                case "plus5_1":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[9] = 1;
-                    break;
-                // Active Tree (3)
-                case "plus1_2":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[10] = 1;
-                    break;
-                case "plus2_2":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[11] = 1;
-                    break;
-                case "plus3_2":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[12] = 1;
-                    break;
-                case "plus4_2":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[13] = 1;
-                    break;
-                case "plus5_2":
-                    (currentButton.Tag as Label).Text = "1 / 1";
-                    collection.classActiveSpells[14] = 1;
+                    collection.armorActiveSpells[2] = 1;
                     break;
                 // Passive Tree (1)
-                case "plus6_0":
+                case "plus1_0":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[0] = 1;
+                        collection.armorPassiveSpells[0] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[0] = 2;
+                        collection.armorPassiveSpells[0] = 2;
                     }
                     break;
-                case "plus7_0":
+                case "plus2_0":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[1] = 1;
+                        collection.armorPassiveSpells[1] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[1] = 2;
+                        collection.armorPassiveSpells[1] = 2;
                     }
                     break;
-                case "plus8_0":
+                case "plus3_0":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[2] = 1;
+                        collection.armorPassiveSpells[2] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[2] = 2;
+                        collection.armorPassiveSpells[2] = 2;
                     }
                     break;
-                case "plus9_0":
+                case "plus4_0":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[3] = 1;
+                        collection.armorPassiveSpells[3] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[3] = 2;
+                        collection.armorPassiveSpells[3] = 2;
+                    }
+                    break;
+                case "plus5_0":
+                    if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "1 / 2";
+                        collection.armorPassiveSpells[4] = 1;
+                    }
+                    else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "2 / 2";
+                        collection.armorPassiveSpells[4] = 2;
                     }
                     break;
                 // Passive Tree (2)
-                case "plus6_1":
+                case "plus1_1":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[4] = 1;
+                        collection.armorPassiveSpells[5] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[4] = 2;
+                        collection.armorPassiveSpells[5] = 2;
                     }
                     break;
-                case "plus7_1":
+                case "plus2_1":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[5] = 1;
+                        collection.armorPassiveSpells[6] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[5] = 2;
+                        collection.armorPassiveSpells[6] = 2;
                     }
                     break;
-                case "plus8_1":
+                case "plus3_1":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[6] = 1;
+                        collection.armorPassiveSpells[7] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[6] = 2;
+                        collection.armorPassiveSpells[7] = 2;
                     }
                     break;
-                case "plus9_1":
+                case "plus4_1":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[7] = 1;
+                        collection.armorPassiveSpells[8] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[7] = 2;
+                        collection.armorPassiveSpells[8] = 2;
+                    }
+                    break;
+                case "plus5_1":
+                    if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "1 / 2";
+                        collection.armorPassiveSpells[9] = 1;
+                    }
+                    else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "2 / 2";
+                        collection.armorPassiveSpells[9] = 2;
                     }
                     break;
                 // Passive Tree (3)
-                case "plus6_2":
+                case "plus1_2":
                    if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[8] = 1;
+                        collection.armorPassiveSpells[10] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[8] = 2;
+                        collection.armorPassiveSpells[10] = 2;
                     }
                     break;
-                case "plus7_2":
+                case "plus2_2":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[9] = 1;
+                        collection.armorPassiveSpells[11] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[9] = 2;
+                        collection.armorPassiveSpells[11] = 2;
                     }
                     break;
-                case "plus8_2":
+                case "plus3_2":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[10] = 1;
+                        collection.armorPassiveSpells[12] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[10] = 2;
+                        collection.armorPassiveSpells[12] = 2;
                     }
                     break;
-                case "plus9_2":
+                case "plus4_2":
                     if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[11] = 1;
+                        collection.armorPassiveSpells[13] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "2 / 2";
-                        collection.classPassiveSpells[11] = 2;
+                        collection.armorPassiveSpells[13] = 2;
+                    }
+                    break;
+                case "plus5_2":
+                    if ((currentButton.Tag as Label).Text.Contains("0 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "1 / 2";
+                        collection.armorPassiveSpells[14] = 1;
+                    }
+                    else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "2 / 2";
+                        collection.armorPassiveSpells[14] = 2;
                     }
                     break;
             }
@@ -548,282 +438,236 @@ namespace ESO___Skill_Point_Calculator
                 // Ultimate
                 case "minus0_0":
                     (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classUltimateSpells[0] = 0;
+                    collection.armorActiveSpells[0] = 0;
                     break;
                 case "minus0_1":
                     (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classUltimateSpells[1] = 0;
+                    collection.armorActiveSpells[1] = 0;
                     break;
                 case "minus0_2":
                     (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classUltimateSpells[2] = 0;
-                    break;
-                // Active Tree (1)
-                case "minus1_0":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[0] = 0;
-                    break;
-                case "minus2_0":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[1] = 0;
-                    break;
-                case "minus3_0":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[2] = 0;
-                    break;
-                case "minus4_0":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[3] = 0;
-                    break;
-                case "minus5_0":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[4] = 0;
-                    break;
-                // Active Tree (2)
-                case "minus1_1":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[5] = 0;
-                    break;
-                case "minus2_1":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[6] = 0;
-                    break;
-                case "minus3_1":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[7] = 0;
-                    break;
-                case "minus4_1":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[8] = 0;
-                    break;
-                case "minus5_1":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[9] = 0;
-                    break;
-                // Active Tree (3)
-                case "minus1_2":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[10] = 0;
-                    break;
-                case "minus2_2":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[11] = 0;
-                    break;
-                case "minus3_2":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[12] = 0;
-                    break;
-                case "minus4_2":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[13] = 0;
-                    break;
-                case "minus5_2":
-                    (currentButton.Tag as Label).Text = "0 / 1";
-                    collection.classActiveSpells[14] = 0;
+                    collection.armorActiveSpells[2] = 0;
                     break;
                 // Passive Tree (1)
-                case "minus6_0":
+                case "minus1_0":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[0] = 1;
+                        collection.armorPassiveSpells[0] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[0] = 0;
+                        collection.armorPassiveSpells[0] = 0;
                     }
                     break;
-                case "minus7_0":
+                case "minus2_0":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[1] = 1;
+                        collection.armorPassiveSpells[1] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[1] = 0;
+                        collection.armorPassiveSpells[1] = 0;
                     }
                     break;
-                case "minus8_0":
+                case "minus3_0":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[2] = 1;
+                        collection.armorPassiveSpells[2] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[2] = 0;
+                        collection.armorPassiveSpells[2] = 0;
                     }
                     break;
-                case "minus9_0":
+                case "minus4_0":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[3] = 1;
+                        collection.armorPassiveSpells[3] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[3] = 0;
+                        collection.armorPassiveSpells[3] = 0;
+                    }
+                    break;
+                case "minus5_0":
+                    if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "1 / 2";
+                        collection.armorPassiveSpells[4] = 1;
+                    }
+                    else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "0 / 2";
+                        collection.armorPassiveSpells[4] = 0;
                     }
                     break;
                 // Passive Tree (2)
-                case "minus6_1":
+                case "minus1_1":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[4] = 1;
+                        collection.armorPassiveSpells[5] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[4] = 0;
+                        collection.armorPassiveSpells[5] = 0;
                     }
                     break;
-                case "minus7_1":
+                case "minus2_1":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[5] = 1;
+                        collection.armorPassiveSpells[6] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[5] = 0;
+                        collection.armorPassiveSpells[6] = 0;
                     }
                     break;
-                case "minus8_1":
+                case "minus3_1":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[6] = 1;
+                        collection.armorPassiveSpells[7] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[6] = 0;
+                        collection.armorPassiveSpells[7] = 0;
                     }
                     break;
-                case "minus9_1":
+                case "minus4_1":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[7] = 1;
+                        collection.armorPassiveSpells[8] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[7] = 0;
+                        collection.armorPassiveSpells[8] = 0;
+                    }
+                    break;
+                case "minus5_1":
+                    if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "1 / 2";
+                        collection.armorPassiveSpells[9] = 1;
+                    }
+                    else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "0 / 2";
+                        collection.armorPassiveSpells[9] = 0;
                     }
                     break;
                 // Passive Tree (3)
-                case "minus6_2":
+                case "minus1_2":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[8] = 1;
+                        collection.armorPassiveSpells[10] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[8] = 0;
+                        collection.armorPassiveSpells[10] = 0;
                     }
                     break;
-                case "minus7_2":
+                case "minus2_2":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[9] = 1;
+                        collection.armorPassiveSpells[11] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[9] = 0;
+                        collection.armorPassiveSpells[11] = 0;
                     }
                     break;
-                case "minus8_2":
+                case "minus3_2":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[10] = 1;
+                        collection.armorPassiveSpells[12] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[10] = 0;
+                        collection.armorPassiveSpells[12] = 0;
                     }
                     break;
-                case "minus9_2":
+                case "minus4_2":
                     if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "1 / 2";
-                        collection.classPassiveSpells[11] = 1;
+                        collection.armorPassiveSpells[13] = 1;
                     }
                     else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
                     {
                         (currentButton.Tag as Label).Text = "0 / 2";
-                        collection.classPassiveSpells[11] = 0;
+                        collection.armorPassiveSpells[13] = 0;
+                    }
+                    break;
+                case "minus5_2":
+                    if ((currentButton.Tag as Label).Text.Contains("2 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "1 / 2";
+                        collection.armorPassiveSpells[14] = 1;
+                    }
+                    else if ((currentButton.Tag as Label).Text.Contains("1 / 2"))
+                    {
+                        (currentButton.Tag as Label).Text = "0 / 2";
+                        collection.armorPassiveSpells[14] = 0;
                     }
                     break;
             }
-            UniqueValue.spentSkillPoints = collection.classUltimateSpells.Sum() + collection.classActiveSpells.Sum()
+            UniqueValue.spentSkillPoints = collection.classUltimateSpells.Sum() + collection.classActiveSpells.Sum() 
                 + collection.classPassiveSpells.Sum() + collection.armorActiveSpells.Sum() + collection.armorPassiveSpells.Sum();
             spentSkill.maxSkillPoint_TextChanged(spentSkill, "maxSkillPoint");
         }
 
-        private void resetTreeOneEvent_Click(object sender, EventArgs e)
+        public void ArmorAllButtonsVisible()
         {
-            Button button = sender as Button;
-            var name = button.Name;
-            if (button != null)
-            {
-                switch (name)
-                {
-                    case "resetTree0":
-                        MessageBox.Show("1");
-                        break;
-                    case "resetTree1":
-                        MessageBox.Show("2");
-                        break;
-                    case "resetTree2":
-                        MessageBox.Show("3");
-                        break;
-                }
-            }
-        }
-        
-        public void ClassAllButtonsVisible()
-        {
-            classBackround.Visible = true;
+            armorBackround.Visible = true;
             UniqueValue.visibleType = true;
-            ultimateInfo.Visible = true;
             activeInfo.Visible = true;
             passiveInfo.Visible = true;
         }
 
-        public void ClassAllButtonsInVisible()
+        public void ArmorAllButtonsInVisible()
         {
-            classBackround.Visible = false;
+            armorBackround.Visible = false;
             UniqueValue.visibleType = false;
-            ultimateInfo.Visible = false;
             activeInfo.Visible = false;
             passiveInfo.Visible = false;
         }
 
         public void RemoveAllButtons()
         {
-            classBackround.Controls.Remove(classBackround);
-            ultimateInfo.Controls.Remove(ultimateInfo);
+            armorBackround.Controls.Remove(armorBackround);
             activeInfo.Controls.Remove(activeInfo);
             passiveInfo.Controls.Remove(passiveInfo);
 
-            classBackround.Dispose();
-            ultimateInfo.Dispose();
+            armorBackround.Dispose();
             activeInfo.Dispose();
             passiveInfo.Dispose();
         }
+    }
+
+    class ButtonControl
+    {
+        public Button btn;
+        public object obj;
     }
 }

@@ -18,9 +18,12 @@ namespace ESO___Skill_Point_Calculator
         public string source;
 
         // Class tree
-        public List<int> ultimateSpells = new List<int>();
-        public List<int> activeSpells = new List<int>();
-        public List<int> passiveSpells = new List<int>();
+        public List<int> classUltimateSpells = new List<int>();
+        public List<int> classActiveSpells = new List<int>();
+        public List<int> classPassiveSpells = new List<int>();
+        // Armor tree
+        public List<int> armorActiveSpells = new List<int>();
+        public List<int> armorPassiveSpells = new List<int>();
 
         public Collection()
         {
@@ -32,19 +35,31 @@ namespace ESO___Skill_Point_Calculator
 
         public void ListClassValueLabel()
         {
-            for (int i = 0; i < ultimateSpells.Count(); i++)
-                ultimateSpells.RemoveAt(i);
-            for (int i = 0; i < activeSpells.Count(); i++)
-                activeSpells.RemoveAt(i);
-            for (int i = 0; i < passiveSpells.Count(); i++)
-                passiveSpells.RemoveAt(i);
+            for (int i = 0; i < classUltimateSpells.Count(); i++)
+            {
+                classUltimateSpells.RemoveAt(i);
+                armorActiveSpells.RemoveAt(i);
+            }
+            for (int i = 0; i < classActiveSpells.Count(); i++)
+            {
+                classActiveSpells.RemoveAt(i);
+                armorPassiveSpells.RemoveAt(i);
+            }
+            for (int i = 0; i < classPassiveSpells.Count(); i++)
+                classPassiveSpells.RemoveAt(i);
 
             for (int i = 0; i < 3; i++)
-                ultimateSpells.Add(0);
+            {
+                classUltimateSpells.Add(0);
+                armorActiveSpells.Add(0);
+            }
             for (int i = 0; i < 15; i++)
-                activeSpells.Add(0);
+            {
+                classActiveSpells.Add(0);
+                armorPassiveSpells.Add(0);
+            }
             for (int i = 0; i < 12; i++)
-                passiveSpells.Add(0);
+                classPassiveSpells.Add(0);
         }
     }
 }
