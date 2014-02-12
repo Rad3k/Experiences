@@ -82,6 +82,7 @@
     <Compile Include="Collection.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Cursors.cs" />
+    <Compile Include="GlobalStructure.cs" />
     <Compile Include="GraphicArmorStructure.cs" />
     <Compile Include="GraphicClassStructure.cs" />
     <Compile Include="GraphicPosition.cs" />

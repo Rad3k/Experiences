@@ -13,6 +13,7 @@ namespace ESO___Skill_Point_Calculator
     public partial class buildEditor : Form
     {
         Collection collection = new Collection();
+        GlobalStructure global;
         GraphicClassStructure classStructure;
         GraphicArmorStructure armorStructure;
 
@@ -24,25 +25,43 @@ namespace ESO___Skill_Point_Calculator
             InitializeComponent();
             this.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
 
-            Label maxSkillPoint = new Label();
-            maxSkillPoint.AutoSize = true;
-            maxSkillPoint.BackColor = System.Drawing.Color.Transparent;
-            maxSkillPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            maxSkillPoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(196)))), ((int)(((byte)(181)))));
-            maxSkillPoint.Location = new System.Drawing.Point(528, 687);
-            maxSkillPoint.Name = "maxSkillPoint";
-            maxSkillPoint.Text = UniqueValue.spentSkillPoints.ToString();
-            maxSkillPoint.Size = new System.Drawing.Size(0, 20);
-            this.Controls.Add(maxSkillPoint);
-
+            global = new GlobalStructure();
             classStructure = new GraphicClassStructure(this);
             armorStructure = new GraphicArmorStructure(this);
 
+            // Menu information for class
             classStructure.CreateClassButtons();
             classStructure.menu.Click += new System.EventHandler(classMenu_Click);
             classStructure.menu.MouseEnter += new System.EventHandler(CheckAllButtons_MouseEnter);
             classStructure.menu.MouseLeave += new System.EventHandler(CheckAllButtons_MouseLeave);
             this.Controls.Add(classStructure.menu);
+
+            // Global structure
+            for (int i = 0; i < 3; i++)
+            {
+                global.resetTree = new Button();
+                if (global.accesToCreate)
+                    global.maxSkillPoint = new Label();
+                global.globalStructureInfo();
+                global.resetTree.Location = classStructure.Location[0][4][i];
+                global.resetTree.Name = global.resetTree.Name + i.ToString();
+                this.Controls.Add(global.resetTree);
+                this.Controls.Add(global.maxSkillPoint);
+
+                global.buttonControl.Add(new ButtonControl() { btn = classStructure.menu, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = weaponSlot1, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = weaponSlot2, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = armorType, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = racialDaggerfall, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = racialAldmeri, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = racialEbonheart, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = pvpType, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = guildsType, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = craftingType, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = soulMagicType, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = lycanthropyType, obj = (object)global.resetTree });
+                global.buttonControl.Add(new ButtonControl() { btn = vampirismType, obj = (object)global.resetTree });
+            }
         }
 
         private void CheckAllButtons_MouseEnter(object sender, EventArgs e)
@@ -201,7 +220,7 @@ namespace ESO___Skill_Point_Calculator
 
         private void classMenu_Click(object sender, EventArgs e)
         {
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             classStructure.ClassAllButtonsVisible();
             armorStructure.ArmorAllButtonsInVisible();
 
@@ -210,30 +229,24 @@ namespace ESO___Skill_Point_Calculator
                 classStructure.CreateClassButtons();
                 classStructure.CreateSpellsButton();
                 this.Controls.Add(classStructure.classBackround);
-
-                for (int i = 0; i < 3; i++)
-                {
-                    classStructure.resetTree = new Button();
-                    classStructure.resetTreeButton((Button)sender, e);
-                    classStructure.resetTree.Location = classStructure.Location[0][4][i];
-                    classStructure.resetTree.Name = classStructure.resetTree.Name + i.ToString();
-                    this.Controls.Add(classStructure.resetTree);
-                }
             }
             clickClass++;
+            UniqueValue.visibleType = true;
         }
 
         private void weaponSlot1_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void armorType_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsVisible();
 
             if (clickArmor < 1)
@@ -246,71 +259,81 @@ namespace ESO___Skill_Point_Calculator
 
         private void weaponSlot2_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void racialDaggerfall_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void racialAldmeri_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void racialEbonheart_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void pvpType_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void guildsType_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void craftingType_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void soulMagicType_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void lycanthropyType_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 
         private void vampirismType_Click(object sender, EventArgs e)
         {
+            UniqueValue.visibleType = true;
             classStructure.ClassAllButtonsInVisible();
-            classStructure.classUniqueButtons_VisibleChanged((Button)sender, e);
+            global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
         }
 

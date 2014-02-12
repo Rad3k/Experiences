@@ -12,10 +12,8 @@ namespace ESO___Skill_Point_Calculator
     class GraphicClassStructure : GraphicPosition
     {
         buildEditor spentSkill;
-        List<ButtonControl> buttonControl = new List<ButtonControl>();
 
         // Global
-        public Button resetTree;
         public Button menu = new Button();
         public PictureBox classBackround = new PictureBox();
         // Button
@@ -126,25 +124,6 @@ namespace ESO___Skill_Point_Calculator
             passiveInfo.UseVisualStyleBackColor = false;
         }
 
-        public void resetTreeButton(object sender, EventArgs e)
-        {
-            // Reset tree
-            resetTree.BackColor = Color.Transparent;
-            resetTree.BackgroundImage = BuildResource.reset;
-            resetTree.BackgroundImageLayout = ImageLayout.Stretch;
-            resetTree.FlatAppearance.BorderSize = 0;
-            resetTree.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            resetTree.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            resetTree.FlatStyle = FlatStyle.Flat;
-            resetTree.Name = "resetTree";
-            resetTree.Size = Size[0][5];
-            resetTree.UseVisualStyleBackColor = false;
-            resetTree.Click += new EventHandler(resetTreeOneEvent_Click);
-            resetTree.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
-            resetTree.MouseEnter += new EventHandler(classButton_MouseEnter);
-            resetTree.MouseLeave += new EventHandler(classButton_MouseLeave);
-        }
-
         public void CreateSpellsButton()
         {
             for (int j = 0; j < 3; j++)
@@ -199,7 +178,6 @@ namespace ESO___Skill_Point_Calculator
                     spells.Size = Size[0][8];
                     spells.UseVisualStyleBackColor = false;
                     spells.Name = spells.Name + i.ToString() + "_" + j.ToString();
-                    spells.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
 
                     // Labels for point
                     points.BackColor = Color.Transparent;
@@ -212,7 +190,6 @@ namespace ESO___Skill_Point_Calculator
                         points.Text = "0 / 2";
                     else
                         points.Text = "0 / 1";
-                    points.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
 
                     // Plus
                     plus.BackColor = Color.Transparent;
@@ -227,7 +204,6 @@ namespace ESO___Skill_Point_Calculator
                     plus.UseVisualStyleBackColor = false;
                     plus.Name = plus.Name + i.ToString() + "_" + j.ToString();
                     plus.Click += new EventHandler(plusButton_click);
-                    plus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
                     plus.MouseEnter += new EventHandler(classButton_MouseEnter);
                     plus.MouseLeave += new EventHandler(classButton_MouseLeave);
                     plus.Tag = points;
@@ -245,7 +221,6 @@ namespace ESO___Skill_Point_Calculator
                     minus.UseVisualStyleBackColor = false;
                     minus.Name = minus.Name + i.ToString() + "_" + j.ToString();
                     minus.Click += new EventHandler(minusButton_click);
-                    minus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
                     minus.MouseEnter += new EventHandler(classButton_MouseEnter);
                     minus.MouseLeave += new EventHandler(classButton_MouseLeave);
                     minus.Tag = points;
@@ -258,31 +233,13 @@ namespace ESO___Skill_Point_Calculator
             }
         }
 
-        public void classUniqueButtons_VisibleChanged(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            foreach (ButtonControl btnCntrl in buttonControl)
-            {
-                if (btnCntrl.btn != button)
-                {
-                    if (btnCntrl.obj.GetType() == typeof(Button))
-                    {
-                        Button objBtn = (Button)btnCntrl.obj;
-                        objBtn.Visible = UniqueValue.visibleType;
-                    }
-                }
-            }
-        }
-
         private void classButton_MouseEnter(object sender, EventArgs e)
         {
             var currentButton = sender as Button;
             var name = currentButton.Name;
             currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor_hand));
 
-            if (name.Contains("resetTree"))
-                currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset_on));
-            else if (name.Contains("plus"))
+            if (name.Contains("plus"))
                 currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.plus_on));
             else if (name.Contains("minus"))
                 currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.minus_on));
@@ -294,9 +251,7 @@ namespace ESO___Skill_Point_Calculator
             var name = currentButton.Name;
             currentButton.Cursor = NativeMethods.LoadCustomCursor(Path.Combine(collection.source, collection.cursor));
 
-            if (name.Contains("resetTree"))
-                currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.reset));
-            else if (name.Contains("plus"))
+            if (name.Contains("plus"))
                 currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.plus1));
             else if (name.Contains("minus"))
                 currentButton.BackgroundImage = ((System.Drawing.Image)(BuildResource.minus1));
@@ -773,32 +728,10 @@ namespace ESO___Skill_Point_Calculator
                 + collection.classPassiveSpells.Sum() + collection.armorActiveSpells.Sum() + collection.armorPassiveSpells.Sum();
             spentSkill.maxSkillPoint_TextChanged(spentSkill, "maxSkillPoint");
         }
-
-        private void resetTreeOneEvent_Click(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            var name = button.Name;
-            if (button != null)
-            {
-                switch (name)
-                {
-                    case "resetTree0":
-                        MessageBox.Show("1");
-                        break;
-                    case "resetTree1":
-                        MessageBox.Show("2");
-                        break;
-                    case "resetTree2":
-                        MessageBox.Show("3");
-                        break;
-                }
-            }
-        }
         
         public void ClassAllButtonsVisible()
         {
             classBackround.Visible = true;
-            UniqueValue.visibleType = true;
             ultimateInfo.Visible = true;
             activeInfo.Visible = true;
             passiveInfo.Visible = true;
@@ -807,7 +740,6 @@ namespace ESO___Skill_Point_Calculator
         public void ClassAllButtonsInVisible()
         {
             classBackround.Visible = false;
-            UniqueValue.visibleType = false;
             ultimateInfo.Visible = false;
             activeInfo.Visible = false;
             passiveInfo.Visible = false;

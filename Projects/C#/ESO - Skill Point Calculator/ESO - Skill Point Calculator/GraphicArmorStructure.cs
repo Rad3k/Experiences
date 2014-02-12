@@ -11,7 +11,6 @@ namespace ESO___Skill_Point_Calculator
     class GraphicArmorStructure : GraphicPosition
     {
         buildEditor spentSkill;
-        public List<ButtonControl> buttonControl = new List<ButtonControl>();
         Collection collection = new Collection();
 
         public PictureBox armorBackround = new PictureBox();
@@ -120,7 +119,6 @@ namespace ESO___Skill_Point_Calculator
                     spells.Size = Size[0][8];
                     spells.UseVisualStyleBackColor = false;
                     spells.Name = spells.Name + i.ToString() + "_" + j.ToString();
-                    spells.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
 
                     // Labels for point
                     points.BackColor = Color.Transparent;
@@ -133,7 +131,6 @@ namespace ESO___Skill_Point_Calculator
                         points.Text = "0 / 2";
                     else
                         points.Text = "0 / 1";
-                    points.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
 
                     // Plus
                     plus.BackColor = Color.Transparent;
@@ -148,7 +145,6 @@ namespace ESO___Skill_Point_Calculator
                     plus.UseVisualStyleBackColor = false;
                     plus.Name = plus.Name + i.ToString() + "_" + j.ToString();
                     plus.Click += new EventHandler(plusButton_click);
-                    plus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
                     plus.MouseEnter += new EventHandler(classButton_MouseEnter);
                     plus.MouseLeave += new EventHandler(classButton_MouseLeave);
                     plus.Tag = points;
@@ -166,7 +162,6 @@ namespace ESO___Skill_Point_Calculator
                     minus.UseVisualStyleBackColor = false;
                     minus.Name = minus.Name + i.ToString() + "_" + j.ToString();
                     minus.Click += new EventHandler(minusButton_click);
-                    minus.VisibleChanged += new EventHandler(classUniqueButtons_VisibleChanged);
                     minus.MouseEnter += new EventHandler(classButton_MouseEnter);
                     minus.MouseLeave += new EventHandler(classButton_MouseLeave);
                     minus.Tag = points;
@@ -175,22 +170,6 @@ namespace ESO___Skill_Point_Calculator
                     armorBackround.Controls.Add(plus);
                     armorBackround.Controls.Add(minus);
                     armorBackround.Controls.Add(points);
-                }
-            }
-        }
-
-        public void classUniqueButtons_VisibleChanged(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            foreach (ButtonControl btnCntrl in buttonControl)
-            {
-                if (btnCntrl.btn != button)
-                {
-                    if (btnCntrl.obj.GetType() == typeof(Button))
-                    {
-                        Button objBtn = (Button)btnCntrl.obj;
-                        objBtn.Visible = UniqueValue.visibleType;
-                    }
                 }
             }
         }
@@ -640,7 +619,6 @@ namespace ESO___Skill_Point_Calculator
         public void ArmorAllButtonsVisible()
         {
             armorBackround.Visible = true;
-            UniqueValue.visibleType = true;
             activeInfo.Visible = true;
             passiveInfo.Visible = true;
         }
@@ -648,7 +626,6 @@ namespace ESO___Skill_Point_Calculator
         public void ArmorAllButtonsInVisible()
         {
             armorBackround.Visible = false;
-            UniqueValue.visibleType = false;
             activeInfo.Visible = false;
             passiveInfo.Visible = false;
         }
@@ -663,11 +640,5 @@ namespace ESO___Skill_Point_Calculator
             activeInfo.Dispose();
             passiveInfo.Dispose();
         }
-    }
-
-    class ButtonControl
-    {
-        public Button btn;
-        public object obj;
     }
 }

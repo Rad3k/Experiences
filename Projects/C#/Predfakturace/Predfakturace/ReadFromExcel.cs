@@ -42,7 +42,7 @@ namespace Predfakturace
                 foreach (DataRow row in schemaTable.Rows)
                     wsList.Add(row.Field<string>("TABLE_NAME"));
                 name = wsList[0];
-                string strCmd = "SELECT J38 FROM [" + name + "]";
+                string strCmd = "SELECT * FROM [" + name + "]";
                 OleDbCommand cmd = new OleDbCommand(strCmd, con);
 
                 da.Clear();
