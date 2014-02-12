@@ -18,7 +18,7 @@ namespace Predfakturace
             DataTable schemaTable;
             DataSet da = new DataSet();
             OleDbDataAdapter adapter = new OleDbDataAdapter();
-            string name = ".";
+            string name;
             string FileName = fullpath;
             string _ConnectionString = string.Empty;
             string _Extension = Path.GetExtension(FileName);
@@ -41,11 +41,8 @@ namespace Predfakturace
                 schemaTable = con.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
                 foreach (DataRow row in schemaTable.Rows)
                     wsList.Add(row.Field<string>("TABLE_NAME"));
-                if (wsList[0].Contains("$"))
-                    name = wsList[0].Replace("$", "");
-                else
-                    name = wsList[0];
-                string strCmd = "SELECT J38 FROM " + name;
+                name = wsList[0];
+                string strCmd = "SELECT J38 FROM [" + name + "]";
                 OleDbCommand cmd = new OleDbCommand(strCmd, con);
 
                 da.Clear();
