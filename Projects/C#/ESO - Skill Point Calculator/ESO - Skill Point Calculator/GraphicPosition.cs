@@ -110,6 +110,42 @@ namespace ESO___Skill_Point_Calculator
                         new Point(105, 224),
                         new Point(55, 284),
                     }
+                },
+                // Weapon structure slot 1
+                new Point[][]
+                {
+                    new Point[]
+                    {
+                        // Spells
+                        new Point(80, 45),
+                        new Point(30, 95),
+                        new Point(130, 95),
+                        new Point(30, 155),
+                        new Point(130, 155),
+                        new Point(30, 235),
+                        new Point(130, 235),
+                        new Point(30, 300),
+                        new Point(130, 300),
+                        new Point(80, 360),
+                    },
+                    new Point[]              // plus
+                    {
+                        new Point(130, 72),
+                        new Point(80, 157),
+                        new Point(180, 157),
+                        new Point(80, 222),
+                        new Point(180, 222),
+                        new Point(130, 282),
+                    },
+                    new Point[]              // minus
+                    {
+                        new Point(55, 72),
+                        new Point(5, 157),
+                        new Point(105, 157),
+                        new Point(5, 224),
+                        new Point(105, 224),
+                        new Point(55, 284),
+                    }
                 }
             };
             Size = new Size[][]

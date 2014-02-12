@@ -579,5 +579,25 @@ namespace ESO___Skill_Point_Calculator {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap weapon_1_skill_tree {
+            get {
+                object obj = ResourceManager.GetObject("weapon_1_skill_tree", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap weapon_2_skill_tree {
+            get {
+                object obj = ResourceManager.GetObject("weapon_2_skill_tree", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

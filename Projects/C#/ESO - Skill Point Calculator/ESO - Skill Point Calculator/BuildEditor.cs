@@ -16,9 +16,12 @@ namespace ESO___Skill_Point_Calculator
         GlobalStructure global;
         GraphicClassStructure classStructure;
         GraphicArmorStructure armorStructure;
+        GraphicWeaponSlot1 weaponStrcture_1;
 
         int clickClass = 0;
         int clickArmor = 0;
+        int clickWeapon_1 = 0;
+        int clickWeapon_2 = 0;
 
         public buildEditor()
         {
@@ -28,6 +31,8 @@ namespace ESO___Skill_Point_Calculator
             global = new GlobalStructure();
             classStructure = new GraphicClassStructure(this);
             armorStructure = new GraphicArmorStructure(this);
+            weaponStrcture_1 = new GraphicWeaponSlot1(this);
+            
 
             // Menu information for class
             classStructure.CreateClassButtons();
@@ -240,6 +245,13 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+
+            if (clickWeapon_1 < 1)
+            {
+                weaponStrcture_1.CreateArmorButtons();
+                this.Controls.Add(weaponStrcture_1.weaponBackround);
+            }
+            clickWeapon_1++;
         }
 
         private void armorType_Click(object sender, EventArgs e)
@@ -252,9 +264,9 @@ namespace ESO___Skill_Point_Calculator
             if (clickArmor < 1)
             {
                 armorStructure.CreateArmorButtons();
-                //armorStructure.CreateSpellsButton();
                 this.Controls.Add(armorStructure.armorBackround);
             }
+            clickArmor++;
         }
 
         private void weaponSlot2_Click(object sender, EventArgs e)
@@ -263,6 +275,13 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+
+            /*if (clickWeapon_2 < 1)
+            {
+                armorStructure.CreateArmorButtons();
+                this.Controls.Add(armorStructure.armorBackround);
+            }
+            clickWeapon_2++;*/
         }
 
         private void racialDaggerfall_Click(object sender, EventArgs e)

@@ -8,12 +8,12 @@ using System.IO;
 
 namespace ESO___Skill_Point_Calculator
 {
-    class GraphicArmorStructure : GraphicPosition
+    class GraphicWeaponSlot1 : GraphicPosition
     {
         buildEditor spentSkill;
         Collection collection = new Collection();
 
-        public PictureBox armorBackround = new PictureBox();
+        public PictureBox weaponBackround = new PictureBox();
         // ButtonInformation:
         Button activeInfo = new Button();
         Button passiveInfo = new Button();
@@ -25,7 +25,7 @@ namespace ESO___Skill_Point_Calculator
         // Label
         Label points;
 
-        public GraphicArmorStructure(buildEditor spentSkill)
+        public GraphicWeaponSlot1(buildEditor spentSkill)
         {
             this.spentSkill = spentSkill;
             collection.ListClassValueLabel();
@@ -34,14 +34,14 @@ namespace ESO___Skill_Point_Calculator
         public void CreateArmorButtons()
         {
             // Class Backround
-            armorBackround.BackColor = Color.Transparent;
-            armorBackround.BackgroundImage = BuildResource.armor_skill_tree;
-            armorBackround.BackgroundImageLayout = ImageLayout.Stretch;
-            armorBackround.Location = Location[0][0][1];
-            armorBackround.Name = "armorBackround";
-            armorBackround.Size = Size[0][4];
-            armorBackround.Controls.Add(activeInfo);
-            armorBackround.Controls.Add(passiveInfo);
+            weaponBackround.BackColor = Color.Transparent;
+            weaponBackround.BackgroundImage = BuildResource.weapon_1_skill_tree;
+            weaponBackround.BackgroundImageLayout = ImageLayout.Stretch;
+            weaponBackround.Location = Location[0][0][1];
+            weaponBackround.Name = "weaponBackround";
+            weaponBackround.Size = Size[0][4];
+            weaponBackround.Controls.Add(activeInfo);
+            weaponBackround.Controls.Add(passiveInfo);
 
             activeInfo.BackColor = Color.Transparent;
             activeInfo.BackgroundImage = BuildResource.active;
@@ -63,13 +63,14 @@ namespace ESO___Skill_Point_Calculator
             passiveInfo.FlatAppearance.MouseOverBackColor = Color.Transparent;
             passiveInfo.FlatStyle = FlatStyle.Flat;
             passiveInfo.Location = Location[0][0][3];
+            passiveInfo.Location = new Point(passiveInfo.Location.X, passiveInfo.Location.Y + 90);
             passiveInfo.Name = "passiveInfo";
             passiveInfo.Size = Size[0][7];
             passiveInfo.UseVisualStyleBackColor = false;
 
             for (int j = 0; j < 3; j++)
             {
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < 10; i++)
                 {
                     spells = new Button();
                     plus = new Button();
@@ -79,31 +80,15 @@ namespace ESO___Skill_Point_Calculator
                     switch (j)
                     {
                         case 0:
-                            spells.Location = Location[1][0][i];
-                            points.Location = Location[1][0][i];
-                            points.Location = new Point(points.Location.X + 8, points.Location.Y + 45);
-                            plus.Location = Location[1][1][i];
-                            minus.Location = Location[1][2][i];
+                            spells.Location = Location[2][0][i];
                             break;
                         case 1:
-                            spells.Location = Location[1][0][i];
+                            spells.Location = Location[2][0][i];
                             spells.Location = new Point(spells.Location.X + 205, spells.Location.Y);
-                            plus.Location = Location[1][1][i];
-                            plus.Location = new Point(plus.Location.X + 205, plus.Location.Y);
-                            minus.Location = Location[1][2][i];
-                            minus.Location = new Point(minus.Location.X + 205, minus.Location.Y);
-                            points.Location = Location[1][0][i];
-                            points.Location = new Point(points.Location.X + 213, points.Location.Y + 45);
                             break;
                         case 2:
-                            spells.Location = Location[1][0][i];
+                            spells.Location = Location[2][0][i];
                             spells.Location = new Point(spells.Location.X + 410, spells.Location.Y);
-                            plus.Location = Location[1][1][i];
-                            plus.Location = new Point(plus.Location.X + 410, plus.Location.Y);
-                            minus.Location = Location[1][2][i];
-                            minus.Location = new Point(minus.Location.X + 410, minus.Location.Y);
-                            points.Location = Location[1][0][i];
-                            points.Location = new Point(points.Location.X + 418, points.Location.Y + 45);
                             break;
                     }
 
@@ -166,10 +151,10 @@ namespace ESO___Skill_Point_Calculator
                     minus.MouseLeave += new EventHandler(classButton_MouseLeave);
                     minus.Tag = points;
 
-                    armorBackround.Controls.Add(spells);
-                    armorBackround.Controls.Add(plus);
-                    armorBackround.Controls.Add(minus);
-                    armorBackround.Controls.Add(points);
+                    weaponBackround.Controls.Add(spells);
+                    weaponBackround.Controls.Add(plus);
+                    weaponBackround.Controls.Add(minus);
+                    weaponBackround.Controls.Add(points);
                 }
             }
         }
@@ -618,25 +603,25 @@ namespace ESO___Skill_Point_Calculator
 
         public void ArmorAllButtonsVisible()
         {
-            armorBackround.Visible = true;
+            weaponBackround.Visible = true;
             activeInfo.Visible = true;
             passiveInfo.Visible = true;
         }
 
         public void ArmorAllButtonsInVisible()
         {
-            armorBackround.Visible = false;
+            weaponBackround.Visible = false;
             activeInfo.Visible = false;
             passiveInfo.Visible = false;
         }
 
         public void RemoveAllButtons()
         {
-            armorBackround.Controls.Remove(armorBackround);
+            weaponBackround.Controls.Remove(weaponBackround);
             activeInfo.Controls.Remove(activeInfo);
             passiveInfo.Controls.Remove(passiveInfo);
 
-            armorBackround.Dispose();
+            weaponBackround.Dispose();
             activeInfo.Dispose();
             passiveInfo.Dispose();
         }

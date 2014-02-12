@@ -86,6 +86,8 @@
     <Compile Include="GraphicArmorStructure.cs" />
     <Compile Include="GraphicClassStructure.cs" />
     <Compile Include="GraphicPosition.cs" />
+    <Compile Include="GraphicWeaponSlot1.cs" />
+    <Compile Include="GraphicWeaponSlot2.cs" />
     <Compile Include="Links.cs" />
     <Compile Include="BasePreview.cs">
       <SubType>Form</SubType>
@@ -150,6 +152,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <None Include="Resources\weapon_2_skill_tree.png" />
+    <None Include="Resources\weapon_1_skill_tree.png" />
     <None Include="Resources\armor_skill_tree.png" />
     <None Include="Resources\stop_on.png" />
     <None Include="Resources\stop.png" />
