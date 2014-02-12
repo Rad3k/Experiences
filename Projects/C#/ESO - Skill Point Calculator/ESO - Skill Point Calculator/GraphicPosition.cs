@@ -86,29 +86,29 @@ namespace ESO___Skill_Point_Calculator
                     {
                         // Spells
                         new Point(80, 60),
-                        new Point(30, 165),
-                        new Point(130, 165),
-                        new Point(30, 245),
-                        new Point(130, 245),
-                        new Point(80, 385),
+                        new Point(30, 145),
+                        new Point(130, 145),
+                        new Point(30, 210),
+                        new Point(130, 210),
+                        new Point(80, 270),
                     },
                     new Point[]              // plus
                     {
                         new Point(130, 72),
-                        new Point(80, 177),
-                        new Point(180, 177),
-                        new Point(80, 256),
-                        new Point(180, 256),
-                        new Point(130, 397),
+                        new Point(80, 157),
+                        new Point(180, 157),
+                        new Point(80, 222),
+                        new Point(180, 222),
+                        new Point(130, 282),
                     },
                     new Point[]              // minus
                     {
                         new Point(55, 72),
-                        new Point(5, 177),
-                        new Point(105, 177),
-                        new Point(5, 257),
-                        new Point(105, 257),
-                        new Point(55, 397),
+                        new Point(5, 157),
+                        new Point(105, 157),
+                        new Point(5, 224),
+                        new Point(105, 224),
+                        new Point(55, 284),
                     }
                 }
             };

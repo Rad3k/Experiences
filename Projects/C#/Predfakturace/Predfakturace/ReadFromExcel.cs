@@ -14,9 +14,11 @@ namespace Predfakturace
     {
         public void ReadData(string fullpath)
         {
+            List<string> wsList = new List<string>();
+            DataTable schemaTable;
             DataSet da = new DataSet();
             OleDbDataAdapter adapter = new OleDbDataAdapter();
-            string name = "List1";
+            string name = ".";
             string FileName = fullpath;
             string _ConnectionString = string.Empty;
             string _Extension = Path.GetExtension(FileName);
@@ -32,12 +34,20 @@ namespace Predfakturace
             }
 
             OleDbConnection con = new OleDbConnection(_ConnectionString);
-            string strCmd = "SELECT C7 FROM [" + name + "]";
-            OleDbCommand cmd = new OleDbCommand(strCmd, con);
 
             try
             {
                 con.Open();
+                schemaTable = con.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+                foreach (DataRow row in schemaTable.Rows)
+                    wsList.Add(row.Field<string>("TABLE_NAME"));
+                if (wsList[0].Contains("$"))
+                    name = wsList[0].Replace("$", "");
+                else
+                    name = wsList[0];
+                string strCmd = "SELECT J38 FROM " + name;
+                OleDbCommand cmd = new OleDbCommand(strCmd, con);
+
                 da.Clear();
                 adapter.SelectCommand = cmd;
                 adapter.Fill(da);

@@ -12,9 +12,17 @@ namespace Predfakturace
 {
     public partial class DataGridView : Form
     {
+        ReadFromExcel read = new ReadFromExcel();
+
         public DataGridView()
         {
             InitializeComponent();
+            for (int i = 0; i < UniqueValue.traceToFile.Count(); i++)
+            {
+                read.ReadData(UniqueValue.traceToFile[i]);
+                MessageBox.Show("Hodnota: " + UniqueValue.traceToFile[i]);
+            }
+            seznamPenez.DataSource = UniqueValue.money.Sum();
         }
 
         private void next_Click(object sender, EventArgs e)
@@ -23,17 +31,7 @@ namespace Predfakturace
                 MessageBox.Show("Nebyl zvolen žádný soubor!");
             else
             {
-                for (int i = 0; i < UniqueValue.traceToFile.Count; i++)
-                {
-                    ReadFromExcel read = new ReadFromExcel();
-                    read.ReadData(UniqueValue.traceToFile[i]);
-                }
-
-                DataTable table = new DataTable();
-
-                foreach (int money in UniqueValue.money)
-                    table.Rows.Add(money);
-                seznamPenez.DataSource = table;
+                //Bad code
             }
         }
 
