@@ -53,7 +53,7 @@ namespace Predfakturace
 
             catch (Exception ex)
             {
-                MessageBox.Show("Chyba" + ex.ToString());
+                MessageBox.Show("Chyba: " + ex.ToString());
             }
 
             finally

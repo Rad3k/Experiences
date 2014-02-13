@@ -13,6 +13,7 @@ namespace Predfakturace
     public partial class DataGridView : Form
     {
         ReadFromExcel read = new ReadFromExcel();
+        private double money;
 
         public DataGridView()
         {
@@ -24,6 +25,7 @@ namespace Predfakturace
             seznamPenez.DataSource = read.da.Tables[0];
             for (int i = 0; i < seznamPenez.RowCount; ++i)
                 UniqueValue.money.Add(double.Parse(seznamPenez.Rows[i].Cells[0].Value.ToString()));
+            money = UniqueValue.money.Sum();
         }
 
         private void next_Click(object sender, EventArgs e)
