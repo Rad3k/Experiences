@@ -18,11 +18,12 @@ namespace Predfakturace
         {
             InitializeComponent();
             for (int i = 0; i < UniqueValue.traceToFile.Count(); i++)
-            {
                 read.ReadData(UniqueValue.traceToFile[i]);
-                MessageBox.Show("Hodnota: " + UniqueValue.traceToFile[i]);
-            }
-            seznamPenez.DataSource = UniqueValue.money.Sum();
+
+            seznamPenez.ReadOnly = true;
+            seznamPenez.DataSource = read.da.Tables[0];
+            for (int i = 0; i < seznamPenez.RowCount; ++i)
+                UniqueValue.money.Add(double.Parse(seznamPenez.Rows[i].Cells[0].Value.ToString()));
         }
 
         private void next_Click(object sender, EventArgs e)

@@ -12,11 +12,12 @@ namespace Predfakturace
 {
     class ReadFromExcel : Config
     {
+        public DataSet da = new DataSet();
+
         public void ReadData(string fullpath)
         {
             List<string> wsList = new List<string>();
             DataTable schemaTable;
-            DataSet da = new DataSet();
             OleDbDataAdapter adapter = new OleDbDataAdapter();
             string name;
             string FileName = fullpath;
@@ -42,18 +43,17 @@ namespace Predfakturace
                 foreach (DataRow row in schemaTable.Rows)
                     wsList.Add(row.Field<string>("TABLE_NAME"));
                 name = wsList[0];
-                string strCmd = "SELECT * FROM [" + name + "]";
+                string strCmd = "SELECT * FROM [" + name + "I42:I42]";
                 OleDbCommand cmd = new OleDbCommand(strCmd, con);
 
                 da.Clear();
                 adapter.SelectCommand = cmd;
                 adapter.Fill(da);
-                UniqueValue.money.Add(double.Parse(da.ToString()));
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Chyba" + ex.ToString());
             }
 
             finally
