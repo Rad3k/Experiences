@@ -16,7 +16,7 @@ namespace ESO___Skill_Point_Calculator
         GlobalStructure global;
         GraphicClassStructure classStructure;
         GraphicArmorStructure armorStructure;
-        GraphicWeaponSlot1 weaponStrcture_1;
+        GraphicWeaponsStructure weaponStrcture_1;
 
         int clickClass = 0;
         int clickArmor = 0;
@@ -31,7 +31,7 @@ namespace ESO___Skill_Point_Calculator
             global = new GlobalStructure();
             classStructure = new GraphicClassStructure(this);
             armorStructure = new GraphicArmorStructure(this);
-            weaponStrcture_1 = new GraphicWeaponSlot1(this);
+            weaponStrcture_1 = new GraphicWeaponsStructure(this);
             
 
             // Menu information for class

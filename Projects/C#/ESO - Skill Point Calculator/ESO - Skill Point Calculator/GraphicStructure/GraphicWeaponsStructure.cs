@@ -8,7 +8,7 @@ using System.IO;
 
 namespace ESO___Skill_Point_Calculator
 {
-    class GraphicWeaponSlot1 : GraphicPosition
+    class GraphicWeaponsStructure : GraphicPosition
     {
         buildEditor spentSkill;
         Collection collection = new Collection();
@@ -25,7 +25,7 @@ namespace ESO___Skill_Point_Calculator
         // Label
         Label points;
 
-        public GraphicWeaponSlot1(buildEditor spentSkill)
+        public GraphicWeaponsStructure(buildEditor spentSkill)
         {
             this.spentSkill = spentSkill;
             collection.ListClassValueLabel();
