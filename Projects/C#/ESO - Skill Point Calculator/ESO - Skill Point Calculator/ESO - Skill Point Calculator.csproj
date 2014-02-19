@@ -151,6 +151,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\favicon.ico" />
+    <None Include="Resources\weapon_2_skill_tree1.png" />
+    <None Include="Resources\weapon_1_skill_tree1.png" />
     <None Include="Resources\weapon_2_skill_tree.png" />
     <None Include="Resources\weapon_1_skill_tree.png" />
     <None Include="Resources\armor_skill_tree.png" />

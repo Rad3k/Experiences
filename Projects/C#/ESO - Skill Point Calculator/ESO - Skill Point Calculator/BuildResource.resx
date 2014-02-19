@@ -124,20 +124,23 @@
   <data name="plus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\plus1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="armor_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\armor_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bow_staff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\bow_staff.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plus_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\plus_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="weapon_2_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\weapon_2_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="assault_support_emperor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\assault_support_emperor.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="build_editor_window" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\build_editor_window.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dragonknight_on1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\dragonknight_on1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="templar_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\templar_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sorcerer_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\sorcerer_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vampirism_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\vampirism_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,14 +160,20 @@
   <data name="sorcerer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\sorcerer.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="skill_temp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\skill_temp.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nightblade_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\nightblade_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="active" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\active.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dragonknight_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\dragonknight_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="passive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\passive.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nord_dunmer_argonian_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\nord_dunmer_argonian_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reset_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\reset_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,9 +193,6 @@
   <data name="reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\reset.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soul_magic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\soul_magic.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="sorcerer_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\sorcerer_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,26 +208,23 @@
   <data name="crafting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\crafting.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="soul_magic_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\soul_magic_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="templar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\templar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\minus1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\active.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nightblade_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\nightblade_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sorcerer_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\sorcerer_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="soul_magic_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\soul_magic_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="one_two_handed_dual_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\one_two_handed_dual_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nord_dunmer_argonian" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\nord_dunmer_argonian.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="soul_magic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\soul_magic.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dragonknight_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\dragonknight_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,35 +232,38 @@
   <data name="breton_redguard_orc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\breton_redguard_orc.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="minus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\minus1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="minus_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\minus_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vampirism" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\vampirism.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="weapon_1_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\weapon_1_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="light_medium_heavy_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\light_medium_heavy_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bow_staff" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\bow_staff.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nord_dunmer_argonian" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\nord_dunmer_argonian.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="skill_temp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\skill_temp.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dragonknight_on1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\dragonknight_on1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ultimate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\ultimate.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="assault_support_emperor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\assault_support_emperor.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="breton_redguard_orc_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\breton_redguard_orc_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="armor_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\armor_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="guilds" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\guilds.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nord_dunmer_argonian_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\nord_dunmer_argonian_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="breton_redguard_orc_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\breton_redguard_orc_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="one_two_handed_dual" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\one_two_handed_dual.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,14 +277,14 @@
   <data name="nightblade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\nightblade.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dragonknight_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\dragonknight_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plus_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\plus_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="weapon_1_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\weapon_1_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="weapon_1_skill_tree1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\weapon_1_skill_tree1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="weapon_2_skill_tree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\weapon_2_skill_tree.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="weapon_2_skill_tree1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\weapon_2_skill_tree1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

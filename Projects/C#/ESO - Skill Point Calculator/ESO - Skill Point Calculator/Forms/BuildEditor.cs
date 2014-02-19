@@ -16,12 +16,11 @@ namespace ESO___Skill_Point_Calculator
         GlobalStructure global;
         GraphicClassStructure classStructure;
         GraphicArmorStructure armorStructure;
-        GraphicWeaponsStructure weaponStrcture_1;
+        GraphicWeaponsStructure weaponStructure;
 
         int clickClass = 0;
         int clickArmor = 0;
-        int clickWeapon_1 = 0;
-        int clickWeapon_2 = 0;
+        int clickWeapons = 0;
 
         public buildEditor()
         {
@@ -31,7 +30,7 @@ namespace ESO___Skill_Point_Calculator
             global = new GlobalStructure();
             classStructure = new GraphicClassStructure(this);
             armorStructure = new GraphicArmorStructure(this);
-            weaponStrcture_1 = new GraphicWeaponsStructure(this);
+            weaponStructure = new GraphicWeaponsStructure(this);
             
 
             // Menu information for class
@@ -228,6 +227,7 @@ namespace ESO___Skill_Point_Calculator
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             classStructure.ClassAllButtonsVisible();
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
 
             if (clickClass < 1)
             {
@@ -242,16 +242,19 @@ namespace ESO___Skill_Point_Calculator
         private void weaponSlot1_Click(object sender, EventArgs e)
         {
             UniqueValue.visibleType = true;
+            UniqueValue.weapons = "melee";
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsVisible();
 
-            if (clickWeapon_1 < 1)
+            if (clickWeapons < 1 || UniqueValue.weapons == "melee")
             {
-                weaponStrcture_1.CreateArmorButtons();
-                this.Controls.Add(weaponStrcture_1.weaponBackround);
+                weaponStructure.weaponBackround.BackgroundImage = BuildResource.weapon_1_skill_tree1;
+                weaponStructure.CreateArmorButtons();
+                this.Controls.Add(weaponStructure.weaponBackround);
             }
-            clickWeapon_1++;
+            clickWeapons++;
         }
 
         private void armorType_Click(object sender, EventArgs e)
@@ -260,6 +263,7 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
 
             if (clickArmor < 1)
             {
@@ -272,16 +276,19 @@ namespace ESO___Skill_Point_Calculator
         private void weaponSlot2_Click(object sender, EventArgs e)
         {
             UniqueValue.visibleType = true;
+            UniqueValue.weapons = "ranged";
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsVisible();
 
-            /*if (clickWeapon_2 < 1)
+            if (clickWeapons < 1 || UniqueValue.weapons == "ranged")
             {
-                armorStructure.CreateArmorButtons();
-                this.Controls.Add(armorStructure.armorBackround);
+                weaponStructure.weaponBackround.BackgroundImage = BuildResource.weapon_2_skill_tree1;
+                weaponStructure.CreateArmorButtons();
+                this.Controls.Add(weaponStructure.weaponBackround);
             }
-            clickWeapon_2++;*/
+            clickWeapons++;
         }
 
         private void racialDaggerfall_Click(object sender, EventArgs e)
@@ -290,6 +297,7 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
         }
 
         private void racialAldmeri_Click(object sender, EventArgs e)
@@ -298,6 +306,7 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
         }
 
         private void racialEbonheart_Click(object sender, EventArgs e)
@@ -306,6 +315,7 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
         }
 
         private void pvpType_Click(object sender, EventArgs e)
@@ -314,6 +324,7 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
         }
 
         private void guildsType_Click(object sender, EventArgs e)
@@ -322,6 +333,7 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
         }
 
         private void craftingType_Click(object sender, EventArgs e)
@@ -330,6 +342,7 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
         }
 
         private void soulMagicType_Click(object sender, EventArgs e)
@@ -338,6 +351,7 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
         }
 
         private void lycanthropyType_Click(object sender, EventArgs e)
@@ -346,6 +360,7 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
         }
 
         private void vampirismType_Click(object sender, EventArgs e)
@@ -354,6 +369,7 @@ namespace ESO___Skill_Point_Calculator
             classStructure.ClassAllButtonsInVisible();
             global.classUniqueButtons_VisibleChanged((Button)sender, e);
             armorStructure.ArmorAllButtonsInVisible();
+            weaponStructure.WeaponsAllButtonsInVisible();
         }
 
         public void maxSkillPoint_TextChanged(Form formInstance, string labelName)

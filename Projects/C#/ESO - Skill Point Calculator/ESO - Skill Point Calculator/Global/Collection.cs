@@ -24,6 +24,9 @@ namespace ESO___Skill_Point_Calculator
         // Armor tree
         public List<int> armorActiveSpells = new List<int>();
         public List<int> armorPassiveSpells = new List<int>();
+        // Weapon tree
+        public List<int> WeaponsActiveSpells = new List<int>();
+        public List<int> WeaponsPassiveSpells = new List<int>();
 
         public Collection()
         {
@@ -44,6 +47,8 @@ namespace ESO___Skill_Point_Calculator
             {
                 classActiveSpells.RemoveAt(i);
                 armorPassiveSpells.RemoveAt(i);
+                WeaponsActiveSpells.RemoveAt(i);
+                WeaponsPassiveSpells.RemoveAt(i);
             }
             for (int i = 0; i < classPassiveSpells.Count(); i++)
                 classPassiveSpells.RemoveAt(i);
@@ -57,6 +62,8 @@ namespace ESO___Skill_Point_Calculator
             {
                 classActiveSpells.Add(0);
                 armorPassiveSpells.Add(0);
+                WeaponsActiveSpells.Add(0);
+                WeaponsPassiveSpells.Add(0);
             }
             for (int i = 0; i < 12; i++)
                 classPassiveSpells.Add(0);

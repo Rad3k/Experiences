@@ -489,7 +489,8 @@ namespace ESO___Skill_Point_Calculator
                     break;
             }
             UniqueValue.spentSkillPoints = collection.classUltimateSpells.Sum() + collection.classActiveSpells.Sum()
-                + collection.classPassiveSpells.Sum() + collection.armorActiveSpells.Sum() + collection.armorPassiveSpells.Sum();
+                + collection.classPassiveSpells.Sum() + collection.armorActiveSpells.Sum() + collection.armorPassiveSpells.Sum() +
+                collection.WeaponsActiveSpells.Sum() + collection.WeaponsPassiveSpells.Sum();
             spentSkill.maxSkillPoint_TextChanged(spentSkill, "maxSkillPoint");
         }
 
@@ -725,7 +726,8 @@ namespace ESO___Skill_Point_Calculator
                     break;
             }
             UniqueValue.spentSkillPoints = collection.classUltimateSpells.Sum() + collection.classActiveSpells.Sum()
-                + collection.classPassiveSpells.Sum() + collection.armorActiveSpells.Sum() + collection.armorPassiveSpells.Sum();
+                + collection.classPassiveSpells.Sum() + collection.armorActiveSpells.Sum() + collection.armorPassiveSpells.Sum() +
+                collection.WeaponsActiveSpells.Sum() + collection.WeaponsPassiveSpells.Sum();
             spentSkill.maxSkillPoint_TextChanged(spentSkill, "maxSkillPoint");
         }
         
