@@ -154,6 +154,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PopupXML\popup.xml" />
     <Content Include="Resources\favicon.ico" />
     <None Include="Resources\weapon_2_skill_tree1.png" />
     <None Include="Resources\weapon_1_skill_tree1.png" />
