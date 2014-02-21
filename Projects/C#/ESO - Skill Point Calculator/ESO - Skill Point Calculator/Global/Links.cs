@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Diagnostics;
-using System.ComponentModel;
 
 namespace ESO___Skill_Point_Calculator
 {

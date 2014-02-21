@@ -1,5 +1,25 @@
-﻿<tooltip id="1" title="sample">
-  <description>
-    test
-  </description>
-</tooltip>
+﻿<?xml version="1.0"?>
+<!-- tooltips/MainCustomApp.mxml -->
+<s:Application
+    xmlns:fx="http://ns.adobe.com/mxml/2009"
+    xmlns:mx="library://ns.adobe.com/flex/mx"
+    xmlns:s="library://ns.adobe.com/flex/spark">
+
+  <s:layout>
+    <s:VerticalLayout/>
+  </s:layout>
+
+  <fx:Script>
+    <![CDATA[
+            import ToolTipComponents.PanelToolTip;
+            import mx.events.ToolTipEvent;
+
+            private function createCustomTip(title:String, body:String, event:ToolTipEvent):void {
+               var ptt:PanelToolTip = new PanelToolTip();
+               ptt.title = title;
+               ptt.bodyText = body;
+               event.toolTip = ptt;
+            }
+        ]]>
+  </fx:Script>
+</s:Application>
