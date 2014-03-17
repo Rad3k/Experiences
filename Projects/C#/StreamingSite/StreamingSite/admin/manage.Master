@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="manage.master.cs" Inherits="rad3k_eu.admin.manage" %>
+
+<!DOCTYPE html>
+<head id="Head1" runat="server">
+    <title><%: Page.Title %> - Rad3k Aministration</title>
+    <link href="~/css/admin.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form runat="server">
+    <div id="manage">
+        <div id="manage-content">
+            <asp:Panel ID="BorderContent" runat="server" BorderStyle="Groove" BorderWidth="1">
+                <div id="manage-body">
+                    <div id="manage-title">
+                        <asp:Panel ID="title" runat="server" BorderStyle="Groove" BorderWidth="1">
+                            <asp:Label ID="tittle" runat="server" Text="Rad3k - Administration"></asp:Label>
+                        </asp:Panel>
+                    </div>
+                    <div id="manage-menu">
+                        <asp:Panel ID="Menu" runat="server" BorderStyle="Groove" BorderWidth="1">
+                            <asp:Label ID="menuLabel" runat="server" Text="Menu"></asp:Label>
+                        </asp:Panel>
+                        <div id="menu-body">
+                            <asp:Panel ID="menuPanel" runat="server" BorderStyle="Groove" BorderWidth="1">
+                                <asp:TreeView ID="menuTree" runat="server" ShowLines="True" LineImagesFolder="~/TreeLineImages" EnableTheming="True" ExpandDepth="0">
+                                    <Nodes>
+                                        <asp:TreeNode Text="Steaming" Value="Steaming" SelectAction="None">
+                                            <asp:TreeNode Text="Home" Value="Home" SelectAction="None">
+                                                <asp:TreeNode Text="Levé menu" Value="leftMenu" NavigateUrl="stream/manage-stream-hLeft.aspx"></asp:TreeNode>
+                                                <asp:TreeNode Text="Pravé menu" Value="rightMenu" NavigateUrl="stream/manage-stream-hRight.aspx"></asp:TreeNode>
+                                            </asp:TreeNode>
+                                            <asp:TreeNode Text="Oblíbené" Value="Oblíbené" NavigateUrl="stream/manage-stream-favourite.aspx"></asp:TreeNode>
+                                            <asp:TreeNode Text="About me" Value="About me"></asp:TreeNode>
+                                            <asp:TreeNode Text="Odkazy" Value="Odkazy" NavigateUrl="stream/manage-stream-links.aspx"></asp:TreeNode>
+                                            <asp:TreeNode Text="Support me" Value="Support me"></asp:TreeNode>
+                                            <asp:TreeNode Text="How help" Value="How help"></asp:TreeNode>
+                                            <asp:TreeNode Text="Video" Value="Video"></asp:TreeNode>
+                                            <asp:TreeNode Text="Contact" Value="Contact"></asp:TreeNode>
+                                        </asp:TreeNode>
+                                        <asp:TreeNode Text="Portfolio" Value="Portfolio" SelectAction="None"></asp:TreeNode>
+                                    </Nodes>
+                                </asp:TreeView>
+                            </asp:Panel>
+                        </div>
+                    </div>
+                    <div id="manage-name">
+                        <asp:Panel ID="NameWork" runat="server" BorderStyle="Groove" BorderWidth="1">
+                            <asp:Label ID="workLabel" runat="server" Text="Content"></asp:Label>
+                        </asp:Panel>
+                    </div>
+                    <div id="manage-work">
+                        <asp:Panel ID="workBorder" runat="server" BorderStyle="Groove" BorderWidth="1" Height="530">
+                            <asp:ContentPlaceHolder ID="WorkPlace" runat="server" />
+                        </asp:Panel>
+                    </div>
+                </div>
+            </asp:Panel>
+        </div>
+    </div>
+    </form>
+</body>

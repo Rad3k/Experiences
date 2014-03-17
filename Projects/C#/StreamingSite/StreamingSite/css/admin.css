@@ -1,0 +1,130 @@
+﻿body {
+	background-position: center top, center 1080px;
+	background-repeat: no-repeat, repeat;
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color: #333;
+    text-align:center;
+	margin: 0;
+	padding: 0;
+}
+
+manage {
+	background-position: center top, center 1080px;
+	background-repeat: no-repeat;
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color:#333;
+    text-align:center;
+	margin: 0;
+	padding: 0;
+}
+
+#content { padding: 2px; text-align: left; }
+#content div { padding: 1px 20px 15px; }
+
+#content 
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    float:left;
+	width: 290px;
+}
+
+#manage-content 
+{
+    background-color:black;
+    padding-left: 10px;
+    padding-right: 10px;
+	width: 1280px;
+}
+
+#manage-menu {
+    background-color:saddlebrown;
+    padding-left: 2px;
+    float: left;
+    width: 200px;
+    height:560px;
+}
+
+#manage-name {
+    background-color:greenyellow;
+    padding-left: 2px;
+    padding-right: 2px;
+    float:right;
+    width: 1072px;
+}
+
+#manage-work {
+    background-color:burlywood;
+    padding-top:2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    float:left;
+    width: 1072px;
+    height: 530px;
+}
+
+#manage-title {
+    background-color:sandybrown;
+    text-align:center;
+    width: 1280px;
+    height: 30px;
+}
+
+#manage-body {
+    text-align:center;
+    height: 590px;
+}
+
+.right { float:right }
+#save-button { padding-top:495px }
+
+/*------------------------------------------------------------*
+**  Body
+**------------------------------------------------------------*/	
+#body { 
+    padding: 350px;
+    padding-left: 800px;
+    padding-right: 800px;
+}
+
+#manage {
+    background-image: url('/Images/admin/backround.jpg');
+    background-color:black;
+    background-repeat: no-repeat;
+    background-position: center top, center 1080px;
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color:#333;
+    text-align:center;
+	margin: 0;
+    padding: 100px;
+    padding-top: 50px;
+    padding-left: 250px;
+    height:1080px;
+}
+
+#menu-body {
+    background-color:lightgreen;
+    padding-top: 2px;
+    width: 200px;
+    height: 530px;
+}
+
+#body-content {
+    padding-top: 2px;
+    width: 100px;
+    height: 560px;
+}
+
+#manage-contain {
+    padding-top:20px;
+    padding-left:20px;
+    padding-right:20px;
+    float:left;
+    width: 1030px;
+}

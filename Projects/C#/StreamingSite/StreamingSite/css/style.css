@@ -1,0 +1,311 @@
+/* ================================================================ **
+** style.css
+** ---------------------------------------------------------------- **
+** Created: 05-05-08 (dd-mm-yy)
+** Author: onedollartemplates.com
+** Template: Granite Glass
+** ================================================================ */
+
+
+/* ---------------------------------------------------------------- **
+** Generic
+** ---------------------------------------------------------------- */
+html { font-size: 76%; }
+body {
+	background-image: url(../Images/stream/backround.png), url(../Images/stream/cerna.png);
+	background-position: center top, center 1080px;
+	background-repeat: no-repeat, repeat;
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	line-height: 1.5em;
+	color: #333;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+/* headers */
+h2, h3, h4, h5, h6 { 
+	color: #099; 
+	margin: 0; 
+	font-weight: normal;
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif; letter-spacing: -1px;
+	}
+h2 { font-size: 1.8em; margin: 25px 0 15px; padding-bottom: 15px; border-bottom: 1px solid #ccc; }
+h3 { font-size: 1.6em; margin: 25px 0 15px; }
+h4 { font-size: 1.4em; margin: 20px 0 10px; }
+h5 { font-size: 1.2em; margin: 20px 0 5px; }	
+h6 { font-size: 1em; margin: 20px 0 0; }
+
+/* text */
+p { margin: 15px 0; }
+acronym { cursor: help; }
+pre, code, blockquote { 
+	margin: 15px 0; 
+    border: 1px dashed #ddd; 
+	padding: 15px; 
+	display: block; 
+	background: #fff url(../Images/stream/grey_grad_.jpg) repeat-x 0 -130px; 
+	color: #666; 
+	}
+blockquote { 
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif; border: 1px solid #ddd; 
+	padding: 0 15px 0 15px;
+	background-color: #eee;
+	min-height: 60px; 
+	}
+* html blockquote { height: 60px; }	
+
+/* links */
+a { text-decoration: underline; color: #099; outline: none; }
+a:hover { text-decoration: none; }
+
+/* images */
+Images { border: 10px solid #ddd; padding: 1px; background-color: #fff; }	
+a Images { }
+a:hover Images { border-color: #eee; }
+Images.right { margin: 0 0 20px 20px; }
+Images.left { margin: 0 20px 20px 0; }
+
+/* lists */
+ul, ol, dl { margin: 15px 0 15px 20px; padding: 0; }
+ul { list-style-type: disc; }
+ul ul, ol ol { margin-top: 0; margin-bottom: 0; }
+ol { margin-left: 25px; }
+dl { margin-left: 0; }
+dl dt { font-weight: bold; margin-top: 15px; }
+dl dd { margin: 0; }
+dl dt, li { color: #099; }
+li span { color: #333; }
+
+/* tables */
+table { margin: 15px 0; border: 1px solid #ddd; border-collapse: collapse; }
+table th, 
+table td { padding: 10px 15px; text-align: left; }
+table thead th { 
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+	background-color: #099; 
+	color: #fff; 
+	font-weight: normal; 
+	font-size: 1.1em;
+	border: 1px solid #099;
+	}
+table tbody th { background-color: #ddd; }
+table tbody th, 
+table tbody td { border-top: 1px solid #ddd; }
+
+/* forms */
+form { background: url(../Images/stream/grey_grad_.jpg) repeat-x; padding: 0; margin: 25px 0; }
+form fieldset { border: 0; padding: 10px 25px 15px; margin: 0; }
+form fieldset legend { display: none; }
+form p { height: 1%; }
+form p:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; }
+form p label {  
+	font-size: 1em; 
+	color: #333; 
+	float: left; 
+	display: block; 
+	width: 30%; 
+	margin-right: 20px; 
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif; }
+form p input,
+form p select,
+form p textarea { 
+	font-size: 1em; 
+	color: #333; 
+	border: 1px solid #ddd; 
+	padding: 8px; 
+	background-color: #eee; 
+	width: 55%; 
+	font-family: Tahoma, Arial, Helvetica, sans-serif; 
+	}
+form p select { width: 57.5%; }
+form ul.fieldlist { margin: -30px 0 10px 33%; padding: 0; list-style-type: none; }
+form ul.fieldlist li { color: #333; padding: 0 30px 5px 0; white-space: nowrap; }
+form input.btn,
+a.btn { 
+	width: auto; 
+	overflow: visible;
+	border: 0;
+	background: #099 url(../Images/stream/image_.jpg) repeat-x 0 -30px; 
+	padding: 8px 10px;
+	cursor: pointer; 
+	color: #fff;
+	text-decoration: none;  
+	font-weight: bold;
+	}
+a.btn:hover { background-color: #ccc; color: #333; }	
+
+/* horizontal rule */
+hr { border: 0; height: 1px; background-color: #ddd; color: #ddd; margin: 30px 0 0; }
+
+/* classes */
+.left { float: left; }
+.right {float: right; }
+.hide { display: none; }
+.text { padding-left: 100px }
+
+/* list of links */
+ul.links { list-style-type: none; margin-left: 0; }
+ul.links li { margin: 5px 0; }
+
+/* list of images */
+ul.images { margin-left: -15px; margin-bottom: 0; padding: 15px 0 0; list-style-type: none; height: 1%; width: 104%; }
+* html ul.images { width: 100%; }
+ul.images:after { content: "."; clear: both; display: block; visibility: hidden; height: 0; }
+ul.images li { float: left; margin: 0; padding: 0 0 15px 15px; }
+ul.images li Images { vertical-align: middle; }
+
+/*------------------------------------------------------------*
+**  Container
+**------------------------------------------------------------*/
+#container {
+	margin: 0 auto;
+	width: 760px;
+	}
+
+/*------------------------------------------------------------*
+**  Header
+**------------------------------------------------------------*/
+#header { background: url(../Images/stream/header_.png) no-repeat; }
+
+/* Logo */
+#header h1 { 
+	font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 2.3em;
+	font-weight: normal;
+	color: #099;
+	margin: 0;
+	padding: 40px 0;
+	letter-spacing: -1px;
+	}
+#header h1 a { text-decoration: none; color: #099; }
+#header h1 a:hover { text-decoration: none; }
+#header h1 span { color: #fff; }
+
+/* if you would like to replace the logo with 
+an image, comment out the above logo code and
+uncomment the following */
+/* 
+#header h1 {
+	background: url(../Images/stream/logo.gif) no-repeat;
+	width: [your-logo-width-here]px;
+	height: [your-logo-height-here]px;	
+	margin: 0;
+	float: left;
+	}	
+#header h1 a {
+	display: block;
+	height: 100%;
+	text-indent: -9999px;
+	outline: none;
+	}
+*/	
+
+/*------------------------------------------------------------*
+**  Body
+**------------------------------------------------------------*/	
+#body { padding: 20px; background: #222 url(../Images/stream/body_.png) repeat-x; }
+
+/*------------------------------------------------------------*
+**  Navigation
+**------------------------------------------------------------*/
+ul#nav {
+	margin: 0 0 20px;
+	padding: 0;
+	list-style-type: none;
+	border-top: 1px solid #535457;
+	border-bottom: 1px solid #050A10;
+	height: 1%;
+	}
+ul#nav:after {	
+	content: ".";
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	}
+ul#nav li {
+	/* this width needs changing 
+	depending on the amount of links. 
+	Divide 100% by the amount of links 
+	and set the value here. 
+	e.g. 5 links: 100/5 = 20% */ 	
+	width: 20%;
+	float: left; 
+	margin: 0; 
+	font-size: 1.1em;
+	background: #3C3C3C url(../Images/stream/nav_over_.png) no-repeat 50% 100%;
+	}	
+ul#nav li a {
+	display: block; 
+	background: #3C3C3C url(../Images/stream/nav_.png) repeat-x 50% 100%;
+	padding: 11px 0 14px;
+	color: #fff;
+	text-decoration: none;
+	border-right: 1px solid #535457;
+	border-left: 1px solid #050A10;
+	position: relative;	
+	} 	
+ul#nav li.first a {	border-left-color: #535457; }
+ul#nav li a:hover { background-color: transparent; background-image: none; }
+ul#nav li.on a,
+ul#nav li.on a:hover { background-image: url(../Images/stream/nav_on_.png); }
+
+/*------------------------------------------------------------*
+**  Content
+**------------------------------------------------------------*/
+#content { background-color: #fff; padding: 2px; text-align: left; }
+#content div { background: url(../Images/stream/content_.png) repeat-x; padding: 1px 20px 15px; min-height: 195px; }
+* html #content div { height: 195px; }
+#content div:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; }
+#content div div { background-image: none; padding: 0; min-height: 0; }
+* html #content div div { height: 1%; }
+
+#content #sub { padding: 0 0 0 20px; }
+#content #main { padding: 0 20px 0 0; }
+
+#content #main { width: 466px; float: left; background: url(../Images/stream/main_.png) no-repeat 100% 0%; } 
+#content #sub { width: 164px; float: right; }
+
+#home #content #sub { 
+	padding: 0 20px 0 0; 
+	width: 340px; 
+	float: left; 
+	background: url(../Images/stream/sub_.png) no-repeat 100% 0%; 
+	}
+#home #content #main { 
+	padding: 0 0 0 20px; 
+	float: right; 
+	width: 290px; 
+	background-image: none; 
+	}
+
+#home #content #contact { 
+	padding: 0 0 0 10px; 
+	float: left; 
+	width: 290px; 
+	background-image: none; 
+	}
+	
+#content #sub h2 { font-size: 1.6em; padding-bottom: 10px; margin-bottom: 10px; }	
+
+
+/*------------------------------------------------------------*
+**  Footer
+**------------------------------------------------------------*/
+#footer { 
+	padding: 0 20px; 
+	background-color: #222; 
+	height: 1%; 
+	font-size: 0.9em;
+	color: #ccc;
+	margin-top: -20px;
+	}	
+#footer:after {
+	content: ".";
+	clear: both;
+	visibility: hidden;
+	display: block;
+	height: 0;
+	}

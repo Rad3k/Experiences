@@ -11,6 +11,9 @@ namespace ESO___Skill_Point_Calculator.Popup
     class descriptionSpells
     {
         ToolTip popup = new ToolTip();
+        string name = "jmeno našeho spelu";
+        string type = "Typ: Ultimate";
+        string separator = "----------------------";
         string description = "test";
         string range = "15";
         string radius = "2";
@@ -21,13 +24,21 @@ namespace ESO___Skill_Point_Calculator.Popup
         {
             popup.OwnerDraw = true;
             popup.Popup += new PopupEventHandler(this.OnPopup);
-            popup.SetToolTip((Button)sender, description + radius + range + castTime + duration);
+            popup.SetToolTip((Button)sender, StringAlignment.Center + name
+                + Environment.NewLine + type
+                + Environment.NewLine + separator
+                + Environment.NewLine
+                + Environment.NewLine + description 
+                + Environment.NewLine + radius 
+                + Environment.NewLine + range 
+                + Environment.NewLine + castTime 
+                + Environment.NewLine + duration);
             popup.Draw += description_Draw;
         }
 
         private void OnPopup(object sender, PopupEventArgs e)
         {
-            e.ToolTipSize = new Size(200, 100);
+            e.ToolTipSize = new Size(300, 300);
         }
 
         private void description_Draw(object sender, DrawToolTipEventArgs e)

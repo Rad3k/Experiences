@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="login.master.cs" Inherits="rad3k_eu.admin.login" %>
+
+<!DOCTYPE html>
+<head id="Head1" runat="server">
+    <title>% Title % - Rad3k Aministration</title>
+    <link href="~/css/admin.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <div id="body">
+            <div id="content">
+                <asp:Panel ID="loginBorder" runat="server" BorderStyle="Groove" BorderWidth="1">
+                    <asp:ContentPlaceHolder ID="loginScreen" runat="server">
+                    </asp:ContentPlaceHolder>
+                </asp:Panel>
+            </div>
+        </div>
+    </form>
+</body>

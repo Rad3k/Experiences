@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="video.master.cs" Inherits="rad3k_eu.video" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - Livestream</title>
+	<meta name="keywords" content="livestream, TDG, games, stream" />
+	<meta name="description" content="livestream" />
+    <meta name="robots" content="all">
+	<meta name="author" content="Rad3k" />
+	<meta name="copyright" content="Rad3k" />	  
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+    <!--[if IE]><link href="css/ie-transparency.css" rel="stylesheet" type="text/css" /><![endif]-->
+</head>
+<body id="home">
+    <form id="Form1" runat="server">
+        <ul class="hide">
+            <li><a href="#body">Skip to content</a></li>
+        </ul>
+        <div id="container">
+            <div id="header">
+                <a href="Home.aspx"><h1>Livestream by<span> Rad3k</span></h1></a> <a href="http://rad3k.eu"></a>
+                </div>
+            <div id="body">
+                <ul id="nav">
+                    <li class="on first"><a href="index.aspx">Domovská Stránka</a></li>
+                    <li><a href="about.aspx">O mě</a></li>
+                    <li><a href="support.aspx">Podpořte mě</a></li>
+                    <li><a href="video.aspx">Videa</a></li>
+                    <li><a href="contact.aspx">Kontakt</a></li>
+                </ul>
+                <div id="content">
+                    <div>
+                        <asp:ContentPlaceHolder runat="server" ID="Description" />
+                    </div>
+                </div>
+            </div>   
+            <div id="footer">
+                <p class="left">© All rights reserved</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+

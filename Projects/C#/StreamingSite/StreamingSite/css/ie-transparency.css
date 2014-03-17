@@ -1,0 +1,23 @@
+﻿/* ================================================================ **
+** ie-transparency.css
+** ---------------------------------------------------------------- **
+** Created: 05-05-08 (dd-mm-yy)
+** Author: onedollartemplates.com
+** Template: Granite Glass
+** ================================================================ */
+* html #header {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/header_.png", sizingMethod="crop"); 	
+	zoom: 1;
+	}	
+* html #home #content #sub {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/sub_.png", sizingMethod="crop"); 	
+	zoom: 1;	
+	}
+* html #content #main { 
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/main_.png", sizingMethod="crop"); 	
+	zoom: 1;
+	}
+* html #home #content #main { filter: none; }

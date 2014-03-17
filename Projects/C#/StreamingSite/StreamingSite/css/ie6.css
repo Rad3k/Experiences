@@ -1,0 +1,4 @@
+.slider-carousel span.project-info {
+	background-image:none;
+ 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/project-span-bg.png', sizingMethod='scale');
+}
