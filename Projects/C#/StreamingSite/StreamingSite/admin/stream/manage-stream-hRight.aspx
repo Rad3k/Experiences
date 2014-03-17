@@ -18,7 +18,7 @@
         </p>
         <p>
             <asp:Label ID="descriptionLabel" runat="server" Text="Description:"></asp:Label>
-            &nbsp;&nbsp;<asp:TextBox ID="TextBox1" runat="server" Width="797px" TextMode="MultiLine" Height="91px"></asp:TextBox>
+            &nbsp;&nbsp;<asp:TextBox ID="descriptionText" runat="server" Width="797px" TextMode="MultiLine" Height="91px"></asp:TextBox>
         </p>
         <ul style="float: left;">
             <li><asp:TextBox ID="program_1" runat="server" Width="235px"></asp:TextBox></li>
