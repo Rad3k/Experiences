@@ -175,16 +175,16 @@ namespace rad3k_eu.admin.database
             switch (UniqueValue.value)
             {
                 case 1:
-                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, 0, @typeName, 0, @email, 'N')", conn);
+                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, 0, @typeName, 0, @email, 'N', GETDATE())", conn);
                     break;
                 case 2:
-                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, 0, 0, 0, @email, 'N')", conn);
+                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, 0, 0, 0, @email, 'N', GETDATE())", conn);
                     break;
                 case 3:
-                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, 0, @typeName, @value, @email, 'N')", conn);
+                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, 0, @typeName, @value, @email, 'N', GETDATE())", conn);
                     break;
                 case 4:
-                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, @typePotion, 0, @value, @email, 'N')", conn);
+                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, @typePotion, 0, @value, @email, 'N', GETDATE())", conn);
                     break;
             }
 
@@ -232,7 +232,7 @@ namespace rad3k_eu.admin.database
         public ArrayList selectOrderGame()
         {
             ArrayList hry = new ArrayList();
-            commandS = new SqlCommand("SELECT typeTicket, typeMethod, message, typeName, value, status FROM dbo.tickets WHERE typeTicket LIKE 'Objednávka' AND typeMethod LIKE 'Hry'", conn);
+            commandS = new SqlCommand("SELECT typeTicket, typeMethod, message, typeName, value, status FROM dbo.tickets WHERE typeTicket LIKE 'Objednávka' AND typeMethod LIKE 'Hry' ORDER BY datum", conn);
 
             try
             {
@@ -263,7 +263,7 @@ namespace rad3k_eu.admin.database
         public ArrayList selectOrderCraft()
         {
             ArrayList craftList = new ArrayList();
-            commandS = new SqlCommand("SELECT typeTicket, typeMethod, message, typePotion, value, email, status FROM dbo.tickets WHERE typeTicket LIKE 'Objednávka' AND typeMethod LIKE 'Craft'", conn);
+            commandS = new SqlCommand("SELECT typeTicket, typeMethod, message, typePotion, value, email, status FROM dbo.tickets WHERE typeTicket LIKE 'Objednávka' AND typeMethod LIKE 'Craft' ORDER BY datum", conn);
 
             try
             {

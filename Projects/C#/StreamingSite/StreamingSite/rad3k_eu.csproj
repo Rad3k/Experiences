@@ -352,6 +352,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\portfolio\" />
+    <Folder Include="scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="stream\Site.Master" />
