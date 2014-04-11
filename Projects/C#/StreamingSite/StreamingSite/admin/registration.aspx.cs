@@ -8,20 +8,17 @@ using rad3k_eu.admin.database;
 
 namespace rad3k_eu.admin
 {
-    public partial class login1 : System.Web.UI.Page
+    public partial class registration : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void Login_Click(object sender, EventArgs e)
+        protected void Registration_Click(object sender, EventArgs e)
         {
             transaction tran = new transaction();
-            if (tran.loginVerification(nameText.Text, passwordText.Text) == true)
-                Response.Redirect("admin.aspx");
-            else
-                Response.Write("Přihlašovací jméno nebo heslo je špatné." + tran.test + "s");
+            Response.Write(tran.signInToSystem(nameText.Text, passwordText.Text));
         }
     }
 }

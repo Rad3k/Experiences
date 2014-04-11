@@ -10,25 +10,43 @@
 namespace rad3k_eu.admin {
     
     
-    public partial class login {
+    public partial class registration {
         
         /// <summary>
-        /// Head1 control.
+        /// nameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        protected global::System.Web.UI.WebControls.Label nameLabel;
         
         /// <summary>
-        /// Login control.
+        /// nameText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink Login;
+        protected global::System.Web.UI.WebControls.TextBox nameText;
+        
+        /// <summary>
+        /// passwordLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label passwordLabel;
+        
+        /// <summary>
+        /// passwordText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox passwordText;
         
         /// <summary>
         /// Registration control.
@@ -37,24 +55,6 @@ namespace rad3k_eu.admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink Registration;
-        
-        /// <summary>
-        /// loginBorder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel loginBorder;
-        
-        /// <summary>
-        /// loginScreen control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder loginScreen;
+        protected global::System.Web.UI.WebControls.Button Registration;
     }
 }

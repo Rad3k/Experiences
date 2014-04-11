@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using rad3k_eu.order.classes;
 
 namespace rad3k_eu.admin.database
 {
@@ -19,6 +21,7 @@ namespace rad3k_eu.admin.database
         public string[] title = new string[3];
         public string description;
         public string[] section = new string[13];
+        public string test;
 
         public transaction()
         {
@@ -26,18 +29,53 @@ namespace rad3k_eu.admin.database
             conn = new SqlConnection(connectionString);
         }
 
+        public string signInToSystem(string name, string password)
+        {
+            string hodnota;
+            string newPass = hashPassword.CreateHash(password);
+            commandI = new SqlCommand("INSERT INTO dbo.users VALUES (3, @name, @password, 0)", conn);
+            try
+            {
+                conn.Open();
+                commandI.Parameters.Clear();
+
+                // Parameters
+                SqlParameter nameParam = new SqlParameter("@name", SqlDbType.VarChar, 30);
+                SqlParameter passwordParam = new SqlParameter("@password", SqlDbType.VarChar, 255);
+
+                nameParam.Value = name;
+                passwordParam.Value = newPass;
+                commandI.Parameters.Add(nameParam);
+                commandI.Parameters.Add(passwordParam);
+                commandI.Prepare();
+                commandI.ExecuteNonQuery();
+
+                return hodnota = "Transakce byla úspěšně provedena";
+            }
+            catch (SqlException e)
+            {
+                return hodnota = "Nastala chyba během samotné transakce: " + e;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public bool loginVerification(string name, string password)
         {
             bool access = false;
             string checkLogin, checkPassword;
-            commandS = new SqlCommand("SELECT * FROM dbo.users WHERE user = @name", conn);
+            int level;
+
+            commandS = new SqlCommand("SELECT * FROM dbo.users WHERE user like 'Rad3k'", conn);
             try
             {
                 conn.Open();
                 commandS.Parameters.Clear();
 
                 // Parameters
-                SqlParameter nameParam = new SqlParameter("@name", SqlDbType.VarChar, 30);
+                SqlParameter nameParam = new SqlParameter("@user", SqlDbType.VarChar, 30);
                 nameParam.Value = name;
                 commandS.Parameters.Add(nameParam);
                 commandS.Prepare();
@@ -45,19 +83,17 @@ namespace rad3k_eu.admin.database
 
                 while (reader.Read())
                 {
-                    if (reader.IsDBNull(1) || reader.IsDBNull(2))
-                    {
-                        access = false;
-                        continue;
-                    }
-                    else
-                    {
-                        checkLogin = reader.GetString(1);
-                        checkPassword = reader.GetString(2);
+                    for (int i = 0; i < reader.FieldCount; i++)
+                        if (reader.IsDBNull(i))
+                            return access = false;
 
-                        if (name == checkLogin && hashPassword.ValidatePassword(password, checkPassword) == true)
-                            access = true;
-                    }
+                    checkLogin = reader.GetString(1);
+                    checkPassword = reader.GetString(2);
+                    level = reader.GetInt32(3);
+                    test = name;
+
+                    if (name == checkLogin && hashPassword.ValidatePassword(password, checkPassword) == true)
+                        access = true;
                 }
 
                 return access;
@@ -99,14 +135,10 @@ namespace rad3k_eu.admin.database
 
                 while (reader.Read())
                 {
-                    for (int i = 0; i < 11; i++)
-                    {
+                    for (int i = 0; i < reader.FieldCount; i++)
                         if (reader.IsDBNull(i))
-                        {
-                            access = false;
-                            continue;
-                        }
-                    }
+                            return access = false;
+
                     if (access)
                     {
                         title[0] = reader.GetString(0);
@@ -132,6 +164,221 @@ namespace rad3k_eu.admin.database
                 return access;
             }
 
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public string saveTicket(string type, string atribute, string message, string typePotion, string typeName, string value, string email)
+        {
+            switch (UniqueValue.value)
+            {
+                case 1:
+                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, 0, @typeName, 0, @email, 'N')", conn);
+                    break;
+                case 2:
+                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, 0, 0, 0, @email, 'N')", conn);
+                    break;
+                case 3:
+                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, 0, @typeName, @value, @email, 'N')", conn);
+                    break;
+                case 4:
+                    commandI = new SqlCommand("INSERT INTO dbo.tickets VALUES (@type, @atribute, @message, @typePotion, 0, @value, @email, 'N')", conn);
+                    break;
+            }
+
+            try
+            {
+                conn.Open();
+                commandI.Parameters.Clear();
+
+                // Parameters
+                SqlParameter typeParam = new SqlParameter("@type", SqlDbType.VarChar, 80);
+                typeParam.Value = type;
+                SqlParameter atributeParam = new SqlParameter("@atribute", SqlDbType.VarChar, 80);
+                atributeParam.Value = atribute;
+                SqlParameter messageParam = new SqlParameter("@message", SqlDbType.VarChar, 255);
+                messageParam.Value = message;
+                SqlParameter potionParam = new SqlParameter("@typePotion", SqlDbType.VarChar, 80);
+                potionParam.Value = typePotion;
+                SqlParameter nameParam = new SqlParameter("@typeName", SqlDbType.VarChar, 80);
+                nameParam.Value = typeName;
+                SqlParameter valueParam = new SqlParameter("@value", SqlDbType.VarChar, 80);
+                valueParam.Value = value;
+                SqlParameter emailParam = new SqlParameter("@email", SqlDbType.VarChar, 80);
+                emailParam.Value = email;
+
+                // Add parameters
+                commandI.Parameters.Add(typeParam);
+                commandI.Parameters.Add(atributeParam);
+                commandI.Parameters.Add(messageParam);
+                commandI.Parameters.Add(potionParam);
+                commandI.Parameters.Add(nameParam);
+                commandI.Parameters.Add(valueParam);
+                commandI.Parameters.Add(emailParam);
+
+                commandI.Prepare();
+                commandI.ExecuteNonQuery();
+
+                return "done";
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public ArrayList selectOrderGame()
+        {
+            ArrayList hry = new ArrayList();
+            commandS = new SqlCommand("SELECT typeTicket, typeMethod, message, typeName, value, status FROM dbo.tickets WHERE typeTicket LIKE 'Objednávka' AND typeMethod LIKE 'Hry'", conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = commandS.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string typeTicket = reader.GetString(0);
+                    string typeMethod = reader.GetString(1);
+                    string message = reader.GetString(2);
+                    string typeName = reader.GetString(3);
+                    string value = reader.GetString(4);
+                    string status = reader.GetString(5);
+
+                    games game = new games(typeTicket, typeMethod, message, typeName, value, status);
+                    hry.Add(game);
+                }
+
+                return hry;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public ArrayList selectOrderCraft()
+        {
+            ArrayList craftList = new ArrayList();
+            commandS = new SqlCommand("SELECT typeTicket, typeMethod, message, typePotion, value, email, status FROM dbo.tickets WHERE typeTicket LIKE 'Objednávka' AND typeMethod LIKE 'Craft'", conn);
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = commandS.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string typeTicket = reader.GetString(0);
+                    string typeMethod = reader.GetString(1);
+                    string message = reader.GetString(2);
+                    string typePotion = reader.GetString(3);
+                    string value = reader.GetString(4);
+                    string nick = reader.GetString(5);
+                    string status = reader.GetString(6);
+
+                    crafting craft = new crafting(typeTicket, typeMethod, message, typePotion, value, nick, status);
+                    craftList.Add(craft);
+                }
+
+                return craftList;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public string saveBusiness(string type, string atribute, string message, string typZbozi, string jmenoZbozi, string value, string nick)
+        {
+            commandI = new SqlCommand("INSERT INTO dbo.obchod VALUES (@type, @atribute, @message, @typeThing, @typeName, @value, @nick, GETDATE())", conn);
+
+            try
+            {
+                conn.Open();
+                commandI.Parameters.Clear();
+
+                // Parameters
+                SqlParameter typeParam = new SqlParameter("@type", SqlDbType.VarChar, 80);
+                typeParam.Value = type;
+                SqlParameter atributeParam = new SqlParameter("@atribute", SqlDbType.VarChar, 80);
+                atributeParam.Value = atribute;
+                SqlParameter messageParam = new SqlParameter("@message", SqlDbType.VarChar, 255);
+                messageParam.Value = message;
+                SqlParameter typZboziParam = new SqlParameter("@typeThing", SqlDbType.VarChar, 80);
+                typZboziParam.Value = typZbozi;
+                SqlParameter nameParam = new SqlParameter("@typeName", SqlDbType.VarChar, 80);
+                nameParam.Value = jmenoZbozi;
+                SqlParameter valueParam = new SqlParameter("@value", SqlDbType.VarChar, 80);
+                valueParam.Value = value;
+                SqlParameter nickParam = new SqlParameter("@nick", SqlDbType.VarChar, 80);
+                nickParam.Value = nick;
+
+                // Add parameters
+                commandI.Parameters.Add(typeParam);
+                commandI.Parameters.Add(atributeParam);
+                commandI.Parameters.Add(messageParam);
+                commandI.Parameters.Add(typZboziParam);
+                commandI.Parameters.Add(nameParam);
+                commandI.Parameters.Add(valueParam);
+                commandI.Parameters.Add(nickParam);
+
+                commandI.Prepare();
+                commandI.ExecuteNonQuery();
+
+                return "done";
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public ArrayList selectBusinessType(char typeN)
+        {
+            ArrayList obchodList = new ArrayList();
+            switch (typeN)
+            {
+                case 'D':
+                    commandS = new SqlCommand("SELECT * FROM dbo.obchod ORDER BY datum", conn);
+                    break;
+                case 'N':
+                    commandS = new SqlCommand("SELECT * FROM dbo.obchod WHERE methods LIKE 'Nakoupím' ORDER BY datum", conn);
+                    break;
+                case 'P':
+                    commandS = new SqlCommand("SELECT * FROM dbo.obchod WHERE methods LIKE 'Prodám' ORDER BY datum", conn);
+                    break;
+                case 'V':
+                    commandS = new SqlCommand("SELECT * FROM dbo.obchod WHERE methods LIKE 'Vyměním' ORDER BY datum", conn);
+                    break;
+            }
+
+            try
+            {
+                conn.Open();
+                SqlDataReader reader = commandS.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Int64 id = reader.GetInt64(0);
+                    string type = reader.GetString(1);
+                    string typeMethod = reader.GetString(2);
+                    string vec = reader.GetString(3);
+                    string message = reader.GetString(4);
+                    string name = reader.GetString(5);
+                    string value = reader.GetString(6);
+                    string nick = reader.GetString(7);
+                    string datum = reader.GetDateTime(8).ToString().Replace("0:00:00", "");
+
+                    Obchod obchod = new Obchod(type, typeMethod, vec, message, name, value, nick, datum);
+                    obchodList.Add(obchod);
+                }
+
+                return obchodList;
+            }
             finally
             {
                 conn.Close();

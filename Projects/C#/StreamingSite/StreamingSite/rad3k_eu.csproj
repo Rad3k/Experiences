@@ -123,14 +123,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\admin.aspx" />
+    <Content Include="admin\registration.aspx" />
     <Content Include="admin\stream\manage-stream-hLeft.aspx" />
     <Content Include="admin\index.aspx" />
     <Content Include="admin\stream\manage-stream-hRight.aspx" />
     <Content Include="admin\stream\manage-stream-links.aspx" />
     <Content Include="css\admin.css" />
     <Content Include="css\ie6.css" />
+    <Content Include="css\table.css" />
     <Content Include="Images\admin\backround.jpg" />
     <Content Include="admin\stream\manage-stream-favourite.aspx" />
+    <Content Include="order\craft.aspx" />
+    <Content Include="order\hry.aspx" />
+    <Content Include="order\index.aspx" />
+    <Content Include="order\obchod.aspx" />
+    <Content Include="order\orderAdd.aspx" />
     <Content Include="stream\about.aspx" />
     <Content Include="stream\contact.aspx" />
     <Content Include="css\ie-transparency.css" />
@@ -189,6 +196,13 @@
     </Compile>
     <Compile Include="admin\class\hashPassword.cs" />
     <Compile Include="admin\database\transaction.cs" />
+    <Compile Include="admin\registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\stream\manage-stream-hLeft.aspx.cs">
       <DependentUpon>manage-stream-hLeft.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,6 +252,52 @@
     </Compile>
     <Compile Include="admin\stream\manage-stream-favourite.aspx.designer.cs">
       <DependentUpon>manage-stream-favourite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="order\classes\crafting.cs" />
+    <Compile Include="order\classes\games.cs" />
+    <Compile Include="order\classes\Email.cs" />
+    <Compile Include="order\classes\Obchod.cs" />
+    <Compile Include="order\craft.aspx.cs">
+      <DependentUpon>craft.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order\craft.aspx.designer.cs">
+      <DependentUpon>craft.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="order\hry.aspx.cs">
+      <DependentUpon>hry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order\hry.aspx.designer.cs">
+      <DependentUpon>hry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="order\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="order\obchod.aspx.cs">
+      <DependentUpon>obchod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order\obchod.aspx.designer.cs">
+      <DependentUpon>obchod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="order\orderAdd.aspx.cs">
+      <DependentUpon>orderAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order\orderAdd.aspx.designer.cs">
+      <DependentUpon>orderAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="order\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
     </Compile>
     <Compile Include="stream\about.aspx.cs">
       <DependentUpon>about.aspx</DependentUpon>
@@ -298,6 +358,7 @@
     <Content Include="stream\video.Master" />
     <Content Include="admin\login.Master" />
     <Content Include="admin\manage.Master" />
+    <Content Include="order\Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

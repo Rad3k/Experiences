@@ -23,7 +23,9 @@ manage {
 }
 
 #content { padding: 2px; text-align: left; }
-#content div { padding: 1px 20px 15px; }
+#content div { padding: 1px 15px 15px;
+    width: 250px;
+}
 
 #content 
 {

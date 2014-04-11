@@ -7,54 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rad3k_eu.admin {
+namespace rad3k_eu.order {
     
     
-    public partial class login {
+    public partial class obchod {
         
         /// <summary>
-        /// Head1 control.
+        /// nakup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        protected global::System.Web.UI.WebControls.Button nakup;
         
         /// <summary>
-        /// Login control.
+        /// prodej control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink Login;
+        protected global::System.Web.UI.WebControls.Button prodej;
         
         /// <summary>
-        /// Registration control.
+        /// vymena control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink Registration;
+        protected global::System.Web.UI.WebControls.Button vymena;
         
         /// <summary>
-        /// loginBorder control.
+        /// labelOutput control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel loginBorder;
-        
-        /// <summary>
-        /// loginScreen control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder loginScreen;
+        protected global::System.Web.UI.WebControls.Label labelOutput;
     }
 }

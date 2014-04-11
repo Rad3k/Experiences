@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="rad3k_eu.order.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Systém objednávek - dotazy a objednávky</title>
+    <link rel="stylesheet" type="text/css" href="/css/table.css" />
+    <!--[if IE]><link href="css/ie-transparency.css" rel="stylesheet" type="text/css" /><![endif]-->
+</head>
+<body>
+    <form runat="server">
+        <div id="head">
+            <h2><asp:HyperLink ID="title" runat="server" ForeColor="#33CC33" NavigateUrl="~/order/index.aspx">Systém objednávek</asp:HyperLink></h2>
+            </div>
+        <div id="body">
+            <div id="folders-left">
+                <asp:Button ID="gameNav" runat="server" Text="Hry" BackColor="#00CC00" Width="100px" BorderStyle="None" OnClick="gameNav_Click" Font-Bold="True" />
+                <asp:Button ID="craftNav" runat="server" Text="Craft" BackColor="#33CC33" Width="100px" BorderStyle="None" OnClick="craftNav_Click" Font-Bold="True" />
+                <asp:Button ID="obchodNav" runat="server" Text="Obchod" BackColor="#33CC33" Width="100px" BorderStyle="None" Font-Bold="True" OnClick="obchodNav_Click" />
+                <asp:Button ID="addNav" runat="server" Text="Přidat" BackColor="#3399FF" Width="100px" BorderStyle="None" OnClick="add_Click" Font-Bold="True" />
+            </div>
+            <div id="center-data">
+                <div id="content-data">
+                    <asp:ContentPlaceHolder ID="order" runat="server">
+                        </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

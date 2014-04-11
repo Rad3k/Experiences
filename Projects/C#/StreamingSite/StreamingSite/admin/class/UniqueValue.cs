@@ -8,5 +8,7 @@ namespace rad3k_eu.admin
     public static class UniqueValue
     {
         public static string type;
+        public static int value;
+        public static char inicial;
     }
 }
