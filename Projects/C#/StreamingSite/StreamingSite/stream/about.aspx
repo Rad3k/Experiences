@@ -1,30 +1,26 @@
 ﻿<%@ Page Title="About me" Language="C#" MasterPageFile="Site.Master" AutoEventWireup="true" CodeBehind="about.aspx.cs" Inherits="rad3k_eu.About" %>
 <asp:Content ID="LeftMenu" ContentPlaceHolderID="LeftContent" runat="server">
-    <h2>O mě</h2>
-    <p>Jsme skupina, která sleduje novinky z herního trhu a snažíme se je reprezentovat lidem zábavnějším způsobem. Věříme, že se Vám naše prezentaci ať z her již aktuálních nebo těch nově vydaných bude líbit v našem podání.</p>
+    <h2><asp:Label ID="nadpis" runat="server" Text="nadPis"></asp:Label></h2>
+    <p><asp:Label ID="popis" runat="server" Text="popis"></asp:Label></p>
 				
-    <p>Oblíbené hry</p>
+    <p><asp:Label ID="titul" runat="server" Text="titul"></asp:Label></p>
     <ul>
-        <li><span>League of Legends</span></li>
-        <li><span>CS:Global Offensive</span></li>
-        <li><span>Path of Exile</span></li>
-        <li><span>Co-op games</span></li>
+        <li><span><asp:Label ID="hra_1" runat="server" Text="hra_1"></asp:Label></span></li>
+        <li><span><asp:Label ID="hra_2" runat="server" Text="hra_2"></asp:Label></span></li>
+        <li><span><asp:Label ID="hra_3" runat="server" Text="hra_3"></asp:Label></span></li>
+        <li><span><asp:Label ID="hra_4" runat="server" Text="hra_4"></asp:Label></span></li>
     </ul>
-    <p>Sledujte aktivně a doporučujte i dále svým prátelům :)</p>
+    <p><asp:Label ID="doplnInformace" runat="server" Text="doplnujiciInformace"></asp:Label></p>
 </asp:Content>
 <asp:Content ID="RightMenu" ContentPlaceHolderID="RightContent" runat="server">
-    <h2>O mě</h2>
-    <ul>
-        <li><span>Dandus</span></li>
-        <li><span>Gaper</span></li>
-        <li><span>Terquil</span></li>
-    </ul>
+    <h2><asp:Label ID="support_me" runat="server" Text="podpora"></asp:Label></h2>
+    <p><asp:Label ID="text" runat="server" Text="text"></asp:Label></p>
     
-    <h2>Odkazy</h2>
+    <h2><asp:Label ID="odkazy" runat="server" Text="Odkazy"></asp:Label></h2>
     <ul class="links">
-        <li><a href="http://www.youtube.com/user/Dragonmawcz?feature=mhee">Youtube</a></li>
-        <li><a href="http://cs.twitch.tv/achiiles">Twitch</a></li>
-        <li><a href="https://twitter.com/dragonmawcz">Twitter</a></li>
-        <li><a href="https://www.facebook.com/groups/282592581872106/">Facebook</a></li>														
+        <li><a href="http://www.youtube.com/user/Dragonmawcz?feature=mhee"><asp:Label ID="alias_1" runat="server" Text="alias_1"></asp:Label></a></li>
+        <li><a href="http://cs.twitch.tv/achiiles"><asp:Label ID="alias_2" runat="server" Text="alias_2"></asp:Label></a></li>
+        <li><a href="https://twitter.com/dragonmawcz"><asp:Label ID="alias_3" runat="server" Text="alias_3"></asp:Label></a></li>
+        <li><a href="https://www.facebook.com/groups/282592581872106/"><asp:Label ID="alias_4" runat="server" Text="alias_4"></asp:Label></a></li>														
     </ul>
 </asp:Content>

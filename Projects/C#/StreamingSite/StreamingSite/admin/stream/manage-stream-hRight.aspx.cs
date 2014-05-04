@@ -37,7 +37,7 @@ namespace rad3k_eu.admin
         protected void hLeftButton_Click(object sender, EventArgs e)
         {
             tran.saveHomePage(nameProgram.Text, timeProgram.Text, namePeople.Text, program_1.Text, program_2.Text, program_3.Text, program_4.Text, program_5.Text,
-                time_1.Text, time_2.Text, time_3.Text, time_4.Text, time_5.Text, "", "", "", "", "", 'R');
+                time_1.Text, time_2.Text, time_3.Text, time_4.Text, time_5.Text, descriptionText.Text, "", "", "", "", 'R');
 
             UniqueValue.update = true;
             Response.Redirect("http://rad3k.eu/admin/message/success.aspx");

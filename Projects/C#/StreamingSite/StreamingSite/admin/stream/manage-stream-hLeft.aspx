@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Manage" Language="C#" MasterPageFile="~/admin/manage.Master" AutoEventWireup="true" CodeBehind="manage-stream-hLeft.aspx.cs" Inherits="rad3k_eu.admin.homeLeft" %>
+﻿<%@ Page Title="Home (L)" Language="C#" MasterPageFile="~/admin/manage.Master" AutoEventWireup="true" CodeBehind="manage-stream-hLeft.aspx.cs" Inherits="rad3k_eu.admin.homeLeft" %>
 <asp:Content ID="subLeft" ContentPlaceHolderID="WorkPlace" runat="server">
     <div id="manage-contain">
         <p>

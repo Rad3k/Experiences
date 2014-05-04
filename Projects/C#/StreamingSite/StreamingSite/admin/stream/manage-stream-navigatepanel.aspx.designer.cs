@@ -121,12 +121,12 @@ namespace rad3k_eu.admin {
         protected global::System.Web.UI.WebControls.TextBox alisy_4;
         
         /// <summary>
-        /// hLeftButton control.
+        /// navigatePanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button hLeftButton;
+        protected global::System.Web.UI.WebControls.Button navigatePanel;
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Manage" Language="C#" MasterPageFile="~/admin/manage.Master" AutoEventWireup="true" CodeBehind="manage-stream-navigatepanel.aspx.cs" Inherits="rad3k_eu.admin.manage_stream_links" %>
+﻿<%@ Page Title="Navigate" Language="C#" MasterPageFile="~/admin/manage.Master" AutoEventWireup="true" CodeBehind="manage-stream-navigatepanel.aspx.cs" Inherits="rad3k_eu.admin.manage_stream_links" %>
 <asp:Content ID="Links" ContentPlaceHolderID="WorkPlace" runat="server">
     <div id="manage-contain">
         <asp:Label ID="nadpis" runat="server" Text="Podpořte mě:"></asp:Label><br/>
@@ -24,6 +24,6 @@
         </div>
     </div>
     <div id="save-button">
-        <asp:Button ID="hLeftButton" runat="server" Text="Save" Height="30px" Width="450px" BackColor="#66FFFF" Font-Bold="True" />
+        <asp:Button ID="navigatePanel" runat="server" Text="Save" Height="30px" Width="450px" BackColor="#66FFFF" Font-Bold="True" OnClick="navigatePanel_Click" />
     </div>
 </asp:Content>

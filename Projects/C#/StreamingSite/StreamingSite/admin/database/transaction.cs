@@ -637,19 +637,20 @@ namespace rad3k_eu.admin.database
             }
             else
             {
-                commandU = new SqlCommand("UPDATE dbo.titles SET text = @titul WHERE ID = 1 "
-                + "UPDATE dbo.titles SET text = @titul_2 WHERE ID = 2 "
-                + "UPDATE dbo.titles SET text = @titul_3 WHERE ID = 3 "
-                + "UPDATE dbo.sections SET text = @section WHERE ID = 1 "
-                + "UPDATE dbo.sections SET text = @section_2 WHERE ID = 2 "
-                + "UPDATE dbo.sections SET text = @section_3 WHERE ID = 3 "
-                + "UPDATE dbo.sections SET text = @section_4 WHERE ID = 4 "
-                + "UPDATE dbo.sections SET text = @section_5 WHERE ID = 5 "
-                + "UPDATE dbo.sections SET text = @section_6 WHERE ID = 6 "
-                + "UPDATE dbo.sections SET text = @section_7 WHERE ID = 7 "
-                + "UPDATE dbo.sections SET text = @section_8 WHERE ID = 8 "
-                + "UPDATE dbo.sections SET text = @section_9 WHERE ID = 9 "
-                + "UPDATE dbo.sections SET text = @section_10 WHERE ID = 10", conn);
+                commandU = new SqlCommand("UPDATE dbo.titles SET text = @titul WHERE ID = 6 "
+                + "UPDATE dbo.titles SET text = @titul_2 WHERE ID = 4 "
+                + "UPDATE dbo.titles SET text = @titul_3 WHERE ID = 5 "
+                + "UPDATE dbo.page SET description = @section_11 WHERE inicial LIKE 'R' "
+                + "UPDATE dbo.sections SET text = @section WHERE ID = 16 "
+                + "UPDATE dbo.sections SET text = @section_2 WHERE ID = 17 "
+                + "UPDATE dbo.sections SET text = @section_3 WHERE ID = 18 "
+                + "UPDATE dbo.sections SET text = @section_4 WHERE ID = 19 "
+                + "UPDATE dbo.sections SET text = @section_5 WHERE ID = 20 "
+                + "UPDATE dbo.sections SET text = @section_6 WHERE ID = 21 "
+                + "UPDATE dbo.sections SET text = @section_7 WHERE ID = 22 "
+                + "UPDATE dbo.sections SET text = @section_8 WHERE ID = 23 "
+                + "UPDATE dbo.sections SET text = @section_9 WHERE ID = 24 "
+                + "UPDATE dbo.sections SET text = @section_10 WHERE ID = 25", conn);
             }
 
             try
@@ -719,7 +720,177 @@ namespace rad3k_eu.admin.database
 
                 commandU.Prepare();
                 commandU.ExecuteNonQuery();
-                UniqueValue.type = title[0] + " | " + titul;
+            }
+
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void saveAboutMe(string nadpis_o, string text_o, string titul, string hra_1, string hra_2, string hra_3, string hra_4, string doplnInformace)
+        {
+            commandU = new SqlCommand("UPDATE dbo.titles SET text = @titul WHERE ID = 7 "
+                + "UPDATE dbo.sections SET text = @hra_1 WHERE ID = 87 "
+                + "UPDATE dbo.sections SET text = @hra_2 WHERE ID = 88 "
+                + "UPDATE dbo.sections SET text = @hra_3 WHERE ID = 89 "
+                + "UPDATE dbo.sections SET text = @hra_4 WHERE ID = 90 "
+                + "UPDATE dbo.pages SET nadpis = @nadpis, text = @text, other = @dopln WHERE ID = 1", conn);
+            try
+            {
+                conn.Open();
+                commandU.Parameters.Clear();
+
+                // New parameters
+                SqlParameter nadpisP = new SqlParameter("@nadpis", SqlDbType.VarChar, 80);
+                SqlParameter textP = new SqlParameter("@text", SqlDbType.VarChar, 255);
+                SqlParameter doplnInformaceP = new SqlParameter("@dopln", SqlDbType.VarChar, 255);
+                SqlParameter titulP = new SqlParameter("@titul", SqlDbType.VarChar, 255);
+                SqlParameter hra_1P = new SqlParameter("@hra_1", SqlDbType.VarChar, 255);
+                SqlParameter hra_2P = new SqlParameter("@hra_2", SqlDbType.VarChar, 255);
+                SqlParameter hra_3P = new SqlParameter("@hra_3", SqlDbType.VarChar, 255);
+                SqlParameter hra_4P = new SqlParameter("@hra_4", SqlDbType.VarChar, 255);
+
+                // New value parameters
+                nadpisP.Value = nadpis_o;
+                textP.Value = text_o;
+                doplnInformaceP.Value = doplnInformace;
+                titulP.Value = titul;
+                hra_1P.Value = hra_1;
+                hra_2P.Value = hra_2;
+                hra_3P.Value = hra_3;
+                hra_4P.Value = hra_4;
+
+                // Add new parameters
+                commandU.Parameters.Add(nadpisP);
+                commandU.Parameters.Add(textP);
+                commandU.Parameters.Add(doplnInformaceP);
+                commandU.Parameters.Add(titulP);
+                commandU.Parameters.Add(hra_1P);
+                commandU.Parameters.Add(hra_2P);
+                commandU.Parameters.Add(hra_3P);
+                commandU.Parameters.Add(hra_4P);
+
+                commandU.Prepare();
+                commandU.ExecuteNonQuery();
+            }
+
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void saveQuickBar(string nadpis_o, string text_o, string odkaz_1, string odkaz_2, string odkaz_3, string odkaz_4, string alias_1, string alias_2, string alias_3, string alias_4)
+        {
+            commandU = new SqlCommand("UPDATE dbo.quickbar SET nadpis = @nadpis, text = @text "
+                + "UPDATE dbo.odkazy SET url = @url_1, alias = @alias_1 WHERE ID = 4 "
+                + "UPDATE dbo.odkazy SET url = @url_2, alias = @alias_2 WHERE ID = 5 "
+                + "UPDATE dbo.odkazy SET url = @url_3, alias = @alias_3 WHERE ID = 6 "
+                + "UPDATE dbo.odkazy SET url = @url_4, alias = @alias_4 WHERE ID = 7", conn);
+            try
+            {
+                conn.Open();
+                commandU.Parameters.Clear();
+
+                // New parameters
+                SqlParameter nadpisP = new SqlParameter("@nadpis", SqlDbType.VarChar, 80);
+                SqlParameter textP = new SqlParameter("@text", SqlDbType.VarChar, 255);
+                SqlParameter url_1P = new SqlParameter("@url_1", SqlDbType.VarChar, 255);
+                SqlParameter url_2P = new SqlParameter("@url_2", SqlDbType.VarChar, 255);
+                SqlParameter url_3P = new SqlParameter("@url_3", SqlDbType.VarChar, 255);
+                SqlParameter url_4P = new SqlParameter("@url_4", SqlDbType.VarChar, 255);
+                SqlParameter alias_1P = new SqlParameter("@alias_1", SqlDbType.VarChar, 255);
+                SqlParameter alias_2P = new SqlParameter("@alias_2", SqlDbType.VarChar, 255);
+                SqlParameter alias_3P = new SqlParameter("@alias_3", SqlDbType.VarChar, 255);
+                SqlParameter alias_4P = new SqlParameter("@alias_4", SqlDbType.VarChar, 255);
+
+                // New value parameters
+                nadpisP.Value = nadpis_o;
+                textP.Value = text_o;
+                url_1P.Value = odkaz_1;
+                url_2P.Value = odkaz_2;
+                url_3P.Value = odkaz_3;
+                url_4P.Value = odkaz_4;
+                alias_1P.Value = alias_1;
+                alias_2P.Value = alias_2;
+                alias_3P.Value = alias_3;
+                alias_4P.Value = alias_4;
+
+                // Add new parameters
+                commandU.Parameters.Add(nadpisP);
+                commandU.Parameters.Add(textP);
+                commandU.Parameters.Add(url_1P);
+                commandU.Parameters.Add(url_2P);
+                commandU.Parameters.Add(url_3P);
+                commandU.Parameters.Add(url_4P);
+                commandU.Parameters.Add(alias_1P);
+                commandU.Parameters.Add(alias_2P);
+                commandU.Parameters.Add(alias_3P);
+                commandU.Parameters.Add(alias_4P);
+
+                commandU.Prepare();
+                commandU.ExecuteNonQuery();
+            }
+
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void saveSupportMe(string nadpis_o, string text_o)
+        {
+            commandU = new SqlCommand("UPDATE dbo.pages SET nadpis = @nadpis, text = @text WHERE ID = 2", conn);
+            try
+            {
+                conn.Open();
+                commandU.Parameters.Clear();
+
+                // New parameters
+                SqlParameter nadpisP = new SqlParameter("@nadpis", SqlDbType.VarChar, 80);
+                SqlParameter textP = new SqlParameter("@text", SqlDbType.Text, 1000);
+
+                // New value parameters
+                nadpisP.Value = nadpis_o;
+                textP.Value = text_o;
+
+                // Add new parameters
+                commandU.Parameters.Add(nadpisP);
+                commandU.Parameters.Add(textP);
+
+                commandU.Prepare();
+                commandU.ExecuteNonQuery();
+            }
+
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void saveContactMe(string nadpis_o, string text_o)
+        {
+            commandU = new SqlCommand("UPDATE dbo.pages SET nadpis = @nadpis, text = @text WHERE ID = 6", conn);
+            try
+            {
+                conn.Open();
+                commandU.Parameters.Clear();
+
+                // New parameters
+                SqlParameter nadpisP = new SqlParameter("@nadpis", SqlDbType.VarChar, 80);
+                SqlParameter textP = new SqlParameter("@text", SqlDbType.Text, 1000);
+
+                // New value parameters
+                nadpisP.Value = nadpis_o;
+                textP.Value = text_o;
+
+                // Add new parameters
+                commandU.Parameters.Add(nadpisP);
+                commandU.Parameters.Add(textP);
+
+                commandU.Prepare();
+                commandU.ExecuteNonQuery();
             }
 
             finally

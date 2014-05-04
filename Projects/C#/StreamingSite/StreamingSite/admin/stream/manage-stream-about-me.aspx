@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Manage" Language="C#" MasterPageFile="~/admin/manage.Master" AutoEventWireup="true" CodeBehind="manage-stream-about-me.aspx.cs" Inherits="rad3k_eu.manage_stream_favourite" %>
+﻿<%@ Page Title="About me" Language="C#" MasterPageFile="~/admin/manage.Master" AutoEventWireup="true" CodeBehind="manage-stream-about-me.aspx.cs" Inherits="rad3k_eu.manage_stream_favourite" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="WorkPlace" runat="server">
     <div id="manage-contain">
         <asp:Label ID="nadpis" runat="server" Text="Nadpis"></asp:Label><br/>
@@ -25,6 +25,6 @@
         </div>
     </div>
     <div id="save-button">
-        <asp:Button ID="hLeftButton" runat="server" Text="Save" Height="30px" Width="450px" BackColor="#66FFFF" Font-Bold="True" />
+        <asp:Button ID="aboutMe" runat="server" Text="Save" Height="30px" Width="450px" BackColor="#66FFFF" Font-Bold="True" OnClick="aboutMe_Click" />
     </div>
 </asp:Content>

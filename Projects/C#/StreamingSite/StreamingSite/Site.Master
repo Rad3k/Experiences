@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="rad3k_eu.Site1" %>
+
+<!DOCTYPE html>
+
+<head runat="server">
+    <title>Rad3k - Portfólio</title>
+    <link rel="stylesheet" type="text/css" href="/css/portfolio.css" />
+    <link rel="shortcut icon" href="http://rad3k.eu/Images/ikonka.ico">
+    <link rel="icon" href="http://rad3k.eu/Images/ikonka.ico">
+</head>
+<body>
+    <form runat="server">
+        <div id="main_container">
+            <div id="header">
+                <div id="logo"><a href="http://rad3k.eu"></a></div>
+                <div id="menu_tab">
+                    <ul class="menu">
+                        <li><a href="index.aspx" class="nav_home"> Domovská stránka </a></li>
+                        <li><a href="about.aspx" class="nav_about"> O mě </a></li>
+                        <li><a href="reference.aspx" class="nav_help"> Reference </a></li>
+                        <li><a href="projects.aspx" class="nav_services"> Projekty </a></li>
+                        <li><a href="contact.aspx" class="nav_contact"> Kontakt </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main_content">
+                <div class="left_content">
+                    <div class="main_title"><img src="http://rad3k.eu/Images/portfolio/welcome.gif" alt=""></div>
+                    <div class="left_box">
+                        <div class="left_icon"><img src="http://rad3k.eu/Images/portfolio/icon_world.gif" alt=""></div>
+                        <div class="left_text_box">
+                            <asp:ContentPlaceHolder ID="left_box_text" runat="server">
+                              </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                    <div class="featured_project">
+                        <asp:ContentPlaceHolder ID="project_list" runat="server">
+                            </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <!-- end of left content-->
+                <div class="right_content">
+                    <div class="blog_title">Twitter novinky</div>
+                    <div class="right_box">
+                        <div class="right_box_top"></div>
+                        <div class="right_box_center">
+                            <a class="twitter-timeline" href="https://twitter.com/dragonmawcz" data-widget-id="461877799117000704">Tweets by @dragonmawcz</a>
+                            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="right_box_bottom"></div>
+                    </div>
+                    <div class="testimonials_title">Moje projekty</div>
+                    <div class="right_box">
+                        <div class="right_box_top"></div>
+                        <div class="right_box_center">
+                            <br/><a href="https://github.com/Rad3k/Experiences" class="view_project"><H4>Repozitář</H4></a>
+                            <a href="http://rad3k.eu/stream" class="view_project"><H4>Stream</H4></a>
+                            <a href="https://www.youtube.com/user/Dragonmawcz/videos" class="view_project"><H4>Youtube</H4></a>
+                            <a href="https://www.facebook.com/Rad3k.T" class="view_project"><H4>Facebook</H4></a>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="right_box_bottom"></div>
+                    </div>
+                </div>
+                <!-- end of left content-->
+                <div class="clear"></div>
+            </div>
+            <!-- main_content-->
+            <div id="footer">
+                <div class="left_footer"> Rad3k - portfólio © 2014. All Rights Reserved. </div>
+                <div class="right_footer"> <a href="http://rad3k.eu">Domovská stránka</a> | <a href="http://rad3k.eu">O mě</a> | <a href="http://rad3k.eu">Reference</a> | <a href="http://rad3k.eu">Projekty</a> | <a href="http://rad3k.eu">Kontakt</a></div>
+            </div>
+        </div>
+    </form>
+</body>

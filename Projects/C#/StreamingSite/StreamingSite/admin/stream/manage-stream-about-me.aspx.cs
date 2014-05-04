@@ -4,16 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using rad3k_eu.admin;
 using rad3k_eu.admin.database;
 
 namespace rad3k_eu
 {
     public partial class manage_stream_favourite : System.Web.UI.Page
     {
+        transaction tran = new transaction();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            transaction tran = new transaction();
-            if (tran.selectPagesInformation('O'))
+            if (tran.selectPagesInformation('O') && UniqueValue.update)
             {
                 nadpisText.Text = tran.nadpis;
                 popisText.Text = tran.text;
@@ -21,10 +23,13 @@ namespace rad3k_eu
             }
             else
             {
-                nadpisText.Text = tran.nadpis;
-                popisText.Text = tran.text;
+                if (UniqueValue.update)
+                {
+                    nadpisText.Text = tran.nadpis;
+                    popisText.Text = tran.text;
+                }
             }
-            if (tran.selectFavouriteGames('O'))
+            if (tran.selectFavouriteGames('O') && UniqueValue.update)
             {
                 favouriteGames.Text = tran.title[0];
                 program_1.Text = tran.section[0];
@@ -32,6 +37,15 @@ namespace rad3k_eu
                 program_3.Text = tran.section[2];
                 program_4.Text = tran.section[3];
             }
+            UniqueValue.update = false;
+        }
+
+        protected void aboutMe_Click(object sender, EventArgs e)
+        {
+            tran.saveAboutMe(nadpisText.Text, popisText.Text, favouriteGames.Text, program_1.Text, program_2.Text, program_3.Text, program_4.Text, doplnInformace.Text);
+
+            UniqueValue.update = true;
+            Response.Redirect("http://rad3k.eu/admin/message/success.aspx");
         }
     }
 }
