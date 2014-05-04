@@ -14,7 +14,6 @@
 <asp:Content ID="FormContent" ContentPlaceHolderID="RightContent" runat="server">
     <h2><asp:Label ID="nadpis" runat="server" Text="nadpis"></asp:Label></h2>
     <asp:Label ID="popis" runat="server" Text="text"></asp:Label><br/>
-
     <asp:Panel ID="contactForm" runat="server" BorderStyle="Groove">
         <div id="contact">
             <asp:Label ID="informationLabel" runat="server" Text="Kontaktní formulář" Font-Bold="True" CssClass="text"></asp:Label>          

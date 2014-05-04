@@ -6,7 +6,7 @@
         <asp:Label ID="text" runat="server" Text="Text:"></asp:Label><br/>
         <asp:TextBox ID="doplnText" runat="server" Width="899px" Height="130px" TextMode="MultiLine"></asp:TextBox><br/>
         <div style="float: left; text-align: left">
-            <H5>Odkazy a Aliasy</H5>
+            <h5>Odkazy a Aliasy</h5>
             <ul>
                 <li><asp:TextBox ID="program_1" runat="server" Width="235px"></asp:TextBox></li>
                 <li><asp:TextBox ID="program_2" runat="server" Width="235px"></asp:TextBox></li>
