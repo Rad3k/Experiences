@@ -36,6 +36,6 @@
         </ul>
     </div>
     <div id="save-button">
-        <asp:Button ID="hLeftButton" runat="server" Text="Save" Height="30px" Width="450px" BackColor="#66FFFF" Font-Bold="True" />
+        <asp:Button ID="hLeftButton" runat="server" Text="Save" Height="30px" Width="450px" BackColor="#66FFFF" Font-Bold="True" OnClick="hLeftButton_Click" />
     </div>
 </asp:Content>

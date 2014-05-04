@@ -21,7 +21,7 @@ namespace rad3k_eu.admin
             if (tran.loginVerification(nameText.Text, passwordText.Text) == true)
                 Response.Redirect("admin.aspx");
             else
-                Response.Write("Přihlašovací jméno nebo heslo je špatné." + tran.test + "s");
+                Response.Write("Přihlašovací jméno nebo heslo je špatné.");
         }
     }
 }

@@ -10,10 +10,11 @@ namespace rad3k_eu.admin
 {
     public partial class manage_stream_hRight : System.Web.UI.Page
     {
+        transaction tran = new transaction();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            transaction tran = new transaction();
-            if (tran.selectHomePage('R'))
+            if (tran.selectHomePage('R') && UniqueValue.update)
             {
                 nameProgram.Text = tran.title[0];
                 timeProgram.Text = tran.title[1];
@@ -29,7 +30,17 @@ namespace rad3k_eu.admin
                 time_3.Text = tran.section[7];
                 time_4.Text = tran.section[8];
                 time_5.Text = tran.section[9];
+                UniqueValue.update = false;
             }
+        }
+
+        protected void hLeftButton_Click(object sender, EventArgs e)
+        {
+            tran.saveHomePage(nameProgram.Text, timeProgram.Text, namePeople.Text, program_1.Text, program_2.Text, program_3.Text, program_4.Text, program_5.Text,
+                time_1.Text, time_2.Text, time_3.Text, time_4.Text, time_5.Text, "", "", "", "", "", 'R');
+
+            UniqueValue.update = true;
+            Response.Redirect("http://rad3k.eu/admin/message/success.aspx");
         }
     }
 }

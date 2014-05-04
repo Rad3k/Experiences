@@ -7,10 +7,64 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rad3k_eu.admin {
+namespace rad3k_eu {
     
     
-    public partial class manage_stream_links {
+    public partial class manage_stream_favourite {
+        
+        /// <summary>
+        /// nadpis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nadpis;
+        
+        /// <summary>
+        /// nadpisText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nadpisText;
+        
+        /// <summary>
+        /// popis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label popis;
+        
+        /// <summary>
+        /// popisText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox popisText;
+        
+        /// <summary>
+        /// nadpis_2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nadpis_2;
+        
+        /// <summary>
+        /// favouriteGames control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox favouriteGames;
         
         /// <summary>
         /// program_1 control.
@@ -49,58 +103,22 @@ namespace rad3k_eu.admin {
         protected global::System.Web.UI.WebControls.TextBox program_4;
         
         /// <summary>
-        /// program_5 control.
+        /// doplnText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox program_5;
+        protected global::System.Web.UI.WebControls.Label doplnText;
         
         /// <summary>
-        /// alisy_1 control.
+        /// doplnInformace control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox alisy_1;
-        
-        /// <summary>
-        /// alisy_2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox alisy_2;
-        
-        /// <summary>
-        /// alisy_3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox alisy_3;
-        
-        /// <summary>
-        /// alisy_4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox alisy_4;
-        
-        /// <summary>
-        /// alisy_5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox alisy_5;
+        protected global::System.Web.UI.WebControls.TextBox doplnInformace;
         
         /// <summary>
         /// hLeftButton control.

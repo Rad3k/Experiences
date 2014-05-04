@@ -122,22 +122,60 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="about.aspx" />
     <Content Include="admin\admin.aspx" />
+    <Content Include="admin\message\success.aspx" />
     <Content Include="admin\registration.aspx" />
+    <Content Include="admin\stream\manage-stream-contact.aspx" />
     <Content Include="admin\stream\manage-stream-hLeft.aspx" />
     <Content Include="admin\index.aspx" />
     <Content Include="admin\stream\manage-stream-hRight.aspx" />
-    <Content Include="admin\stream\manage-stream-links.aspx" />
+    <Content Include="admin\stream\manage-stream-navigatepanel.aspx" />
+    <Content Include="admin\stream\manage-stream-support-me.aspx" />
+    <Content Include="admin\stream\manage-stream-video.aspx" />
+    <Content Include="contact.aspx" />
     <Content Include="css\admin.css" />
     <Content Include="css\ie6.css" />
+    <Content Include="css\smlouvy.css" />
     <Content Include="css\table.css" />
     <Content Include="Images\admin\backround.jpg" />
-    <Content Include="admin\stream\manage-stream-favourite.aspx" />
+    <Content Include="admin\stream\manage-stream-about-me.aspx" />
+    <Content Include="Images\portfolio\bg.jpg" />
+    <Content Include="Images\portfolio\blog_icon.gif" />
+    <Content Include="Images\portfolio\bullet.gif" />
+    <Content Include="Images\portfolio\footer_bg.gif" />
+    <Content Include="Images\portfolio\footer_logo.gif" />
+    <Content Include="Images\portfolio\header_bg.jpg" />
+    <Content Include="Images\portfolio\icon_team.gif" />
+    <Content Include="Images\portfolio\icon_testimonials.gif" />
+    <Content Include="Images\portfolio\icon_world.gif" />
+    <Content Include="Images\portfolio\logo.gif" />
+    <Content Include="Images\portfolio\menu_icon1.gif" />
+    <Content Include="Images\portfolio\menu_icon1_a.gif" />
+    <Content Include="Images\portfolio\menu_icon2.gif" />
+    <Content Include="Images\portfolio\menu_icon2_a.gif" />
+    <Content Include="Images\portfolio\menu_icon3.gif" />
+    <Content Include="Images\portfolio\menu_icon3_a.gif" />
+    <Content Include="Images\portfolio\menu_icon4.gif" />
+    <Content Include="Images\portfolio\menu_icon4_a.gif" />
+    <Content Include="Images\portfolio\menu_icon5.gif" />
+    <Content Include="Images\portfolio\menu_icon5_a.gif" />
+    <Content Include="Images\portfolio\project.gif" />
+    <Content Include="Images\portfolio\read_more.gif" />
+    <Content Include="Images\portfolio\right_box_bottom.gif" />
+    <Content Include="Images\portfolio\right_box_center.gif" />
+    <Content Include="Images\portfolio\right_box_top.gif" />
+    <Content Include="Images\portfolio\top_bg.jpg" />
+    <Content Include="Images\portfolio\welcome.gif" />
+    <Content Include="index.aspx" />
     <Content Include="order\craft.aspx" />
     <Content Include="order\hry.aspx" />
     <Content Include="order\index.aspx" />
     <Content Include="order\obchod.aspx" />
     <Content Include="order\orderAdd.aspx" />
+    <Content Include="projects.aspx" />
+    <Content Include="reference.aspx" />
+    <Content Include="smlouvy\index.aspx" />
     <Content Include="stream\about.aspx" />
     <Content Include="stream\contact.aspx" />
     <Content Include="css\ie-transparency.css" />
@@ -187,6 +225,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\admin.aspx.cs">
       <DependentUpon>admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,12 +241,26 @@
     </Compile>
     <Compile Include="admin\class\hashPassword.cs" />
     <Compile Include="admin\database\transaction.cs" />
+    <Compile Include="admin\message\success.aspx.cs">
+      <DependentUpon>success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\message\success.aspx.designer.cs">
+      <DependentUpon>success.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\registration.aspx.cs">
       <DependentUpon>registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\stream\manage-stream-contact.aspx.cs">
+      <DependentUpon>manage-stream-contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\stream\manage-stream-contact.aspx.designer.cs">
+      <DependentUpon>manage-stream-contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\stream\manage-stream-hLeft.aspx.cs">
       <DependentUpon>manage-stream-hLeft.aspx</DependentUpon>
@@ -231,12 +290,12 @@
     <Compile Include="admin\stream\manage-stream-hRight.aspx.designer.cs">
       <DependentUpon>manage-stream-hRight.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\stream\manage-stream-links.aspx.cs">
-      <DependentUpon>manage-stream-links.aspx</DependentUpon>
+    <Compile Include="admin\stream\manage-stream-navigatepanel.aspx.cs">
+      <DependentUpon>manage-stream-navigatepanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\stream\manage-stream-links.aspx.designer.cs">
-      <DependentUpon>manage-stream-links.aspx</DependentUpon>
+    <Compile Include="admin\stream\manage-stream-navigatepanel.aspx.designer.cs">
+      <DependentUpon>manage-stream-navigatepanel.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\manage.Master.cs">
       <DependentUpon>manage.Master</DependentUpon>
@@ -246,12 +305,40 @@
       <DependentUpon>manage.Master</DependentUpon>
     </Compile>
     <Compile Include="admin\class\UniqueValue.cs" />
-    <Compile Include="admin\stream\manage-stream-favourite.aspx.cs">
-      <DependentUpon>manage-stream-favourite.aspx</DependentUpon>
+    <Compile Include="admin\stream\manage-stream-about-me.aspx.cs">
+      <DependentUpon>manage-stream-about-me.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\stream\manage-stream-favourite.aspx.designer.cs">
-      <DependentUpon>manage-stream-favourite.aspx</DependentUpon>
+    <Compile Include="admin\stream\manage-stream-about-me.aspx.designer.cs">
+      <DependentUpon>manage-stream-about-me.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\stream\manage-stream-support-me.aspx.cs">
+      <DependentUpon>manage-stream-support-me.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\stream\manage-stream-support-me.aspx.designer.cs">
+      <DependentUpon>manage-stream-support-me.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\stream\manage-stream-video.aspx.cs">
+      <DependentUpon>manage-stream-video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\stream\manage-stream-video.aspx.designer.cs">
+      <DependentUpon>manage-stream-video.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="order\classes\crafting.cs" />
     <Compile Include="order\classes\games.cs" />
@@ -298,6 +385,48 @@
     </Compile>
     <Compile Include="order\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="podstranky.Master.cs">
+      <DependentUpon>podstranky.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="podstranky.Master.designer.cs">
+      <DependentUpon>podstranky.Master</DependentUpon>
+    </Compile>
+    <Compile Include="projects.aspx.cs">
+      <DependentUpon>projects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects.aspx.designer.cs">
+      <DependentUpon>projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reference.aspx.cs">
+      <DependentUpon>reference.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reference.aspx.designer.cs">
+      <DependentUpon>reference.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="smlouvy\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="smlouvy\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="smlouvy\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="smlouvy\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="stream\about.aspx.cs">
       <DependentUpon>about.aspx</DependentUpon>
@@ -351,7 +480,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Images\portfolio\" />
     <Folder Include="scripts\" />
   </ItemGroup>
   <ItemGroup>
@@ -360,6 +488,9 @@
     <Content Include="admin\login.Master" />
     <Content Include="admin\manage.Master" />
     <Content Include="order\Site.Master" />
+    <Content Include="smlouvy\Site.Master" />
+    <Content Include="Site.Master" />
+    <Content Include="podstranky.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

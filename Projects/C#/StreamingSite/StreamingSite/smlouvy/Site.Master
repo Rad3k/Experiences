@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="rad3k_eu.smlouvy.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Seznam smluv</title>
+    <link rel="stylesheet" type="text/css" href="/css/smlouvy.css" />
+    <!--[if IE]><link href="css/ie-transparency.css" rel="stylesheet" type="text/css" /><![endif]-->
+</head>
+<body>
+    <form runat="server">
+        <div id="head">
+            <h2><asp:HyperLink ID="title" runat="server" ForeColor="#33CC33" NavigateUrl="~/order/index.aspx">Evidence smluv</asp:HyperLink></h2>
+            </div>
+        <div id="body">
+            <div id="folders-left">
+                <asp:Button ID="smlouvyNav" runat="server" Text="Smlouvy" BackColor="#00CC00" Width="100px" BorderStyle="None" Font-Bold="True" OnClick="smlouvyNav_Click" />
+                <asp:Button ID="pridatNav" runat="server" Text="Přidat" BackColor="#3399FF" Width="100px" BorderStyle="None" Font-Bold="True" OnClick="pridatNav_Click" />
+            </div>
+            <div id="center-data">
+                <div id="content-data">
+                    <asp:ContentPlaceHolder ID="smlouvy" runat="server">
+                        </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

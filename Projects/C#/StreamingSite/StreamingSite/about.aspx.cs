@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace rad3k_eu
 {
-    public partial class manage_stream_favourite : System.Web.UI.Page
+    public partial class about : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

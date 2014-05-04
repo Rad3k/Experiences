@@ -1,0 +1,94 @@
+﻿body 
+{
+    background-color:Gray;
+    text-align:center;
+    padding-top:20px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+head { 
+    text-align: center; 
+    padding-top:10px;
+    padding-left:20px;
+    padding-right:20px;
+}
+#folders-left { float:left; }
+#folders-right { float:left; }
+#center-data{ padding-top:22px; }
+
+#content-data { 
+    padding-top:10px;
+    background-color:silver; 
+    height:1080px;
+}
+
+.left { float: left; }
+.right { float: right; }
+
+#add {
+    padding-left:500px;
+}
+
+#message { 
+    float:left;
+    padding-left: 50px;
+}
+
+#under-context {
+    padding-top:360px;
+}
+
+#under-navigation {
+    padding-top:100px;
+}
+#under-droplist {
+    padding-top:90px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align:center;
+}
+
+th {
+    background-color:#3399FF;
+}
+
+td {
+    background-color:#99CCFF;
+}
+
+#tableStyle {
+    padding-left:150px;
+}
+
+#main {
+    float:left;
+    text-align:left;
+    padding-left:20px;
+    padding-right:20px;
+    width: 184px;
+}
+
+#description {
+    float:left;
+    text-align:left;
+    padding-top:40px;
+    width:1280px;
+}
+
+b {
+    font-size:12px;
+    color:forestgreen;
+}
+
+.odsazeni {
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#calendar {
+    float:right;
+    padding-top:18px;
+}

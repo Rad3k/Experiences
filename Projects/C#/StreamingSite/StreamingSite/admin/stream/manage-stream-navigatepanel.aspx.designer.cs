@@ -10,61 +10,43 @@
 namespace rad3k_eu.admin {
     
     
-    public partial class homeLeft {
+    public partial class manage_stream_links {
         
         /// <summary>
-        /// actualLabel control.
+        /// nadpis control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label actualLabel;
+        protected global::System.Web.UI.WebControls.Label nadpis;
         
         /// <summary>
-        /// nameProgram control.
+        /// nadpisText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nameProgram;
+        protected global::System.Web.UI.WebControls.TextBox nadpisText;
         
         /// <summary>
-        /// timeStream control.
+        /// text control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label timeStream;
+        protected global::System.Web.UI.WebControls.Label text;
         
         /// <summary>
-        /// timeProgram control.
+        /// doplnText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox timeProgram;
-        
-        /// <summary>
-        /// nameStreamers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label nameStreamers;
-        
-        /// <summary>
-        /// namePeople control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox namePeople;
+        protected global::System.Web.UI.WebControls.TextBox doplnText;
         
         /// <summary>
         /// program_1 control.
@@ -103,103 +85,40 @@ namespace rad3k_eu.admin {
         protected global::System.Web.UI.WebControls.TextBox program_4;
         
         /// <summary>
-        /// program_5 control.
+        /// alisy_1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox program_5;
+        protected global::System.Web.UI.WebControls.TextBox alisy_1;
         
         /// <summary>
-        /// program_6 control.
+        /// alisy_2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox program_6;
+        protected global::System.Web.UI.WebControls.TextBox alisy_2;
         
         /// <summary>
-        /// time_1 control.
+        /// alisy_3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox time_1;
+        protected global::System.Web.UI.WebControls.TextBox alisy_3;
         
         /// <summary>
-        /// time_2 control.
+        /// alisy_4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox time_2;
-        
-        /// <summary>
-        /// time_3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox time_3;
-        
-        /// <summary>
-        /// time_4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox time_4;
-        
-        /// <summary>
-        /// time_5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox time_5;
-        
-        /// <summary>
-        /// time_6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox time_6;
-        
-        /// <summary>
-        /// name_1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox name_1;
-        
-        /// <summary>
-        /// name_2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox name_2;
-        
-        /// <summary>
-        /// name_3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox name_3;
+        protected global::System.Web.UI.WebControls.TextBox alisy_4;
         
         /// <summary>
         /// hLeftButton control.

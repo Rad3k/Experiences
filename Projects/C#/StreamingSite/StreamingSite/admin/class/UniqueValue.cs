@@ -10,5 +10,6 @@ namespace rad3k_eu.admin
         public static string type;
         public static int value;
         public static char inicial;
+        public static bool update = true;
     }
 }

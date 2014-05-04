@@ -7,63 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rad3k_eu {
+namespace rad3k_eu.admin.stream {
     
     
-    public partial class manage_stream_favourite {
+    public partial class manage_stream_contact {
         
         /// <summary>
-        /// program_1 control.
+        /// nadpis control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox program_1;
+        protected global::System.Web.UI.WebControls.Label nadpis;
         
         /// <summary>
-        /// program_2 control.
+        /// nadpisText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox program_2;
+        protected global::System.Web.UI.WebControls.TextBox nadpisText;
         
         /// <summary>
-        /// program_3 control.
+        /// text control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox program_3;
+        protected global::System.Web.UI.WebControls.Label text;
         
         /// <summary>
-        /// program_4 control.
+        /// doplnText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox program_4;
+        protected global::System.Web.UI.WebControls.TextBox doplnText;
         
         /// <summary>
-        /// program_5 control.
+        /// save_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox program_5;
-        
-        /// <summary>
-        /// hLeftButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button hLeftButton;
+        protected global::System.Web.UI.WebControls.Button save_id;
     }
 }

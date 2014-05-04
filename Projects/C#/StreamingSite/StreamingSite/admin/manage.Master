@@ -22,20 +22,18 @@
                         </asp:Panel>
                         <div id="menu-body">
                             <asp:Panel ID="menuPanel" runat="server" BorderStyle="Groove" BorderWidth="1">
-                                <asp:TreeView ID="menuTree" runat="server" ShowLines="True" LineImagesFolder="~/TreeLineImages" EnableTheming="True" ExpandDepth="0">
+                                <asp:TreeView ID="menuTree" runat="server" ShowLines="True" LineImagesFolder="~/TreeLineImages" EnableTheming="True" ExpandDepth="1">
                                     <Nodes>
                                         <asp:TreeNode Text="Steaming" Value="Steaming" SelectAction="None">
                                             <asp:TreeNode Text="Home" Value="Home" SelectAction="None">
                                                 <asp:TreeNode Text="Levé menu" Value="leftMenu" NavigateUrl="stream/manage-stream-hLeft.aspx"></asp:TreeNode>
                                                 <asp:TreeNode Text="Pravé menu" Value="rightMenu" NavigateUrl="stream/manage-stream-hRight.aspx"></asp:TreeNode>
                                             </asp:TreeNode>
-                                            <asp:TreeNode Text="Oblíbené" Value="Oblíbené" NavigateUrl="stream/manage-stream-favourite.aspx"></asp:TreeNode>
-                                            <asp:TreeNode Text="About me" Value="About me"></asp:TreeNode>
-                                            <asp:TreeNode Text="Odkazy" Value="Odkazy" NavigateUrl="stream/manage-stream-links.aspx"></asp:TreeNode>
-                                            <asp:TreeNode Text="Support me" Value="Support me"></asp:TreeNode>
-                                            <asp:TreeNode Text="How help" Value="How help"></asp:TreeNode>
-                                            <asp:TreeNode Text="Video" Value="Video"></asp:TreeNode>
-                                            <asp:TreeNode Text="Contact" Value="Contact"></asp:TreeNode>
+                                            <asp:TreeNode Text="O mě" Value="AboutMe" NavigateUrl="stream/manage-stream-about-me.aspx"></asp:TreeNode>
+                                            <asp:TreeNode Text="Navigační panel" Value="Odkazy" NavigateUrl="stream/manage-stream-navigatepanel.aspx"></asp:TreeNode>
+                                            <asp:TreeNode Text="Support me" Value="Support me" NavigateUrl="stream/manage-stream-support-me.aspx"></asp:TreeNode>
+                                            <asp:TreeNode Text="Video" Value="Video" NavigateUrl="stream/manage-stream-video.aspx"></asp:TreeNode>
+                                            <asp:TreeNode Text="Contact" Value="Contact" NavigateUrl="stream/manage-stream-contact.aspx"></asp:TreeNode>
                                         </asp:TreeNode>
                                         <asp:TreeNode Text="Portfolio" Value="Portfolio" SelectAction="None"></asp:TreeNode>
                                     </Nodes>
@@ -46,6 +44,7 @@
                     <div id="manage-name">
                         <asp:Panel ID="NameWork" runat="server" BorderStyle="Groove" BorderWidth="1">
                             <asp:Label ID="workLabel" runat="server" Text="Content"></asp:Label>
+                            <asp:Button ID="refreshData" runat="server" Text="Refresh" CssClass="right" OnClick="refreshData_Click" />
                         </asp:Panel>
                     </div>
                     <div id="manage-work">

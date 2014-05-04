@@ -6,49 +6,49 @@
 </asp:Content>
 
 <asp:Content ID="LeftMenu" ContentPlaceHolderID="LeftContent" runat="server">
-    <h2>Livestream with modern games</h2>
-    <p>Zde můžete sledovat náš stream ať z her z koutku těch nejhranějších, tak i novinky na trhu, které se teprve snaží dostat na světlo světa herního trhu.</p>  
-    <p><b>Hry, které můžete u nás vidět nejčastěji?</b></p>		
+    <h2><asp:Label ID="hlavniNadpis" runat="server" Text="nadPis"></asp:Label></h2>
+    <p><asp:Label ID="popisPrace" runat="server" Text="popisPrace"></asp:Label></p>  
+    <p><b><asp:Label ID="nadpisHry" runat="server" Text="nadpisHry"></asp:Label></b></p>		
     <ul>
-        <li><span>League of Legends</span></li>
-        <li><span>Heartstone</span></li>
-        <li><span>CS: Global Offensive</span></li>
-        <li><span>Co-op games</span></li>
-        <li><span>Path of Exile</span></li>
+        <li><span><asp:Label ID="hra_1" runat="server" Text="hra_1"></asp:Label></span></li>
+        <li><span><asp:Label ID="hra_2" runat="server" Text="hra_2"></asp:Label></span></li>
+        <li><span><asp:Label ID="hra_3" runat="server" Text="hra_3"></asp:Label></span></li>
+        <li><span><asp:Label ID="hra_4" runat="server" Text="hra_4"></asp:Label></span></li>
+        <li><span><asp:Label ID="hra_5" runat="server" Text="hra_5"></asp:Label></span></li>
     </ul>			
-    <p><b>Informace o streamu a kvalitě.</b></p>    
+    <p><b><asp:Label ID="InformaceNadpis" runat="server" Text="informaceNadpis"></asp:Label></b></p>    
     <ul>
-        <li><span>Rozlišení mého PC: 1920x1080 Full HD</span></li>
-        <li><span>Rozlišení streamu: 1280x720 HD Quality</span></li>
-        <li><span>Quality: 10</span></li>    
-        <li><span>Upload: 18 mb/s</span></li> 
-        <li><span>Odezva: 3s</span></li> 
+        <li><span><asp:Label ID="rozliseniPC" runat="server" Text="rozliseniPC"></asp:Label></span></li>
+        <li><span><asp:Label ID="rozliseniStream" runat="server" Text="rozliseniStream"></asp:Label></span></li>
+        <li><span><asp:Label ID="Kvalita" runat="server" Text="kvalita"></asp:Label></span></li>    
+        <li><span><asp:Label ID="upload" runat="server" Text="upload"></asp:Label></span></li> 
+        <li><span><asp:Label ID="odezva" runat="server" Text="Odezva"></asp:Label></span></li> 
     </ul>
 </asp:Content>
 
 <asp:Content ID="RightMenu" ContentPlaceHolderID="RightContent" runat="server">
-    <p><b>Aktuální program pro streaming.</b></p>          
+    <p><b><asp:Label ID="nadpisProgram" runat="server" Text="nadpisProgram"></asp:Label></b></p>          
     <ul>
-        <li><span>01.11.2013 - League of Legends </span></li>
-        <li><span>02.11.2013 - League of Legends </span></li>    
-        <li><span>03.11.2013 - League of Legends </span></li> 
-        <li><span>04.11.2013 - League of Legends</span></li> 
-        <li><span>05.11.2013 - League of Legends</span></li>     
-        <li><span>06.11.2013 - League of Legends</span></li>
+        <li><span><asp:Label ID="program_1" runat="server" Text="program_1"></asp:Label></span></li>
+        <li><span><asp:Label ID="program_2" runat="server" Text="program_2"></asp:Label></span></li>    
+        <li><span><asp:Label ID="program_3" runat="server" Text="program_3"></asp:Label></span></li> 
+        <li><span><asp:Label ID="program_4" runat="server" Text="program_4"></asp:Label></span></li> 
+        <li><span><asp:Label ID="program_5" runat="server" Text="program_5"></asp:Label></span></li>     
+        <li><span><asp:Label ID="program_6" runat="server" Text="program_6"></asp:Label></span></li>
     </ul>      
-    <p><b>Čas, kdy bude náš stream aktivní.</b></p>	
+    <p><b><asp:Label ID="casStream" runat="server" Text="casStream"></asp:Label></b></p>	
     <ul>
-        <li><span>Pondělí: 16:00 - 23:30 hodin</span></li>
-        <li><span>Úterý:   16:00 - 23:30 hodin</span></li>
-        <li><span>Středa:  16:00 - 23:30 hodin</span></li>
-        <li><span>Čtvrtek: 16:00 - 23:30 hodin</span></li>
-        <li><span>Pátek:   18:00 - 02:00 hodin</span></li>
-        <li><span>So + Ne: 13:00 - 02:00 hodin (v případě změny budete informováni)</span></li>
+        <li><span><asp:Label ID="cas_1" runat="server" Text="cas_1"></asp:Label></span></li>
+        <li><span><asp:Label ID="cas_2" runat="server" Text="cas_2"></asp:Label></span></li>
+        <li><span><asp:Label ID="cas_3" runat="server" Text="cas_3"></asp:Label></span></li>
+        <li><span><asp:Label ID="cas_4" runat="server" Text="cas_4"></asp:Label></span></li>
+        <li><span><asp:Label ID="cas_5" runat="server" Text="cas_5"></asp:Label></span></li>
+        <li><span><asp:Label ID="cas_6" runat="server" Text="cas_6"></asp:Label></span></li>
     </ul>    
-    <p><b>Let´s playeři</b></p>	        
+    <p><b><asp:Label ID="playerNadpis" runat="server" Text="playerNadpis"></asp:Label></b></p>	        
     <ul>
-        <li><span>Dandus - RTS Hry, CS:GO</span></li>
-        <li><span>Gaper - Recenze, RTS Hry</span></li>
-        <li><span>Terquil - Recenze, Beta Testy</span></li>
+        <li><span><asp:Label ID="jmeno_1" runat="server" Text="jmeno_1"></asp:Label></span></li>
+        <li><span><asp:Label ID="jmeno_2" runat="server" Text="jmeno_2"></asp:Label></span></li>
+        <li><span><asp:Label ID="jmeno_3" runat="server" Text="jmeno_3"></asp:Label></span></li>
     </ul>
 </asp:Content>

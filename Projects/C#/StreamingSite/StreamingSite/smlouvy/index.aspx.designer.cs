@@ -7,126 +7,135 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace rad3k_eu.admin {
+namespace rad3k_eu.smlouvy {
     
     
-    public partial class manage {
+    public partial class smlouvy {
         
         /// <summary>
-        /// Head1 control.
+        /// nadpis control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        protected global::System.Web.UI.WebControls.Label nadpis;
         
         /// <summary>
-        /// BorderContent control.
+        /// jmeno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel BorderContent;
+        protected global::System.Web.UI.WebControls.Label jmeno;
         
         /// <summary>
-        /// title control.
+        /// prijmeni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel title;
+        protected global::System.Web.UI.WebControls.Label prijmeni;
         
         /// <summary>
-        /// tittle control.
+        /// pozice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label tittle;
+        protected global::System.Web.UI.WebControls.Label pozice;
         
         /// <summary>
-        /// Menu control.
+        /// datumNastupu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Menu;
+        protected global::System.Web.UI.WebControls.Label datumNastupu;
         
         /// <summary>
-        /// menuLabel control.
+        /// Calendar1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label menuLabel;
+        protected global::System.Web.UI.WebControls.Calendar Calendar1;
         
         /// <summary>
-        /// menuPanel control.
+        /// jmenoText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel menuPanel;
+        protected global::System.Web.UI.WebControls.TextBox jmenoText;
         
         /// <summary>
-        /// menuTree control.
+        /// prijmeniText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TreeView menuTree;
+        protected global::System.Web.UI.WebControls.TextBox prijmeniText;
         
         /// <summary>
-        /// NameWork control.
+        /// poziceText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel NameWork;
+        protected global::System.Web.UI.WebControls.TextBox poziceText;
         
         /// <summary>
-        /// workLabel control.
+        /// datumUkonceni control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label workLabel;
+        protected global::System.Web.UI.WebControls.Label datumUkonceni;
         
         /// <summary>
-        /// refreshData control.
+        /// Calendar2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button refreshData;
+        protected global::System.Web.UI.WebControls.Calendar Calendar2;
         
         /// <summary>
-        /// workBorder control.
+        /// doplnInformaceLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel workBorder;
+        protected global::System.Web.UI.WebControls.Label doplnInformaceLabel;
         
         /// <summary>
-        /// WorkPlace control.
+        /// doplnInformaceText control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder WorkPlace;
+        protected global::System.Web.UI.WebControls.TextBox doplnInformaceText;
+        
+        /// <summary>
+        /// addData control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addData;
     }
 }
