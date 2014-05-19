@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="rad3k_eu.index" %>
 <asp:Content ID="left_box_text_ID" ContentPlaceHolderID="left_box_text" runat="server">
     <h1>Informace</h1>
-    <p>Vítejte na mém portóliu. Můžete zde shlédnout mnou aktuálně vedené projekty, které se zabývají recenzemi a streamováním her v realném čase, vývojem webových stránek a windows aplikací v jazyce C# a nebo drobnějšími grafickými prácemi.<br/>
+    <p>Vítejte na mém portóliu. Můžete zde shlédnout mnou aktuálně vedené projekty, které se zabývají recenzemi a streamováním her v realném čase, vývojem webových stránek a windows aplikací v jazyce C# a nebo drobnější grafické práce.<br/>
     <br/>Hlavním prvkem je, že široké veřejnosti dávám k dispozice své aktuální znalosti. Takže v případě, že i vy hledáte někoho, kdo by Vám vypomohl s Vaším projektem a nebo vytvořil webovou či interní aplikaci na míru, tak mě neváhejte kontaktovat.</p>
     <br/><b>Mohu nabídnout služby v tomto okruhu:</b>
     <ul>

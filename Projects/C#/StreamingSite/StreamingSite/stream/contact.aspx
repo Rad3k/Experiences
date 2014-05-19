@@ -27,18 +27,18 @@
             </p>
             <p>
                 <asp:Label ID="subjectLabel" runat="server" Text="Subject"></asp:Label>
-                <select id="typ" style="width: 202px; float: right;">
-                    <option value="Enquiry">Otázka</option>
-                    <option value="Support">Žádost</option>
-                    <option value="Report bug">Ohlášení chyb</option>
-                    <option value="Other">Jiné</option>
-                </select>
+                <asp:DropDownList ID="type" runat="server" style="width: 202px; float: right;">
+                    <asp:ListItem>Otázka</asp:ListItem>
+                    <asp:ListItem>Žádost</asp:ListItem>
+                    <asp:ListItem>Ohlášení chyb</asp:ListItem>
+                    <asp:ListItem>Jiné</asp:ListItem>
+                </asp:DropDownList>
             </p>
             <p>
                 <asp:Label ID="messageLabel" runat="server" Text="Message"></asp:Label>
                 <asp:TextBox ID="messageText" runat="server" MaxLength="255" Height="200" TextMode="MultiLine" Width="185" CssClass="right"></asp:TextBox>
             </p>
-            <p><asp:Button ID="sendEmail" runat="server" Text="Send" BorderStyle="NotSet" Font-Bold="True" Width="50" Height="30" CssClass="btn" /></p>
+            <p><asp:Button ID="sendEmail" runat="server" Text="Send" BorderStyle="NotSet" Font-Bold="True" Width="50" Height="30" CssClass="btn" OnClick="sendEmail_Click" /></p>
         </div>
     </asp:Panel>
 </asp:Content>

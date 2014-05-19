@@ -69,7 +69,7 @@
             <!-- main_content-->
             <div id="footer">
                 <div class="left_footer"> Rad3k - portfólio © 2014. All Rights Reserved. </div>
-                <div class="right_footer"> <a href="http://rad3k.eu">Domovská stránka</a> | <a href="http://rad3k.eu">O mě</a> | <a href="http://rad3k.eu">Reference</a> | <a href="http://rad3k.eu">Projekty</a> | <a href="http://rad3k.eu">Kontakt</a></div>
+                <div class="right_footer"> <a href="index.aspx">Domovská stránka</a> | <a href="about.aspx">O mě</a> | <a href="reference.aspx">Reference</a> | <a href="projects.aspx">Projekty</a> | <a href="contact.aspx">Kontakt</a></div>
             </div>
         </div>
     </form>

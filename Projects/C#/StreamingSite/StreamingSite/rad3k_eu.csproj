@@ -132,7 +132,10 @@
     <Content Include="admin\stream\manage-stream-hRight.aspx" />
     <Content Include="admin\stream\manage-stream-navigatepanel.aspx" />
     <Content Include="admin\stream\manage-stream-support-me.aspx" />
-    <Content Include="admin\stream\manage-stream-video.aspx" />
+    <Content Include="admin\stream\manage-stream-video-seznam.aspx" />
+    <Content Include="admin\stream\manage-stream-videoAdd.aspx">
+      <BrowseToURL>~/admin/stream/manage-stream-videoAdd.aspx</BrowseToURL>
+    </Content>
     <Content Include="contact.aspx" />
     <Content Include="css\admin.css" />
     <Content Include="css\ie6.css" />
@@ -239,7 +242,8 @@
     <Compile Include="admin\admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\class\hashPassword.cs" />
+    <Compile Include="admin\classes\email.cs" />
+    <Compile Include="admin\classes\hashPassword.cs" />
     <Compile Include="admin\database\transaction.cs" />
     <Compile Include="admin\message\success.aspx.cs">
       <DependentUpon>success.aspx</DependentUpon>
@@ -304,7 +308,7 @@
     <Compile Include="admin\manage.Master.designer.cs">
       <DependentUpon>manage.Master</DependentUpon>
     </Compile>
-    <Compile Include="admin\class\UniqueValue.cs" />
+    <Compile Include="admin\classes\UniqueValue.cs" />
     <Compile Include="admin\stream\manage-stream-about-me.aspx.cs">
       <DependentUpon>manage-stream-about-me.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -319,12 +323,19 @@
     <Compile Include="admin\stream\manage-stream-support-me.aspx.designer.cs">
       <DependentUpon>manage-stream-support-me.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\stream\manage-stream-video.aspx.cs">
-      <DependentUpon>manage-stream-video.aspx</DependentUpon>
+    <Compile Include="admin\stream\manage-stream-video-seznam.aspx.cs">
+      <DependentUpon>manage-stream-video-seznam.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\stream\manage-stream-video.aspx.designer.cs">
-      <DependentUpon>manage-stream-video.aspx</DependentUpon>
+    <Compile Include="admin\stream\manage-stream-video-seznam.aspx.designer.cs">
+      <DependentUpon>manage-stream-video-seznam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\stream\manage-stream-videoAdd.aspx.cs">
+      <DependentUpon>manage-stream-videoAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\stream\manage-stream-videoAdd.aspx.designer.cs">
+      <DependentUpon>manage-stream-videoAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>

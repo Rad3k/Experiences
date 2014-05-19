@@ -32,7 +32,7 @@
                                             <asp:TreeNode Text="O mě" Value="AboutMe" NavigateUrl="stream/manage-stream-about-me.aspx"></asp:TreeNode>
                                             <asp:TreeNode Text="Navigační panel" Value="Odkazy" NavigateUrl="stream/manage-stream-navigatepanel.aspx"></asp:TreeNode>
                                             <asp:TreeNode Text="Support me" Value="Support me" NavigateUrl="stream/manage-stream-support-me.aspx"></asp:TreeNode>
-                                            <asp:TreeNode Text="Video" Value="Video" NavigateUrl="stream/manage-stream-video.aspx"></asp:TreeNode>
+                                            <asp:TreeNode Text="Video" Value="Video" NavigateUrl="stream/manage-stream-video-seznam.aspx"></asp:TreeNode>
                                             <asp:TreeNode Text="Contact" Value="Contact" NavigateUrl="stream/manage-stream-contact.aspx"></asp:TreeNode>
                                         </asp:TreeNode>
                                         <asp:TreeNode Text="Portfolio" Value="Portfolio" SelectAction="None"></asp:TreeNode>
